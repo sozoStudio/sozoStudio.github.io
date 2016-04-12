@@ -1,0 +1,67 @@
+<section class="timeline-page">
+  <div class ="scene-title">
+    <div class ="scene-title-box fade-in title">
+      <h3>第一章</h3>
+      <h1 class="scene-title-lgword">佛光寺時間史</h1>
+      <button id="chap1_start" onclick="playAudio(0)">开始</button>
+  </div>
+  </div>
+  <ul class="timeline-list fade-in content">
+    <div class ="timeline-line">
+        <div class="timeline-node" ng-repeat="item in events" style="margin-left:{{item.node}}px" ng-click="selectItem(item)" ng-class="{activenode:item.selected}"><p>{{item.date}}年</p></div>
+    </div>
+    <li class="timeline-each hori-scroll hideme" ng-repeat="item in events | orderBy: date" ng-click="selectItem(item)" ng-class="{activecards:item.selected}">
+      <!--href="#/details/{{events.indexOf(item)}}" -->
+      <div class="left-timeline">
+      <audio controls id="{{item.id}}" onended="playAudio(1)">
+          <source ng-src="{{item.audio | trustUrl}}"></source>
+      </audio>
+        <h1>{{item.title}}</h1>
+        <h3>{{item.era}}</h3>
+        <p class="timeline_descp">{{item.description}}
+          {{item.description.length > 80 ? '&hellip;': ''}} </p>
+      </div>
+
+        <div class="timeline-cover" ng-repeat="img in item.images">
+        <img class="timeline-img" ng-src="dist/img/scene/{{img}}" alt="Photo of {{img}}">
+        </div>
+
+    </li>
+    <a href ="#/tab/chap2">
+    <div class="next-chap">
+        <ul>
+        <li><p>下一章</p>
+        <h4>发现佛光寺</h4></li>
+        <li><div class="arrow-right"></div></li>
+    </ul>
+</div></a>
+  </ul>
+
+  <audio autoplay="" controls="" loop="" preload="" class="background-mvc">
+    <source src="media/scene1/bgm/001.mp3" type="audio/mpeg">
+    <source src="media/scene1/bgm/001.ogg" type="audio/ogg">
+    <source src="media/scene1/bgm/001.wav" type="audio/wav">
+   Your browser does not support the audio element.
+  </audio>
+<script>
+var count = 0;
+var audios = document.getElementsByTagName('audio');
+
+function playAudio(direction){
+  console.log("play audio function called");
+  if (direction>0) {
+    if (count<audios.length) {
+      count++;
+      audios[count].load();audios[count].play();
+
+    }else {
+      count=0;
+    }
+  }else if (direction==0) {
+    //init
+    audios[0].load();audios[0].play();
+  }
+
+}
+</script>
+</section>

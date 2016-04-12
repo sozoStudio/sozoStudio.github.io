@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="app/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+<!---jquery link ---->
+  <script src="lib/jquery.min.js"></script>
+   <script src="lib/velocity.min.js"></script>
+<!--angular Link -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+ <script src="lib/angular/angular-ui-router.min.js"></script>
+
+<!--- bootstrap link ---->
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.5.0/ui-bootstrap-tpls.min.js"></script>
+<!--- my own js link -->
+  <script src="dist/js/all.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Foguang Temple</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+  <style>
+      /* following three (cascaded) are equivalent to above three meta viewport statements */
+          /*@-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+          @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }*/
+          /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+  </style>
+
+  <!-- Latest compiled and minified CSS -->
+  <script type="text/ng-template" id="modalContainer">
+  </script>
+
+</head>
+<body ng-app="myApp">
+    <div ng-scrollable="{scrollX:'left',scrollY:'none'}" >
+    <div class="main" ui-view>
+
+</div>
+</div>
+<div id = "texture"></div>
+  <script src="dist/js/custom-jquery.js"></script>
+  <script src="lib/angular/angular-carousel.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-touch.min.js"></script>
+</body>
+</html>
