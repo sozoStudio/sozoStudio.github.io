@@ -60,8 +60,7 @@ $( document ).ready(function() {
     // // $('.timeline-each').css('opacity','0.5');
     // // $("h1, h2, p").addClass("blue");
     //  $("div").css("border","3px solid red");
-  var audio1 = document.getElementById("audio1_1");
-  $('body').css('backgroundImage','url("../../img/layout/slide-bg.png")');
+
 //jquery mouse horizontal scroll
   (function() {
   function scrollHorizontally(e) {
@@ -81,6 +80,19 @@ $( document ).ready(function() {
       window.attachEvent("onmousewheel", scrollHorizontally);
   }
   })();
+});
+
+$(function(){
+  $('#audio-player').mediaelementplayer({
+    alwaysShowControls: true,
+    features: ['playpause','progress','volume'],
+    audioVolume: 'horizontal',
+    audioWidth: 150,
+    audioHeight: 70,
+    iPadUseNativeControls: true,
+    iPhoneUseNativeControls: true,
+    AndroidUseNativeControls: true
+  });
 });
 
 /* ========================================================================

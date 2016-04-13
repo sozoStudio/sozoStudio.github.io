@@ -309,9 +309,9 @@ button, btn {
   border: none;
   outline: none; }
 
-div.audio-player {
+.audio-player {
   position: relative;
-  width: 450px;
+  width: 150px;
   height: 70px;
   margin: 0 auto;
   background: #4c4e5a;
