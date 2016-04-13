@@ -247,12 +247,7 @@ th {
   h3 {
     page-break-after: avoid;
   }
-<<<<<<< HEAD
-=======
-  select {
-    background: #fff !important;
-  }
->>>>>>> 6e77c623608e687ee279c72f0f06441cac5c88a8
+
   .navbar {
     display: none;
   }

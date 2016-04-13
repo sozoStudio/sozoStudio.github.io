@@ -56,14 +56,16 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       })
 });
 
-var timelineControllers = angular.module('timelineControllers', ['angular-carousel'])
+var timelineControllers = angular.module('timelineControllers', ['ui.bootstrap.dialog'])
 .filter('trustUrl', function ($sce) {
   return function(url) {
     return $sce.trustAsResourceUrl(url);
   };
 });
 
+///////////////////////////
 //chapter 1 timeline
+///////////////////////////
 timelineControllers.controller('timelineController', ['$scope', '$http', function($scope, $http) {
   $http.get('source/timeline.json').success(function(data) {
     $scope.events = data;
@@ -95,7 +97,9 @@ timelineControllers.controller('timelineController', ['$scope', '$http', functio
   });
 }]);
 
+///////////////////////////
 //chapter 2 scroll
+///////////////////////////
 timelineControllers.controller('Chap2Controller', ['$scope', '$http',function($scope, $http) {
   $http.get('source/chap2-scroll.json').success(function(data) {
     $scope.events = data;
@@ -124,17 +128,19 @@ timelineControllers.controller('Chap2Controller', ['$scope', '$http',function($s
                 $scope.letterLimit = 100;
             }
           }
-         }
+      }
 
     //only allow one audio at a time
-    $(".narration").on("play", function() {
-    $(".narration").not(this).each(function(index, audio) {
-        audio.pause();
-    });
-});
+//     $(".narration").on("play", function() {
+//     $(".narration").not(this).each(function(index, audio) {
+//         audio.pause();
+//     });
+//      });
 
     //auto play bgm
-
+        var playbgm = document.getElementById('bgm1');
+        playbgm.load();
+        playbgm.play();
 
     //auto play audio
     var playaudio = (function(number){
@@ -147,15 +153,21 @@ timelineControllers.controller('Chap2Controller', ['$scope', '$http',function($s
         for(var i = 0; i < $scope.events.length; i++){
             playaudio(i);
         }
+
+        
   });
+
+  // alert when audio is finished playing
+  $("#audio_0").on('ended',function(){
+      alert('sdfsgdsg');
+  });
+
 
 }]);
 
-$("#audio_0").on('ended',function(){
-alert("bsdfhjksf");
-});
-
+///////////////////////////
 //chapter 3 scroll
+///////////////////////////
 timelineControllers.controller('Chap3Controller', ['$scope', '$http',function($scope, $http) {
   $http.get('source/chap3-scroll.json').success(function(data) {
     $scope.events = data;
@@ -182,6 +194,9 @@ timelineControllers.controller('Chap3Controller', ['$scope', '$http',function($s
   });
 }]);
 
+///////////////////////////
+///////////////////////////
+
 timelineControllers.controller('Ctrl', function($scope, $window,$dialog) {
             $scope.open = function() {
                 var options = {
@@ -206,7 +221,10 @@ timelineControllers.controller('Ctrl', function($scope, $window,$dialog) {
                 dialog.close(result);
             };
         });
+
+///////////////////////////
 //details controller
+///////////////////////////
 timelineControllers.controller('DetailsController', ['$scope', '$http', '$state',function($scope, $http, $state, dialog) {
     $http.get('source/chap2-scroll.json').success(function(data) {
         $scope.events = data;
@@ -220,7 +238,9 @@ timelineControllers.controller('DetailsController', ['$scope', '$http', '$state'
   });
 }]);
 
-
+///////////////////////////
+//tab controller
+///////////////////////////
 timelineControllers.controller('tabcontrol',function(){
   $('.chap-title').hide();
     $("#menu-toggle").click(function(e) {
@@ -232,9 +252,11 @@ timelineControllers.controller('tabcontrol',function(){
         if(sidebarLen < 50){
           //  $(sidebar).css('border','3px solid red');
            $(".chap-title").show();
+          $("#sidebar-toggle").removeClass('sidebar-move');
         }
         if(sidebarLen > 50){
           $(".chap-title").hide();
+          $("#sidebar-toggle").addClass('sidebar-move');
         }
     });
 });
@@ -242,18 +264,18 @@ timelineControllers.controller('tabcontrol',function(){
 /*-------------------------------------------------------------------------------------------------
   This plugin is based on the GAPJUMPER line example http://www.gapjumper.com/research/lines.html.
   Special thanks to its author!
-  Author: Tiago do Bem
+  Author: Tiago do Bem 
   Date: March 2013
   URL: https://github.com/tbem/jquery.line
   The jQuery.line.js plugin is distributed under the GNU General Public License version 3 (GPLv3).
   -------------------------------------------------------------------------------------------------
-*/
+*/ 
 
 (function($) {
 
   var helpers = {
     createLine: function(x1, y1, x2, y2, options){
-
+      
                   // Check if browser is Internet Exploder ;)
                   var isIE = navigator.userAgent.indexOf("MSIE") > -1;
                   if (x2 < x1){
@@ -265,7 +287,7 @@ timelineControllers.controller('tabcontrol',function(){
                     y2 = temp;
                   }
                   var line = document.createElement("div");
-
+                  
                   // Formula for the distance between two points
                   // http://www.mathopenref.com/coorddist.html
                   var length = Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
@@ -291,7 +313,7 @@ timelineControllers.controller('tabcontrol',function(){
                   return line;
                 }
   }
-
+  
 
   $.fn.line = function( x1, y1, x2, y2, options, callbacks) {
                 return $(this).each(function(){
@@ -309,7 +331,7 @@ timelineControllers.controller('tabcontrol',function(){
                     }
                   });
 
-
+                
               });
   };
   $.fn.line.defaults = {  zindex : 10000,
@@ -318,3 +340,4 @@ timelineControllers.controller('tabcontrol',function(){
                           style: "solid",
                         };
 })(jQuery);
+

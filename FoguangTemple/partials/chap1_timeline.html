@@ -1,10 +1,12 @@
 <section class="timeline-page">
     <button id="chap1_start" onclick="playAudio(0)">开始介绍</button>
   <div class ="scene-title">
-    <div class ="scene-title-box fade-in title">
-      <h3>第一章</h3>
-      <h1 class="scene-title-lgword">佛光寺時間史</h1>
-  </div>
+        <div id="titlebox-top"><img src="img/UI/titlebox-top.png"></div>
+        <div class ="scene-title-box fade-in title" style="height:200px;">
+          <h3>第一章</h3>
+          <h1 class="scene-title-lgword">佛光寺時間史</h1>
+         <div id="titlebox-bottom"><img src="img/UI/titlebox-bottom.png"></div>
+      </div>
   </div>
   <ul class="timeline-list fade-in content">
     <div class ="timeline-line">
@@ -14,7 +16,7 @@
       <!--href="#/details/{{events.indexOf(item)}}" -->
       <div class="left-timeline">
           <div class="audio-player">
-          <audio id="audio-player" controls id="{{item.id}}" onended="playAudio(1)">
+          <audio id="audio-player" controls="controls" onended="playAudio(1)">
               <source ng-src="{{item.audio | trustUrl}}"></source>
           </audio>
       </div>
@@ -24,8 +26,8 @@
           {{item.description.length > 80 ? '&hellip;': ''}} </p>
       </div>
 
-        <div class="timeline-cover" ng-repeat="img in item.images">
-        <img class="timeline-img" ng-src="dist/img/scene/{{img}}" alt="Photo of {{img}}">
+        <div class="timeline-cover">
+        <img class="timeline-img" ng-repeat="img in item.images" ng-src="dist/img/scene/{{img}}" alt="Photo of {{img}}">
         </div>
 
     </li>
@@ -55,7 +57,6 @@ function playAudio(direction){
     if (count<audios.length) {
       count++;
       audios[count].load();audios[count].play();
-
     }else {
       count=0;
     }

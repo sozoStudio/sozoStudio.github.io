@@ -59,7 +59,7 @@ div.rn-carousel-indicator span {
     .rn-carousel-control.rn-carousel-control-next:before {
       content: ">"; }
 
-.vertical-middle, .scene-title-box {
+.vertical-middle, .scene-title {
   position: relative;
   top: 50%;
   transform: translateY(-50%); }
@@ -224,21 +224,27 @@ button, btn {
 .scene-title {
   width: 200px;
   min-width: 100px;
-  height: 100vh;
+  height: 77vh;
+  top: 50vh;
+  left: 100px;
   display: inline-block;
   position: absolute; }
 
 .scene-title-box {
   padding-top: 5px;
   color: #EEE2CF;
-  background-color: #9D2932;
+  background-image: url(../../img/layout/title-bg.png);
   opacity: 0.8;
   left: 24%;
-  width: auto;
+  width: 100px;
   height: auto;
   max-width: 55%;
-  min-height: 100%;
+  min-height: 80%;
   text-align: center; }
+
+#titlebox-top, #titlebox-bottom {
+  width: 100px;
+  height: 80px; }
 
 .scene-title-lgword {
   letter-spacing: 16px;
@@ -301,90 +307,6 @@ button, btn {
   top: 0;
   left: 0;
   z-index: 999; }
-
-/* customize audio attribute  */
-.audio-player, .audio-player div, .audio-player h2, .audio-player a, .audio-player span, .audio-player button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none; }
-
-.audio-player {
-  position: relative;
-  width: 150px;
-  height: 70px;
-  margin: 0 auto;
-  background: #4c4e5a;
-  background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -ms-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px; }
-
-/* play/pause control */
-.mejs-controls .mejs-button button {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  text-indent: -9999px; }
-
-.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
-  width: 34px;
-  height: 34px;
-  top: 32px;
-  left: 7px;
-  background: transparent url("playpause.png") 0 0 no-repeat; }
-
-.mejs-controls .mejs-pause button {
-  background-position: 0 -35px; }
-
-/* mute/unmute control */
-.mejs-controls .mejs-mute button, .mejs-controls .mejs-unmute button {
-  width: 18px;
-  height: 19px;
-  top: 9px;
-  right: 142px;
-  background: transparent url("audio.png") 0 0; }
-
-.mejs-controls .mejs-unmute button {
-  background-position: 0 -19px; }
-
-/* volume scrubber bar */
-.mejs-controls div.mejs-horizontal-volume-slider {
-  position: absolute;
-  top: 13px;
-  right: 15px;
-  cursor: pointer; }
-
-.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
-  width: 120px;
-  height: 11px;
-  background: #212227;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, 0.25);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px; }
-
-.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-  position: absolute;
-  width: 0;
-  height: 9px;
-  top: 1px;
-  left: 1px;
-  background: #90d26a;
-  background: -webkit-linear-gradient(top, #90d26a 0%, #83bb63 100%);
-  background: -moz-linear-gradient(top, #90d26a 0%, #83bb63 100%);
-  background: -o-linear-gradient(top, #90d26a 0%, #83bb63 100%);
-  background: -ms-linear-gradient(top, #90d26a 0%, #83bb63 100%);
-  background: linear-gradient(top, #90d26a 0%, #83bb63 100%);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
 
 .scrollable {
   overflow: hidden;
@@ -489,7 +411,7 @@ button, btn {
   margin-left: -150px;
   /* position of the side bar */
   overflow-y: auto;
-  background: #050505;
+  background: #424B50;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -799,21 +721,22 @@ video#bgvid {
 .timeline-each {
   width: 300px;
   height: 60vh;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   margin: auto 50px 200px 50px;
   padding: 70px;
-  border-top: 15px solid #76664D;
-  overflow: hidden;
-  border-left: #424B50;
-  border-right: #424B50;
-  border-bottom: #424B50; }
+  border: 30px solid transparent;
+  padding: 35px;
+  -webkit-border-image: url(../../img/UI/border.png) 35 round;
+  /* Safari 3.1-5 */
+  -o-border-image: url(../../img/UI/border.png) 35 round;
+  /* Opera 11-12.1 */
+  border-image: url(../../img/UI/border.png) 35 round;
+  overflow: hidden; }
   .timeline-each h2, .timeline-each h3, .timeline-each p {
     color: #050505; }
 
 .timeline-cover {
-  width: 120%;
   height: auto;
-  background-image: url("../../img/layout/time-bg.png");
   z-index: 1000; }
 
 .left-timeline {
@@ -890,8 +813,9 @@ video#bgvid {
     width: 100%; }
 
 .activecards {
-  width: 60vw; }
+  width: 80vw; }
   .activecards .left-timeline {
+    width: 250px;
     max-width: 35%;
     width: 35%;
     display: inline-block;
@@ -902,6 +826,7 @@ video#bgvid {
     max-width: 55%;
     float: left;
     padding-left: 5%;
+    margin-top: 50px;
     opacity: 1; }
   .activecards .timeline_descp {
     max-height: 100%; }
@@ -1320,7 +1245,7 @@ q {
 
 @media screen and (min-width: 1024px) {
   p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 34px; }
   h2 {
     font-size: 2em; } }
