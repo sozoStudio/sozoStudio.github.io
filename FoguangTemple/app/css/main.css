@@ -234,7 +234,6 @@ button, btn {
   padding-top: 5px;
   color: #EEE2CF;
   background-image: url(../../img/layout/title-bg.png);
-  opacity: 0.8;
   left: 24%;
   width: 100px;
   height: auto;
@@ -246,12 +245,16 @@ button, btn {
   width: 100px;
   height: 80px; }
 
+#titlebox-bottom {
+  margin-top: -34px; }
+
 .scene-title-lgword {
   letter-spacing: 16px;
   font-size: 2.5em;
   top: 50%;
   text-align: center;
-  color: #F3F8F1; }
+  color: #F3F8F1;
+  padding-left: 8px; }
 
 .scene-sub-title {
   width: 60px;
