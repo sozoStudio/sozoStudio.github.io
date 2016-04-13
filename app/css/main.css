@@ -65,7 +65,7 @@ div.rn-carousel-indicator span {
   transform: translateY(-50%); }
 
 html {
-  background-color: #DED8D4; }
+  background-color: #EEE2CF; }
 
 body {
   height: 100vh;
@@ -137,15 +137,17 @@ h3, h4, h5 {
   left: 50%;
   width: auto;
   height: auto;
-  min-height: 50%; }
+  min-height: 50%;
+  display: block; }
   .main-intro button {
-    height: 40px;
+    height: 60px;
     position: absolute;
     margin: auto;
     top: 40vh;
-    left: 50%;
+    left: 45%;
     right: 50%;
-    bottom: 0; }
+    bottom: 0;
+    color: #EEE2CF; }
 
 .sunrise-intro {
   top: 50%;
@@ -158,7 +160,7 @@ h3, h4, h5 {
   text-align: center;
   line-height: 2.0em;
   position: fixed;
-  color: #DED8D4;
+  color: #EEE2CF;
   padding: 50px;
   position: fixed;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -169,19 +171,19 @@ h3, h4, h5 {
     position: absolute;
     bottom: 0;
     margin-bottom: 40px;
-    margin-left: -10%; }
+    color: #EEE2CF;
+    margin-left: -75px; }
 
 button, btn {
-  border: solid 1px #F2B626;
-  padding: 5px;
+  background: url(../../img/UI/button_light.png) no-repeat;
+  background-position: -30px 5px;
+  width: 166px;
+  height: 60px;
+  border: none;
   min-height: 50px;
   min-width: 90px;
-  border-radius: 1px;
-  background-clip: content-box;
-  background-color: #F2B626;
-  line-height: 1;
   font-size: 20px;
-  color: #050505;
+  color: #EEE2CF;
   text-indent: 0.5rem;
   text-decoration: none; }
 
@@ -228,8 +230,8 @@ button, btn {
 
 .scene-title-box {
   padding-top: 5px;
-  color: #DED8D4;
-  background-color: #A10B00;
+  color: #EEE2CF;
+  background-color: #9D2932;
   opacity: 0.8;
   left: 24%;
   width: auto;
@@ -242,7 +244,8 @@ button, btn {
   letter-spacing: 16px;
   font-size: 2.5em;
   top: 50%;
-  text-align: center; }
+  text-align: center;
+  color: #F3F8F1; }
 
 .scene-sub-title {
   width: 60px;
@@ -280,7 +283,7 @@ button, btn {
     height: 1px;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
-    border-left: 30px solid #606060; }
+    border-left: 30px solid #76664D; }
   .next-chap ul {
     list-style: none; }
   .next-chap li {
@@ -298,6 +301,90 @@ button, btn {
   top: 0;
   left: 0;
   z-index: 999; }
+
+/* customize audio attribute  */
+.audio-player, .audio-player div, .audio-player h2, .audio-player a, .audio-player span, .audio-player button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none; }
+
+div.audio-player {
+  position: relative;
+  width: 450px;
+  height: 70px;
+  margin: 0 auto;
+  background: #4c4e5a;
+  background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: -ms-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+/* play/pause control */
+.mejs-controls .mejs-button button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  text-indent: -9999px; }
+
+.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
+  width: 34px;
+  height: 34px;
+  top: 32px;
+  left: 7px;
+  background: transparent url("playpause.png") 0 0 no-repeat; }
+
+.mejs-controls .mejs-pause button {
+  background-position: 0 -35px; }
+
+/* mute/unmute control */
+.mejs-controls .mejs-mute button, .mejs-controls .mejs-unmute button {
+  width: 18px;
+  height: 19px;
+  top: 9px;
+  right: 142px;
+  background: transparent url("audio.png") 0 0; }
+
+.mejs-controls .mejs-unmute button {
+  background-position: 0 -19px; }
+
+/* volume scrubber bar */
+.mejs-controls div.mejs-horizontal-volume-slider {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  cursor: pointer; }
+
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  width: 120px;
+  height: 11px;
+  background: #212227;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  position: absolute;
+  width: 0;
+  height: 9px;
+  top: 1px;
+  left: 1px;
+  background: #90d26a;
+  background: -webkit-linear-gradient(top, #90d26a 0%, #83bb63 100%);
+  background: -moz-linear-gradient(top, #90d26a 0%, #83bb63 100%);
+  background: -o-linear-gradient(top, #90d26a 0%, #83bb63 100%);
+  background: -ms-linear-gradient(top, #90d26a 0%, #83bb63 100%);
+  background: linear-gradient(top, #90d26a 0%, #83bb63 100%);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .scrollable {
   overflow: hidden;
@@ -714,9 +801,12 @@ video#bgvid {
   height: 60vh;
   background-color: rgba(255, 255, 255, 0.2);
   margin: auto 50px 200px 50px;
-  padding: 50px;
-  border-top: 15px solid #606060;
-  overflow: hidden; }
+  padding: 70px;
+  border-top: 15px solid #76664D;
+  overflow: hidden;
+  border-left: #424B50;
+  border-right: #424B50;
+  border-bottom: #424B50; }
   .timeline-each h2, .timeline-each h3, .timeline-each p {
     color: #050505; }
 
@@ -757,7 +847,7 @@ video#bgvid {
 .timeline-line {
   width: 86%;
   height: 4px;
-  border-bottom: 3px double #606060;
+  border-bottom: 3px double #424B50;
   padding-top: 7vh;
   margin-left: 50px;
   margin-bottom: 65px; }
@@ -765,8 +855,8 @@ video#bgvid {
 .timeline-node {
   width: 20px;
   height: 20px;
-  background-color: #606060;
-  border: 3px solid #DED8D4;
+  background-color: #76664D;
+  border: 3px solid #EEE2CF;
   border-radius: 50%;
   position: absolute;
   margin-top: -10px; }
@@ -775,8 +865,15 @@ video#bgvid {
     line-height: 1.2em;
     text-align: center; }
 
+#chap1_start {
+  color: #EEE2CF;
+  position: absolute;
+  left: 270px;
+  top: 0px;
+  z-index: 999; }
+
 .all-active, .activenode, .activecards, .activechap {
-  border-color: #A10B00 !important;
+  border-color: #9D2932 !important;
   box-shadow: 2px 4px 10px #A5A5A5;
   -webkit-transition: 0.5s;
   /* For Safari 3.1 to 6.0 */

@@ -11,9 +11,13 @@
   height:60vh;
   background-color: rgba(255,255,255,0.2);
   margin:auto 50px 200px 50px;
-  padding:50px;
-  border-top: 15px solid $color-grey;
+  padding:70px;
+  border-top: 15px solid $color-brown;
   overflow: hidden;
+  border-left:$color-blue;
+  border-right:$color-blue;
+  border-bottom:$color-blue;
+
   h2, h3, p{
     color:$color-black;
   }
@@ -61,7 +65,7 @@
 .timeline-line {
   width: 86%;
   height:4px;
-  border-bottom: 3px double $color-grey;
+  border-bottom: 3px double $color-blue;
   padding-top:7vh;
   margin-left:50px;
   margin-bottom: 65px;
@@ -69,7 +73,7 @@
 .timeline-node {
   width:20px;
   height:20px;
-  background-color:$color-grey;
+  background-color:$color-brown;
   border:3px solid $color-paper;
   border-radius: 50%;
   position: absolute;
@@ -79,6 +83,14 @@
       line-height: 1.2em;
       text-align: center;
   }
+}
+// the auto play button
+#chap1_start {
+    color:$color-paper;
+    position: absolute;
+    left: 270px;
+    top: 0px;
+    z-index: 999;
 }
 
 .all-active {

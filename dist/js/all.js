@@ -128,7 +128,7 @@ timelineControllers.controller('Chap2Controller', ['$scope', '$http',function($s
                 $scope.letterLimit = 100;
             }
           }
-         }
+      }
 
     //only allow one audio at a time
 //     $(".narration").on("play", function() {
@@ -153,12 +153,16 @@ timelineControllers.controller('Chap2Controller', ['$scope', '$http',function($s
         for(var i = 0; i < $scope.events.length; i++){
             playaudio(i);
         }
+
+        
   });
 
   // alert when audio is finished playing
   $("#audio_0").on('ended',function(){
       alert('sdfsgdsg');
   });
+
+
 }]);
 
 ///////////////////////////

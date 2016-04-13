@@ -1,9 +1,9 @@
 <section class="timeline-page">
+    <button id="chap1_start" onclick="playAudio(0)">开始介绍</button>
   <div class ="scene-title">
     <div class ="scene-title-box fade-in title">
       <h3>第一章</h3>
       <h1 class="scene-title-lgword">佛光寺時間史</h1>
-      <button id="chap1_start" onclick="playAudio(0)">开始</button>
   </div>
   </div>
   <ul class="timeline-list fade-in content">
@@ -13,9 +13,11 @@
     <li class="timeline-each hori-scroll hideme" ng-repeat="item in events | orderBy: date" ng-click="selectItem(item)" ng-class="{activecards:item.selected}">
       <!--href="#/details/{{events.indexOf(item)}}" -->
       <div class="left-timeline">
-      <audio controls id="{{item.id}}" onended="playAudio(1)">
-          <source ng-src="{{item.audio | trustUrl}}"></source>
-      </audio>
+          <div class="audio-player">
+          <audio id="audio-player" controls id="{{item.id}}" onended="playAudio(1)">
+              <source ng-src="{{item.audio | trustUrl}}"></source>
+          </audio>
+      </div>
         <h1>{{item.title}}</h1>
         <h3>{{item.era}}</h3>
         <p class="timeline_descp">{{item.description}}

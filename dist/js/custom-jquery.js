@@ -39,12 +39,12 @@ timer = setTimeout(displayLine,400);
               var positionF = position.left;
               var width = $('.timeline-each').width();
               var starting = 150;
-              $('.timeline-list').line(node + 470,heightT,positionF + width,heightL,{color:"#606060", stroke:3, zindex:-1});
-              $('.timeline-list').line(node + 549,heightT,positionF + 499 + width,heightL,{color:"#606060", stroke:3, zindex:-1});
-              $('.timeline-list').line(node + 1110,heightT,positionF + 940 + width,heightL,{color:"#606060", stroke:3, zindex:-1});
-              $('.timeline-list').line(node + 2240,heightT,positionF + 1390 + width,heightL,{color:"#606060", stroke:3, zindex:-1});
-              $('.timeline-list').line(node + 2370,heightT,positionF + 1990 + width,heightL,{color:"#606060", stroke:3, zindex:-1});
-              $('.timeline-list').line(node + 2460,heightT,positionF + 2460 + width,heightL,{color:"#606060", stroke:3, zindex:-1});
+              $('.timeline-list').line(node + 470,heightT,positionF + width,heightL,{color:"#76664D", stroke:3, zindex:-1});
+              $('.timeline-list').line(node + 549,heightT,positionF + 499 + width,heightL,{color:"#76664D", stroke:3, zindex:-1});
+              $('.timeline-list').line(node + 1110,heightT,positionF + 940 + width,heightL,{color:"#76664D", stroke:3, zindex:-1});
+              $('.timeline-list').line(node + 2240,heightT,positionF + 1390 + width,heightL,{color:"#76664D", stroke:3, zindex:-1});
+              $('.timeline-list').line(node + 2370,heightT,positionF + 1990 + width,heightL,{color:"#76664D", stroke:3, zindex:-1});
+              $('.timeline-list').line(node + 2460,heightT,positionF + 2460 + width,heightL,{color:"#76664D", stroke:3, zindex:-1});
           }
           }
           else if( right_of_window > right_of_object ){
@@ -56,12 +56,7 @@ timer = setTimeout(displayLine,400);
 
 $( document ).ready(function() {
     $('html').fadeIn(700);
-    try {
-      bgm.play();
-    } catch (e) {
-
-    } 
-
+    bgm.play();
     // // $('.timeline-each').css('opacity','0.5');
     // // $("h1, h2, p").addClass("blue");
     //  $("div").css("border","3px solid red");
