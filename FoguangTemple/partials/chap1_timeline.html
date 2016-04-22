@@ -8,11 +8,11 @@
       </div>
       <div id="titlebox-bottom"><img src="img/UI/titlebox-bottom.png"></div>
   </div>
-  <ul class="timeline-list fade-in content">
-    <div class ="timeline-line">
-        <div class="timeline-node" ng-repeat="item in events" style="margin-left:{{item.node}}px" ng-click="selectItem(item)" ng-class="{activenode:item.selected}"><p>{{item.date}}年</p></div>
+  <ul class="timeline-list content">
+    <div class ="timeline-line fade-in">
+        <div class="timeline-node" ng-repeat="item in events" style="margin-left:{{item.node}}px" ng-click="selectItem(item)" ng-class="{activenode:item.selected}" onclick="moveup()"><p>{{item.date}}年</p></div>
     </div>
-    <li class="timeline-each hori-scroll hideme" ng-repeat="item in events | orderBy: date" ng-click="selectItem(item)" ng-class="{activecards:item.selected}">
+    <li class="timeline-each hori-scroll" ng-repeat="item in events | orderBy: date" ng-click="selectItem(item)" ng-class="{activecards:item.selected}">
       <!--href="#/details/{{events.indexOf(item)}}" -->
       <div class="left-timeline">
           <div class="audio-player">
@@ -64,7 +64,30 @@ function playAudio(direction){
     //init
     audios[0].load();audios[0].play();
   }
-
 }
+
+
+function moveup() {
+    var nodeactive = $('.timeline-node').css('border-width');
+    nodeactive = parseInt(nodeactive);
+    console.log(nodeactive);
+    if ($(nodeactive) < "3") {
+        $('.timeline-line').removeClass('top-10');
+        ('.timeline-line').addClass('top-45');
+        console.log('remove');
+        nodeactive = 0;
+    }
+
+    else if ($(nodeactive) > "3"){
+        $('.timeline-line').addClass('top-10');
+        console.log('add');
+        nodeactive = 0;
+    }
+
+    else {
+        console.log('sdfsdf');
+    }
+}
+
 </script>
 </section>

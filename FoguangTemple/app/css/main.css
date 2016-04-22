@@ -408,6 +408,7 @@ button, btn {
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
+  top: 0;
   left: 150px;
   width: 40px;
   height: 110vh;
@@ -722,6 +723,7 @@ video#bgvid {
   margin-left: 150px; }
 
 .timeline-each {
+  opacity: 0;
   width: 300px;
   height: 60vh;
   background-color: rgba(255, 255, 255, 0.4);
@@ -774,7 +776,7 @@ video#bgvid {
   width: 86%;
   height: 4px;
   border-bottom: 3px double #424B50;
-  padding-top: 7vh;
+  margin-top: 45vh;
   margin-left: 50px;
   margin-bottom: 65px; }
 
@@ -782,7 +784,7 @@ video#bgvid {
   width: 20px;
   height: 20px;
   background-color: #76664D;
-  border: 3px solid #EEE2CF;
+  border: 2px solid #EEE2CF;
   border-radius: 50%;
   position: absolute;
   margin-top: -10px; }
@@ -799,6 +801,7 @@ video#bgvid {
   z-index: 999; }
 
 .all-active, .activenode, .activecards, .activechap {
+  opacity: 1 !important;
   border-color: #9D2932 !important;
   box-shadow: 2px 4px 10px #A5A5A5;
   -webkit-transition: 0.5s;
@@ -815,7 +818,15 @@ video#bgvid {
     max-width: 100%;
     width: 100%; }
 
+.activenode {
+  background-color: #9D2932;
+  border-width: 4px; }
+
+.active-timeline {
+  margin-top: 10vh; }
+
 .activecards {
+  max-width: 80vw;
   width: 80vw; }
   .activecards .left-timeline {
     width: 250px;
@@ -833,6 +844,12 @@ video#bgvid {
     opacity: 1; }
   .activecards .timeline_descp {
     max-height: 100%; }
+
+.top-10 {
+  margin-top: 10vh; }
+
+.top-45 {
+  margin-top: 45vh; }
 
 .scroll-page {
   width: auto;

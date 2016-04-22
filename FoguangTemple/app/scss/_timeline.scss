@@ -7,6 +7,7 @@
   margin-left: 150px;
 }
 .timeline-each {
+ opacity:0;
   width:300px;
   height:60vh;
   background-color: rgba(255,255,255,0.4);
@@ -56,8 +57,6 @@
   }
 }
 
-.timeline-each::before{
-}
 .time-img{
   max-width: 100%;
   height:auto;
@@ -67,15 +66,16 @@
   width: 86%;
   height:4px;
   border-bottom: 3px double $color-blue;
-  padding-top:7vh;
+  margin-top:45vh;
   margin-left:50px;
   margin-bottom: 65px;
 }
+
 .timeline-node {
   width:20px;
   height:20px;
   background-color:$color-brown;
-  border:3px solid $color-paper;
+  border:2px solid $color-paper;
   border-radius: 50%;
   position: absolute;
   margin-top:-10px;
@@ -95,6 +95,7 @@
 }
 
 .all-active {
+    opacity:1 !important;
   border-color: $color-red !important;
   box-shadow: 2px 4px 10px #A5A5A5;
   -webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
@@ -109,13 +110,20 @@
     max-width: 100%;
     width:100%;
   }
+
 }
 .activenode {
   @extend .all-active;
+  background-color: $color-red;
+  border-width: 4px;
+}
+.active-timeline{
+    margin-top:10vh;
 }
 .activecards {
   @extend .all-active;
-  width: 80vw;
+  max-width: 80vw;
+  width:80vw;
   .left-timeline{
       width:250px;
     max-width: 35%;
@@ -135,4 +143,11 @@
   .timeline_descp{
     max-height: 100%;;
   }
+}
+
+.top-10 {
+    margin-top:10vh;
+}
+.top-45 {
+    margin-top:45vh;
 }
