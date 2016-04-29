@@ -80,31 +80,25 @@ display: inline-block;
     url('../../source/font/yuweif.woff');
 }
 @font-face {
-  font-family: 'HanWangWCL06';
-  src: local('wcl06.otf'),
-  url('../../source/font/wcl06.otf') format('otf');
+  font-family: 'FZQKBYSJW';
+  src: local('FZQKBYSJW.TTF'),
+  url('../../source/font/FZQKBYSJW.TTF') format('TTF');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-   font-family: 'cwTeXFangSong';
-   src: local('cwTeXFangSong.ttf'),
-   url('@import url(../../source/font/wt024.ttf);');
-}
-
 h1, h2 {
-  font-family: 'titleFont', Helvetica, Arial, sans-serif;
+  font-family: 'FZQKBYSJW', Helvetica, Arial, sans-serif;
 }
 
 p,li{
-  font-family:'HanWangWCL06',times;
+  font-family:'FZQKBYSJW',times;
   font-weight:normal;
   font-size: 12pt;
 }
 
 h3, h4, h5 {
-    font-family:'HanWangWCL06',Helvetica;
+    font-family:'FZQKBYSJW',Helvetica;
     font-weight:700;
     font-size: 1.6em;
 }
