@@ -48,8 +48,8 @@ timer = setTimeout(displayLine,400);
           }
           }
           else if( right_of_window > right_of_object ){
-
               $(this).animate({'opacity':'1'},800);
+              $(".hideme-img").delay(1000).animate({'opacity':'1'},800);
           }
       });
   });

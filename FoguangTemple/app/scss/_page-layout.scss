@@ -80,28 +80,26 @@ display: inline-block;
     url('../../source/font/yuweif.woff');
 }
 @font-face {
-  font-family: 'FZQKBYSJW';
-  src: local('FZQKBYSJW.TTF'),
-  url('../../source/font/FZQKBYSJW.TTF') format('TTF');
-  font-weight: normal;
-  font-style: normal;
-}
+      font-family: 'chnFont1';
+      src: local("FZQKBYSJW.TTF"), url("../../source/font/FZQKBYSJW.TTF");
+    }
 
 h1, h2 {
-  font-family: 'FZQKBYSJW', Helvetica, Arial, sans-serif;
+  font-family: 'chnFont1', Helvetica, Arial, sans-serif;
 }
 
 p,li{
-  font-family:'FZQKBYSJW',times;
+  font-family:'chnFont1',times;
   font-weight:normal;
   font-size: 12pt;
 }
 
 h3, h4, h5 {
-    font-family:'FZQKBYSJW',Helvetica;
+    font-family:'chnFont1',Helvetica;
     font-weight:700;
     font-size: 1.6em;
 }
+
 /* all chapters introduction page */
 .main-intro{
     top:50%;
@@ -303,4 +301,9 @@ h4{
 	top: 0;
 	left: 0;
     z-index:999;
+}
+.red {
+    color:$color-red;
+    display: inline;
+    line-height: 34px;
 }
