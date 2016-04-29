@@ -48,8 +48,13 @@ a {
     font-family: 'contentFont';
     src: local("yuweif.woff"), url("../font/contentFont.woff"); }
 
+@font-face {
+      font-family: 'chnFont1';
+      src: local("FZQKBYSJW.TTF"), url("../font/FZQKBYSJW.TTF");
+    }
+
 h1, h2, h4 {
-  font-family: 'titleFont', Helvetica, Arial, sans-serif; }
+  font-family: 'chnFont1', Helvetica, Arial, sans-serif; }
 
 p {
   font-family: 'Arial',Helvetica; }
@@ -61,11 +66,11 @@ h3, h4, h5 {
   font-size: 1.5em; }
 
 button, btn {
-  font-family: 'titleFont', Helvetica, Arial, sans-serif;
+  font-family: 'chnFont1', Helvetica, Arial, sans-serif;
 }
 
 li {
-  font-family: 'HanWangWCL06',times;
+  font-family: 'chnFont1',times;
   font-weight: normal;
   font-size: 12pt; }
 
