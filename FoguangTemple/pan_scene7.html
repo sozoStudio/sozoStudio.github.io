@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>第三章 佛光寺 - 东大殿</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/pan_css.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/gallery.prefixed.css">
+		<link rel="stylesheet" href="css/gallery.theme.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
+	</head>
+	<body>
+		<div id="wrapper" class="toggled">
+
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper">
+						<ul class="sidebar-nav">
+								<li class="sidebar-brand">
+
+								</li>
+								<li>
+										<a href="/#/tab/timeline"><div class="chap-title">第一章</div></a>
+								</li>
+								<li>
+										<a href="/#/tab/chap2"><div class="chap-title">第二章</div></a>
+								</li>
+								<li>
+										<a href="/#/tab/chap3"><div class="chap-title">第三章</div></a>
+								</li>
+								<li>
+										<a href="pan_scene1.html"><div class="chap-title">第四章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">第五章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">地图</div></a>
+								</li>
+						</ul>
+				</div>
+				<!-- /#sidebar-wrapper -->
+
+				<!-- Page Content -->
+				<div id="page-content-wrapper">
+
+					<div id="container"></div>
+					<div id="info">
+			      <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">Change Controls</button>
+						<button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">Show/Hide Hotspots</button>
+					</div>
+					<div id="menu">
+						<button href="#menu-toggle" type="button" class="btn btn-info" id="menu-toggle" aria-label="Left Align">
+							<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div id="info2">
+						<button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">Play/Pause</button>
+					</div>
+
+					<div id="bgm_section">
+						<audio id="bgm1" loop>
+							<source src="audio/4/bgm_001.mp3" type="audio/mp3">
+							<source src="audio/4/bgm_001.ogg" type="audio/ogg">
+							<source src="audio/4/bgm_001.wav" type="audio/wav">
+						</audio>
+					</div>
+
+
+
+
+
+					<!--   Modals  -->
+
+
+					<!-- ================= Modal 4 for hotspot 2  ==================================================== -->
+					<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">唐大中经幢</h1>
+								</div>
+								<div class="modal-body" align="center">
+
+
+									<div id="modal4_img">
+										<video id="m4_vid" autoplay="" loop="" width="100%" controls="">
+											<source src="media/2.webm">
+										</video>
+									</div>
+
+
+									<div id="m4_text_holder" align="left">
+										<p>
+											 唐大中经幢立于东大殿正前，青石质，高3.24米，权衡秀美。最下方为方形土衬石，
+											 其上为八角形幢座，座束腰镌刻壶门，内雕蹲狮，上承仰覆莲座，座上立八角形幢身，
+											 正面向西，刻题名：“奉为国及法界众生造佛顶陀罗尼幢”。内容刻《佛顶尊胜陀罗尼经》，
+											 以及立幢人和年代。
+										</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m4_pre" onclick="m4_buttons_pre()" hidden="">Previous</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        		<button type="button" class="btn btn-warning" id="m4_next" onclick="m4_buttons_next()">Next</button>								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 4 ========================================================= -->
+				</div>
+				<!-- /#page-content-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+
+		<script src="js/three.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/SSUhtml5Audio.js"></script>
+		<script src="js/threex.domevents_hacked.js"></script>
+
+    <script src="js/DeviceOrientationControls.js"></script>
+    <script src="js/OrbitControlsHacked.js"></script>
+
+		<script src="js/scene7/threejs_objs.js"></script>
+		<script src="js/scene7/modal_events.js"></script>
+		<script>
+		$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+		});
+
+		$(".modal-transparent").on('show.bs.modal', function () {
+  			setTimeout( function() {
+    		$(".modal-backdrop").addClass("modal-backdrop-transparent");
+		  }, 0);
+		});
+
+		$(".modal-transparent").on('hidden.bs.modal', function () {
+		  $(".modal-backdrop").addClass("modal-backdrop-transparent");
+		});
+
+		$(".modal-fullscreen").on('show.bs.modal', function () {
+		  setTimeout( function() {
+		    $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+		  }, 0);
+		});
+
+		$(".modal-fullscreen").on('hidden.bs.modal', function () {
+		  $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+		});
+		</script>
+	</body>
+</html>
