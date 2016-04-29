@@ -108,6 +108,18 @@
 				hotspots.push(hotspot2);
 				scene.add(hotspot2);
 
+				//-------------------------
+				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
+				material.opacity = 0.7;
+
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
+				var hotspot1 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				hotspot1.position.set(-400, 0, -100);
+				hotspot1.name = "hotspot1";
+
+				hotspots.push(hotspot1);
+				scene.add(hotspot1);
+
 
 
 
@@ -117,27 +129,7 @@
 
 
 		//------------ To other panos ------------------------------------------------------------
-				// var door;
-				// var geometry = new THREE.PlaneGeometry( 60, 100, 32 );
-				// var material = new THREE.MeshBasicMaterial( {color: 0xffffff, side: THREE.DoubleSide} );
-				// material.transparent = true; material.opacity = 0.5;
-				// var door = new THREE.Mesh( geometry, material );
-				//
-				// door.position.set(90, 30, 400);
-				// door.rotation.y = 15*Math.PI/180;
-				// scene.add( door );
-				//
-				// //-----------------------------------------------------
-				//
-				// var door_right;
-				// var geometry = new THREE.PlaneGeometry( 60, 100, 32 );
-				// var material = new THREE.MeshBasicMaterial( {color: 0xffffff, side: THREE.DoubleSide} );
-				// material.transparent = true; material.opacity = 0.5;
-				// var door_right = new THREE.Mesh( geometry, material );
-				//
-				// door_right.position.set(-120, 30, -400);
-				// door_right.rotation.y = 15*Math.PI/180;
-				// scene.add( door_right );
+
 
 				//------------------------------------------------------
 
@@ -152,14 +144,7 @@
 				//tele_left.position.set(-380, -130, 80);
 				//tele_left.position.set(70, -150, 400);
 				tele_left.position.set(-50, -130, -200);
-
-
 				scene.add(tele_left);
-
-
-
-
-
 
 
 		//--------------- End of teleporting spots -----------------------------------------------
@@ -188,20 +173,29 @@
 				//dom events
 			domEvents = new THREEx.DomEvents(camera, renderer.domElement);
 
-
-
-
-				domEvents.addEventListener(hotspot2, 'click', function(event){
+			domEvents.addEventListener(hotspot2, 'click', function(event){
 						$('#modal4').modal('toggle');
-					}, false);
+			}, false);
 
-					domEvents.addEventListener(hotspot2, 'mouseover', function(event){
+			domEvents.addEventListener(hotspot2, 'mouseover', function(event){
 						hotspot2.material.opacity = 1;
-					});
+			});
 
-					domEvents.addEventListener(hotspot2, 'mouseout', function(event){
+			domEvents.addEventListener(hotspot2, 'mouseout', function(event){
 						hotspot2.material.opacity = 0.7;
-					});
+			});
+
+			domEvents.addEventListener(hotspot1, 'click', function(event){
+						$('#modal1').modal('toggle');
+			}, false);
+
+			domEvents.addEventListener(hotspot1, 'mouseover', function(event){
+						hotspot1.material.opacity = 1;
+			});
+
+			domEvents.addEventListener(hotspot1, 'mouseout', function(event){
+						hotspot1.material.opacity = 0.7;
+			});
 
 
 

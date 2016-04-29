@@ -4,7 +4,7 @@ var bgm = document.getElementById('bgm1');
 var m4_count = 0;
 var m4_pre = document.getElementById('m4_pre');
 var m4_next = document.getElementById('m4_next');
-
+var m1_count = 0;
 $(document).ready(function(){
   //var audio = document.getElementById('bgm1');
   bgm.play();
@@ -47,6 +47,7 @@ function m4_buttons_next(){
 
 $('#modal4').on('shown.bs.modal', function(e){
   //init modal
+  bgm.pause();
   $('div#m4_text_holder').html("<p>唐大中经幢立于东大殿正前，青石质，高3.24米，权衡秀美。最下方为方形土衬石，其上为八角形幢座，座束腰镌刻壶门，内雕蹲狮，上承仰覆莲座，座上立八角形幢身，正面向西，刻题名：“奉为国及法界众生造佛顶陀罗尼幢”。内容刻《佛顶尊胜陀罗尼经》，以及立幢人和年代。</p>");
   m4_count=0;
   var video = document.getElementById('m4_vid');
@@ -54,6 +55,68 @@ $('#modal4').on('shown.bs.modal', function(e){
 });
 
 $('#modal4').on('hide.bs.modal', function(e){
+  bgm.play();
 
+});
+
+$('#modal1').on('shown.bs.modal', function(e){
+  //init modal
+  bgm.pause();
+
+  var m1_bgm = document.getElementById("m1_bgm");
+  var audio1 = document.getElementById("audio1");
+  var video = document.getElementById("m1_vid");
+  video.play();
+
+  var isSupp0 = audio1.canPlayType("audio/mpeg");
+  var isSupp1 = audio1.canPlayType("audio/wav");
+  var isBgmSupp0 = m1_bgm.canPlayType("audio/mpeg");
+  var isBgmSupp1 = m1_bgm.canPlayType("audio/wav");
+
+
+
+  //init audio + bgm
+  if (m1_count == 0) {
+
+
+    if (isSupp0 === "") {
+      if (isSupp1 === "") {
+        audio1.src="audio/scene3/s1/m1_1.ogg";
+      }else {
+        audio1.src="audio/scene3/s1/m1_1.wav";
+      }
+    }else {
+      audio1.src="audio/scene3/s1/m1_1.mp3";
+    }
+
+    if (isBgmSupp0 === "") {
+      if (isBgmSupp1 === "") {
+        m1_bgm.src="audio/scene3/s1/m1_bgm.ogg";
+      }else {
+        m1_bgm.src="audio/scene3/s1/m1_bgm.wav";
+      }
+    }else {
+      m1_bgm.src="audio/scene3/s1/m1_bgm.mp3";
+    }
+  }
+
+    audio1.load();
+    audio1.play();
+    m1_bgm.load();
+    m1_bgm.play();
+
+
+
+});
+
+$('#modal1').on('hide.bs.modal', function(e){
+  var bgm1 = document.getElementById("m1_bgm");
+  bgm1.pause();
+  var audio1 = document.getElementById("audio1");
+  audio1.pause();
+  var video = document.getElementById("m1_vid");
+  video.pause();
+
+  bgm.play();
 
 });
