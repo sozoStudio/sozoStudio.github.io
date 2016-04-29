@@ -60,19 +60,6 @@ $( document ).ready(function() {
     // // $("h1, h2, p").addClass("blue");
     //  $("div").css("border","3px solid red");
 
-    $(function(){
-      $('.audio-player').mediaelementplayer({
-        alwaysShowControls: true,
-        features: ['playpause','progress','volume'],
-        audioVolume: 'horizontal',
-        audioWidth: 150,
-        audioHeight: 70,
-        iPadUseNativeControls: true,
-        iPhoneUseNativeControls: true,
-        AndroidUseNativeControls: true
-      });
-    });
-
 //jquery mouse horizontal scroll
   (function() {
   function scrollHorizontally(e) {

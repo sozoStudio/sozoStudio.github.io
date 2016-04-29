@@ -820,14 +820,21 @@ video#bgvid {
 
 .activenode {
   background-color: #9D2932;
-  border-width: 4px; }
+  width: 24px;
+  height: 24px; }
 
 .active-timeline {
-  margin-top: 10vh; }
+  margin-top: 10vh;
+  height: 70vh;
+  max-height: 90vh;
+  max-width: 80vw;
+  width: auto; }
 
 .activecards {
+  height: 70vh;
+  max-height: 90vh;
   max-width: 80vw;
-  width: 80vw; }
+  width: auto; }
   .activecards .left-timeline {
     width: 250px;
     max-width: 35%;
@@ -852,12 +859,12 @@ video#bgvid {
   margin-top: 45vh; }
 
 .scroll-page {
-  width: auto;
+  width: 5000px;
   overflow-x: visible; }
 
 .scroll-list {
   margin-left: 150px;
-  margin-top: 0px; }
+  margin-top: -60px; }
 
 .scroll-each {
   max-width: 450px;

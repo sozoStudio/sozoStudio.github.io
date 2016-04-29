@@ -1,0 +1,100 @@
+<section class="scroll-page">
+    <button id="chap2_start" onclick="playAudio(0)">开始介绍</button>
+      <div class ="scene-title">
+            <div id="titlebox-top"><img src="img/UI/titlebox-top.png"></div>
+            <div class ="scene-title-box title">
+              <h4 style="margin-top:9px;">第二章</h4>
+              <h2 class="scene-title-lgword" style="font-size:1.9em;margin-top:-15px;">梁思成｜發現佛光寺</h2>
+          </div>
+          <div id="titlebox-bottom"><img src="img/UI/titlebox-bottom.png"></div>
+      </div>
+
+  <ul class="scroll-list fade-in content">
+      <li class ="hori-scroll scene-sub-title fade-in">
+          <div class="sub-title-line"></div>
+           <h1>營造學社成立背景</h1>
+      </li>
+      <div class="scroll-each hori-scroll hideme">
+          <audio controls id="audio_0" onended="playAudio(1)">
+              <source src="media/scene2/audio/001.mp3"></source>
+          </audio>
+          <div class="paragraph">
+            <p> 佛光寺东大殿是我国古建筑类文化遗产最珍贵的一处，
+              其自身的文物价值与其传奇的发现过程，对推动中国建筑
+              史学的发展具有重大意义。中国建筑史学开端，发轫
+        <br><b>于一本书：《营造法式》，<br>
+          一个机构：中国营造学社，<br>一位学者：梁思成</b>。</p></div>
+ </div>
+    <li class="scroll-each hori-scroll hideme">
+        <div class="left-chapscroll">
+            <audio controls class="narration" id="audio_1" onended="playAudio(1)">
+                <source src=""></source>
+            </audio>
+            <h2>一本书</h2>
+                <p> 《营造法式》是宋崇宁二年，由北宋官方颁布的一部建筑设计、施工的规范书，是时任将作监的李诫奉敕修编的。李诫在两浙工匠喻皓所著《木经》的基础上进行编纂，成书于元符三年。《营造法式》是我国古代最完整的建筑技术书籍，标志着中国古代建筑已经发展到了较为成熟的阶段.</p>
+            </div>
+            <div class="scroll-img">
+                <img class="scene-img" src ="dist/img/scene/scene2/图4.jpg"></img>
+                <img class="scene-img" src ="dist/img/scene/scene2/图5.jpg"></img>
+                <img class="scene-img" src ="dist/img/scene/scene2/图6.jpg"></img>
+                <img class="scene-img" src ="dist/img/scene/scene2/图7.jpg"></img>
+            </div>
+
+    </li>
+    <a href ="#/tab/chap3">
+    <div class="next-chap">
+        <ul>
+        <li><p>下一章</p>
+        <h4>環繞東大殿</h4></li>
+        <li><div class="arrow-right"></div></li>
+    </ul>
+</div></a>
+  </ul>
+</section>
+<script>
+var count = 0;
+var audios = new Array();
+audios = document.getElementsByTagName('audio');
+
+function playAudio(direction){
+  console.log("play audio function called!");
+  //this is the function that handles autoplay
+  var nextAudio, currentAudio, previousAudio;
+
+  currentAudio = document.getElementById('audio_' + count);
+
+  if (count<16) {
+    nextAudio = document.getElementById('audio_' + (count + 1));
+  }
+  if (count>0) {
+    previousAudio = document.getElementById('audio_' + (count - 1));
+  }
+
+  if (direction>0) {
+    for (var i = 0; i < audios.length; i++) {
+      if (i != (count+1) && i!=16) {
+        audios[i].pause();
+      }
+    }
+    nextAudio.load();nextAudio.play();
+  }else {
+    for (var i = 0; i < audios.length; i++) {
+      if (i != (count-1)&&i!=16) {
+        audios[i].pause();
+      }
+    }
+    previousAudio.load();previousAudio.play();
+  }
+  if (count < 15) {
+    count++;
+  }else {
+    count = 0;
+  }
+
+
+}
+
+</script>
+
+  </div>
+</div>

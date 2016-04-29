@@ -115,17 +115,25 @@
 .activenode {
   @extend .all-active;
   background-color: $color-red;
-  border-width: 4px;
+  width:24px;
+  height:24px;
 }
 .active-timeline{
     margin-top:10vh;
+    height:70vh;
+    max-height:90vh;
+    max-width: 80vw;
+    width:auto;
 }
 .activecards {
   @extend .all-active;
+  height:70vh;
+  max-height:90vh;
   max-width: 80vw;
-  width:80vw;
+  width:auto;
+
   .left-timeline{
-      width:250px;
+     width:250px;
     max-width: 35%;
     width:35%;
     display: inline-block;

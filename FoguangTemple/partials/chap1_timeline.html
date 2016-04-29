@@ -69,24 +69,25 @@ function playAudio(direction){
 
 function moveup() {
     var nodeactive = $('.timeline-node').css('border-width');
-    nodeactive = parseInt(nodeactive);
-    console.log(nodeactive);
-    if ($(nodeactive) < "3") {
-        $('.timeline-line').removeClass('top-10');
-        ('.timeline-line').addClass('top-45');
-        console.log('remove');
-        nodeactive = 0;
-    }
 
-    else if ($(nodeactive) > "3"){
-        $('.timeline-line').addClass('top-10');
-        console.log('add');
-        nodeactive = 0;
-    }
+    var eachnode = $('.timeline-node').each(function(){
+        var vwidth =$('.timeline-node').width();
+        if (vwidth > 21) {
+            $('.timeline-line').removeClass('top-10');
+            $('.timeline-line').addClass('top-45');
+            console.log('remove');
+            nodeactive = 0;
+        }
 
-    else {
-        console.log('sdfsdf');
-    }
+        else if (vwidth < 21){
+            $('.timeline-line').addClass('top-10');
+            console.log('add');
+            nodeactive = 0;
+        }
+    });
+console.log($(eachnode).width());
+
+
 }
 
 </script>

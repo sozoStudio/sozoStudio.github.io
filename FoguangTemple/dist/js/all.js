@@ -37,9 +37,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 //chapter 2
   .state('tab.chap2', {
     url:'/chap2',
-        templateUrl:'partials/chap2_scroll.html',
-        controller:'Chap2Controller'
-
+        templateUrl:'partials/chap2_second.html',
   })
   //chapter 3
     .state('tab.chap3', {
