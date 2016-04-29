@@ -102,7 +102,7 @@
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
 				var hotspot2 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
-				hotspot2.position.set(-400, 140, 180);
+				hotspot2.position.set(400, 140, -100);
 				hotspot2.name = "hotspot2";
 
 				hotspots.push(hotspot2);
@@ -146,12 +146,12 @@
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
 				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
 				tele_left.rotation.x = -90 * Math.PI/180;
-				//tele_left.rotation.z = 80 * Math.PI/180;
+				tele_left.rotation.z = 70 * Math.PI/180;
 
 				//tele_left.position.set(50, -150, 350);
 				//tele_left.position.set(-380, -130, 80);
 				//tele_left.position.set(70, -150, 400);
-				tele_left.position.set(-50, -130, -200);
+				tele_left.position.set(-300, -130, 0);
 
 
 				scene.add(tele_left);
