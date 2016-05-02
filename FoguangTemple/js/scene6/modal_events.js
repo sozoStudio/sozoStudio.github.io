@@ -7,7 +7,7 @@ var m4_next = document.getElementById('m4_next');
 var m1_count = 0;
 $(document).ready(function(){
   //var audio = document.getElementById('bgm1');
-  bgm.play();
+  //bgm.play();
 
 
 });
@@ -59,64 +59,27 @@ $('#modal4').on('hide.bs.modal', function(e){
 
 });
 
-$('#modal1').on('shown.bs.modal', function(e){
-  //init modal
-  bgm.pause();
-
-  var m1_bgm = document.getElementById("m1_bgm");
-  var audio1 = document.getElementById("audio1");
-  var video = document.getElementById("m1_vid");
+$('#modal3').on('shown.bs.modal', function(e){
+  var video = document.getElementById('modal3_video');
+  video.load();
   video.play();
-
-  var isSupp0 = audio1.canPlayType("audio/mpeg");
-  var isSupp1 = audio1.canPlayType("audio/wav");
-  var isBgmSupp0 = m1_bgm.canPlayType("audio/mpeg");
-  var isBgmSupp1 = m1_bgm.canPlayType("audio/wav");
-
-
-
-  //init audio + bgm
-  if (m1_count == 0) {
-
-
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/scene3/s1/m1_1.ogg";
-      }else {
-        audio1.src="audio/scene3/s1/m1_1.wav";
-      }
-    }else {
-      audio1.src="audio/scene3/s1/m1_1.mp3";
-    }
-
-    if (isBgmSupp0 === "") {
-      if (isBgmSupp1 === "") {
-        m1_bgm.src="audio/scene3/s1/m1_bgm.ogg";
-      }else {
-        m1_bgm.src="audio/scene3/s1/m1_bgm.wav";
-      }
-    }else {
-      m1_bgm.src="audio/scene3/s1/m1_bgm.mp3";
-    }
-  }
-
-    audio1.load();
-    audio1.play();
-    m1_bgm.load();
-    m1_bgm.play();
-
-
+  var audio = document.getElementById('m3_audio');
+  audio.load();
+  audio.play();
+  var bgm3 = document.getElementById('m3_bgm');
+  bgm3.load();
+  bgm3.play();
+  bgm.pause();
 
 });
 
-$('#modal1').on('hide.bs.modal', function(e){
-  var bgm1 = document.getElementById("m1_bgm");
-  bgm1.pause();
-  var audio1 = document.getElementById("audio1");
-  audio1.pause();
-  var video = document.getElementById("m1_vid");
+$('#modal3').on('hide.bs.modal', function(e){
+  var video = document.getElementById('modal3_video');
   video.pause();
-
+  var audio = document.getElementById('m3_audio');
+  audio.pause();
+  var bgm3 = document.getElementById('m3_bgm');
+  bgm3.pause();
   bgm.play();
 
 });

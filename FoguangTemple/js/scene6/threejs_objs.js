@@ -113,12 +113,12 @@
 				material.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot1 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
-				hotspot1.position.set(-400, 0, -100);
-				hotspot1.name = "hotspot1";
+				var hotspot3 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				hotspot3.position.set(-400, 0, -100);
+				hotspot3.name = "hotspot3";
 
-				hotspots.push(hotspot1);
-				scene.add(hotspot1);
+				hotspots.push(hotspot3);
+				scene.add(hotspot3);
 
 
 
@@ -175,6 +175,7 @@
 
 			domEvents.addEventListener(hotspot2, 'click', function(event){
 						$('#modal4').modal('toggle');
+						console.log("modal 4 toggle function called");
 			}, false);
 
 			domEvents.addEventListener(hotspot2, 'mouseover', function(event){
@@ -185,16 +186,16 @@
 						hotspot2.material.opacity = 0.7;
 			});
 
-			domEvents.addEventListener(hotspot1, 'click', function(event){
-						$('#modal1').modal('toggle');
+			domEvents.addEventListener(hotspot3, 'click', function(event){
+						$('#modal3').modal('toggle');
 			}, false);
 
-			domEvents.addEventListener(hotspot1, 'mouseover', function(event){
-						hotspot1.material.opacity = 1;
+			domEvents.addEventListener(hotspot3, 'mouseover', function(event){
+						hotspot3.material.opacity = 1;
 			});
 
-			domEvents.addEventListener(hotspot1, 'mouseout', function(event){
-						hotspot1.material.opacity = 0.7;
+			domEvents.addEventListener(hotspot3, 'mouseout', function(event){
+						hotspot3.material.opacity = 0.7;
 			});
 
 
