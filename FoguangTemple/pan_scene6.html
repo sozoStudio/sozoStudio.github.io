@@ -74,53 +74,84 @@
 
 					<!--   Modals  -->
 
-					<!-- ================= Modal 1 for hotspot 1  ==================================================== -->
-					<!-- <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<!-- ================= Modal 1 for hotspot 1 ==================================================== -->
+					<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h1 class="modal-title" id="myModalLabel">东大殿概述</h1>
+									<h1 class="modal-title" id="myModalLabel">东大殿形制概述</h1>
 								</div>
-								<div class="modal-body" align="center"> -->
-									<!-- <div id="m1_bgm_section">
+								<div class="modal-body" align="center">
+
+									<div id="modal1_img" class="gallery autoplay items-4">
+										<div id="item-1" class="control-operator"></div>
+										<div id="item-2" class="control-operator"></div>
+										<div id="item-3" class="control-operator"></div>
+										<div id="item-4" class="control-operator"></div>
+
+										<figure class="item">
+											<img src="img/scene3_1/001nanchan.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/002tiantai.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/003renwang.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/004EH.jpg" height="400px">
+										</figure>
+
+										<div class="controls">
+											<a href="#item-1" class="control-button">•</a>
+											<a href="#item-2" class="control-button">•</a>
+											<a href="#item-3" class="control-button">•</a>
+											<a href="#item-4" class="control-button">•</a>
+										</div>
+
+									</div>
+
+									<div id="m1_bgm_section">
 										<audio id="m1_bgm">
-											<source src="audio/scene3/s1/m1_bgm.mp3" type="audio/mp3">
-											<source src="audio/scene3/s1/m1_bgm.ogg" type="audio/ogg">
-											<source src="audio/scene3/s1/m1_bgm.wav" type="audio/wav">
+											<source src="audio/scene3/s1/tm1_bgm1.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/tm1_bgm1.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/tm1_bgm1.wav" type="audio/wav">
 										</audio>
-									</div> -->
+									</div>
 
-
-									<!-- <div id="modal1_img">
-										<video id="m1_vid" autoplay="" width="100%" controls="">
-											<source src="media/scene3_intro.webm">
-										</video>
-									</div> -->
-
-									<!-- <div id="modal1_audio">
+									<div id="audio1_placeholder">
 										<audio id="audio1" controls="controls">
-											<source src="audio/scene3/s1/m1_1.mp3" type="audio/mp3">
-											<source src="audio/scene3/s1/m1_1.ogg" type="audio/ogg">
-											<source src="audio/scene3/s1/m1_1.wav" type="audio/wav">
+											<source src="audio/scene3/s1/tm1_1.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/tm1_1.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/tm1_1.wav" type="audio/wav">
 										</audio>
-									</div> -->
+									</div>
+
+									<br>
 
 
-									<!-- <div id="m1_text_holder" align="left">
-										<p>
-											 佛光寺位于五台山台外南麓佛光山中。寺院坐东面西，建筑分布在由西向东逐层升高的三层台地上。</p>
-											 <p>东大殿矗立于东端的寺院制高点，向西俯瞰一马平川，视野非常开阔。东大殿殿前有经幢一座，刻工精美，
-												 与大殿同时建造，背后紧邻山崖，东南侧为北齐祖师塔。
-										</p>
+
+									<div id="m1_text_holder" align="left">
+										<p>佛光寺东大殿的建筑的绝大多数构件为唐代遗构，构件表面仍保留有唐代的丹粉
+											刷饰彩画，东大殿内还保存有与建筑同时期的塑像、壁画、题记，以及从唐代至
+											今一千多年，历次维修改造碑刻题记、重装补塑的塑像壁画，真实完整的显现出东大殿
+											在历史长河中的变迁。因此，佛光寺东大殿是东亚文化体系中，最具代表性的
+											木结构古建筑，在全世界都具有极高的文化价值与代表意义。</p>
 									</div>
 								</div>
 								<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m1_pre" hidden="" onclick="m1_buttons_pre()">Previous</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-warning" id="m1_next" onclick="m1_button_next()">Next</button>      		</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
 					<!-- ================= End of Modal 1 ========================================================= -->
+
 
 					<!-- ================= Modal 3 for hotspot 1 ==================================================== -->
 					<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

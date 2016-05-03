@@ -120,6 +120,18 @@
 				hotspots.push(hotspot3);
 				scene.add(hotspot3);
 
+				//-------------------------
+				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
+				material.opacity = 0.7;
+
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
+				var hotspot1 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				hotspot1.position.set(-400, 100, -100);
+				hotspot1.name = "hotspot1";
+
+				hotspots.push(hotspot1);
+				scene.add(hotspot1);
+
 
 
 
@@ -172,6 +184,18 @@
 //----------------------------------------------------------------------------------------
 				//dom events
 			domEvents = new THREEx.DomEvents(camera, renderer.domElement);
+
+			domEvents.addEventListener(hotspot1, 'click', function(event){
+						$('#modal1').modal('toggle');
+			}, false);
+
+			domEvents.addEventListener(hotspot1, 'mouseover', function(event){
+						hotspot1.material.opacity = 1;
+			});
+
+			domEvents.addEventListener(hotspot1, 'mouseout', function(event){
+						hotspot1.material.opacity = 0.7;
+			});
 
 			domEvents.addEventListener(hotspot2, 'click', function(event){
 						$('#modal4').modal('toggle');
