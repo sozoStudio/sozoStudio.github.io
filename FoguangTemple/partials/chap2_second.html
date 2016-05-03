@@ -1,10 +1,10 @@
-<section class="scroll-page">
+<section class="scroll-page" id="texture">
     <button id="chap2_start" onclick="playAudio(0)">开始介绍</button>
       <div class ="scene-title">
             <div id="titlebox-top"><img src="img/UI/titlebox-top.png"></div>
             <div class ="scene-title-box title">
               <h4 style="margin-top:9px;">第二章</h4>
-              <h2 class="scene-title-lgword" style="font-size:1.9em;margin-top:-15px;">梁思成｜發現佛光寺</h2>
+              <h2 class="scene-title-lgword" style="font-size:1.9em;margin-top:-15px;">梁思成｜发现佛光寺</h2>
           </div>
           <div id="titlebox-bottom"><img src="img/UI/titlebox-bottom.png"></div>
       </div>
@@ -12,7 +12,7 @@
   <ul class="scroll-list fade-in content">
       <li class ="hori-scroll scene-sub-title fade-in">
           <div class="sub-title-line"></div>
-           <h1>營造學社成立背景</h1>
+           <h1>营造学社成立背景</h1>
       </li>
       <!-- the first paragraph -->
       <div class="scroll-each hori-scroll hideme">
@@ -86,7 +86,7 @@
          <h2>一位学者</h2>
              <p> 19世纪末20世纪初，由于西方文化的涌入，中国的传统文化体系受到了巨大的冲击。梁思成先生就成长于这样的历史环境下，其父亲——著名学者梁启超先生，正是那一代探索中国文化发展的学者代表。梁启超先生始终坚持“中学为体，西学为用”，强调中西文化的融会贯通。</p>
          </div>
-          <img class="scene-anime hideme-img" src ="dist/img/scene/scene2/图16.梁启超.png"></img>
+          <img class="scene-anime delay-show" src ="dist/img/scene/scene2/图16.梁启超.png"></img>
           <img class="scene-img" src ="dist/img/scene/scene2/图17.“中学为体，西学为用”合同.jpg"></img>
 
  </li>
@@ -158,17 +158,18 @@
           <p> 蓟县独乐寺、正定隆兴寺、大同华严寺、善化寺、应县木塔都是辽宋时期的木构建筑，价值都很高，每次调查都让这些学者们兴奋不已，但这些都和唐代建筑有一点距离。梁思成先生和他的同事们已经做好了充分的准备工作，距离他们梦寐以求的唐代建筑，仅仅欠缺一点运气和一个机缘.</p>
        </div>
   </li>
-
+<img class="scene-anime hideme mrLiang1" src ="dist/img/scene/scene2/梁先生.png"></img>
 <!--- ++++++++++++++++++++++++++++++++++ number 8 ++++++++++++++++++++++++++++++++++++++++++++  -->
- <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0);color:white;text-shadow:0px 0px 5px rgba(0, 0, 0, 1);">
+ <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0);color:white;text-shadow:0px 0px 5px rgba(0, 0, 0, 1); margin-left:500px;">
      <div class="left-chapscroll">
-         <audio controls class="narration" id="audio_1" onended="playAudio(1)">
-             <source src="media/scene2/audio/010.mp3"></source>
-         </audio>
              <p> 1926年，法国学者伯希和出版一书<div style="color:yellow;">《敦煌石窟》（Les GrottesDeTouen-houang），</div></p><p>其61窟有一幅五代时期绘制的五台山全景壁画，这是一幅绘有五台山自然地理和佛教寺院、瑞相灵迹的佛画，其中寺庙林立、宝塔穿云。</p>
+
          </div>
-            <img style="width:100vw; height:100vh; position:absolute; opacity:0.8; top:0; margin-left:-5%; z-index:-1;" src ="dist/img/scene/scene2/图31.敦煌61窟壁画局部.jpg"></img>
-        </div>
+           <img id="my-svg" class="scene-anime delay-show" src ="img/UI/temple-brush.svg"></img>
+            <img style="width:auto; height:100vh; position:absolute; opacity:0.8; top:0; margin-left:-135px; z-index:-1;" src ="dist/img/scene/scene2/图31.敦煌61窟壁画局部.png"></img>
+            <audio style="margin-top:45vh;" controls class="narration" id="audio_1" onended="playAudio(1)">
+                <source src="media/scene2/audio/010.mp3"></source>
+            </audio>
  </li>
  <!--- ++++++++++++++++++++++++++++++++++ number 9 ++++++++++++++++++++++++++++++++++++++++++++  -->
     <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.7); margin-left:400px;">
@@ -187,21 +188,13 @@
            <audio controls class="narration" id="audio_1" onended="playAudio(1)">
                <source src="media/scene2/audio/008.mp3"></source>
            </audio>
-           <h2>中国古建筑考察历程</h2>
-               <p> 1931年，日本帝国主义分子悍然发动震惊中外的九一八事变。日本人除了军事上的侵略，在文化上更妄图以汉学正统自居。当时日本学者甚至宣称：中国已经没有了唐代木构建筑，唐代木构建筑都保存在日本奈良。这种狂妄自大的态度，深深刺痛了梁思成先生这一辈学者。梁先生抱着在祖国辽阔的土地上一定还留存有唐代木构遗存的坚强信念，展开了调查研究工作。</p>
+       <p> 台外的情形，就与台内很不相同了。因为地占外围，寺刹散远，交通不便，所以祈福进香的人，足迹很少到台外。因为香火冷落，寺僧贫苦，所以修装困难，就比较有利于古建筑之保存。</p>
            </div>
-           <div class="image-container scroll-img">
-               <div id="slider">
-                   <figure>
-                      <img class="scene-img" src ="dist/img/scene/scene2/图4.jpg"></img>
-                      <img class="scene-img" src ="dist/img/scene/scene2/图5.jpg"></img>
-                      <img class="scene-img" src ="dist/img/scene/scene2/图6.jpg"></img>
-                      <img class="scene-img" src ="dist/img/scene/scene2/图8.jpg"></img>
-                      <img class="scene-img" src ="dist/img/scene/scene2/图9.jpg"></img>
-                      <img class="scene-img" src ="dist/img/scene/scene2/图10.jpg"></img>
-                  </figure>
-              </div>
-          </div>
+
+                      <img class="scene-img" src ="dist/img/scene/scene2/图33.梁思成老照片.jpg"></img>
+
+
+
    </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 11 ++++++++++++++++++++++++++++++++++++++++++++  -->
   <li class="scroll-each hori-scroll hideme">

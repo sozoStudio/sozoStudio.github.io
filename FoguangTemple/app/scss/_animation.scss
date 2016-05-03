@@ -2,7 +2,9 @@
 {
   opacity: 0;
 }
-
+.delay-show{
+    opacity:0.1;
+}
 .hideme:first-child {
   opacity:1;
 }

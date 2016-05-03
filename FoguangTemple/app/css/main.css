@@ -115,7 +115,7 @@ a {
 h1, h2 {
   font-family: 'chnFont1', Helvetica, Arial, sans-serif; }
 
-p, li {
+p, li, button {
   font-family: 'chnFont1',times;
   font-weight: normal;
   font-size: 12pt; }
@@ -953,10 +953,7 @@ video#bgvid {
   width: auto;
   position: absolute;
   z-index: 9999;
-  margin-left: 20%;
-  -webkit-transition-delay: 0.6s;
-  /* Safari */
-  transition-delay: 0.6s; }
+  margin-left: 200px; }
 
 .scene-within {
   width: 100%;
@@ -997,8 +994,17 @@ video#bgvid {
   width: 33%;
   padding: 0px 20px 0px 20px; }
 
+.mrLiang1 {
+  height: 90vh;
+  width: auto;
+  bottom: 0;
+  margin-left: -100px; }
+
 .hideme {
   opacity: 0; }
+
+.delay-show {
+  opacity: 0.1; }
 
 .hideme:first-child {
   opacity: 1; }

@@ -25,6 +25,10 @@ timer = setTimeout(displayLine,400);
           /* If the object is completely visible in the window, fade it it */
           if(right_of_object < right_of_window){
             $(this).animate({'opacity':'1'},500);
+            setTimeout(function(){
+             $(".delay-show").animate({'opacity':'0.9'},2000);
+         }, 2000);
+
             setTimeout(
               function()
               {$('.timeline-img').fadeIn(500);
@@ -49,7 +53,6 @@ timer = setTimeout(displayLine,400);
           }
           else if( right_of_window > right_of_object ){
               $(this).animate({'opacity':'1'},800);
-              $(".hideme-img").delay(1000).animate({'opacity':'1'},800);
           }
       });
   });
