@@ -47,14 +47,18 @@ function m4_buttons_next(){
 
 $('#modal4').on('shown.bs.modal', function(e){
   //init modal
+  bgm.pause();
   $('div#m4_text_holder').html("<p> 祖师塔位于东大殿左后方，为双层六角形砖塔，通高8米。形制较罕见，实物在国内为孤例，在敦煌壁画中有类似的塔型。推测为北朝时期所建。</p>"+
   "<p>塔下层内部做六角形小室，西面开一道券门，下层塔身平素无装饰，券门上做火焰型券面，塔身上部出叠涩，构成第一层檐部。一层檐顶部上做须弥座式的平座，以承托上层塔身。</p>");
   m4_count=0;
   //var video = document.getElementById('m4_vid');
   //video.onended = test();
+  var bgm4 = document.getElementById("m4_bgm");
+  bgm4.load();bgm4.play();
 });
 
 $('#modal4').on('hide.bs.modal', function(e){
-
-
+  var bgm4 = document.getElementById("m4_bgm");
+  bgm4.pause();
+  bgm.play();
 });

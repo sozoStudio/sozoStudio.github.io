@@ -68,6 +68,30 @@
 						</audio>
 					</div>
 
+					<div id="lsc-avatar" onclick="testAvatar()">
+						<img src="img/scene3_1/lsc2.png">
+					</div>
+
+					<div id="lsc-sp-bubble" hidden="hidden">
+						<audio id="lsc_bgm">
+							<source src="audio/scene3/s1/lsc_bgm.mp3" type="audio/mp3">
+							<source src="audio/scene3/s1/lsc_bgm.ogg" type="audio/ogg">
+							<source src="audio/scene3/s1/lsc_bgm.wav" type="audio/wav">
+						</audio>
+						<audio id="lsc_nar" onended="lsc_end()">
+							<source src="audio/scene3/s1/lsc.mp3" type="audio/mp3">
+							<source src="audio/scene3/s1/lsc.ogg" type="audio/ogg">
+							<source src="audio/scene3/s1/lsc.wav" type="audio/wav">
+						</audio>
+					</div>
+
+					<div id="speech" hidden="hidden">
+						<p>佛光寺一寺之中，寥寥几座殿塔，几乎全是国内建筑的孤例：
+							佛殿建筑物，本身已经是一座唐构，乃更在殿内蕴藏着唐代原有塑像、绘画和墨迹，
+							四种艺术萃聚在一处，在实物遗迹中诚然是件奇珍。</p>
+							<p>佛光寺东大殿不但是国内古建筑之第一瑰宝，也是我国封建文化遗产中最可珍贵的一件东西。</p>
+					</div>
+
 
 
 
@@ -153,7 +177,7 @@
 					<!-- ================= End of Modal 1 ========================================================= -->
 
 
-					<!-- ================= Modal 3 for hotspot 1 ==================================================== -->
+					<!-- ================= Modal 3 for hotspot 3 ==================================================== -->
 					<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
@@ -171,7 +195,7 @@
 									</div>
 									<!-- <img src="img/4/details/title3.jpg" height="400px"> -->
 									<div id="modal3_video_sec">
-										<video id="modal3_video" controls="" width="500px" loop="">
+										<video id="modal3_video" controls="" width="100%" loop="">
 											<source src="media/scene3_intro.webm" type="video/webm">
 										</video>
 									</div>
@@ -235,6 +259,74 @@
 						</div>
 					</div>
 					<!-- ================= End of Modal 4 ========================================================= -->
+
+					<!-- ================= Modal 2 for hotspot 4 ==================================================== -->
+					<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">前檐柱头铺作</h1>
+								</div>
+								<div class="modal-body" align="center">
+
+									<div id="modal2_img" class="gallery autoplay items-2">
+										<div id="item-1" class="control-operator"></div>
+										<div id="item-2" class="control-operator"></div>
+
+
+										<figure class="item">
+											<img src="img/scene3_1/013.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/014.jpg" height="400px">
+										</figure>
+
+
+										<div class="controls">
+											<a href="#item-1" class="control-button">•</a>
+											<a href="#item-2" class="control-button">•</a>
+										</div>
+
+									</div>
+
+									<div id="m2_bgm_section">
+										<audio id="m2_bgm">
+											<source src="audio/scene3/s1/m2_bgm.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/m2_bgm.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/m2_bgm.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<div id="audio2_placeholder">
+										<audio id="audio2" controls="controls">
+											<source src="audio/scene3/s1/m2_1.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/m2_1.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/m2_1.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<br>
+
+
+
+									<div id="m2_text_holder" align="left">
+										<p>东大殿殿身所用斗栱壮大，屋顶曲线平缓，出檐深远，气势庞大豪迈。</p>
+										<p>斗栱是中国木结构古建筑最具代表性的构件，是柱梁与屋顶之间的承托构件。
+											科学的杠杆运用与精巧的榫卯设计结合，将木材的特性发挥到极致。
+											东大殿铺作设计简约、结构精巧、造型雄伟，是最具代表性的构件。</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m2_pre" hidden="" onclick="m2_buttons_pre()">Previous</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-warning" id="m2_next" onclick="m2_button_next()">Next</button>      		</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 2 ========================================================= -->
+
 				</div>
 				<!-- /#page-content-wrapper -->
 
@@ -258,25 +350,52 @@
 				$("#wrapper").toggleClass("toggled");
 		});
 
-		$(".modal-transparent").on('show.bs.modal', function () {
-  			setTimeout( function() {
-    		$(".modal-backdrop").addClass("modal-backdrop-transparent");
-		  }, 0);
-		});
+		function testAvatar(){
+		  //alert("avatar clicked!");
+			var bgm_lsc = document.getElementById("lsc_bgm");
+			var lsc_nar = document.getElementById("lsc_nar");
+			var speech = document.getElementById("speech");
 
-		$(".modal-transparent").on('hidden.bs.modal', function () {
-		  $(".modal-backdrop").addClass("modal-backdrop-transparent");
-		});
+			//check status
+			if (speech.hidden == true) {
+				speech.hidden=false;
 
-		$(".modal-fullscreen").on('show.bs.modal', function () {
-		  setTimeout( function() {
-		    $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-		  }, 0);
-		});
+				bgm_lsc.load();bgm_lsc.play();
+				lsc_nar.load(); lsc_nar.play();
+			}else {
+				lsc_end();
+				speech.hidden = true;
+			}
 
-		$(".modal-fullscreen").on('hidden.bs.modal', function () {
-		  $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-		});
+
+		}
+
+		function lsc_end() {
+			var bgm_lsc = document.getElementById("lsc_bgm");
+			var lsc_nar = document.getElementById("lsc_nar");
+			bgm_lsc.pause();
+			lsc_nar.pause();
+		}
+
+		// $(".modal-transparent").on('show.bs.modal', function () {
+  	// 		setTimeout( function() {
+    // 		$(".modal-backdrop").addClass("modal-backdrop-transparent");
+		//   }, 0);
+		// });
+		//
+		// $(".modal-transparent").on('hidden.bs.modal', function () {
+		//   $(".modal-backdrop").addClass("modal-backdrop-transparent");
+		// });
+		//
+		// $(".modal-fullscreen").on('show.bs.modal', function () {
+		//   setTimeout( function() {
+		//     $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+		//   }, 0);
+		// });
+		//
+		// $(".modal-fullscreen").on('hidden.bs.modal', function () {
+		//   $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+		// });
 		</script>
 	</body>
 </html>

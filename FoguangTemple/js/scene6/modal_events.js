@@ -5,6 +5,7 @@ var m4_count = 0;
 var m4_pre = document.getElementById('m4_pre');
 var m4_next = document.getElementById('m4_next');
 var m1_count = 0;
+var m2_count = 0;
 $(document).ready(function(){
   //var audio = document.getElementById('bgm1');
   //bgm.play();
@@ -282,6 +283,208 @@ $('#modal1').on('shown.bs.modal', function(e){
 $('#modal1').on('hide.bs.modal', function(e){
   var audio1 = document.getElementById('audio1');
   var bgm4 = document.getElementById('m1_bgm');
+  bgm4.pause();
+  audio1.pause();
+  bgm.play();
+});
+
+function m2_update(direction){
+  var audio1 = document.getElementById('audio2');
+  var isSupp0 = audio1.canPlayType("audio/mpeg");
+  var isSupp1 = audio1.canPlayType("audio/wav");
+  if ((m2_count == 0 && direction == 1) || (m2_count == 2 && direction == -1)) {
+    var vid;
+    try {
+      vid = document.getElementById("modal2_video");
+      vid.pause();
+    } catch (e) {
+
+    }
+
+    audio1.controls = false;
+    audio1.pause();
+    m2_count = m2_count + direction;
+    // audio1.load();
+    // audio1.play();
+    $('div#modal2_img').attr({
+      "class" : "single-img"
+    });
+    $('div#modal2_img').html(
+      '<img src="img/scene3_1/015.jpg" height="450px">'
+    );
+    $('div#m2_text_holder').html("<p> 东大殿的外檐柱头铺作为：“七铺作双杪双下昂”，是直接承托东大殿出檐的斗栱，"+
+    "承托整座铺作的为：栌斗，东大殿栌斗在与栱眼壁部分衔接部分向两侧突出，增加了与阑额的承接面积，这种做法被近年的研究学"+
+    "者称为：栌斗泥道截直造。栌斗上承托两跳华栱和两跳下昂，华栱第二跳跳头上置瓜子栱和瓜子慢栱，承托罗汉枋。下昂第二跳上"+
+    "安令栱，与翼形耍头相交，令栱上安替木，以承托撩檐槫。第一跳华栱与第一跳下昂上不设横向栱，这种做法被称为：“偷心造”。"+
+    "东大殿斗栱设计完全是根据结构需要而作，完全没有后世繁复的装饰构件，所有构件造型都最为直接简单，如昂嘴使用最简单的斜角“批竹昂”做法。</p>");
+
+  }else if ((m2_count == 1 && direction == 1)||(m2_count == 3 && direction == -1)) {
+    //load third sound tracking
+    audio1.pause();
+    if (isSupp0 === "") {
+      if (isSupp1 === "") {
+        audio1.src="audio/scene3/s1/m2_2.ogg";
+      }else {
+        audio1.src="audio/scene3/s1/m2_2.wav";
+      }
+    }else {
+      audio1.src="audio/scene3/s1/m2_2.mp3";
+    }
+    m2_count = m2_count + direction;
+    audio1.load();
+    audio1.play();
+    audio1.controls = true;
+
+    $('div#modal2_img').html(
+      '<video id="modal2_video" controls="" width="100%" loop="" autoplay="">'+
+      '<source src="media/scene3/m2_vid1.webm" type="video/webm">'+
+      '</video>'
+
+    );
+
+
+    $('div#m2_text_holder').html("<p> 中国是世界上最早将模数制运用到建筑营造的国家，《营造法式》称：“凡构屋之制，皆以材为祖。”</p>"+
+    "<p>近年的研究者基于三维激光扫描的精确测量数据，分析东大殿采用的材分º模数制，通过模数密码的解读，重现东大殿精妙而理性的设计建造过程。</p>");
+
+  }else if ((m2_count == 2 && direction == 1) || (m2_count == 4 && direction == -1)) {
+    var vid;
+    try {
+      vid = document.getElementById("modal2_video");
+      vid.pause();
+    } catch (e) { //do nothing
+    }
+    audio1.pause();
+
+    audio1.controls = false;
+
+    $('div#modal2_img').attr({
+      "class" : "gallery autoplay items-3"
+    });
+
+    $('div#modal2_img').html(
+      '<div id="item-1" class="control-operator"></div>'+
+      '<div id="item-2" class="control-operator"></div>'+
+      '<div id="item-3" class="control-operator"></div>'+
+      '<figure class="item"><img src="img/scene3_1/016.jpg" height="400px"></figure>'+
+      '<figure class="item"><img src="img/scene3_1/017.jpg" height="400px"></figure>'+
+      '<figure class="item"><img src="img/scene3_1/018.jpg" height="400px"></figure>'+
+      '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
+      '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
+      '</div>'
+    );
+
+
+    $('div#m2_text_holder').html("<p>早在公元前十一世纪的周代的《周髀算经》，就记载了勾三股四弦五的勾股定理，"+
+    "并根据发现者取名“商高定理”。中国古代工匠在建筑中常常灵活运用勾股定理，作为建筑屋架的设计。</p>"+
+    "<p>东大殿基本模数为21毫米为1分º。铺作材厚10分º，足材21分º，昂制平出47分º，昂制斜长51.5分º。这个勾21、股47、弦51.5的直角三角形，就是东大殿从铺作到屋架的基准三角形。二分之一进深通槫距为基本昂制平出47分º的11倍，合计517分º，撩檐槫至脊槫为21分º的11倍，即231分º。整个东大殿屋架的勾股弦为昂制勾股弦的11倍。</p>");
+
+    m2_count = m2_count + direction;
+  }else if ((m2_count == 3 && direction == 1)) {
+    $('div#modal2_img').attr({
+      "class" : "gallery autoplay items-2"
+    });
+
+    $('div#modal2_img').html(
+      '<div id="item-1" class="control-operator"></div>'+
+      '<div id="item-2" class="control-operator"></div>'+
+      '<figure class="item"><img src="img/scene3_1/020.jpg" height="400px"></figure>'+
+      '<figure class="item"><img src="img/scene3_1/019.gif" height="400px"></figure>'+
+      '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
+      '<a href="#item-2" class="control-button">•</a>'+
+      '</div>'
+    );
+
+    $('div#m2_text_holder').html("<p>东大殿的平面进深及尽间开间为210分º，是10倍足材宽。大殿中五间各面阔240分º，"+
+    "平柱高同样240分º，出现在次间外缝，其外侧柱高存在生起，内侧的明间柱高存在“负生起”。</p>"+
+    "<p>唐代来自长安的高超工匠，使用了一个21毫米为基本模数的尺，和一个勾股直角三角形，精妙的设计"+
+    "了东大殿整个大木构架。让我们得以窥见中国古代木结构建筑建造顶峰时代的光辉。</p>");
+
+    m2_count = m2_count + direction;
+
+  }
+  else if( (m2_count == 4 && direction == 1)|| (m2_count == 1 && direction == -1)){
+    //load the first sound track
+    //reset status
+    if (isSupp0 === "") {
+      if (isSupp1 === "") {
+        audio1.src="audio/scene3/s1/m2_1.ogg";
+      }else {
+        audio1.src="audio/scene3/s1/m2_1.wav";
+      }
+    }else {
+      audio1.src="audio/scene3/s1/m2_1.mp3";
+    }
+
+    audio2.controls = true;
+
+    m2_count = 0;
+    $('div#m2_text_holder').html("<p>东大殿殿身所用斗栱壮大，屋顶曲线平缓，出檐深远，气势庞大豪迈。</p>"+
+    "<p>斗栱是中国木结构古建筑最具代表性的构件，是柱梁与屋顶之间的承托构件。"+
+    "科学的杠杆运用与精巧的榫卯设计结合，将木材的特性发挥到极致。"+
+    "东大殿铺作设计简约、结构精巧、造型雄伟，是最具代表性的构件。</p>");
+
+    //int gallery
+    $('div#modal2_img').attr({
+      "class" : "gallery autoplay items-2"
+    });
+    $('div#modal2_img').html(
+      '<div id="item-1" class="control-operator"></div>'+
+      '<div id="item-2" class="control-operator"></div>'+
+      '<figure class="item"><img src="img/scene3_1/013.jpg" height="400px"></figure>'+
+      '<figure class="item"><img src="img/scene3_1/014tiantai.jpg" height="400px"></figure>'+
+      '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
+      '<a href="#item-2" class="control-button">•</a>'+
+      '</div>'
+    );
+    if (direction == -1) {
+      audio1.load();
+      audio1.play();
+    }else {
+      audio1.pause();
+    }
+
+  }
+
+  if (m2_count == 0) {
+    document.getElementById("m2_pre").hidden = true;
+  }else {
+    document.getElementById("m2_pre").hidden = false;
+  }
+  if (m2_count == 4) {
+    document.getElementById("m2_next").hidden = true;
+  }else {
+    document.getElementById("m2_next").hidden = false;
+  }
+}
+
+function m2_buttons_pre(){
+    //m5_count = m5_count - 1;
+    m2_update(-1);
+}
+
+function m2_button_next(){
+  m2_update(1);
+}
+
+$('#modal2').on('shown.bs.modal', function(e){
+  var audio1 = document.getElementById('audio2');
+  var bgm4 = document.getElementById('m2_bgm');
+  audio1.load();
+  audio1.play();
+  bgm4.load();
+  bgm4.play();
+  bgm.pause();
+
+
+  audio1.onended = function(){
+    m2_update(1);
+  };
+
+});
+
+$('#modal2').on('hide.bs.modal', function(e){
+  var audio1 = document.getElementById('audio2');
+  var bgm4 = document.getElementById('m2_bgm');
   bgm4.pause();
   audio1.pause();
   bgm.play();

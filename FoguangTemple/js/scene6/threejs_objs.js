@@ -132,12 +132,24 @@
 				hotspots.push(hotspot1);
 				scene.add(hotspot1);
 
+				//-------------------------
+				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
+				material.opacity = 0.7;
+
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
+				var hotspot4 = new THREE.Mesh( new  THREE.SphereGeometry(7, 20, 10), material);
+				hotspot4.position.set(-120, 80, 200);
+				hotspot4.name = "hotspot4";
+
+				hotspots.push(hotspot4);
+				scene.add(hotspot4);
 
 
 
 
 
-		//------------ End of titles -------------------------------------------------------------
+
+		//------------ End of hotspots -------------------------------------------------------------
 
 
 		//------------ To other panos ------------------------------------------------------------
@@ -220,6 +232,18 @@
 
 			domEvents.addEventListener(hotspot3, 'mouseout', function(event){
 						hotspot3.material.opacity = 0.7;
+			});
+
+			domEvents.addEventListener(hotspot4, 'click', function(event){
+						$('#modal2').modal('toggle');
+			}, false);
+
+			domEvents.addEventListener(hotspot4, 'mouseover', function(event){
+						hotspot4.material.opacity = 1;
+			});
+
+			domEvents.addEventListener(hotspot4, 'mouseout', function(event){
+						hotspot4.material.opacity = 0.7;
 			});
 
 
