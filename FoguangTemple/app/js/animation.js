@@ -1,3 +1,9 @@
+function animate() {
+   $('.arrowpointer').fadeIn(300).delay(250).fadeOut(250);
+    }
+animate();
+setInterval(animate, 1500);
+
 //intro text rolling.
 var lines = $('.intro-text').text().split("\n");
 var bgm = document.getElementById('bgm1');

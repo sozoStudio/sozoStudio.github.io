@@ -1,5 +1,5 @@
 .scroll-page{
-  width:8500px;
+  width:9500px;
   overflow-x: visible;
 }
 .scroll-list{
@@ -16,6 +16,7 @@ margin-top:-60px;
   margin:10vh 20px 10vh 20px;
   padding:40px;
   overflow: hidden;
+  z-index: 999;
 }
 .wide-scroll {
     @extend .scroll-each;
@@ -50,12 +51,32 @@ margin-top:-60px;
     }
 }
 
+.image-full {
+    width:125% !important;
+    height:auto;
+    margin-left:-40px;
+}
+.image-fit {
+    width:100%;
+    height:auto;
+}
+.image-overlay {
+    img:first-child {
+        position: absolute;
+    }
+    img:nth-child(2) {
+        opacity: 1;
+        position: absolute;
+    }
+}
+
 .scene-anime {
     height:40vh;
     width: auto;
     position:absolute;
     z-index: 9999;
-    margin-left: 200px;
+    margin-left: -16%;
+    margin-top: -40vh;
 }
 .scene-within {
     width:100%;
@@ -102,10 +123,9 @@ margin-top:-60px;
       width:33%;
       padding:0px 20px 0px 20px;
   }
-
   .mrLiang1 {
       height:90vh;
       width:auto;
       bottom: 0;
-      margin-left: -100px;
+      margin-left: -130px;
   }

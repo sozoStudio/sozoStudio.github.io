@@ -310,6 +310,24 @@ button, btn {
   display: inline;
   line-height: 34px; }
 
+audio {
+  z-index: 99999; }
+
+#arrows {
+  top: 50px;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 99999; }
+
+#arrows .arrowpointer {
+  background-color: #EEE2CF;
+  -webkit-mask-image: url(../../img/UI/arrow-link.svg);
+  mask-image: url(../../img/UI/arrow-link.svg);
+  height: 100%;
+  width: 100%; }
+
 .scrollable {
   overflow: hidden;
   position: relative;
@@ -903,7 +921,7 @@ video#bgvid {
   margin-top: 45vh; }
 
 .scroll-page {
-  width: 8500px;
+  width: 9500px;
   overflow-x: visible; }
 
 .scroll-list {
@@ -918,7 +936,8 @@ video#bgvid {
   background-color: rgba(255, 255, 255, 0.2);
   margin: 10vh 20px 10vh 20px;
   padding: 40px;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 999; }
 
 .wide-scroll {
   width: auto;
@@ -948,12 +967,29 @@ video#bgvid {
     -o-transition: 1s -o-filter linear;
     transition: 1s filter linear; }
 
+.image-full {
+  width: 125% !important;
+  height: auto;
+  margin-left: -40px; }
+
+.image-fit {
+  width: 100%;
+  height: auto; }
+
+.image-overlay img:first-child {
+  position: absolute; }
+
+.image-overlay img:nth-child(2) {
+  opacity: 1;
+  position: absolute; }
+
 .scene-anime {
   height: 40vh;
   width: auto;
   position: absolute;
   z-index: 9999;
-  margin-left: 200px; }
+  margin-left: -16%;
+  margin-top: -40vh; }
 
 .scene-within {
   width: 100%;
@@ -998,7 +1034,7 @@ video#bgvid {
   height: 90vh;
   width: auto;
   bottom: 0;
-  margin-left: -100px; }
+  margin-left: -130px; }
 
 .hideme {
   opacity: 0; }

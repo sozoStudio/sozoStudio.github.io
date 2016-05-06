@@ -307,3 +307,24 @@ h4{
     display: inline;
     line-height: 34px;
 }
+
+audio {
+    z-index: 99999;
+}
+
+#arrows {
+    top:50px;
+    left:50px;
+		width:30px;
+		height:30px;
+		position:absolute;
+        z-index:99999;
+	}
+
+#arrows .arrowpointer{
+    background-color: $color-paper;
+    -webkit-mask-image: url(../../img/UI/arrow-link.svg);
+    mask-image: url(../../img/UI/arrow-link.svg);
+	height:100%;
+	width:100%;
+}
