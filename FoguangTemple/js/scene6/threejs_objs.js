@@ -37,6 +37,9 @@
 
 			var hotspots = [];
 
+			//avatar status
+			var lsc_visible = false;
+
 			init();
 			animate();
 
@@ -96,53 +99,99 @@
         scene.add(hemi);
 
 
+
 				//---------------------------------------------------------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				//declare all materials
+				var material1= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material2= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material3= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material4= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
 
-				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot2 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
-				hotspot2.position.set(-400, 140, 180);
-				hotspot2.name = "hotspot2";
+				var loader_int = new THREE.TextureLoader();
+				loader_int.load(
+					'img/maps/icon_temple.jpg',
+					function(texture){
+						material1.alphaMap = texture;
+						material2.alphaMap = texture;
+						material3.alphaMap = texture;
+						material4.alphaMap = texture;
+					}
+				);
 
-				hotspots.push(hotspot2);
-				scene.add(hotspot2);
 
-				//-------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
 
-				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot3 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
-				hotspot3.position.set(-400, 0, -100);
-				hotspot3.name = "hotspot3";
-
-				hotspots.push(hotspot3);
-				scene.add(hotspot3);
 
 				//-------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+
+				material1.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot1 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				var hotspot1 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material1);
 				hotspot1.position.set(-400, 100, -100);
 				hotspot1.name = "hotspot1";
+				hotspot1.rotation.y = 70 * Math.PI/180;
 
 				hotspots.push(hotspot1);
 				scene.add(hotspot1);
 
 				//-------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+
+				material2.opacity = 0.7;
+
+				var hotspot2 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material2);
+				hotspot2.position.set(-380, -100, 180);
+				hotspot2.name = "hotspot2";
+				hotspot2.rotation.y = -60 * Math.PI/180;
+
+				hotspots.push(hotspot2);
+				scene.add(hotspot2);
+
+				//-------------------------
+				material3.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot4 = new THREE.Mesh( new  THREE.SphereGeometry(7, 20, 10), material);
+				var hotspot3 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material3);
+				hotspot3.position.set(-400, -70, -100);
+				hotspot3.name = "hotspot3";
+				hotspot3.rotation.y = 70 * Math.PI/180;
+
+				hotspots.push(hotspot3);
+				scene.add(hotspot3);
+
+				//-------------------------
+
+				//var material = new THREE.MeshBasicMaterial( { color:0x02ffb5, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				material4.opacity = 0.7;
+
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
+				var hotspot4 = new THREE.Mesh( new  THREE.PlaneGeometry( 15, 15, 32 ), material4);
 				hotspot4.position.set(-120, 80, 200);
 				hotspot4.name = "hotspot4";
+				hotspot4.rotation.y = -10 * Math.PI/180;
 
 				hotspots.push(hotspot4);
 				scene.add(hotspot4);
+				//-------------------------
+
+				var material5 = new THREE.MeshBasicMaterial( { color:0xffba00, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				material5.opacity = 0.7;
+
+				var loader = new THREE.TextureLoader();
+				loader.load(
+					'img/maps/icon_book.jpg',
+					function(texture){
+						material5.alphaMap = texture;
+					}
+				);
+
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
+				var hotspot5 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material5);
+				hotspot5.position.set(-250, -80, -100);
+				hotspot5.name = "hotspot5";
+				hotspot5.rotation.y = 60 * Math.PI/180;
+
+				hotspots.push(hotspot5);
+				scene.add(hotspot5);
 
 
 
@@ -151,16 +200,50 @@
 
 		//------------ End of hotspots -------------------------------------------------------------
 
+		//------------------------- Avatar -------------------------------------------------------
+
+		var loader = new THREE.TextureLoader();
+		var material0 = new THREE.MeshBasicMaterial({transparent: true, side: THREE.DoubleSide});
+
+		//load alpha map
+		loader.load(
+			//resource url
+			'img/maps/s3_lsc1_alpha2.jpg',
+			//Function when resource is loaded
+			function(texture){
+				material0.alphaMap = texture;
+			}
+		);
+
+		//load texture
+		loader.load(
+			//resource url
+			'img/maps/s3_lsc1.jpg',
+			//Function when resource is loaded
+			function(texture){
+				material0.map = texture;
+			}
+		);
+
+		var figure_plane = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material0);
+		figure_plane.position.set(-125, -10, -100);
+		figure_plane.rotation.y = 60 * Math.PI/180;
+		figure_plane.visible = false;
+		scene.add(figure_plane);
+
+
+		//----------------------------------------------------------------------------------------
+
 
 		//------------ To other panos ------------------------------------------------------------
 
 
 				//------------------------------------------------------
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
-				material.opacity = 0.5;
+				var material_t = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
+				material_t.opacity = 0.5;
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
+				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t);
 				tele_left.rotation.x = -90 * Math.PI/180;
 				//tele_left.rotation.z = 80 * Math.PI/180;
 
@@ -193,7 +276,9 @@
 
         controls = new THREE.DeviceOrientationControls( camera );
 
-//----------------------------------------------------------------------------------------
+				//----------------------------------------------------------------------------------------
+
+
 				//dom events
 			domEvents = new THREEx.DomEvents(camera, renderer.domElement);
 
@@ -245,6 +330,48 @@
 			domEvents.addEventListener(hotspot4, 'mouseout', function(event){
 						hotspot4.material.opacity = 0.7;
 			});
+
+			domEvents.addEventListener(hotspot5, 'click', function(event){
+				var bgm_lsc = document.getElementById("lsc_bgm");
+				var lsc_nar = document.getElementById("lsc_nar");
+
+						if (!lsc_visible) {
+							figure_plane.visible = true;
+							//figure_plane.material.opacity = 1 + Math.sin(new Date().getTime() * .0025);
+							lsc_visible = true;
+							bgm_lsc.load();bgm_lsc.play();
+							lsc_nar.load(); lsc_nar.play();
+						}else {
+							figure_plane.visible = false;
+							lsc_visible = false;
+							bgm_lsc.pause();
+							lsc_nar.pause();
+						}
+			}, false);
+
+			domEvents.addEventListener(hotspot5, 'mouseover', function(event){
+						hotspot5.material.opacity = 1;
+			});
+
+			domEvents.addEventListener(hotspot5, 'mouseout', function(event){
+						hotspot5.material.opacity = 0.7;
+			});
+
+			domEvents.addEventListener(figure_plane, 'click', function(event){
+				var bgm_lsc = document.getElementById("lsc_bgm");
+				var lsc_nar = document.getElementById("lsc_nar");
+				if (lsc_visible) {
+							figure_plane.visible = false;
+							lsc_visible = false;
+
+							bgm_lsc.pause();
+							lsc_nar.pause();
+
+						}
+			}, false);
+
+
+
 
 
 
