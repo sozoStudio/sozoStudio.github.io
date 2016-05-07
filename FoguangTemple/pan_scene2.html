@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="css/gallery.prefixed.css">
 		<link rel="stylesheet" href="css/gallery.theme.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap-toggle.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
 	</head>
 	<body>
@@ -28,7 +30,7 @@
 										<a href="/#/tab/chap2"><div class="chap-title">第二章</div></a>
 								</li>
 								<li>
-										<a href="/#/tab/chap3"><div class="chap-title">第三章</div></a>
+										<a href="pan_scene6.html"><div class="chap-title">第三章</div></a>
 								</li>
 								<li>
 										<a href="pan_scene1.html"><div class="chap-title">第四章</div></a>
@@ -47,14 +49,7 @@
 				<div id="page-content-wrapper">
 
 					<div id="container"></div>
-					<div id="info">
-			      <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">Change Controls</button>
-						<button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">Show/Hide Hotspots</button>
-						<!-- 	<button type="button" class="btn btn-warning btn-xs" id="songPlayPause" onclick="playPause('n1')">Start/Pause intro</button> -->
 
-						<!-- <div id="songPlayPause" onclick="playPause('song')"></div> -->
-						<!-- <div class="popup"><div class="text"></div></div> -->
-					</div>
 
 					<div id="menu">
 						<button href="#menu-toggle" type="button" class="btn btn-info" id="menu-toggle" aria-label="Left Align">
@@ -62,9 +57,12 @@
 						</button>
 					</div>
 
-					<div id="info2">
-						<button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">Play/Pause</button>
+					<div id="setting">
+						<button type="button" class="btn btn-info" id="menu-toggle" aria-label="Right Align" onclick="toggleSetting()">
+							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						</button>
 					</div>
+
 
 
 					<div id="bgm_section">
@@ -79,6 +77,46 @@
 
 
 					<!--   Modals  -->
+					<!-- ================= Modal S for settings ==================================================== -->
+					<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">设置</h1>
+								</div>
+								<div class="modal-body" align="center">
+									<ul style="list-style-type:none" align-content="justify">
+										<li>
+											<!-- <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">切换模式</button> -->
+											<p>切换模式
+												<input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+										<li>
+											<!-- <button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">显示/隐藏热点</button> -->
+											<p>热点
+												<input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+										<li>
+											<!-- <button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">暂停/播放背景乐</button> -->
+											<p>背景音乐
+												<input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+
+									</ul>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal S ========================================================= -->
+
 
 					<!-- ================= Modal 1 for title 1 ==================================================== -->
 					<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -359,6 +397,9 @@
 		<script src="js/bootstrap.js"></script>
 		<script src="js/SSUhtml5Audio.js"></script>
 		<script src="js/threex.domevents_hacked.js"></script>
+		<script src="js/bootstrap-toggle.js"></script>
+		<script src="js/Settings_Pan.js"></script>
+
 
     <script src="js/DeviceOrientationControls.js"></script>
     <script src="js/OrbitControlsHacked.js"></script>

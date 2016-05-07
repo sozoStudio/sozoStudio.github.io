@@ -10,6 +10,10 @@
 		<link rel="stylesheet" href="css/gallery.prefixed.css">
 		<link rel="stylesheet" href="css/gallery.theme.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap-toggle.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+
+
 		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
 	</head>
 	<body>
@@ -103,7 +107,8 @@
 
 
 					<!--   Modals  -->
-					<!-- ================= Setting Modal for Settings ==================================================== -->
+
+					<!-- ================= Modal S for settings ==================================================== -->
 					<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
@@ -112,29 +117,37 @@
 									<h1 class="modal-title" id="myModalLabel">设置</h1>
 								</div>
 								<div class="modal-body" align="center">
-									<ul>
+									<ul style="list-style-type:none" align-content="justify">
 										<li>
-											<button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">Change Controls</button>
+											<!-- <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">切换模式</button> -->
+											<p>切换模式
+												<input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
 										</li>
 										<li>
-											<button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">Show/Hide Hotspots</button>
+											<!-- <button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">显示/隐藏热点</button> -->
+											<p>热点
+												<input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
 										</li>
 										<li>
-											<button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">Play/Pause</button>
+											<!-- <button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">暂停/播放背景乐</button> -->
+											<p>背景音乐
+												<input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
 										</li>
 
 									</ul>
 
-
-
-
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- ================= End of Modal ========================================================= -->
+					<!-- ================= End of Modal S ========================================================= -->
+
 
 
 					<!-- ================= Modal 1 for hotspot 1 ==================================================== -->
@@ -377,12 +390,14 @@
 		<script src="js/bootstrap.js"></script>
 		<script src="js/SSUhtml5Audio.js"></script>
 		<script src="js/threex.domevents_hacked.js"></script>
+		<script src="js/bootstrap-toggle.js"></script>
 
     <script src="js/DeviceOrientationControls.js"></script>
     <script src="js/OrbitControlsHacked.js"></script>
 
 		<script src="js/scene6/threejs_objs.js"></script>
 		<script src="js/scene6/modal_events.js"></script>
+		<script src="js/Settings_Pan.js"></script>
 		<script>
 		$("#menu-toggle").click(function(e) {
 				e.preventDefault();
@@ -420,9 +435,8 @@
 			console.log("test function called");
 		}
 
-		function toggleSetting(){
-			$('#modal_S').modal('toggle');
-		}
+
+
 
 		// $(".modal-transparent").on('show.bs.modal', function () {
   	// 		setTimeout( function() {

@@ -8,7 +8,7 @@ var m1_count = 0;
 var m2_count = 0;
 $(document).ready(function(){
   //var audio = document.getElementById('bgm1');
-  //bgm.play();
+  bgm.play();
 
 
 });
