@@ -97,12 +97,14 @@
 
 
 				//---------------------------------------------------------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				var material0= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_temple.jpg") } ) ;
+
+				material0.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot2 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				var hotspot2 = new THREE.Mesh( new THREE.PlaneGeometry( 30, 30, 32), material0);
 				hotspot2.position.set(400, 140, -100);
+				hotspot2.rotation.y = -70 * Math.PI/180;
 				hotspot2.name = "hotspot2";
 
 				hotspots.push(hotspot2);
@@ -110,34 +112,8 @@
 
 
 
-
-
-
 		//------------ End of titles -------------------------------------------------------------
 
-
-		//------------ To other panos ------------------------------------------------------------
-				// var door;
-				// var geometry = new THREE.PlaneGeometry( 60, 100, 32 );
-				// var material = new THREE.MeshBasicMaterial( {color: 0xffffff, side: THREE.DoubleSide} );
-				// material.transparent = true; material.opacity = 0.5;
-				// var door = new THREE.Mesh( geometry, material );
-				//
-				// door.position.set(90, 30, 400);
-				// door.rotation.y = 15*Math.PI/180;
-				// scene.add( door );
-				//
-				// //-----------------------------------------------------
-				//
-				// var door_right;
-				// var geometry = new THREE.PlaneGeometry( 60, 100, 32 );
-				// var material = new THREE.MeshBasicMaterial( {color: 0xffffff, side: THREE.DoubleSide} );
-				// material.transparent = true; material.opacity = 0.5;
-				// var door_right = new THREE.Mesh( geometry, material );
-				//
-				// door_right.position.set(-120, 30, -400);
-				// door_right.rotation.y = 15*Math.PI/180;
-				// scene.add( door_right );
 
 				//------------------------------------------------------
 

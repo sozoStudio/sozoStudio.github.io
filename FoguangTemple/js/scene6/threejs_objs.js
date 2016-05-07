@@ -9,7 +9,7 @@
 			// phi = 0, theta = 0;
 
       var orbitControl, deviceOrientation, controls;
-      function toggleControls(){
+			function toggleControls(){
         if (deviceOrientation) {
           deviceOrientation = false;
         }else {
@@ -18,6 +18,7 @@
         }
         console.log("change controls: deviceOrientation = " + deviceOrientation);
       }
+
 
 			var hotspotControl = true;
 			function toggleHotspots(){
@@ -185,7 +186,7 @@
 				);
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot5 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material5);
+				var hotspot5 = new THREE.Mesh( new  THREE.PlaneGeometry( 25, 25, 32 ), material5);
 				hotspot5.position.set(-250, -80, -100);
 				hotspot5.name = "hotspot5";
 				hotspot5.rotation.y = 60 * Math.PI/180;

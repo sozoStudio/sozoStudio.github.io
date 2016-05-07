@@ -40,6 +40,16 @@ body {
   text-align:center;
 }
 
+#setting {
+  position:absolute;;
+  top: 0px; width: 100%; left: 45%;
+  color: #ffffff;
+  padding: 5px;
+  font-size:13px;
+  font-weight: bold;
+  text-align:center;
+}
+
 #single-img {
   text-align: center;
   align-content: center;
