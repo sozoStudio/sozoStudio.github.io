@@ -112,6 +112,12 @@
 													<input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger">
 												</p>
 											</li>
+											<li>
+												<!-- <button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">暂停/播放背景乐</button> -->
+												<p>介绍旁白
+													<input id="narPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger">
+												</p>
+											</li>
 
 										</ul>
 
@@ -272,6 +278,10 @@
 		$("#menu-toggle").click(function(e) {
 				e.preventDefault();
 				$("#wrapper").toggleClass("toggled");
+		});
+		$('#narPlayPause').change(function() {
+		  console.log('Toggle: ' + $(this).prop('checked'));
+		  playPause('n1');
 		});
 		</script>
 	</body>
