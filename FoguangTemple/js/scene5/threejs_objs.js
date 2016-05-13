@@ -97,12 +97,21 @@
 
 
 				//---------------------------------------------------------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				var material1 = new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				material1.opacity = 0.7;
+				var loader_int = new THREE.TextureLoader();
+				loader_int.load(
+					'img/maps/icon_temple.jpg',
+					function(texture){
+						material1.alphaMap = texture;
+					}
+				);
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot2 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				var hotspot2 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material1);
 				hotspot2.position.set(-350, 190, -120);
+				hotspot2.rotation.y = 70 * Math.PI/180;
+
 				hotspot2.name = "hotspot2";
 
 				hotspots.push(hotspot2);

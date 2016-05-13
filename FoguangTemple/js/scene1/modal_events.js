@@ -40,7 +40,7 @@ function m4_update(direction){
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a><a href="#item-4" class="control-button">•</a></div>'
     );
-    $('div#m4_text_holder').attr({"class":"lzwavatar-dialogue"});
+    // $('div#m4_text_holder').attr({"class":"lzwavatar-dialogue"});
     $('div#m4_text_holder').html("<p><strong>罗哲文：</strong>一九六四年七月间，有机会再到五台佛光寺，适被雨阻于寺内数日，对寺内的唐代木构大殿又进行了比较仔细的观察。和山西省文物工作委员会孟繁兴同志一起，发现了多处唐、五代、金、以及明清题记多处，并且还发现了一幅唐代的壁画，可为这座唐代大殿补充一些新的资料。</p>");
     $( "#lzw" ).html("<img src='img/4/details/lzw.png' height='150px'>");
   }else if ((m4_count == 1 && direction == 1) || (m4_count == 3 && direction == -1)) {

@@ -31,7 +31,7 @@ function m4_update(direction){
     audio1.load();
     audio1.play();
     $('div#modal4_img').attr({
-      "class" : "gallery autoplay items-3"
+      "class" : "gallery autoplay items-3 avatar"
     });
     $('div#modal4_img').html(
       '<div id="item-1" class="control-operator"></div>'+
@@ -81,7 +81,7 @@ function m4_update(direction){
 
     //int gallery
     $('div#modal4_img').attr({
-      "class" : "gallery autoplay items-2"
+      "class" : "gallery autoplay items-2 avatar"
     });
     $('div#modal4_img').html(
       '<div id="item-1" class="control-operator"></div>'+
