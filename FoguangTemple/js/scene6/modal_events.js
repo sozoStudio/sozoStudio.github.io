@@ -6,6 +6,8 @@ var m4_pre = document.getElementById('m4_pre');
 var m4_next = document.getElementById('m4_next');
 var m1_count = 0;
 var m2_count = 0;
+var bgm_lsc = document.getElementById("lsc_bgm");
+var lsc_nar = document.getElementById("lsc_nar");
 $(document).ready(function(){
   //var audio = document.getElementById('bgm1');
   bgm.play();
@@ -53,10 +55,21 @@ $('#modal4').on('shown.bs.modal', function(e){
   m4_count=0;
   var video = document.getElementById('m4_vid');
   video.onended = test();
+
+  //--------------
+  if (lsc_visible){
+    lsc_visible = false;
+    bgm_lsc.pause();
+    lsc_nar.pause();
+
+  }
 });
 
 $('#modal4').on('hide.bs.modal', function(e){
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
+
 
 });
 
@@ -72,6 +85,14 @@ $('#modal3').on('shown.bs.modal', function(e){
   bgm3.play();
   bgm.pause();
 
+  //--------------
+  if (lsc_visible){
+    lsc_visible = false;
+    bgm_lsc.pause();
+    lsc_nar.pause();
+
+  }
+
 });
 
 $('#modal3').on('hide.bs.modal', function(e){
@@ -81,7 +102,9 @@ $('#modal3').on('hide.bs.modal', function(e){
   audio.pause();
   var bgm3 = document.getElementById('m3_bgm');
   bgm3.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -272,6 +295,13 @@ $('#modal1').on('shown.bs.modal', function(e){
   bgm4.load();
   bgm4.play();
   bgm.pause();
+  //--------------
+  if (lsc_visible){
+    lsc_visible = false;
+    bgm_lsc.pause();
+    lsc_nar.pause();
+
+  }
 
 
   audio1.onended = function(){
@@ -285,7 +315,9 @@ $('#modal1').on('hide.bs.modal', function(e){
   var bgm4 = document.getElementById('m1_bgm');
   bgm4.pause();
   audio1.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 });
 
 function m2_update(direction){
@@ -475,6 +507,14 @@ $('#modal2').on('shown.bs.modal', function(e){
   bgm4.play();
   bgm.pause();
 
+  //--------------
+  if (lsc_visible){
+    lsc_visible = false;
+    bgm_lsc.pause();
+    lsc_nar.pause();
+
+  }
+
 
   audio1.onended = function(){
     m2_update(1);
@@ -487,5 +527,7 @@ $('#modal2').on('hide.bs.modal', function(e){
   var bgm4 = document.getElementById('m2_bgm');
   bgm4.pause();
   audio1.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 });

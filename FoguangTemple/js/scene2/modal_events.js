@@ -143,7 +143,9 @@ $('#modal3').on('hide.bs.modal', function(e){
   video.pause();
   var audio = document.getElementById('m3_audio');
   audio.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -186,7 +188,9 @@ $('#modal4').on('hide.bs.modal', function(e){
   var bgm4 = document.getElementById('m4_bgm');
   bgm4.pause();
   audio1.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 });
 
 $('#modal5').on('shown.bs.modal', function(e){
@@ -200,7 +204,9 @@ $('#modal5').on('shown.bs.modal', function(e){
 $('#modal5').on('hide.bs.modal', function(e){
   var audio = document.getElementById('audio5');
   audio.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -215,7 +221,9 @@ $('#modal6').on('shown.bs.modal', function(e){
 $('#modal6').on('hide.bs.modal', function(e){
   var audio = document.getElementById('audio6');
   audio.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -230,6 +238,8 @@ $('#modal7').on('shown.bs.modal', function(e){
 $('#modal7').on('hide.bs.modal', function(e){
   var audio = document.getElementById('audio7');
   audio.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });

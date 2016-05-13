@@ -60,5 +60,7 @@ $('#modal4').on('shown.bs.modal', function(e){
 $('#modal4').on('hide.bs.modal', function(e){
   var bgm4 = document.getElementById("m4_bgm");
   bgm4.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 });

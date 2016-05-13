@@ -241,3 +241,23 @@ a {
         margin-right: 0;
     }
 }
+
+
+div#lzw {
+  display: inline;
+  float: left;
+  height: 100px;
+  position: relative;
+  margin-top: -25%;
+  z-index: 100;
+
+}
+
+.avatar {
+    position: relative;
+    z-index: 10;
+}
+
+.lzwavatar-dialogue {
+  margin-left: 17%;
+}

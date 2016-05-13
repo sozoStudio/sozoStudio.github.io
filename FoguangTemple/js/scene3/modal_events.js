@@ -557,7 +557,9 @@ $('#modal1').on('hide.bs.modal', function(e){
   }
   m1_bgm.pause();
   audio1.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 
 });
@@ -572,7 +574,9 @@ $('#modal3').on('shown.bs.modal', function(e){
 $('#modal3').on('hide.bs.modal', function(e){
   var audio = document.getElementById('audio3');
   audio.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -591,7 +595,9 @@ $('#modal4').on('hide.bs.modal', function(e){
   audio.pause();
   var video = document.getElementById('m4_video');
   video.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -608,7 +614,9 @@ $('#modal5').on('hide.bs.modal', function(e){
   var audio = document.getElementById('m5_audio');
   audio.pause();
 
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -623,6 +631,8 @@ $('#modal6').on('hide.bs.modal', function(e){
   var audio = document.getElementById('audio6');
   audio.pause();
 
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
