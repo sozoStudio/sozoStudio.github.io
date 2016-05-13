@@ -26,7 +26,7 @@ timer = setTimeout(displayLine,400);
   $(window).scroll( function(){
       /* Check the location of each desired element */
       $('.hideme').each( function(i){
-          var right_of_object = $(this).offset().left + $(this).outerWidth();
+          var right_of_object = $(this).offset().left + 100;
           var right_of_window = $(window).scrollLeft() + $(window).width();
           /* If the object is completely visible in the window, fade it it */
           if(right_of_object < right_of_window){

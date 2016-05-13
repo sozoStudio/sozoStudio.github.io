@@ -1,10 +1,33 @@
 .scroll-page{
-  width:9500px;
+  width:11700px;
   overflow-x: visible;
 }
 .scroll-list{
 margin-left: 150px;
-margin-top:-60px;
+height:100vh;
+margin-left:13px;
+}
+
+#chap2_start{
+    float:left;
+    color:$color-paper;
+    position: fixed;
+    z-index: 9999;
+}
+.timelineborder {
+    border: 15px solid transparent;
+      -webkit-border-image: url(../../img/UI/border.png) 25 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border.png) 25 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border.png) 25 round;
+    overflow: hidden;
+}
+
+.imageborder {
+    border: 10px solid transparent;
+      -webkit-border-image: url(../../img/UI/border.png) 25 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border.png) 25 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border.png) 25 round;
+    overflow: hidden;
 }
 
 .scroll-each {
@@ -13,7 +36,7 @@ margin-top:-60px;
   min-width: 270px;
   height:70vh;
   background-color: rgba(255,255,255,0.2);
-  margin:10vh 20px 10vh 20px;
+  margin:auto 40px auto 40px;
   padding:40px;
   overflow: hidden;
   z-index: 999;
@@ -36,6 +59,7 @@ margin-top:-60px;
     float:right;
 }
 .scene-img{
+    width:100%;
     height: auto;
     -webkit-filter: grayscale(10%);
     filter: grayscale(10%);
@@ -57,7 +81,7 @@ margin-top:-60px;
     margin-left:-40px;
 }
 .image-fit {
-    width:100%;
+    width:90%;
     height:auto;
 }
 .image-overlay {
@@ -76,7 +100,7 @@ margin-top:-60px;
     position:absolute;
     z-index: 9999;
     margin-left: -16%;
-    margin-top: -40vh;
+    bottom:0px;
 }
 .scene-within {
     width:100%;
@@ -112,9 +136,9 @@ margin-top:-60px;
   .left-chapscroll-two {
       display:inline-block;
       float:left;
-      max-width: 44%;
+      max-width: 40%;
       width:auto;
-      padding:0px 20px 0px 20px;
+      padding:0px 5% 0px 5%;
   }
   .left-chapscroll-three {
       display:inline-block;
@@ -128,4 +152,19 @@ margin-top:-60px;
       width:auto;
       bottom: 0;
       margin-left: -130px;
+  }
+
+  .circle {
+      height:40vh;
+      width: auto;
+      position:absolute;
+      z-index: 9999;
+      margin-left: 15%;
+margin-top: -5%;
+  }
+
+  .scrollTexture{
+      color:$color-paper;
+      background-color: $color-black;
+
   }

@@ -1,5 +1,5 @@
 <section class="scroll-page">
-    <button id="chap2_start" onclick="playAudio(0)">开始介绍</button>
+    <button id="chap2_start" type="button"></button>
       <div class ="scene-title">
             <div id="titlebox-top"><img src="img/UI/titlebox-top.png"></div>
             <div class ="scene-title-box title">
@@ -9,23 +9,23 @@
           <div id="titlebox-bottom"><img src="img/UI/titlebox-bottom.png"></div>
       </div>
 
-  <ul class="scroll-list fade-in content">
-      <li class ="hori-scroll scene-sub-title fade-in">
-          <div class="sub-title-line"></div>
+  <ul class="scroll-list fade-in" style="margin-left:180px;">
+      <li class ="hori-scroll scene-sub-title">
+          <div class="sub-title-line "></div>
            <h1>营造学社成立背景</h1>
       </li>
       <!-- the first paragraph -->
-      <div class="scroll-each hori-scroll hideme">
+      <div class="scrollTexture scroll-each hori-scroll">
           <audio controls id="audio_0" onended="playAudio(1)">
               <source src="media/scene2/audio/001.mp3"></source>
           </audio>
           <div class="paragraph">
             <p> 佛光寺东大殿是我国古建筑类文化遗产最珍贵的一处，
               其自身的文物价值与其传奇的发现过程，对推动中国建筑
-              史学的发展具有重大意义。中国建筑史学开端，发轫
-        <br></br><b>于一本书：《营造法式》，</b>
+              史学的发展具有重大意义。中国建筑史学开端，发轫于
+        <br></br><h5>一本书：《营造法式》，
             <br></br>一个机构：中国营造学社，
-            <br></br><b>一位学者：梁思成</b>。</p></div>
+            <br></br>一位学者：梁思成</h5>。</p></div>
  </div>
  <!--- ++++++++++++++++++++++++++++++++++ number 1 ++++++++++++++++++++++++++++++++++++++++++++  -->
     <li class="wide-scroll hori-scroll hideme" style="width:800px;">
@@ -36,38 +36,38 @@
 
         <div class="left-chapscroll-two">
                 <p> 《营造法式》是宋崇宁二年，由北宋官方颁布的一部建筑设计、施工的规范书，是时任将作监的李诫奉敕修编的。李诫在两浙工匠喻皓所著《木经》的基础上进行编纂，成书于元符三年。《营造法式》是我国古代最完整的建筑技术书籍，标志着中国古代建筑已经发展到了较为成熟的阶段.</p>
+                <p>1919年，前北洋政府交通总长、内务总长朱启钤先生在江南图书馆发现了宋代李诫的《营造法式》丁氏抄本，便委托商务印书馆以石印本印行。</p>
             </div>
             <div class="left-chapscroll-two">
-                <p> 1919年，前北洋政府交通总长、内务总长朱启钤先生在江南图书馆发现了宋代李诫的《营造法式》丁氏抄本，便委托商务印书馆以石印本印行。1925年陶湘以此丁本《营造法式》与《四库全书》文渊、文溯、文津各本校勘后，按宋残叶版式和大小刻版印行，世称为仿宋陶湘本，即陶本。</p>
+                <p> 1925年陶湘以此丁本《营造法式》与《四库全书》文渊、文溯、文津各本校勘后，按宋残叶版式和大小刻版印行，世称为仿宋陶湘本，即陶本。</p>
+                <div class="scroll-img">
+                    <div id="slider">
+                        <figure>
+                           <img class="scene-img" src ="dist/img/scene/scene2/图4.jpg"></img>
+                           <img class="scene-img" src ="dist/img/scene/scene2/图5.jpg"></img>
+                           <img class="scene-img" src ="dist/img/scene/scene2/图6.jpg"></img>
+                           <img class="scene-img" src ="dist/img/scene/scene2/图8.jpg"></img>
+                           <img class="scene-img" src ="dist/img/scene/scene2/图9.jpg"></img>
+                           <img class="scene-img" src ="dist/img/scene/scene2/图10.jpg"></img>
+                       </figure>
+                   </div>
+               </div>
             </div>
             <audio controls class="narration" id="audio_1" onended="playAudio(1)">
                 <source src="media/scene2/audio/003.mp3"></source>
             </audio>
-             <div class="image-container scroll-img">
-                 <div id="slider">
-                     <figure>
-                        <img class="scene-img" src ="dist/img/scene/scene2/图4.jpg"></img>
-                        <img class="scene-img" src ="dist/img/scene/scene2/图5.jpg"></img>
-                        <img class="scene-img" src ="dist/img/scene/scene2/图6.jpg"></img>
-                        <img class="scene-img" src ="dist/img/scene/scene2/图8.jpg"></img>
-                        <img class="scene-img" src ="dist/img/scene/scene2/图9.jpg"></img>
-                        <img class="scene-img" src ="dist/img/scene/scene2/图10.jpg"></img>
-                    </figure>
-                </div>
-            </div>
-            <img style="width: 900px; position:absolute; top:0px; left:800px; height: auto; opacity:0.2;" src ="dist/img/scene/scene2/图7.png"></img>
+            <img style="width: 900px; position:absolute; top:0px; margin-left:-35%;height: auto; opacity:0.2;z-index:-1;" src ="dist/img/scene/scene2/图7.png"></img>
     </li>
-
 <!--- ++++++++++++++++++++++++++++++++++ number 3 ++++++++++++++++++++++++++++++++++++++++++++  -->
-  <li style="width:450px;" class="scroll-each hori-scroll hideme">
-      <div class="left-chapscroll">
-          <audio controls class="narration" id="audio_1" onended="playAudio(1)">
-              <source src="media/scene2/audio/004.mp3"></source>
-          </audio>
+  <li style="width:650px;" class="wide-scroll hori-scroll hideme timelineborder">
+      <audio controls class="narration" id="audio_1" onended="playAudio(1)">
+          <source src="media/scene2/audio/004.mp3"></source>
+      </audio>
+      <div class="left-chapscroll-two">
           <h2>一个机构</h2>
               <p> 1930年，朱启钤成立了“中国营造学社”，聘请从美国学成归来的梁思成先生担任法式组主任。梁思成先生将中国文献学与西方建筑测绘调查学相结合，初步形成了中国建筑史学研究方法。学社从事古代建筑实例的调查、研究和测绘，以及文献资料搜集、整理和研究，编辑出版《中国营造学社汇刊》。营造学社不仅在学术上为后人留下了珍贵的资料，同时也培养了一大批优秀的建筑专业人才。梁思成、林徽因、刘敦桢、罗哲文等许多建筑学界的重量级人物均出自中国营造学社门下。</p>
           </div>
-          <div class="image-container">
+          <div class="left-chapscroll-two">
           <div id="slider">
               <figure>
               <img class="scene-img" src ="dist/img/scene/scene2/图11.jpg"></img>
@@ -87,7 +87,7 @@
          <h2>一位学者</h2>
              <p> 19世纪末20世纪初，由于西方文化的涌入，中国的传统文化体系受到了巨大的冲击。梁思成先生就成长于这样的历史环境下，其父亲——著名学者梁启超先生，正是那一代探索中国文化发展的学者代表。梁启超先生始终坚持“中学为体，西学为用”，强调中西文化的融会贯通。</p>
          </div>
-          <img class="scene-img" src ="dist/img/scene/scene2/图17.“中学为体，西学为用”合同.jpg"></img>
+          <img class="scene-img image-full" src ="dist/img/scene/scene2/图17.png"></img>
  </li>
  <li class="hori-scroll hideme">
     <img class="scene-anime delay-show" src ="dist/img/scene/scene2/图16.梁启超.png"></img>
@@ -113,7 +113,7 @@
 
 </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 6 ++++++++++++++++++++++++++++++++++++++++++++  -->
-   <li class="scroll-each hori-scroll hideme">
+   <li class="scroll-each hori-scroll hideme timelineborder">
        <div class="left-chapscroll">
            <h2>中国古建筑考察历程</h2>
            <audio controls class="narration" id="audio_1" onended="playAudio(1)">
@@ -138,16 +138,16 @@
 </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 7 ++++++++++++++++++++++++++++++++++++++++++++  -->
   <li style="width:650px" class="wide-scroll hori-scroll hideme">
-      <audio controls class="narration" id="audio_1" onended="playAudio(1)">
-          <source src="media/scene2/audio/009.mp3"></source>
-      </audio>
-              <p>从加入营造学社开始，梁思成和他的同事们就开始了对中国古建筑的考察，考察足迹遍布中国大江南北：</p>
+              <p>自从从加入营造学社开始，梁思成和他的同事们就开始了对中国古建筑的考察，考察足迹遍布中国大江南北：</p>
               <div class="left-chapscroll-three">
                   <p>1932年春调查蓟县独乐寺、
                   河北宝坻广济寺;
                   1933年调查正定隆兴寺、
                   大同云冈石窟、善化寺、应县木塔；1934年调查晋汾古建、浙江古建筑；1935年调查安阳古建筑、苏州古建筑；1936年调査陕西古建筑……</p>
-                    <img class="scene-img" src ="dist/img/scene/scene2/图25.蓟县独乐寺.jpg"></img>
+                  <audio controls class="narration" id="audio_1" onended="playAudio(1)">
+                      <source src="media/scene2/audio/009.mp3"></source>
+                  </audio>
+
           </div>
           <div style="width: 15%;" class="left-chapscroll-three">
               <img class="scene-img" src ="dist/img/scene/scene2/图26.正定隆兴寺.jpg"></img>
@@ -155,8 +155,12 @@
             <img class="scene-img" src ="dist/img/scene/scene2/图28.应县木塔.jpg"></img>
             <img class="scene-img" src ="dist/img/scene/scene2/图29.华严寺.jpg"></img>
              <img class="scene-img" src ="dist/img/scene/scene2/图30.善化寺.jpg"></img>
+             <img class="scene-img" src ="dist/img/scene/scene2/图25.蓟县独乐寺.jpg"></img>
           </div>
         <div class="left-chapscroll-three">
+            <audio controls class="narration" id="audio_1" onended="playAudio(1)">
+                <source src="media/scene2/audio/010.mp3"></source>
+            </audio>
           <p> 蓟县独乐寺、正定隆兴寺、大同华严寺、善化寺、应县木塔都是辽宋时期的木构建筑，价值都很高，每次调查都让这些学者们兴奋不已，但这些都和唐代建筑有一点距离。梁思成先生和他的同事们已经做好了充分的准备工作，距离他们梦寐以求的唐代建筑，仅仅欠缺一点运气和一个机缘.</p>
        </div>
   </li>
@@ -167,17 +171,18 @@
              <p> 1926年，法国学者伯希和出版一书<div style="color:yellow;">《敦煌石窟》（Les GrottesDeTouen-houang），</div></p><p>其61窟有一幅五代时期绘制的五台山全景壁画，这是一幅绘有五台山自然地理和佛教寺院、瑞相灵迹的佛画，其中寺庙林立、宝塔穿云。</p>
 
          </div>
-           <object class="scene-anime" type="image/svg+xml" data="img/UI/temple-brush.html"></object>
+           <object class="circle" type="image/svg+xml" data="img/UI/temple-brush.html"></object>
+
             <img style="width:auto; height:100vh; position:absolute; opacity:0.8; top:0; margin-left:-135px; z-index:-1;" src ="dist/img/scene/scene2/图31.敦煌61窟壁画局部.png"></img>
             <audio style="margin-top:45vh;" controls class="narration" id="audio_1" onended="playAudio(1)">
-                <source src="media/scene2/audio/010.mp3"></source>
+                <source src="media/scene2/audio/011.mp3"></source>
             </audio>
  </li>
  <!--- ++++++++++++++++++++++++++++++++++ number 9 ++++++++++++++++++++++++++++++++++++++++++++  -->
     <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.4); margin-left:400px;">
         <div class="left-chapscroll">
             <audio controls class="narration" id="audio_1" onended="playAudio(1)">
-                <source src="media/scene2/audio/011.mp3"></source>
+                <source src="media/scene2/audio/012.mp3"></source>
             </audio>
                 <p> 山西五台山是由五座山峰环抱起来的，当中是盆地，有一个镇叫台怀。五峰以内称为“台内”，以外称“台外”。台怀是五台山的中心，附近寺刹林立，香火极盛。殿塔佛像都勤经修建。其中许多金碧辉煌，用来炫耀香客的寺院，都是近代的贵官富贾所布施重修的。千余年来所谓：文殊菩萨道场的地方，竟然很少明清以前的殿宇存在。</p>
             </div>
@@ -206,7 +211,7 @@
   </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 12 ++++++++++++++++++++++++++++++++++++++++++++  -->
  <li class="scroll-each hori-scroll" style="background-color: rgba(255,255,255,0.0); width:250px; margin-left: -60px;">
-     <img class="image-fit hideme" src ="dist/img/scene/scene2/图34.jpg"></img>
+     <img class="image-fit hideme delay-show" src ="dist/img/scene/scene2/图34.jpg"></img>
      <p></p>
      <img class="image-fit hideme delay-show" src ="dist/img/scene/scene2/图35.jpg"></img>
      <p></p>
@@ -223,48 +228,40 @@
             </div>
     </li>
 
-    <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0); width:250px; margin-left: -60px; position:relative;">
+    <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0); width:330px; margin-left: -60px; position:relative; padding:0px;">
          <div id="arrows"><div class="arrowpointer"></div></div>
         <div class="image-overlay">
-        <img class="image-fit" id="first-img" src ="dist/img/scene/scene2/图39.乾符经幢老照片.jpg"></img>
-        <img class="image-fit" id="second-img" src ="dist/img/scene/scene2/图39.乾符经幢.png"></img>
+        <img class="image-fit first-img imageborder" src ="dist/img/scene/scene2/图39.乾符经幢老照片.jpg"></img>
+        <img class="image-fit second-img imageborder" src ="dist/img/scene/scene2/图39.乾符经幢.png"></img>
     </div>
     </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 14 ++++++++++++++++++++++++++++++++++++++++++++  -->
-   <li class="scroll-each hori-scroll hideme">
-       <div class="left-chapscroll">
-           <audio controls class="narration" id="audio_1" onended="playAudio(1)">
-               <source src=""></source>
-           </audio>
-           <h2>一本书</h2>
-               <p> 《营造法式》是宋崇宁二年，由北宋官方颁布的一部建筑设计、施工的规范书，是时任将作监的李诫奉敕修编的。李诫在两浙工匠喻皓所著《木经》的基础上进行编纂，成书于元符三年。《营造法式》是我国古代最完整的建筑技术书籍，标志着中国古代建筑已经发展到了较为成熟的阶段.</p>
-           </div>
-           <div class="scroll-img">
-               <img class="scene-img" src ="dist/img/scene/scene2/图4.jpg"></img>
-               <img class="scene-img" src ="dist/img/scene/scene2/图5.jpg"></img>
-               <img class="scene-img" src ="dist/img/scene/scene2/图6.jpg"></img>
-               <img class="scene-img" src ="dist/img/scene/scene2/图7.jpg"></img>
-           </div>
-   </li>
-<!--- ++++++++++++++++++++++++++++++++++ number 15 ++++++++++++++++++++++++++++++++++++++++++++  -->
-  <li class="scroll-each hori-scroll hideme">
-      <div class="left-chapscroll">
-          <audio controls class="narration" id="audio_1" onended="playAudio(1)">
-              <source src=""></source>
-          </audio>
-          <h2>一本书</h2>
-              <p> 《营造法式》是宋崇宁二年，由北宋官方颁布的一部建筑设计、施工的规范书，是时任将作监的李诫奉敕修编的。李诫在两浙工匠喻皓所著《木经》的基础上进行编纂，成书于元符三年。《营造法式》是我国古代最完整的建筑技术书籍，标志着中国古代建筑已经发展到了较为成熟的阶段.</p>
-          </div>
-          <div class="scroll-img">
-              <img class="scene-img" src ="dist/img/scene/scene2/图4.jpg"></img>
-              <img class="scene-img" src ="dist/img/scene/scene2/图5.jpg"></img>
-              <img class="scene-img" src ="dist/img/scene/scene2/图6.jpg"></img>
-              <img class="scene-img" src ="dist/img/scene/scene2/图7.jpg"></img>
-          </div>
-  </li>
+<li class="wide-scroll hori-scroll hideme" style="width:800px;">
+    <h2>文殊殿简介</h2>
+            <p>  文殊殿建于金天会十五年（公元1137年），元至正十一年（公元1351年）重修。1953年又进行了补修。</p>
+            <div class="left-chapscroll-two">
+                <audio controls class="narration" id="audio_1" onended="playAudio(1)">
+                    <source src="media/scene2/audio/014.mp3"></source>
+                </audio>
+                <p>“文殊殿在寺内南侧，在佛光诸殿中，其年代之古及规模之大仅次于佛殿。殿广七间，深四间，单檐悬山顶，檐下用单杪单昂五铺作的斗栱。正面的中三间开门，两梢间开直棂窗，尽间砌着砖墙。山面和后面也全砌砖墙，只在后面当心间开一道门。正殿七间，而一七间的大殿做配殿，在佛寺中是颇为少见的。”（梁思成文集第四卷</p>
 
+        </div>
+
+      <div class="left-chapscroll-two">
+        <p>殿顶脊中琉璃宝刹，是元至正十一年（1351年）烧造，形制秀丽，色泽浑厚。大殿梁架采用了硕大的木材，两架之间用斜木相撑，构成“人字柁架”，殿内立柱较一般构架减少八根，形成了巨大的供奉空间。殿内佛坛上有七尊塑像，中为骑青狮的文殊，两旁为胁侍菩萨。殿内两山墙及后墙上绘有五百罗汉壁画，是明宣德年间的作品。</p>
+        <p>文殊殿是我国早期建筑遗存中不可多得的实例，尤其是文殊殿采用的大跨度人字柁架更是早期建筑遗存中的孤例。</p>
+
+     </div>
+</li>
+<li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0); width:auto; min-width:85vw; padding:0px; position:relative;">
+     <div id="arrows"><div class="arrowpointer"></div></div>
+    <div class="image-overlay">
+    <img class="image-fit first-img imageborder" src ="dist/img/scene/scene2/图41.文殊殿老照片.jpg"></img>
+    <img class="image-fit second-img imageborder" src ="dist/img/scene/scene2/图42文殊殿.png"></img>
+</div>
+</li>
     <!-- next chapter link -->
-    <a href ="#/tab/chap3">
+    <a href ="pan_scene6.html">
     <div class="next-chap">
         <ul>
         <li><p>下一章</p>
@@ -274,82 +271,61 @@
 </div></a>
   </ul>
 </section>
+<script src="lib/wow2.js"></script>
 <script>
+new WOW().init();
 // //// auto play audio //////
-var count = 0;
-var audios = new Array();
-audios = document.getElementsByTagName('audio');
 
-function playAudio(direction){
-  console.log("play audio function called!");
-  //this is the function that handles autoplay
-  var nextAudio, currentAudio, previousAudio;
-
-  currentAudio = document.getElementById('audio_' + count);
-
-  if (count<16) {
-    nextAudio = document.getElementById('audio_' + (count + 1));
-  }
-  if (count>0) {
-    previousAudio = document.getElementById('audio_' + (count - 1));
-  }
-
-  if (direction>0) {
-    for (var i = 0; i < audios.length; i++) {
-      if (i != (count+1) && i!=16) {
-        audios[i].pause();
-      }
-    }
-    nextAudio.load();nextAudio.play();
-  }else {
-    for (var i = 0; i < audios.length; i++) {
-      if (i != (count-1)&&i!=16) {
-        audios[i].pause();
-      }
-    }
-    previousAudio.load();previousAudio.play();
-  }
-  if (count < 15) {
-    count++;
-  }else {
-    count = 0;
-  }
-}
 
 //////  resize images /////
-var sceneImg = $(".scene-img"),
-    containerW = $(".left-chapscroll").width(),
-    imageContainer = $(".scroll-img");
-    originWidth = $(imageContainer).find("img").width();
-    originHeight = $(imageContainer).find("img").height();
+// var sceneImg = $(".scene-img"),
+//     containerW = $(".left-chapscroll").width(),
+//     imageContainer = $(".scroll-img");
+//     originWidth = $(imageContainer).find("img").width();
+//     originHeight = $(imageContainer).find("img").height();
+//
+//     $.each(imageContainer, function(){
+//         imageNum = $(this).find(".scene-img").size();
+//         imageWidth = containerW / imageNum;
+//         if(originWidth > originHeight ){
+//         $(".scene-img").css({
+//             "width": imageWidth,
+//             "height":'auto',
+//         });
+//         $('.image-container ').css(
+//             "width", imageWidth
+//         );
+//         }
+//         else {
+//             $(".scene-img").css({
+//                 "width": imageWidth,
+//                 "height":'auto',
+//             });
+//         }
+//     });
 
-    $.each(imageContainer, function(){
-        imageNum = $(this).find(".scene-img").size();
-        imageWidth = containerW / imageNum;
-        if(originWidth > originHeight ){
-        $(".scene-img").css({
-            "width": imageWidth,
-            "height":'auto',
-        });
-        $('.image-container ').css(
-            "width", imageWidth
-        );
-        }
-        else {
-            $(".scene-img").css({
-                "width": imageWidth,
-                "height":'auto',
-            });
-        }
-    });
-
-$("#second-img").click(function() {
+$(".second-img").click(function() {
     $(this).fadeToggle("slow");
-})
-$("#first-img").click(function() {
-    $("#second-img").fadeToggle("slow");
-})
-</script>
+});
+$(".first-img").click(function() {
+    $(".second-img").fadeToggle("slow");
+});
+$('#texture').css('width','11700px');
 
+//button change text
+var startbutton = $("#chap2_start");
+startbutton.text('开始介绍');
+
+$(startbutton).click(function(){
+    var $this = $(this);
+    $this.toggleClass('SeeMore2');
+    if($this.hasClass('SeeMore2')){
+        $this.text('停止介绍');
+    } else {
+        $this.text('开始介绍');
+    }
+});
+
+</script>
   </div>
 </div>
