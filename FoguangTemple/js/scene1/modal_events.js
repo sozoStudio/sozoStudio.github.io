@@ -26,7 +26,7 @@ function m4_update(direction){
     audio.load();
     audio.play();
     $('div#modal4_img').attr({
-      "class" : "gallery autoplay items-4"
+      "class" : "gallery autoplay items-4 avatar"
     });
     $('div#modal4_img').html(
       '<div id="item-1" class="control-operator"></div>'+
@@ -40,8 +40,9 @@ function m4_update(direction){
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a><a href="#item-4" class="control-button">•</a></div>'
     );
+    // $('div#m4_text_holder').attr({"class":"lzwavatar-dialogue"});
     $('div#m4_text_holder').html("<p><strong>罗哲文：</strong>一九六四年七月间，有机会再到五台佛光寺，适被雨阻于寺内数日，对寺内的唐代木构大殿又进行了比较仔细的观察。和山西省文物工作委员会孟繁兴同志一起，发现了多处唐、五代、金、以及明清题记多处，并且还发现了一幅唐代的壁画，可为这座唐代大殿补充一些新的资料。</p>");
-
+    $( "#lzw" ).html("<img src='img/4/details/lzw.png' height='150px'>");
   }else if ((m4_count == 1 && direction == 1) || (m4_count == 3 && direction == -1)) {
     //load third sound tracking
     if (isSupp0 === "") {
@@ -74,7 +75,7 @@ function m4_update(direction){
     audio.load();
     audio.play();
 
-    $('div#m4_text_holder').html("<p>壁画共高三十厘米，长约八十厘米。从画面上看，可分为左、中、右三部分。这三部分虽然是分离的，但彼此之间也有密切的联系。左端画的是一个手持宝剑的天王，天王的旁边有一女立像，头带花冠，右手掌心托一花朵，左手托一香盂，盂中燃香。正中画的是一个身穿翻领花甲胄的力士，手擒一个类似猿猴的动物，好像在作驯服之状。右端画的是一个手持长杆的力士，向左追赶，右上角还残存着三爪的龙腿和龙尾一段。壁画题材的内容尚待进一步的考证。</p>");
+    $('div#m4_text_holder').html("<p><strong>罗哲文：</strong>壁画共高三十厘米，长约八十厘米。从画面上看，可分为左、中、右三部分。这三部分虽然是分离的，但彼此之间也有密切的联系。左端画的是一个手持宝剑的天王，天王的旁边有一女立像，头带花冠，右手掌心托一花朵，左手托一香盂，盂中燃香。正中画的是一个身穿翻领花甲胄的力士，手擒一个类似猿猴的动物，好像在作驯服之状。右端画的是一个手持长杆的力士，向左追赶，右上角还残存着三爪的龙腿和龙尾一段。壁画题材的内容尚待进一步的考证。</p>");
 
   }else if ((m4_count == 3 && direction == 1)) {
     //load third sound tracking
@@ -91,7 +92,7 @@ function m4_update(direction){
     audio.load();
     audio.play();
 
-    $('div#m4_text_holder').html("<p>壁画的年代问题，我认为是与大殿建筑同时的，理由是：第一，从壁画残破处的画地、灰皮、泥层等结构看，都是未经重装重绘过的。第二，从画的用色，笔法等风格看也与唐代相同。</p>");
+    $('div#m4_text_holder').html("<p><strong>罗哲文：</strong>壁画的年代问题，我认为是与大殿建筑同时的，理由是：第一，从壁画残破处的画地、灰皮、泥层等结构看，都是未经重装重绘过的。第二，从画的用色，笔法等风格看也与唐代相同。</p>");
 
   }
   else if((m4_count == 4 && direction == 1) || (m4_count == 1 && direction == -1)){
@@ -113,11 +114,12 @@ function m4_update(direction){
     }else {
       audio.pause();
     }
+    $('div#m4_text_holder').attr({"class":" "});
     $('div#m4_text_holder').html("<p>这幅位于主佛坛背后的束腰壁画是罗哲文罗老在1964年的那次佛光寺考察中发现的。</p>");
-
+    $( "#lzw" ).html("");
     //int gallery
     $('div#modal4_img').attr({
-      "class" : "gallery autoplay items-2"
+      "class" : "gallery autoplay items-2 avatar"
     });
     $('div#modal4_img').html(
       '<div id="item-1" class="control-operator"></div>'+
@@ -127,6 +129,8 @@ function m4_update(direction){
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a></div>'
     );
+
+
   }
   //set button status
   if (m4_count == 0) {
@@ -204,8 +208,10 @@ $('#modal3').on('shown.bs.modal', function(e){
 $('#modal3').on('hide.bs.modal', function(e){
   var audio = document.getElementById('audio3');
   audio.pause();
-  bgm.play();
-  if (!n1_ended) {
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
+  if (!n1_ended && (bgm1Statues == 1)) {
     n1.play();
   }
 });
@@ -249,8 +255,10 @@ $('#modal4').on('hide.bs.modal', function(e){
   var m4bgm = document.getElementById('m4_bgm');
   audio.pause();
   m4bgm.pause();
-  bgm.play();
-  if (!n1_ended) {
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
+  if (!n1_ended && (bgm1Statues == 1)) {
     n1.play();
   }
 });

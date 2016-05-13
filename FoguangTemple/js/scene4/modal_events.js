@@ -296,7 +296,9 @@ $('#modal2').on('hide.bs.modal', function(e){
   var m2bgm = document.getElementById('m2_bgm');
   audio.pause();
   m2bgm.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });
 
@@ -344,6 +346,8 @@ $('#modal4').on('hide.bs.modal', function(e){
   var m4bgm = document.getElementById('m4_bgm');
   audio.pause();
   m4bgm.pause();
-  bgm.play();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
 
 });

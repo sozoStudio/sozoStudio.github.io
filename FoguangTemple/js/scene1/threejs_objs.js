@@ -116,12 +116,13 @@
 				scene.add(object);
 
 				//---------------------------------------------------------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				var material1 = new THREE.MeshBasicMaterial( { color:0xffba00, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_book.jpg") } ) ;
+				material1.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot2 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				var hotspot2 = new THREE.Mesh( new  THREE.PlaneGeometry( 28, 28, 32 ), material1);
 				hotspot2.position.set(400, 120, -180);
+				hotspot2.rotation.y = 95 * Math.PI/180;
 				hotspot2.name = "hotspot2";
 
 				hotspots.push(hotspot2);

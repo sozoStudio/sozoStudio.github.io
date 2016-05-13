@@ -15,4 +15,6 @@ $('#hotspotButton').change(function() {
 $('#songPlayPause').change(function() {
   console.log('Toggle: ' + $(this).prop('checked'));
   playPause('bgm1');
+  bgm1Statues = -bgm1Statues;
+  console.log("bgm1Statues is " + bgm1Statues);
 });

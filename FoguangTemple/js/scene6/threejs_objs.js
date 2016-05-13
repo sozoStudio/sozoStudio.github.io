@@ -40,6 +40,7 @@
 
 			//avatar status
 			var lsc_visible = false;
+			var figure_plane;
 
 			init();
 			animate();
@@ -226,7 +227,7 @@
 			}
 		);
 
-		var figure_plane = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material0);
+		figure_plane = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material0);
 		figure_plane.position.set(-125, -10, -100);
 		figure_plane.rotation.y = 60 * Math.PI/180;
 		figure_plane.visible = false;
@@ -342,11 +343,15 @@
 							lsc_visible = true;
 							bgm_lsc.load();bgm_lsc.play();
 							lsc_nar.load(); lsc_nar.play();
+							bgm.pause();
 						}else {
 							figure_plane.visible = false;
 							lsc_visible = false;
 							bgm_lsc.pause();
 							lsc_nar.pause();
+							if (bgm1Statues == 1) {
+						    bgm.play();
+						  }
 						}
 			}, false);
 
@@ -367,6 +372,9 @@
 
 							bgm_lsc.pause();
 							lsc_nar.pause();
+							if (bgm1Statues == 1) {
+						    bgm.play();
+						  }
 
 						}
 			}, false);
@@ -439,6 +447,7 @@
 						hotspots[i].visible = false;
 					}
 				}
+				figure_plane.visible = lsc_visible;
 
 
 				renderer.render( scene, camera );

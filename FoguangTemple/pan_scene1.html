@@ -26,10 +26,10 @@
 
                 </li>
                 <li>
-                    <a href="/#/tab/timeline"><div class="chap-title">第一章</div></a>
+                    <a href="/FoguangTemple/#/tab/timeline"><div class="chap-title">第一章</div></a>
                 </li>
                 <li>
-                    <a href="/#/tab/chap2"><div class="chap-title">第二章</div></a>
+                    <a href="/FoguangTemple/#/tab/chap2"><div class="chap-title">第二章</div></a>
                 </li>
                 <li>
                     <a href="pan_scene6.html"><div class="chap-title">第三章</div></a>
@@ -240,8 +240,14 @@
 												<source src="audio/4/m4_1.wav" type="audio/wav">
 											</audio>
 										</div>
+										<div class="container-fluid bd-example-row">
+          						<div class="row">
+												<div id="lzw">
+												</div>
+												<div id="m4_text_holder" align="left">
+												</div>
 
-										<div id="m4_text_holder" align="left">
+											</div>
 										</div>
 									</div>
 									<div class="modal-footer">
@@ -271,6 +277,10 @@
 
     <script src="js/DeviceOrientationControls.js"></script>
     <script src="js/OrbitControlsHacked.js"></script>
+		<script>
+			var bgm1Statues = 1;
+			var n1Statues = 1;
+		</script>
 
 		<script src="js/scene1/threejs_objs.js"></script>
 		<script src="js/scene1/modal_events.js"></script>
@@ -282,6 +292,7 @@
 		$('#narPlayPause').change(function() {
 		  console.log('Toggle: ' + $(this).prop('checked'));
 		  playPause('n1');
+			n1Statues = -n1Statues;
 		});
 		</script>
 	</body>
