@@ -11,7 +11,7 @@
   "audio":"media/scene1/audio/1.mp3"
 },
 {"id":2,
-  "title": "佛教興盛",
+  "title": "佛教兴盛",
   "era":"北齐",
   "date": 499,
   "node":540,
@@ -23,7 +23,7 @@
 },
 
 {"id":3,
-  "title": "毀滅與復興",
+  "title": "毁灭与复兴",
   "era":"唐元和，長慶年間 (845 A.D）",
   "date": 845,
   "node":1100,
@@ -34,7 +34,7 @@
     "audio":"media/scene1/audio/3_new.mp3"
 },
 {"id":4,
-  "title": "發現佛光寺",
+  "title": "发现佛光寺",
   "era":"A.D 1937",
   "date": 1937,
   "node":2240,
@@ -45,7 +45,7 @@
     "audio":"media/scene1/audio/4_new.mp3"
 },
 {"id":5,
-  "title": "文物認可",
+  "title": "文物认可",
   "era":"A.D 1961",
   "date": 1962,
   "node":2370,

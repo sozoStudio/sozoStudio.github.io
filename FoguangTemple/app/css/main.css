@@ -144,20 +144,20 @@ h3, h4, h5 {
 
 .sunrise-intro {
   top: 50%;
-  left: 24%;
+  left: 10%;
   width: auto;
   height: auto;
   max-width: 25%;
-  min-width: 260px;
-  min-height: 45%;
+  min-width: 350px;
+  min-height: 330px;
   text-align: center;
   line-height: 2.0em;
   position: fixed;
   color: #EEE2CF;
   padding: 50px;
   position: fixed;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(0%) translateY(-50%);
+  transform: translateX(0%) translateY(-50%);
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 90000; }
   .sunrise-intro button {
@@ -326,6 +326,37 @@ audio {
   mask-image: url(../../img/UI/arrow-link.svg);
   height: 100%;
   width: 100%; }
+
+#templeicon {
+  width: 4vw;
+  height: 4vw;
+  min-width: 30px;
+  min-width: 30px;
+  position: absolute;
+  z-index: 99999; }
+
+#templeicon .templepointer {
+  background-color: #d9b612;
+  -webkit-mask-image: url(../../img/UI/temple.svg);
+  mask-image: url(../../img/UI/temple.svg);
+  height: 100%;
+  width: 100%; }
+
+.bounce {
+  position: fixed;
+  bottom: 0;
+  margin-top: -25px;
+  -webkit-animation: bounce 1s infinite; }
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 5px; }
+  25%, 75% {
+    bottom: 15px; }
+  50% {
+    bottom: 20px; }
+  100% {
+    bottom: 0; } }
 
 .scrollable {
   overflow: hidden;
@@ -782,12 +813,12 @@ video#bgvid {
   overflow-x: visible; }
 
 .timeline-list {
-  margin-left: 150px; }
+  margin-left: 77vw; }
 
 .timeline-each {
   opacity: 0;
   width: 300px;
-  height: 60vh;
+  height: 50vh;
   background-color: rgba(255, 255, 255, 0.4);
   margin: auto 50px 200px 50px;
   padding: 70px;
@@ -845,15 +876,19 @@ video#bgvid {
 .timeline-node {
   width: 20px;
   height: 20px;
-  background-color: #76664D;
+  background-color: #d9b612;
   border: 2px solid #EEE2CF;
   border-radius: 50%;
   position: absolute;
   margin-top: -10px; }
-  .timeline-node p {
-    margin-top: -50px;
+  .timeline-node .node-year {
+    margin-top: -30px;
     line-height: 1.2em;
-    text-align: center; }
+    width: 70px;
+    text-align: left;
+    margin-left: -50%; }
+  .timeline-node .node-title {
+    margin-top: 40px; }
 
 #chap1_start {
   color: #EEE2CF;
@@ -894,7 +929,7 @@ video#bgvid {
 
 .activecards {
   height: 70vh;
-  max-height: 90vh;
+  max-height: 470px;
   max-width: 80vw;
   width: auto; }
   .activecards .left-timeline {
@@ -919,6 +954,28 @@ video#bgvid {
 
 .top-45 {
   margin-top: 45vh; }
+
+.temple-location {
+  height: 100vh;
+  width: 60vw;
+  min-width: 600px;
+  display: inline-block;
+  float: left;
+  position: absolute;
+  left: 290px;
+  top: 100px; }
+  .temple-location img {
+    width: 100%; }
+
+.icon1location {
+  position: absolute;
+  top: 850%;
+  left: 320%; }
+
+#maparial {
+  max-width: 75%;
+  top: 3%;
+  left: 2%; }
 
 .scroll-page {
   width: 11700px;
@@ -1007,6 +1064,9 @@ video#bgvid {
 
 .image-overlay img:nth-child(2) {
   opacity: 1;
+  position: absolute; }
+
+.image-overlay img:nth-child(3) {
   position: absolute; }
 
 .scene-anime {

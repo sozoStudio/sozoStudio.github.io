@@ -4,16 +4,15 @@
   overflow-x: visible;
 }
 .timeline-list{
-  margin-left: 150px;
+  margin-left: 77vw;
 }
 .timeline-each {
- opacity:0;
+opacity:0;
   width:300px;
-  height:60vh;
+  height:50vh;
   background-color: rgba(255,255,255,0.4);
   margin:auto 50px 200px 50px;
   padding:70px;
-  // border-top: 15px solid $color-brown;
   border: 30px solid transparent;
     padding: 35px;
     -webkit-border-image: url(../../img/UI/border.png) 35 round; /* Safari 3.1-5 */
@@ -74,17 +73,23 @@
 .timeline-node {
   width:20px;
   height:20px;
-  background-color:$color-brown;
+  background-color:$color-yellow;
   border:2px solid $color-paper;
   border-radius: 50%;
   position: absolute;
   margin-top:-10px;
-  p{
-      margin-top:-50px;
+ .node-year{
+      margin-top:-30px;
       line-height: 1.2em;
-      text-align: center;
+      width: 70px;
+     text-align: left;
+     margin-left: -50%;
+  }
+  .node-title {
+      margin-top: 40px;
   }
 }
+
 // the auto play button
 #chap1_start {
     color:$color-paper;
@@ -128,7 +133,7 @@
 .activecards {
   @extend .all-active;
   height:70vh;
-  max-height:90vh;
+  max-height:470px;
   max-width: 80vw;
   width:auto;
 
@@ -158,4 +163,30 @@
 }
 .top-45 {
     margin-top:45vh;
+}
+
+// the map to display the location of the
+.temple-location {
+    height: 100vh;
+    width: 60vw;
+    min-width: 600px;
+    display:inline-block;
+    float: left;
+    position:absolute;
+    left:290px;
+    top:100px;
+    img {
+        width:100%;
+    }
+}
+.icon1location {
+    position: absolute;
+    top: 850%;
+    left: 320%;
+}
+
+#maparial {
+    max-width: 75%;
+    top: 3%;
+    left: 2%;
 }

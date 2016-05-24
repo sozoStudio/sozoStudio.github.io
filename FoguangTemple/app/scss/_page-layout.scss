@@ -1,7 +1,7 @@
 //variables
 $color-red: #9D2932;
 $color-orange: #FF8500;
-$color-yellow: #F2B626;
+$color-yellow: #d9b612;
 $color-brown: #76664D;
 $color-blue: #424B50;
 $color-black: #050505;
@@ -120,20 +120,20 @@ h3, h4, h5 {
 }
 .sunrise-intro {
   top: 50%;
-  left: 24%;
+  left: 10%;
   width: auto;
   height: auto;
   max-width: 25%;
-  min-width: 260px;
-  min-height: 45%;
+  min-width: 350px;
+  min-height: 330px;
   text-align:center;
    line-height: 2.0em;
    position: fixed;
    color:$color-paper;
    padding:50px;
   position: fixed;
-   -webkit-transform: translateX(-50%) translateY(-50%);
-   transform: translateX(-50%) translateY(-50%);
+   -webkit-transform: translateX(0%) translateY(-50%);
+   transform: translateX(0%) translateY(-50%);
    background-color: rgba(0,0,0,0.7);
    z-index:90000;
    button{
@@ -326,4 +326,34 @@ audio {
     mask-image: url(../../img/UI/arrow-link.svg);
 	height:100%;
 	width:100%;
+}
+
+#templeicon{
+		width:4vw;
+		height:4vw;
+        min-width:30px;
+        min-width:30px;
+		position:absolute;
+        z-index:99999;
+	}
+#templeicon .templepointer{
+    background-color: $color-yellow;
+    -webkit-mask-image: url(../../img/UI/temple.svg);
+    mask-image: url(../../img/UI/temple.svg);
+	height:100%;
+	width:100%;
+}
+
+.bounce {
+  position:fixed;
+  bottom:0;
+  margin-top:-25px;
+  -webkit-animation:bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:15px; }
+  50%      { bottom:20px; }
+  100%     {bottom:0;}
 }

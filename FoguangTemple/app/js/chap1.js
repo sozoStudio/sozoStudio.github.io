@@ -9,11 +9,11 @@ var timelineControllers = angular.module('timelineControllers', ['ui.bootstrap.d
 //chapter 1 timeline
 ///////////////////////////
 timelineControllers.controller('timelineController', ['$scope', '$http', function($scope, $http) {
-  $http.get('source/timeline.json').success(function(data) {
+  $http.get('source/timeline_new.json').success(function(data) {
     $scope.events = data;
     $scope.letterLimit = 80;
-    document.body.style.width = '3500px';
-    $('#texture').css('width','3500px');
+    document.body.style.width = '4000px';
+    $('#texture').css('width','4500px');
 
     var found = $.grep(data, function(audio) {
       return audio.id === 1;
@@ -96,7 +96,7 @@ timelineControllers.controller('Chap2Controller', ['$scope', '$http',function($s
             playaudio(i);
         }
 
-        
+
   });
 
   // alert when audio is finished playing
