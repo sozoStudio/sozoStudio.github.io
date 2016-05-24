@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.webapp",
       "src": "",
       "projectGuid": "8ff52646-e5f8-45d9-9e6b-b972e9aeac2f",
-      "lastModifiedDate": 1464117019243,
+      "lastModifiedDate": 1464120427622,
       "creationDate": 1463669854956
     },
     "sourceDirectory": "",
@@ -68,7 +68,8 @@
         "name_": "iOS",
         "preferences_": {
           "deployment-target": "8.0",
-          "ios-configuration": "adhoc"
+          "ios-configuration": "production",
+          "exit-on-suspend": false
         },
         "isActive_": true,
         "appName_": "Foguang_app_test",

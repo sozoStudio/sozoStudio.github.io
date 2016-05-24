@@ -8,6 +8,7 @@
 <content src="index.html"/>
 <access origin="*"/>
 <preference name="deployment-target" value="8.0"/>
-<preference name="ios-configuration" value="adhoc"/>
+<preference name="ios-configuration" value="production"/>
+<preference name="exit-on-suspend" value="false"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.webapp"}-->
 <preference name="debuggable" value="false"/></widget>
