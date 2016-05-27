@@ -1,19 +1,32 @@
 {
   "project": {
-    "projectSettingsVersion": "2.0.0",
+    "projectSettingsVersion": "3.0.0",
     "creationData": {
+      "type": "Import",
       "projectTypeName": "com.intel.xdk.projecttype.webapp",
-      "src": "webapp/template-ionic-angularjs-starter/sample.zip",
-      "projectGuid": "80a45699-c401-44b0-9af0-55daf879a113",
-      "lastModifiedDate": 1450802166727,
-      "creationDate": 1450799856714
+      "src": "",
+      "projectGuid": "13f04754-ba7a-49cc-bcbc-b8c3a77099e1",
+      "lastModifiedDate": 1464128485777,
+      "creationDate": 1464126918450
     },
-    "sourceDirectory": "www",
+    "sourceDirectory": "",
     "cordovaPluginsDirectory": "plugins",
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "testDirectory": "test",
     "startFile": "index.html",
-    "projectFiles": {},
+    "projectTags": [],
+    "projectFiles": {
+      "xdk-publish-meta-data.json": {
+        "settings": {
+          "project": {
+            "XDK-not-deployed": "True"
+          }
+        }
+      }
+    },
     "projectDirectories": {
-      "www/xdk": {
+      "xdk": {
         "settings": {
           "project": {
             "XDK-generated": "true"
@@ -27,18 +40,19 @@
     "buildConfigurations": {
       "Android": {
         "platform_": "android",
-        "runtime_": "W3C on Cordova",
+        "runtime_": "W3C on Crosswalk",
         "name_": "Android",
         "preferences_": {
           "android-minSdkVersion": "14",
-          "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-targetSdkVersion": "23",
+          "android-installLocation": "auto",
+          "android-signed": false
         },
         "isActive_": true,
-        "appName_": "Foguang_ionic",
-        "appID_": "demo.ionicangularjsstarter",
+        "appName_": "FoGuangExport1",
+        "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -49,59 +63,25 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "iosProvs_": [],
-        "cordovaCLIVersion_": "5.1.1",
+        "certificateId_": "",
         "appVersion_": "0.0.1",
         "appVersionCode_": "1",
-        "crosswalkVersion_": "14",
-        "appDescription_": "A Starter project for building Cordova app using Ionic Framework + AngularJS.",
-        "appAuthor_": "Intel XDK"
-      },
-      "Android-Crosswalk": {
-        "platform_": "android",
-        "runtime_": "W3C on Crosswalk",
-        "name_": "Android-Crosswalk",
-        "preferences_": {
-          "android-minSdkVersion": "14",
-          "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
-        },
-        "isActive_": true,
-        "appName_": "Foguang_ionic",
-        "appID_": "demo.ionicangularjsstarter",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [
-            "*"
-          ],
-          "intents": [],
-          "navigation": []
-        },
-        "icons_": [],
-        "splashes_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-        "iosProvs_": [],
-        "cordovaCLIVersion_": "5.1.1",
-        "appVersion_": "0.0.1",
-        "appVersionCode_": "1",
-        "crosswalkVersion_": "15",
-        "appDescription_": "A Starter project for building Cordova app using Ionic Framework + AngularJS.",
-        "appAuthor_": "Intel XDK"
+        "crosswalkVersion_": "16",
+        "cordovaCLIVersion_": "5.4.1"
       },
       "iOS": {
         "platform_": "ios",
         "runtime_": "W3C on Cordova",
         "name_": "iOS",
         "preferences_": {
-          "ios-target": "6",
+          "deployment-target": "8.0",
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "Foguang_ionic",
-        "appID_": "demo.ionicangularjsstarter",
+        "appName_": "FoGuangExport1",
+        "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -112,11 +92,10 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "iosProvs_": [],
-        "cordovaCLIVersion_": "5.1.1",
+        "certificateId_": "",
         "appVersion_": "0.0.1",
-        "appDescription_": "A Starter project for building Cordova app using Ionic Framework + AngularJS.",
-        "appAuthor_": "Intel XDK"
+        "cordovaCLIVersion_": "5.4.1",
+        "iosProvs_": []
       },
       "Windows8": {
         "platform_": "windows8",
@@ -124,10 +103,10 @@
         "name_": "Windows8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "Foguang_ionic",
-        "appID_": "demo.ionicangularjsstarter",
+        "appName_": "FoGuangExport1",
+        "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -138,11 +117,9 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "iosProvs_": [],
-        "cordovaCLIVersion_": "5.1.1",
+        "certificateId_": "",
         "appVersion_": "0.0.0.1",
-        "appDescription_": "A Starter project for building Cordova app using Ionic Framework + AngularJS.",
-        "appAuthor_": "Intel XDK"
+        "cordovaCLIVersion_": "5.4.1"
       },
       "WebApp": {
         "platform_": "webapp",
@@ -150,10 +127,10 @@
         "name_": "WebApp",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "Foguang_ionic",
+        "appName_": "FoGuangExport1",
         "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -164,8 +141,8 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK"
+        "certificateId_": "",
+        "appVersion_": "0.0.1"
       },
       "Firefox": {
         "platform_": "firefoxos",
@@ -173,10 +150,10 @@
         "name_": "Firefox",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "Foguang_ionic",
+        "appName_": "FoGuangExport1",
         "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -187,8 +164,8 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK"
+        "certificateId_": "",
+        "appVersion_": "0.0.1"
       },
       "Chrome": {
         "platform_": "chromeos",
@@ -196,10 +173,10 @@
         "name_": "Chrome",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "Foguang_ionic",
+        "appName_": "FoGuangExport1",
         "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -210,8 +187,8 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK"
+        "certificateId_": "",
+        "appVersion_": "0.0.1"
       },
       "Facebook": {
         "platform_": "facebook",
@@ -219,10 +196,10 @@
         "name_": "Facebook",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "Foguang_ionic",
+        "appName_": "FoGuangExport1",
         "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -233,8 +210,8 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK"
+        "certificateId_": "",
+        "appVersion_": "0.0.1"
       },
       "WP81": {
         "platform_": "wp81",
@@ -242,11 +219,13 @@
         "name_": "WP81",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "Foguang_ionic",
+        "appName_": "FoGuangExport1",
         "appID_": "not.yet.specified",
         "appAccess_": {
-          "mode": "legacy",
-          "network": [],
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
           "intents": [],
           "navigation": []
         },
@@ -254,13 +233,10 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.0.1",
-        "cordovaCLIVersion_": "5.1.1"
+        "cordovaCLIVersion_": "5.4.1"
       }
-    },
-    "gameAssetDirectory": "asset",
-    "gameMetadata": {},
-    "projectTags": [],
-    "testDirectory": "test"
+    }
   }
 }

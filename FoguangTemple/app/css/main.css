@@ -964,8 +964,6 @@ video#bgvid {
   position: absolute;
   left: 290px;
   top: 100px; }
-  .temple-location img {
-    width: 100%; }
 
 .icon1location {
   position: absolute;
@@ -1060,14 +1058,17 @@ video#bgvid {
   height: auto; }
 
 .image-overlay img:first-child {
-  position: absolute; }
+  position: absolute;
+  max-height: 80vh; }
 
 .image-overlay img:nth-child(2) {
   opacity: 1;
-  position: absolute; }
+  position: absolute;
+  max-height: 80vh; }
 
 .image-overlay img:nth-child(3) {
-  position: absolute; }
+  position: absolute;
+  max-height: 80vh; }
 
 .scene-anime {
   height: 40vh;

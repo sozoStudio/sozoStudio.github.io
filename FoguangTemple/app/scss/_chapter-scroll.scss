@@ -87,13 +87,16 @@ margin-left:13px;
 .image-overlay {
     img:first-child {
         position: absolute;
+        max-height:80vh;
     }
     img:nth-child(2) {
         opacity: 1;
         position: absolute;
+        max-height:80vh;
     }
     img:nth-child(3) {
         position: absolute;
+        max-height:80vh;
     }
 }
 
