@@ -1,0 +1,213 @@
+.hideme
+{
+  opacity: 0;
+}
+.delay-show{
+    opacity:0.1;
+}
+.hideme:first-child {
+  opacity:1;
+}
+
+.hideme:nth-child(2) {
+  opacity:0.5;
+}
+
+.hideme:nth-child(3) {
+  opacity:0.2;
+}
+//variables with more value
+.darkbg {
+  background-color:rgba(black, 0.5);
+  color:white;
+}
+
+.lightbg{
+  background-color: white;
+  color:$color-black;
+}
+
+.delayfadein {
+opacity: 0.001;
+transition: opacity 5.5s 5.5s;
+-moz-transition: opacity 5.5s 5.5s;
+-webkit-transition: opacity 5.5s 5.5s;
+-o-transition: opacity 5.5s 5.5s;
+-ms-transition: opacity 5.5s 5.5s;
+-khtml-transition: opacity 5.5s 5.5s;
+}
+
+.drop-shadow{
+  filter: drop-shadow(8px 8px 10px rgba(0,0,0,.7));
+}
+
+/*    */
+/*  the delay animation
+/*  */
+.css-delay{
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-delay: 2s;
+}
+/*    */
+/*  the fading animation
+/*  */
+
+.fade-in {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+}
+
+//attribute to addin the effect, dependent with above slideup
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*    */
+/*  the slide up animation
+/*  */
+
+.slide-up {
+  animation: slideup 2s;
+  -moz-animation: slideup 2s; /* Firefox */
+  -webkit-animation: slideup 2s; /* Safari and Chrome */
+  -o-animation: slideup 2s; /* Opera */
+}
+//attribute to addin the effect, dependent with above slideup
+@keyframes slideup {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes slideup { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes slideup { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes slideup { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*    */
+/*  //display one word at a time
+/*  */
+.word-delay{
+}
+.hide
+{
+    display:none;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+.fade-in.logo {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.fade-in.start {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.fade-in.title {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.fade-in.content {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+@keyframes blink {
+    0% { -webkit-filter: drop-shadow(5px 5px 30px rgba(255,245,204, 1));
+        filter: drop-shadow(5px 5px 30px rgba(255,245,204, 1)); }
+    50% { -webkit-filter: drop-shadow(5px 5px 30px rgba(0,0,0, 0.9));
+        filter: drop-shadow(5px 5px 30px rgba(0,0,0, 0.9));}
+    100% { -webkit-filter: drop-shadow(5px 5px 30px rgba(255,245,204, 1));
+        filter: drop-shadow(5px 5px 30px rgba(255,245,204, 1)); }
+}
+
+@-webkit-keyframes blink {
+    0% { -webkit-filter: drop-shadow(5px 5px 30px rgba(255,245,204, 1));
+        filter: drop-shadow(5px 5px 30px rgba(255,245,204, 1)); }
+    50% { -webkit-filter: drop-shadow(5px 5px 30px rgba(0,0,0, 0.9));
+        filter: drop-shadow(5px 5px 30px rgba(0,0,0, 0.9));}
+    100% { -webkit-filter: drop-shadow(5px 5px 10px rgba(255,245,204, 1));
+        filter: drop-shadow(5px 5px 30px rgba(255,245,204, 1)); }
+}
+
+.blink {
+    -webkit-animation: blink 5.0s linear infinite;
+    -moz-animation: blink 5.0s linear infinite;
+    -ms-animation: blink 5.0s linear infinite;
+    -o-animation: blink 5.0s linear infinite;
+    animation: blink 5.0s linear infinite;
+}

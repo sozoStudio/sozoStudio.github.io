@@ -8,9 +8,21 @@
       </div>
       <div id="titlebox-bottom"><img src="img/UI/titlebox-bottom.png"></div>
   </div>
+
+  <div class="temple-location animated fadeInUp">
+      <div id="templeicon"><div class="templepointer icon1location bounce"></div></div>
+      <div class="image-overlay">
+      <img class="achor-link1 first-img" src ="dist/img/scene/scene1/2.png"></img>
+      <img class="achor-link1 third-img" id="maparial" src ="dist/img/scene/scene1/templearial.png"></img>
+    <img class="second-img" src ="dist/img/scene/scene1/1.png"></img>
+  </div>
+  </div>
+
   <ul class="timeline-list content">
     <div class ="timeline-line fade-in">
-        <div class="timeline-node" ng-repeat="item in events" style="margin-left:{{item.node}}px" ng-click="selectItem(item)" ng-class="{activenode:item.selected}" onclick="moveup()"><p>{{item.date}}年</p></div>
+        <div class="timeline-node" ng-repeat="item in events" style="margin-left:{{item.node}}px" ng-click="selectItem(item)" ng-class="{activenode:item.selected}" onclick="moveup()"><p class="node-year">{{item.date}}年</p>
+            <h4 class="node-title">{{item.title}}</h4>
+        </div>
     </div>
     <li class="timeline-each hori-scroll" ng-repeat="item in events | orderBy: date" ng-click="selectItem(item)" ng-class="{activecards:item.selected}">
       <!--href="#/details/{{events.indexOf(item)}}" -->
@@ -73,22 +85,35 @@ function moveup() {
     var eachnode = $('.timeline-node').each(function(){
         var vwidth =$('.timeline-node').width();
         if (vwidth > 21) {
-            $('.timeline-line').removeClass('top-10');
-            $('.timeline-line').addClass('top-45');
-            console.log('remove');
+            // $('.timeline-line').removeClass('top-10');
+            // $('.node-title').fadeIn();
+            // console.log('remove');
             nodeactive = 0;
         }
 
-        else if (vwidth < 21){
+        if (vwidth < 21){
             $('.timeline-line').addClass('top-10');
+            $('.node-title').fadeOut();
             console.log('add');
             nodeactive = 0;
         }
     });
-console.log($(eachnode).width());
-
 
 }
+$('.achor-link1').click(function(event) {
+    var pos = $(window).scrollLeft() + 550;
+    $('html, body').animate({
+              scrollLeft: 550
+          }, 800);
+
+});
+
+$("#templeicon").click(function() {
+    $(this).fadeToggle("slow");
+    $('.second-img').fadeToggle("slow");
+    $('.third-img').addClass("animated bounceInRight");
+});
+
 
 </script>
 </section>

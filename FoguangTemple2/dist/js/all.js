@@ -65,11 +65,11 @@ var timelineControllers = angular.module('timelineControllers', ['ui.bootstrap.d
 //chapter 1 timeline
 ///////////////////////////
 timelineControllers.controller('timelineController', ['$scope', '$http', function($scope, $http) {
-  $http.get('source/timeline.json').success(function(data) {
+  $http.get('source/timeline_new.json').success(function(data) {
     $scope.events = data;
     $scope.letterLimit = 80;
-    document.body.style.width = '3500px';
-    $('#texture').css('width','3500px');
+    document.body.style.width = '5000px';
+    $('#texture').css('width','5000px');
 
     var found = $.grep(data, function(audio) {
       return audio.id === 1;
@@ -81,11 +81,11 @@ timelineControllers.controller('timelineController', ['$scope', '$http', functio
             var item = $scope.events[i];
             if(item.id == selectedItem.id){
                 item.selected = !item.selected;
-                document.body.style.width = '4000px';
+                document.body.style.width = '5000px';
                 $scope.letterLimit = 1000;
             }else {
                 item.selected = false;
-                document.body.style.width = '3500px';
+                document.body.style.width = '3700px';
                 $scope.letterLimit = 80;
             }
           }
@@ -152,7 +152,7 @@ timelineControllers.controller('Chap2Controller', ['$scope', '$http',function($s
             playaudio(i);
         }
 
-        
+
   });
 
   // alert when audio is finished playing
