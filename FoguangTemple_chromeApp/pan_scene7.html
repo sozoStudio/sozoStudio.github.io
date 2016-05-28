@@ -56,7 +56,7 @@
 						</button>
 					</div>
 					<div id="setting">
-						<button type="button" class="btn btn-info" id="menu-toggle" aria-label="Right Align" onclick="toggleSetting()">
+						<button type="button" class="btn btn-info" id="setting-toggle" aria-label="Right Align">
 							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 						</button>
 					</div>
@@ -163,9 +163,9 @@
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m4_pre" onclick="m4_buttons_pre()" hidden="">Previous</button>
+									<button type="button" class="btn btn-warning" id="m4_pre" hidden="">Previous</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        		<button type="button" class="btn btn-warning" id="m4_next" onclick="m4_buttons_next()">Next</button>								</div>
+			        		<button type="button" class="btn btn-warning" id="m4_next">Next</button>								</div>
 							</div>
 						</div>
 					</div>
@@ -186,36 +186,11 @@
 
     <script src="js/DeviceOrientationControls.js"></script>
     <script src="js/OrbitControlsHacked.js"></script>
-		<script> var bgm1Statues = 1; </script>
+		<script src="js/chrome.js"></script>
 
 		<script src="js/scene7/threejs_objs.js"></script>
 		<script src="js/scene7/modal_events.js"></script>
 		<script src="js/Settings_Pan.js"></script>
-		<script>
-		$("#menu-toggle").click(function(e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled");
-		});
 
-		$(".modal-transparent").on('show.bs.modal', function () {
-  			setTimeout( function() {
-    		$(".modal-backdrop").addClass("modal-backdrop-transparent");
-		  }, 0);
-		});
-
-		$(".modal-transparent").on('hidden.bs.modal', function () {
-		  $(".modal-backdrop").addClass("modal-backdrop-transparent");
-		});
-
-		$(".modal-fullscreen").on('show.bs.modal', function () {
-		  setTimeout( function() {
-		    $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-		  }, 0);
-		});
-
-		$(".modal-fullscreen").on('hidden.bs.modal', function () {
-		  $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-		});
-		</script>
 	</body>
 </html>

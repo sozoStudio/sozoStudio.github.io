@@ -243,3 +243,17 @@ $('#modal7').on('hide.bs.modal', function(e){
   }
 
 });
+
+//----------------------------------------------------
+// button functions
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m4_buttons_pre').click(function(){
+  m4_pre();
+});
+
+$('button#m4_buttons_next').click(function(){
+  m4_next();
+});

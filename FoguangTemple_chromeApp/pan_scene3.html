@@ -57,7 +57,7 @@
 					</div>
 
 					<div id="setting">
-						<button type="button" class="btn btn-info" id="menu-toggle" aria-label="Right Align" onclick="toggleSetting()">
+						<button type="button" class="btn btn-info" id="setting-toggle" aria-label="Right Align">
 							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 						</button>
 					</div>
@@ -178,9 +178,9 @@
 									</div>
 			      		</div>
 			      		<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m1_pre" hidden="" onclick="m1_buttons_pre()">Previous</button>
+									<button type="button" class="btn btn-warning" id="m1_pre" hidden="">Previous</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" id="m1_next" onclick="m1_button_next()">Next</button>      		</div>
+									<button type="button" class="btn btn-warning" id="m1_next">Next</button>      		</div>
 			    		</div>
 			  		</div>
 					</div>
@@ -328,9 +328,9 @@
 
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m5_pre" hidden="" onclick="m5_buttons_pre()">Previous</button>
+									<button type="button" class="btn btn-warning" id="m5_pre" hidden="">Previous</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" id="m5_next" onclick="m5_button_next()">Next</button>
+									<button type="button" class="btn btn-warning" id="m5_next">Next</button>
 								</div>
 							</div>
 						</div>
@@ -388,16 +388,11 @@
 
     <script src="js/DeviceOrientationControls.js"></script>
     <script src="js/OrbitControlsHacked.js"></script>
-		<script>var bgm1Statues = 1;</script>
+		<script src="js/chrome.js"></script>
 
 		<script src="js/scene3/threejs_objs.js"></script>
 
 		<script src="js/scene3/modal_events.js"></script>
-		<script>
-		$("#menu-toggle").click(function(e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled");
-		});
-		</script>
+
 	</body>
 </html>

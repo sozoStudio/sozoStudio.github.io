@@ -1,6 +1,6 @@
 chrome.app.runtime.onLaunched.addListener(function() {
-  chrome.app.window.create("index.html", {
-    frame: "chrome", bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600
+  chrome.app.window.create("pan_scene7.html", {
+    frame: "chrome", bounds: { width: 1280, height: 960}, minWidth:1024, minHeight: 600
   });
 });
 // chrome.commands.onCommand.addListener(function(command) {

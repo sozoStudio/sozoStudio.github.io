@@ -65,7 +65,7 @@
 						<button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">Play/Pause</button>
 					</div> -->
 					<div id="setting">
-						<button type="button" class="btn btn-info" id="menu-toggle" aria-label="Right Align" onclick="toggleSetting()">
+						<button type="button" class="btn btn-info" id="setting-toggle" aria-label="Right Align">
 							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 						</button>
 					</div>
@@ -78,9 +78,6 @@
 						</audio>
 					</div>
 
-					<div id="lsc-avatar" onclick="testAvatar()" hidden="hidden">
-						<img src="img/scene3_1/lsc2.png">
-					</div>
 
 					<div id="lsc-sp-bubble" hidden="hidden">
 						<audio id="lsc_bgm">
@@ -220,9 +217,9 @@
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m1_pre" hidden="" onclick="m1_buttons_pre()">Previous</button>
+									<button type="button" class="btn btn-warning" id="m1_pre" hidden="">Previous</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" id="m1_next" onclick="m1_button_next()">Next</button>      		</div>
+									<button type="button" class="btn btn-warning" id="m1_next">Next</button>      		</div>
 							</div>
 						</div>
 					</div>
@@ -304,9 +301,9 @@
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m4_pre" onclick="m4_buttons_pre()" hidden="">Previous</button>
+									<button type="button" class="btn btn-warning" id="m4_pre" hidden="">Previous</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        		<button type="button" class="btn btn-warning" id="m4_next" onclick="m4_buttons_next()">Next</button>								</div>
+			        		<button type="button" class="btn btn-warning" id="m4_next">Next</button>								</div>
 							</div>
 						</div>
 					</div>
@@ -371,9 +368,9 @@
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m2_pre" hidden="" onclick="m2_buttons_pre()">Previous</button>
+									<button type="button" class="btn btn-warning" id="m2_pre" hidden="">Previous</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" id="m2_next" onclick="m2_button_next()">Next</button>      		</div>
+									<button type="button" class="btn btn-warning" id="m2_next">Next</button>      		</div>
 							</div>
 						</div>
 					</div>
@@ -393,43 +390,35 @@
 
 		<script src="js/DeviceOrientationControls.js"></script>
 		<script src="js/OrbitControlsHacked.js"></script>
-		<script>
-		var bgm1Statues = 1;
-		$("#menu-toggle").click(function(e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled");
-		});
+		<script src="js/chrome.js"></script>
+		<!-- <script>
+		// function testAvatar(){
+		//   //alert("avatar clicked!");
+		// 	var bgm_lsc = document.getElementById("lsc_bgm");
+		// 	var lsc_nar = document.getElementById("lsc_nar");
+		// 	var speech = document.getElementById("speech");
+		//
+		// 	//check status
+		// 	if (speech.hidden == true) {
+		// 		speech.hidden=false;
+		//
+		// 		bgm_lsc.load();bgm_lsc.play();
+		// 		lsc_nar.load(); lsc_nar.play();
+		// 	}else {
+		// 		lsc_end();
+		// 		speech.hidden = true;
+		// 	}
+		//
+		//
+		// }
+		//
+		// function lsc_end() {
+		// 	var bgm_lsc = document.getElementById("lsc_bgm");
+		// 	var lsc_nar = document.getElementById("lsc_nar");
+		// 	bgm_lsc.pause();
+		// 	lsc_nar.pause();
+		// }
 
-		function testAvatar(){
-		  //alert("avatar clicked!");
-			var bgm_lsc = document.getElementById("lsc_bgm");
-			var lsc_nar = document.getElementById("lsc_nar");
-			var speech = document.getElementById("speech");
-
-			//check status
-			if (speech.hidden == true) {
-				speech.hidden=false;
-
-				bgm_lsc.load();bgm_lsc.play();
-				lsc_nar.load(); lsc_nar.play();
-			}else {
-				lsc_end();
-				speech.hidden = true;
-			}
-
-
-		}
-
-		function lsc_end() {
-			var bgm_lsc = document.getElementById("lsc_bgm");
-			var lsc_nar = document.getElementById("lsc_nar");
-			bgm_lsc.pause();
-			lsc_nar.pause();
-		}
-
-		function test(){
-			console.log("test function called");
-		}
 
 
 
@@ -453,7 +442,7 @@
 		// $(".modal-fullscreen").on('hidden.bs.modal', function () {
 		//   $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
 		// });
-		</script>
+	</script>-->
 
 
 

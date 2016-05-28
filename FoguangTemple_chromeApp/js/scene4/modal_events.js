@@ -351,3 +351,26 @@ $('#modal4').on('hide.bs.modal', function(e){
   }
 
 });
+
+//------------------------------
+// ------ buttons
+
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m2_pre').click(function(){
+  m2_buttons_pre();
+});
+
+$('button#m2_next').click(function(){
+  m2_buttons_next();
+});
+
+$('button#m4_pre').click(function(){
+  m4_buttons_pre();
+});
+
+$('button#m4_next').click(function(){
+  m4_buttons_next();
+});

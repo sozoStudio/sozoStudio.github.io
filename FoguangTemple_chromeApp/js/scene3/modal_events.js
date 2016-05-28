@@ -636,3 +636,24 @@ $('#modal6').on('hide.bs.modal', function(e){
   }
 
 });
+//------------------------------------------------------------
+//button fuctions
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m1_pre').click(function(){
+  m1_buttons_pre();
+});
+
+$('button#m1_next').click(function(){
+  m1_button_next();
+});
+
+$('button#m5_pre').click(function(){
+  m5_buttons_pre();
+});
+
+$('button#m5_next').click(function(){
+  m5_button_next();
+});
