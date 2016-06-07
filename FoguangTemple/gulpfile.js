@@ -9,26 +9,26 @@ const pngquant = require('imagemin-pngquant');
 var sassGlob = require('gulp-sass-glob');
 
 //js path
-var paths1 = {
+// var paths1 = {
     // using framework version of jquery
-    scripts: [
+    // scripts: [
         // 'app/js/jquery.min.js',
         // 'app/js/bootstrap.min.js',
         // 'app/js/angular.min.js',
-        'app/js/app.js',
-        'app/js/chap1.js',
-        'lib/jquery.line.js'
-    ]
-};
+//         'app/js/app.js',
+//         'app/js/chap1.js',
+//         'lib/jquery.line.js'
+//     ]
+// };
 var paths2 = {
     // using framework version of jquery
     scripts: [
         'app/js/animation.js',
         'app/js/carousel.js',
-        'app/js/angular-carousel.js',
         'app/js/scene_image.js',
         'app/js/timelineJS.js',
         'app/js/chap2animation.js',
+        'app/js/tab-navigation.js',
         // 'app/js/modal.js'
         //the animation for sunrise on intro 1 page is included in its page. not this one here
     ]
@@ -44,11 +44,11 @@ gulp.task('styles', function () {
 });
 
 // Concatenate js
-gulp.task('scripts1', function() {
-    return gulp.src(paths1.scripts)
-      .pipe(concat('all.js'))
-      .pipe(gulp.dest('dist/js'));
-});
+// gulp.task('scripts1', function() {
+//     return gulp.src(paths1.scripts)
+//       .pipe(concat('all.js'))
+//       .pipe(gulp.dest('dist/js'));
+// });
 
 gulp.task('scripts2', function() {
     return gulp.src(paths2.scripts)
@@ -86,13 +86,13 @@ gulp.task('imagemin', () => {
 
 //gulp watch
 gulp.task('watch', function() {
-    gulp.watch('app/js/*.js', ['scripts1','scripts2']);
+    gulp.watch('app/js/*.js', ['scripts2']);
     gulp.watch('app/scss/*.scss', ['styles']);
   });
 
 //gulp default
 gulp.task('default', function (callback) {
-  runSequence(['styles', 'nano','scripts1','scripts2','compress'],
+  runSequence(['styles', 'nano','scripts2','compress'],
     callback
   )
 })

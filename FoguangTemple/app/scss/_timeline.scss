@@ -4,10 +4,10 @@
   overflow-x: visible;
 }
 .timeline-list{
-  margin-left: 77vw;
+  margin-left: 990px;
 }
 .timeline-each {
-display:inline;
+display:none;
   width:300px;
   height:50vh;
   background-color: rgba(255,255,255,0.4);
@@ -63,7 +63,7 @@ display:inline;
 }
 
 .timeline-line {
-  width: 86%;
+  width: 1400px;
   height:4px;
   border-bottom: 3px double $color-blue;
   margin-top:45vh;
@@ -124,12 +124,15 @@ opacity:1 !important;
   height:24px;
 }
 .active-timeline{
-    margin-top:10vh;
-    height:70vh;
+    height:55vh;
     max-height:90vh;
     max-width: 80vw;
+    min-width: 50vw;
     width:auto;
-
+    display:inherit;
+}
+.timeline-each-up {
+    margin-top:-170%;
 }
 .activecards {
   @extend .all-active;
@@ -161,7 +164,7 @@ opacity:1 !important;
 }
 
 .top-10 {
-    margin-top:-30vh;
+    margin-top:10vh;
 }
 .top-45 {
     margin-top:45vh;

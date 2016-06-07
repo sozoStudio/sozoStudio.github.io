@@ -314,19 +314,6 @@ $( document ).ready(function() {
 
 }(jQuery);
 
-/*global angular */
-
-/*
-Angular touch carousel with CSS GPU accel and slide buffering
-http://github.com/revolunet/angular-carousel
-
-*/
-
-angular.module('angular-carousel', [
-    'ngTouch',
-    'angular-carousel.shifty'
-]);
-
 
 
 var count = 0;
@@ -356,12 +343,16 @@ $('.timeline-node').click(function(){
     var nodeactive = $('.timeline-node').css('border-width'),
         eachnode = $('.timeline-node'),
         thisnode = $('.timeline-node').index(this),
-
+        nodetext = $('.node-title'),
         tcontent = $('.timeline-each'),
+        tline = $('.timeline-line'),
         thiscontent = $('.timeline-each').index(this);
 
-    eachnode[thisnode] = $(this).toggleClass('activenode top-10');
-    tcontent[thisnode] =$(tcontent[thisnode]).toggleClass('active-timeline');
+    eachnode[thisnode] = $(this).toggleClass('activenode');
+
+    tline= $(tline).toggleClass('top-10');
+    nodetext = $(nodetext).fadeToggle('slow');
+    tcontent[thisnode] =$(tcontent[thisnode]).toggleClass('timeline-each-up active-timeline');
 });
 
 $('.achor-link1').click(function(event) {
@@ -430,3 +421,21 @@ $(startbutton).click(function(){
         $this.text('开始介绍');
     }
 });
+
+$('.chap-title').hide();
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+      var sidebarLen = $('#sidebar-wrapper').width();
+      var sidebar = $('#sidebar-wrapper');
+       console.log ($('#sidebar-wrapper').width());
+      if(sidebarLen < 50){
+        //  $(sidebar).css('border','3px solid red');
+         $(".chap-title").show();
+        $("#sidebar-toggle").removeClass('sidebar-move');
+      }
+      if(sidebarLen > 50){
+        $(".chap-title").hide();
+        $("#sidebar-toggle").addClass('sidebar-move');
+      }
+  });
