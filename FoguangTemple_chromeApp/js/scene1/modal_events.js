@@ -262,3 +262,18 @@ $('#modal4').on('hide.bs.modal', function(e){
     n1.play();
   }
 });
+
+
+//------------------------------------------------------------
+//button fuctions
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m4_pre').click(function(){
+  m4_buttons_pre();
+});
+
+$('button#m4_next').click(function(){
+  m4_buttons_next();
+})
