@@ -816,7 +816,7 @@ video#bgvid {
   margin-left: 77vw; }
 
 .timeline-each {
-  opacity: 0;
+  display: inline;
   width: 300px;
   height: 50vh;
   background-color: rgba(255, 255, 255, 0.4);
@@ -897,7 +897,7 @@ video#bgvid {
   top: 0px;
   z-index: 999; }
 
-.all-active, .activenode, .activecards, .activechap {
+.all-active, .activecards, .activechap {
   opacity: 1 !important;
   border-color: #9D2932 !important;
   box-shadow: 2px 4px 10px #A5A5A5;
@@ -905,7 +905,7 @@ video#bgvid {
   /* For Safari 3.1 to 6.0 */
   transition: 0.5s;
   opacity: 1 !important; }
-  .all-active img, .activenode img, .activecards img, .activechap img {
+  .all-active img, .activecards img, .activechap img {
     opacity: 1;
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
@@ -931,7 +931,8 @@ video#bgvid {
   height: 70vh;
   max-height: 470px;
   max-width: 80vw;
-  width: auto; }
+  width: auto;
+  display: block !important; }
   .activecards .left-timeline {
     width: 250px;
     max-width: 35%;
@@ -950,7 +951,7 @@ video#bgvid {
     max-height: 100%; }
 
 .top-10 {
-  margin-top: 10vh; }
+  margin-top: -30vh; }
 
 .top-45 {
   margin-top: 45vh; }

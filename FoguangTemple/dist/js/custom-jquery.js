@@ -328,3 +328,105 @@ angular.module('angular-carousel', [
 ]);
 
 
+
+var count = 0;
+var audios = document.getElementsByTagName('audio');
+
+$(document).ready(function() {
+    console.log("sdfsdf");
+});
+
+function playAudio(direction){
+  console.log("play audio function called");
+  if (direction>0) {
+    if (count<audios.length) {
+      count++;
+      audios[count].load();audios[count].play();
+    }else {
+      count=0;
+    }
+  }else if (direction==0) {
+    //init
+    audios[0].load();audios[0].play();
+  }
+}
+
+// function click node to display content
+$('.timeline-node').click(function(){
+    var nodeactive = $('.timeline-node').css('border-width'),
+        eachnode = $('.timeline-node'),
+        thisnode = $('.timeline-node').index(this),
+
+        tcontent = $('.timeline-each'),
+        thiscontent = $('.timeline-each').index(this);
+
+    eachnode[thisnode] = $(this).toggleClass('activenode top-10');
+    tcontent[thisnode] =$(tcontent[thisnode]).toggleClass('active-timeline');
+});
+
+$('.achor-link1').click(function(event) {
+    var pos = $(window).scrollLeft() + 550;
+    $('html, body').animate({
+              scrollLeft: 550
+          }, 800);
+});
+
+
+$("#templeicon").click(function() {
+    $(this).fadeToggle("slow");
+    $('.second-img').fadeToggle("slow");
+    $('.third-img').addClass("animated bounceInRight");
+});
+
+new WOW().init();
+// //// auto play audio //////
+
+
+//////  resize images /////
+// var sceneImg = $(".scene-img"),
+//     containerW = $(".left-chapscroll").width(),
+//     imageContainer = $(".scroll-img");
+//     originWidth = $(imageContainer).find("img").width();
+//     originHeight = $(imageContainer).find("img").height();
+//
+//     $.each(imageContainer, function(){
+//         imageNum = $(this).find(".scene-img").size();
+//         imageWidth = containerW / imageNum;
+//         if(originWidth > originHeight ){
+//         $(".scene-img").css({
+//             "width": imageWidth,
+//             "height":'auto',
+//         });
+//         $('.image-container ').css(
+//             "width", imageWidth
+//         );
+//         }
+//         else {
+//             $(".scene-img").css({
+//                 "width": imageWidth,
+//                 "height":'auto',
+//             });
+//         }
+//     });
+
+$(".second-img").click(function() {
+    $(this).fadeToggle("slow");
+});
+$(".first-img").click(function() {
+    $(".second-img").fadeToggle("slow");
+});
+$('#texture').css('width','11700px');
+
+//button change text
+var startbutton = $("#chap2_start");
+startbutton.text('开始介绍');
+
+$(startbutton).click(function(){
+    var $this = $(this);
+    $this.toggleClass('SeeMore2');
+    if($this.hasClass('SeeMore2')){
+        $this.text('停止介绍');
+    } else {
+        $this.text('开始介绍');
+    }
+});

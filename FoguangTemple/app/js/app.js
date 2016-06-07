@@ -31,7 +31,6 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
   .state('tab.timeline', {
     url: '/timeline',
         templateUrl: 'partials/chap1_timeline.html',
-        controller: 'timelineController'
   })
 
 //chapter 2

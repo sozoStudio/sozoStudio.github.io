@@ -27,6 +27,8 @@ var paths2 = {
         'app/js/carousel.js',
         'app/js/angular-carousel.js',
         'app/js/scene_image.js',
+        'app/js/timelineJS.js',
+        'app/js/chap2animation.js',
         // 'app/js/modal.js'
         //the animation for sunrise on intro 1 page is included in its page. not this one here
     ]
