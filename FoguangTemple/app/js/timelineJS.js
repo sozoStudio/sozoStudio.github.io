@@ -27,13 +27,25 @@ $('.timeline-node').click(function(){
         nodetext = $('.node-title'),
         tcontent = $('.timeline-each'),
         tline = $('.timeline-line'),
+        tindicator = $('.node-line'),
         thiscontent = $('.timeline-each').index(this);
 
     eachnode[thisnode] = $(this).toggleClass('activenode');
-
-    tline= $(tline).toggleClass('top-10');
-    nodetext = $(nodetext).fadeToggle('slow');
+    tindicator[thisnode]= $(this).css('opacity','1');
+    $(eachnode ).not( thisnode ).removeClass('activenode');
     tcontent[thisnode] =$(tcontent[thisnode]).toggleClass('timeline-each-up active-timeline');
+    $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
+
+        var activeNum = $('.activenode').length;
+        if(activeNum >= 1) {
+            tline= $(tline).removeClass('top-45');
+            tline= $(tline).addClass('top-10');
+            nodetext = $(nodetext).fadeOut('slow');
+        }
+        else if (activeNum < 1) {
+            tline= $(tline).removeClass('top-10').addClass('top-45');
+            nodetext = $(nodetext).show('slow');
+        }
 });
 
 $('.achor-link1').click(function(event) {

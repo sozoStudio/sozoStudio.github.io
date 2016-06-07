@@ -273,11 +273,9 @@ button, btn {
   left: 100px; }
 
 .next-chap {
-  float: right;
-  top: 0;
   width: 160px;
-  padding: 40px;
-  height: auto; }
+  height: 100vh;
+  padding: 40px; }
   .next-chap h4 {
     margin-top: -15px; }
   .next-chap .arrow-right {
@@ -874,8 +872,8 @@ video#bgvid {
   margin-bottom: 65px; }
 
 .timeline-node {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   background-color: #d9b612;
   border: 2px solid #EEE2CF;
   border-radius: 50%;
@@ -888,7 +886,14 @@ video#bgvid {
     text-align: left;
     margin-left: -50%; }
   .timeline-node .node-title {
-    margin-top: 40px; }
+    margin-top: 50px; }
+  .timeline-node .node-line {
+    opacity: 0;
+    height: 50px;
+    width: 2px;
+    margin-left: 11px;
+    margin-top: 35px;
+    background-color: #050505; }
 
 #chap1_start {
   color: #EEE2CF;
@@ -972,16 +977,16 @@ video#bgvid {
 
 .icon1location {
   position: absolute;
-  top: 850%;
-  left: 320%; }
+  top: 57vh;
+  left: 20vh; }
 
 #maparial {
-  max-width: 75%;
-  top: 3%;
-  left: 2%; }
+  max-width: 54vh;
+  top: 7vh;
+  left: 16vh;
+  position: absolute; }
 
 .scroll-page {
-  width: 11700px;
   overflow-x: visible; }
 
 .scroll-list {

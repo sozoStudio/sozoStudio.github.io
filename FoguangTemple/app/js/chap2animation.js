@@ -35,7 +35,6 @@ $(".second-img").click(function() {
 $(".first-img").click(function() {
     $(".second-img").fadeToggle("slow");
 });
-$('#texture').css('width','11700px');
 
 //button change text
 var startbutton = $("#chap2_start");
