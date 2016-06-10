@@ -17,18 +17,21 @@ $(document).ready(function(){
 
 
 function m4_update(direction){
+  var video = document.getElementById('m4_vid');
   if((m4_count == 0) && (direction == 1)){
     //status 1
-    var video = document.getElementById('m4_vid');
+
     $('video#m4_vid').attr("onended","test()");
-    video.src="media/3a.mp4";
+    $('video#m4_vid').attr("width","40%");
+    video.src="media/3ab.webm";
     $('div#m4_text_holder').html("<p>幢身上有八角形宝盖，每面悬璎珞一束，每角有带结垂下。宝盖上是八角矮柱，四正面各镌刻佛像一龛。</p>"+
     "<p>幢身镌刻的佛殿主宁公遇与大中十一年题刻与梁栿题记文字的对照，成为确定东大殿建成时间的依据。</p>");
     m4_next.hidden = true;
     m4_pre.hidden = false;
     m4_count++;
   }else if ((m4_count == 1) && (direction==-1)) {
-
+    video.src="media/2.webm";
+    $('video#m4_vid').attr("width","100%");
     $('div#m4_text_holder').html("<p>唐大中经幢立于东大殿正前，青石质，高3.24米，权衡秀美。最下方为方形土衬石，其上为八角形幢座，座束腰镌刻壶门，内雕蹲狮，上承仰覆莲座，座上立八角形幢身，正面向西，刻题名：“奉为国及法界众生造佛顶陀罗尼幢”。内容刻《佛顶尊胜陀罗尼经》，以及立幢人和年代。</p>");
     m4_pre.hidden = true;
     m4_next.hidden = false;
@@ -37,7 +40,11 @@ function m4_update(direction){
 }
 
 function test(){
-  console.log("test function called" + m4_count);
+  var video = document.getElementById('m4_vid');
+  if (m4_count==1) {
+    video.src="media/3b.mp4";
+  }
+  console.log("test function called " + m4_count + " " + video.src);
 }
 
 function m4_buttons_pre(){
@@ -342,7 +349,7 @@ function m2_update(direction){
       "class" : "single-img"
     });
     $('div#modal2_img').html(
-      '<img src="img/scene3_1/015.jpg" height="450px">'
+      '<img src="img/scene3_1/015.jpg" height="370px">'
     );
     $('div#m2_text_holder').html("<p> 东大殿的外檐柱头铺作为：“七铺作双杪双下昂”，是直接承托东大殿出檐的斗栱，"+
     "承托整座铺作的为：栌斗，东大殿栌斗在与栱眼壁部分衔接部分向两侧突出，增加了与阑额的承接面积，这种做法被近年的研究学"+
@@ -353,15 +360,9 @@ function m2_update(direction){
   }else if ((m2_count == 1 && direction == 1)||(m2_count == 3 && direction == -1)) {
     //load third sound tracking
     audio1.pause();
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/scene3/s1/m2_2.ogg";
-      }else {
-        audio1.src="audio/scene3/s1/m2_2.wav";
-      }
-    }else {
-      audio1.src="audio/scene3/s1/m2_2.mp3";
-    }
+
+    audio1.src="audio/scene3/s1/m2_2.mp3";
+
     m2_count = m2_count + direction;
     audio1.load();
     audio1.play();
@@ -393,13 +394,14 @@ function m2_update(direction){
       "class" : "gallery autoplay items-3"
     });
 
+
     $('div#modal2_img').html(
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
       '<div id="item-3" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/scene3_1/016.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/017.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/018.jpg" height="400px"></figure>'+
+      '<figure class="item"><img src="img/scene3_1/016.jpg" height="350px"></figure>'+
+      '<figure class="item"><img src="img/scene3_1/017.jpg" height="350px"></figure>'+
+      '<figure class="item"><img src="img/scene3_1/018.jpg" height="350px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '</div>'
@@ -437,17 +439,11 @@ function m2_update(direction){
   else if( (m2_count == 4 && direction == 1)|| (m2_count == 1 && direction == -1)){
     //load the first sound track
     //reset status
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/scene3/s1/m2_1.ogg";
-      }else {
-        audio1.src="audio/scene3/s1/m2_1.wav";
-      }
-    }else {
-      audio1.src="audio/scene3/s1/m2_1.mp3";
-    }
 
-    audio2.controls = true;
+    audio1.src="audio/scene3/s1/m2_1.mp3";
+
+
+    audio1.controls = true;
 
     m2_count = 0;
     $('div#m2_text_holder').html("<p>东大殿殿身所用斗栱壮大，屋顶曲线平缓，出檐深远，气势庞大豪迈。</p>"+
@@ -530,4 +526,34 @@ $('#modal2').on('hide.bs.modal', function(e){
   if (bgm1Statues == 1) {
     bgm.play();
   }
+});
+
+//-----------------------------------------------------
+//----- buttons --------------------
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m1_pre').click(function(){
+  m1_buttons_pre();
+});
+
+$('button#m1_next').click(function(){
+  m1_button_next();
+});
+
+$('button#m2_pre').click(function(){
+  m2_buttons_pre();
+});
+
+$('button#m2_next').click(function(){
+  m2_button_next();
+});
+
+$('button#m4_pre').click(function(){
+  m4_buttons_pre();
+});
+
+$('button#m4_next').click(function(){
+  m4_buttons_next();
 });

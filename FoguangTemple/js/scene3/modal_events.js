@@ -18,15 +18,9 @@ function m5_update(direction){
   var isSupp1 = audio.canPlayType("audio/wav");
   if(direction>0){
     if(m5_count == 0){
-      if (isSupp0 === "") {
-        if (isSupp1 === "") {
-          audio.src="audio/5/m5_2.ogg";
-        }else {
-          audio.src="audio/5/m5_2.wav";
-        }
-      }else {
-        audio.src="audio/5/m5_2.mp3";
-      }
+
+      audio.src="audio/5/m5_2.mp3";
+
       audio.controls=true;
       audio.load();
       audio.play();
@@ -55,15 +49,9 @@ function m5_update(direction){
 
     }else if (m5_count == 1) {
       //reload first sound track
-      if (isSupp0 === "") {
-        if (isSupp1 === "") {
-          audio.src="audio/5/m5.ogg";
-        }else {
-          audio.src="audio/5/m5.wav";
-        }
-      }else {
-        audio.src="audio/5/m5.mp3";
-      }
+
+      audio.src="audio/5/m5.mp3";
+
       audio.load();
       audio.pause();
       audio.controls=false;
@@ -83,15 +71,9 @@ function m5_update(direction){
     }
   }else if (direction<0) {
     if(m5_count == 2){
-      if (isSupp0 === "") {
-        if (isSupp1 === "") {
-          audio.src="audio/5/m5_2.ogg";
-        }else {
-          audio.src="audio/5/m5_2.wav";
-        }
-      }else {
-        audio.src="audio/5/m5_2.mp3";
-      }
+
+      audio.src="audio/5/m5_2.mp3";
+
       audio.load();
       audio.play();
       audio.controls=true;
@@ -121,15 +103,9 @@ function m5_update(direction){
     }else if (m5_count == 1) {
       //load the first sound track
       //reset status
-      if (isSupp0 === "") {
-        if (isSupp1 === "") {
-          audio.src="audio/5/m5.ogg";
-        }else {
-          audio.src="audio/5/m5.wav";
-        }
-      }else {
-        audio.src="audio/5/m5.mp3";
-      }
+
+      audio.src="audio/5/m5.mp3";
+
       audio.controls=true;
       audio.load();
       audio.play();
@@ -184,15 +160,9 @@ function m1_update(direction){
   var isBgmSupp1 = m1_bgm.canPlayType("audio/wav");
   if ((m1_count == 0 && direction == 1) || (m1_count == 2 && direction == -1) ) {
     //load second sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/4/2.ogg";
-      }else {
-        audio1.src="audio/4/2.wav";
-      }
-    }else {
-      audio1.src="audio/4/2.mp3";
-    }
+
+    audio1.src="audio/4/2.mp3";
+
     if (direction == -1) {
       if (isBgmSupp0 === "") {
         if (isBgmSupp1 === "") {
@@ -228,25 +198,13 @@ function m1_update(direction){
 
   }else if ((m1_count == 1 && direction == 1) || (m1_count == 3 && direction == -1)) {
     //load third sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/4/3.ogg";
-      }else {
-        audio1.src="audio/4/3.wav";
-      }
-    }else {
-      audio1.src="audio/4/3.mp3";
-    }
 
-    if (isBgmSupp0 === "") {
-      if (isBgmSupp1 === "") {
-        m1_bgm.src="audio/3/m3_bgm_1.ogg";
-      }else {
-        m1_bgm.src="audio/3/m3_bgm_1.wav";
-      }
-    }else {
-      m1_bgm.src="audio/3/m3_bgm_1.mp3";
-    }
+    audio1.src="audio/4/3.mp3";
+
+
+
+    m1_bgm.src="audio/3/m3_bgm_1.mp3";
+
     m1_count=m1_count + direction;
     audio1.load();
     audio1.play();
@@ -445,15 +403,9 @@ function m1_update(direction){
       //m1_bgm.load();
       // m1_bgm.play();
     }else {
-      if (isBgmSupp0 === "") {
-        if (isBgmSupp1 === "") {
-          m1_bgm.src="audio/3/m3_bgm_0.ogg";
-        }else {
-          m1_bgm.src="audio/3/m3_bgm_0.wav";
-        }
-      }else {
-        m1_bgm.src="audio/3/m3_bgm_0.mp3";
-      }
+
+      m1_bgm.src="audio/3/m3_bgm_0.mp3";
+
       audio1.pause();
       //m1_bgm.pause();
     }
@@ -496,15 +448,8 @@ $('#modal1').on('shown.bs.modal', function(e){
   //init audio + bgm
   if (m1_count==0) {
 
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/4/1.ogg";
-      }else {
-        audio1.src="audio/4/1.wav";
-      }
-    }else {
-      audio1.src="audio/4/1.mp3";
-    }
+    audio1.src="audio/4/1.mp3";
+    
 
     if (isBgmSupp0 === "") {
       if (isBgmSupp1 === "") {
@@ -635,4 +580,25 @@ $('#modal6').on('hide.bs.modal', function(e){
     bgm.play();
   }
 
+});
+//------------------------------------------------------------
+//button fuctions
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m1_pre').click(function(){
+  m1_buttons_pre();
+});
+
+$('button#m1_next').click(function(){
+  m1_button_next();
+});
+
+$('button#m5_pre').click(function(){
+  m5_buttons_pre();
+});
+
+$('button#m5_next').click(function(){
+  m5_button_next();
 });

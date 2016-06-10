@@ -8,6 +8,8 @@
 			// lat = 0, onMouseDownLat = 0,
 			// phi = 0, theta = 0;
 
+			console.log("three js loaded");
+
       var orbitControl, deviceOrientation, controls;
       function toggleControls(){
         if (deviceOrientation) {
@@ -305,6 +307,8 @@
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
 						window.open('pan_scene3.html','_self');
+                //window.location.href="./#/tab/timeline";
+
 				}
 			);
 
@@ -321,6 +325,7 @@
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
 						window.open('pan_scene2.html','_self');
+                        //window.location="pan_scene2.html";
 				}
 			);
 
@@ -336,6 +341,8 @@
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
 						window.open('pan_scene4.html','_self');
+                    //window.location="pan_scene4.html";
+
 				}
 			);
 

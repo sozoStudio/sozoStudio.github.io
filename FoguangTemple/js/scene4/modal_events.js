@@ -65,15 +65,9 @@ function m4_update(direction){
   if ((m4_count == 0 && direction == 1)||(m4_count == 2 && direction == -1)) {
     //alert("m4_count is 0");
     //load second sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/6/m4_002.ogg";
-      }else {
-        audio.src="audio/6/m4_002.wav";
-      }
-    }else {
-      audio.src="audio/6/m4_002.mp3";
-    }
+
+    audio.src="audio/6/m4_002.mp3";
+
     m4_count = m4_count + direction;
     audio.load();
     audio.play();
@@ -100,15 +94,9 @@ function m4_update(direction){
 
   }else if ((m4_count == 1 && direction == 1) || (m4_count == 3 && direction == -1)) {
     //load third sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/6/m4_003.ogg";
-      }else {
-        audio.src="audio/6/m4_003.wav";
-      }
-    }else {
-      audio.src="audio/6/m4_003.mp3";
-    }
+
+    audio.src="audio/6/m4_003.mp3";
+
 
     $('div#modal4_img').attr({
       "class" : "gallery autoplay items-3"
@@ -132,15 +120,9 @@ function m4_update(direction){
 
   }else if ((m4_count == 2 && direction == 1) || (m4_count == 4 && direction == -1)) {
     //load third sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/6/m4_004.ogg";
-      }else {
-        audio.src="audio/6/m4_004.wav";
-      }
-    }else {
-      audio.src="audio/6/m4_004.mp3";
-    }
+
+    audio.src="audio/6/m4_004.mp3";
+
 
     $('div#modal4_img').attr({
       "class" : "gallery autoplay items-3"
@@ -164,15 +146,9 @@ function m4_update(direction){
 
   }else if ((m4_count == 3 && direction == 1) || (m4_count == 5 && direction == -1)) {
     //load third sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/6/m4_005.ogg";
-      }else {
-        audio.src="audio/6/m4_005.wav";
-      }
-    }else {
-      audio.src="audio/6/m4_005.mp3";
-    }
+
+    audio.src="audio/6/m4_005.mp3";
+
     m4_count=m4_count + direction;
     audio.load();
     audio.play();
@@ -196,15 +172,9 @@ function m4_update(direction){
     $('div#m4_text_holder').html("<p>佛光寺东大殿的外檐一跳华栱底燕尾彩画皆为白色，殿堂内及内槽燕尾彩画皆为红色，据观察西侧外槽的一跳华栱底燕尾彩画虽在室内却为白色，如若东大殿曾有前廊，则可解释这些燕尾原为前廊的室外彩画，故刷白色。</p>");
 
   }else if ((m4_count == 4 && direction == 1)){
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/6/m4_006.ogg";
-      }else {
-        audio.src="audio/6/m4_006.wav";
-      }
-    }else {
-      audio.src="audio/6/m4_006.mp3";
-    }
+
+    audio.src="audio/6/m4_006.mp3";
+
     m4_count=m4_count + direction;
     audio.load();
     audio.play();
@@ -213,15 +183,9 @@ function m4_update(direction){
   else if((m4_count == 5 && direction == 1) || (m4_count == 1 && direction == -1)){
     //load the first sound track
     //reset status
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/6/m4_001.ogg";
-      }else {
-        audio.src="audio/6/m4_001.wav";
-      }
-    }else {
-      audio.src="audio/6/m4_001.mp3";
-    }
+
+    audio.src="audio/6/m4_001.mp3";
+    
 
     m4_count = 0;
     if (direction == -1) {
@@ -350,4 +314,27 @@ $('#modal4').on('hide.bs.modal', function(e){
     bgm.play();
   }
 
+});
+
+//------------------------------
+// ------ buttons
+
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m2_pre').click(function(){
+  m2_buttons_pre();
+});
+
+$('button#m2_next').click(function(){
+  m2_buttons_next();
+});
+
+$('button#m4_pre').click(function(){
+  m4_buttons_pre();
+});
+
+$('button#m4_next').click(function(){
+  m4_buttons_next();
 });
