@@ -27,24 +27,29 @@ $('.timeline-node').click(function(){
         nodetext = $('.node-title'),
         tcontent = $('.timeline-each'),
         tline = $('.timeline-line'),
-        tindicator = $('.node-line'),
+        nodeline = $('.node-line'),
+        part1 = $('.timeline-part1'),
         thiscontent = $('.timeline-each').index(this);
 
     eachnode[thisnode] = $(this).toggleClass('activenode');
-    tindicator[thisnode]= $(this).css('opacity','1');
     $(eachnode ).not( thisnode ).removeClass('activenode');
-    tcontent[thisnode] =$(tcontent[thisnode]).toggleClass('timeline-each-up active-timeline');
+    tcontent[thisnode] =$(tcontent[thisnode]).toggleClass('timeline-each-up active-timeline animated Fadein');
     $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
+
+    nodeline[thisnode]=$(nodeline[thisnode]).toggleClass('opacity1 animated FadeinUp');
+    $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp')
 
         var activeNum = $('.activenode').length;
         if(activeNum >= 1) {
             tline= $(tline).removeClass('top-45');
             tline= $(tline).addClass('top-10');
             nodetext = $(nodetext).fadeOut('slow');
+            part1 = $(part1).css('margin-top', '-11vh');
         }
         else if (activeNum < 1) {
             tline= $(tline).removeClass('top-10').addClass('top-45');
             nodetext = $(nodetext).show('slow');
+            part1 = $(part1).css('margin-top', '-46vh');
         }
 });
 

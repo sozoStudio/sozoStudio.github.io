@@ -1,3 +1,56 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="app/css/main.css">
+   <link rel="stylesheet" type="text/css" href="lib/css/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+<!---jquery link ---->
+  <script src="lib/jquery.min.js"></script>
+  <title>Foguang Temple</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+  <style>
+      /* following three (cascaded) are equivalent to above three meta viewport statements */
+          @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+          @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }*/
+          @-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }
+  </style>
+
+</head>
+<body>
+    <div class="main chap2-width">
+        <!-- navigation bar -->
+        <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars sidebar-move" id="sidebar-toggle"></i></a>
+                </li>
+                <li>
+                    <a href="chap1_timeline.html" name="timeline-tab"><div class="chap-title">第一章</div></a>
+                </li>
+                <li>
+                    <a href="chap2_second.html" name="chap2-tab"><div class="chap-title">第二章</div></a>
+                </li>
+                <li>
+                    <a href="pan_scene6.html"><div class="chap-title">第三章</div></a>
+                </li>
+                <li>
+                    <a href="pan_scene1.html"><div class="chap-title">第四章</div></a>
+                </li>
+                <li>
+                    <a href="#"><div class="chap-title">第五章</div></a>
+                </li>
+                <li>
+                    <a href="#"><div class="chap-title">地圖</div></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- navigation bar -->
 <section class="scroll-page">
     <button id="chap2_start" type="button"></button>
       <div class ="scene-title">
@@ -187,7 +240,6 @@
                 <p> 山西五台山是由五座山峰环抱起来的，当中是盆地，有一个镇叫台怀。五峰以内称为“台内”，以外称“台外”。台怀是五台山的中心，附近寺刹林立，香火极盛。殿塔佛像都勤经修建。其中许多金碧辉煌，用来炫耀香客的寺院，都是近代的贵官富贾所布施重修的。千余年来所谓：文殊菩萨道场的地方，竟然很少明清以前的殿宇存在。</p>
             </div>
                        <img class="scene-img image-full" src ="dist/img/scene/scene2/img32.png"></img>
-           </div>
     </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 10 ++++++++++++++++++++++++++++++++++++++++++++  -->
    <li class="scroll-each hori-scroll hideme">
@@ -260,14 +312,23 @@
     <img class="image-fit second-img imageborder" src ="dist/img/scene/scene2/img42.png"></img>
 </div>
 </li>
-    <!-- next chapter link -->
-    <a href ="pan_scene6.html">
-    <div class="next-chap">
+
+<li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0); width:200px; left:-100px;position:relative">
+    <div class="chap2-nextchap">
+         <a href ="pan_scene6.html">
         <ul>
-        <li><p>下一章</p>
-        <h4>環繞東大殿</h4></li>
+        <li><p>身临其境</p>
+        <h4>东大殿全景体验</h4></li>
         <li><div class="arrow-right"></div></li>
     </ul>
-</div></a>
+    </a>
+    </div>
+</li>
   </ul>
 </section>
+</div>
+<div id = "texture"></div>
+<script src="lib/wow2.js"></script>
+<script src="dist/js/custom-jquery.js"></script>
+</body>
+</html>

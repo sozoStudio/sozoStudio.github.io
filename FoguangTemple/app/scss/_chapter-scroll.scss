@@ -1,3 +1,6 @@
+.chap2-width {
+    width:12000px;
+}
 .scroll-page{
   overflow-x: visible;
 }
@@ -13,6 +16,7 @@ margin-left:13px;
     color:$color-paper;
     position: fixed;
     z-index: 9999;
+    left: 80px;
 }
 .timelineborder {
     border: 15px solid transparent;

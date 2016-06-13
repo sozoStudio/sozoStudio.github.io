@@ -1,4 +1,11 @@
-
+.timeline-width {
+    width:3000px;
+    position: relative;
+}
+.timeline-part1{
+    position: absolute;
+    margin-top: -46vh;
+}
 .timeline-page{
   width:auto;
   overflow-x: visible;
@@ -10,18 +17,20 @@
 display:none;
   width:300px;
   height:50vh;
-  background-color: rgba(255,255,255,0.4);
   margin:auto 50px 200px 50px;
   padding:70px;
-  border: 30px solid transparent;
+  border: 13px solid transparent;
     padding: 35px;
-    -webkit-border-image: url(../../img/UI/border.png) 35 round; /* Safari 3.1-5 */
-    -o-border-image: url(../../img/UI/border.png) 35 round; /* Opera 11-12.1 */
-    border-image: url(../../img/UI/border.png) 35 round;
+    -webkit-border-image: url(../../img/UI/border1.svg) 35 round; /* Safari 3.1-5 */
+    -o-border-image: url(../../img/UI/border1.svg) 35 round; /* Opera 11-12.1 */
+    border-image: url(../../img/UI/border1.svg) 35 round;
   overflow: hidden;
-
+  h4{
+      color:$color-orange;
+      line-height: 0px;
+  }
   h2, h3, p{
-    color:$color-black;
+    color:$color-paper;
   }
 }
 .timeline-cover{
@@ -74,8 +83,7 @@ display:none;
 .timeline-node {
   width:26px;
   height:26px;
-  background-color:$color-yellow;
-  border:2px solid $color-paper;
+  background: url("../../img/UI/icons/icon1.svg");
   border-radius: 50%;
   position: absolute;
   margin-top:-10px;
@@ -84,18 +92,17 @@ display:none;
       line-height: 1.2em;
       width: 70px;
      text-align: left;
-     margin-left: -50%;
   }
   .node-title {
       margin-top: 50px;
   }
   .node-line {
     opacity:0;
-     height: 50px;
-    width: 2px;
+    background: url("../../img/UI/icons/icon-branch.svg");
+    height: 50px;
+    width: 40px;
     margin-left: 11px;
-    margin-top: 35px;
-    background-color: #050505;
+    margin-top: 53px;
   }
 }
 
@@ -127,21 +134,20 @@ opacity:1 !important;
 
 }
 .activenode {
-  background-color: $color-red;
-  width:24px;
-  height:24px;
+   background: url("../../img/UI/icons/icon2.svg");
+  width:50px;
+  height:50px;
 }
 .active-timeline{
     height:55vh;
     max-height:90vh;
-    max-width: 80vw;
-    min-width: 50vw;
+    max-width: 70vw;
+    width: 55vw;
+    min-width: 40vw;
     width:auto;
     display:inherit;
 }
-.timeline-each-up {
-    margin-top:-170%;
-}
+
 .activecards {
   @extend .all-active;
   height:70vh;

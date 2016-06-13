@@ -1,9 +1,11 @@
 //variables
-$color-red: #9D2932;
-$color-orange: #FF8500;
+$color-red: #7A1A11;
+$color-orange: #D69F50;
 $color-yellow: #d9b612;
-$color-brown: #76664D;
+$color-brown: #B55C39;
 $color-blue: #424B50;
+$color-lightblue:#707D95;
+$color-green:#AEC3A4;
 $color-black: #050505;
 $color-paper: #EEE2CF;
 $color-grey:#606060;
@@ -16,7 +18,7 @@ $color-white: #F3F8F1;
 }
 
 html {
-    background-color: $color-paper;
+    background-color: $color-blue;
 }
 
 body {
@@ -50,14 +52,16 @@ display: inline-block;
      background-color: rgba(0, 0, 0, .4);
 }
 #texture {
-    background: url("../../img/layout/slide-bg1.png");
-    height:100vh;
+    width:inherit;
+    background: url("../../img/layout/concrete-wall-2.png");
+    height:150vh;
     z-index: 0;
     position:absolute;
-    top:0px;
-    left:0px;
+    margin-top:-46vh;
+    opacity:0.6;
     pointer-events: none;
 }
+
 // .active {
 //   background-color: $color-orange;
 // }
@@ -261,7 +265,33 @@ button, btn {
 
   left:100px;
 }
+.chap2-nextchap{
+    width: 250px;
+    height:100vh;
+    text-align: center;
+    h4{
+        margin-top:-15px;
+        line-height: 0px;
+    }
+        .arrow-right {
+            margin-left:40%;
+        	width: 20px;
+        	height: 1px;
+        	border-top: 30px solid transparent;
+        	border-bottom: 30px solid transparent;
+        	border-left: 30px solid $color-brown;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline;
+        }
+}
 .next-chap{
+    top: -30vh;
+    right: 0px;
+    position: absolute;
     width: 160px;
     height:100vh;
     padding: 40px;
@@ -342,13 +372,12 @@ audio {
 	width:100%;
 }
 
-.bounce {
-  position:fixed;
-  bottom:0;
-  margin-top:-25px;
-  -webkit-animation:bounce 1s infinite;
+.opacity1 {
+    opacity:1 !important;
 }
-
+.opacity0 {
+    opacity:0;
+}
 @-webkit-keyframes bounce {
   0%       { bottom:5px; }
   25%, 75% { bottom:15px; }
