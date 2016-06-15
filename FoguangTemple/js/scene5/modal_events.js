@@ -9,6 +9,13 @@ $(document).ready(function(){
 
 });
 
+//------------------------------------
+//buttons-------------------
+
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
 
 
 

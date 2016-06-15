@@ -24,10 +24,10 @@
 
 								</li>
 								<li>
-										<a href="/FoguangTemple/#/tab/timeline"><div class="chap-title">第一章</div></a>
+										<a href="chap1_timeline.html"><div class="chap-title">第一章</div></a>
 								</li>
 								<li>
-										<a href="/FoguangTemple/#/tab/chap2"><div class="chap-title">第二章</div></a>
+										<a href="chap2_second.html"><div class="chap-title">第二章</div></a>
 								</li>
 								<li>
 										<a href="pan_scene6.html"><div class="chap-title">第三章</div></a>
@@ -57,7 +57,7 @@
 					</div>
 
 					<div id="setting">
-						<button type="button" class="btn btn-info" id="menu-toggle" aria-label="Right Align" onclick="toggleSetting()">
+						<button type="button" class="btn btn-info" id="setting-toggle" aria-label="Right Align">
 							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 						</button>
 					</div>
@@ -82,30 +82,34 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h1 class="modal-title" id="myModalLabel">设置</h1>
+									<h1 class="modal-title" id="myModalLabel" align="center">设置</h1>
 								</div>
-								<div class="modal-body" align="center">
-									<ul style="list-style-type:none" align-content="justify">
-										<li>
-											<!-- <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">切换模式</button> -->
-											<p>切换模式
-												<input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger">
-											</p>
-										</li>
-										<li>
-											<!-- <button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">显示/隐藏热点</button> -->
-											<p>热点
-												<input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger">
-											</p>
-										</li>
-										<li>
-											<!-- <button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">暂停/播放背景乐</button> -->
-											<p>背景音乐
-												<input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger">
-											</p>
-										</li>
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-sm-3 col-sm-offset-3">
+											<p>切换模式</p>
+										</div>
+										<div class="col-sm-3 col-sm-offset-1">
+											<p><input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3 col-sm-offset-3">
+											<p>热点</p>
+										</div>
+										<div class="col-sm-3 col-sm-offset-1">
+											<p><input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3 col-sm-offset-3">
+											<p>背景音乐</p>
+										</div>
+										<div class="col-sm-3 col-sm-offset-1">
+											<p><input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+										</div>
+									</div>
 
-									</ul>
 
 								</div>
 								<div class="modal-footer">
@@ -155,16 +159,12 @@
 									<div id="m1_bgm_section">
 										<audio id="m1_bgm">
 											<source src="audio/3/m3_bgm_0.mp3" type="audio/mp3">
-											<source src="audio/3/m3_bgm_0.ogg" type="audio/ogg">
-											<source src="audio/3/m3_bgm_0.wav" type="audio/wav">
 										</audio>
 									</div>
 
 									<div id="audio1_placeholder">
 										<audio id="audio1" controls="controls">
 											<source src="audio/4/1.mp3" type="audio/mp3">
-											<source src="audio/4/1.ogg" type="audio/ogg">
-											<source src="audio/4/1.wav" type="audio/wav">
 										</audio>
 									</div>
 
@@ -178,9 +178,9 @@
 									</div>
 			      		</div>
 			      		<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m1_pre" hidden="" onclick="m1_buttons_pre()">Previous</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" id="m1_next" onclick="m1_button_next()">Next</button>      		</div>
+									<button type="button" class="btn btn-warning" id="m1_pre" hidden="">前一节</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-warning" id="m1_next">后一节</button>      		</div>
 			    		</div>
 			  		</div>
 					</div>
@@ -200,7 +200,7 @@
 
 			      		</div>
 			      		<div class="modal-footer">
-			        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 			      		</div>
 			    		</div>
 			  		</div>
@@ -221,8 +221,6 @@
 									<div id="audio1_placeholder">
 										<audio id="audio3" controls="controls">
 											<source src="audio/5/m3.mp3" type="audio/mp3">
-											<source src="audio/5/m3.ogg" type="audio/ogg">
-											<source src="audio/5/m3.wav" type="audio/wav">
 										</audio>
 									</div>
 
@@ -238,7 +236,7 @@
 
 			      		</div>
 			      		<div class="modal-footer">
-			        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 			      		</div>
 			    		</div>
 			  		</div>
@@ -264,8 +262,7 @@
 									<div id="m4_audio_sec">
 										<audio id="m4_audio" controls="">
 											<source src="audio/5/m4.mp3" type="audio/mp3">
-											<source src="audio/5/m4.ogg" type="audio/ogg">
-											<source src="audio/5/m4.wav" type="audio/wav">
+
 										</audio>
 									</div>
 
@@ -286,7 +283,7 @@
 
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 								</div>
 							</div>
 						</div>
@@ -311,8 +308,6 @@
 									<div id="m5_audio_sec">
 										<audio id="m5_audio" controls="">
 											<source src="audio/5/m5.mp3" type="audio/mp3">
-											<source src="audio/5/m5.ogg" type="audio/ogg">
-											<source src="audio/5/m5.wav" type="audio/wav">
 										</audio>
 									</div>
 
@@ -328,9 +323,9 @@
 
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m5_pre" hidden="" onclick="m5_buttons_pre()">Previous</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" id="m5_next" onclick="m5_button_next()">Next</button>
+									<button type="button" class="btn btn-warning" id="m5_pre" hidden="">前一节</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-warning" id="m5_next">后一节</button>
 								</div>
 							</div>
 						</div>
@@ -351,8 +346,6 @@
 									<div id="audio6_placeholder">
 										<audio id="audio6" controls="controls">
 											<source src="audio/3/m7.mp3" type="audio/mp3">
-											<source src="audio/3/m7.ogg" type="audio/ogg">
-											<source src="audio/3/m7.wav" type="audio/wav">
 										</audio>
 									</div>
 
@@ -363,7 +356,7 @@
 
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 								</div>
 							</div>
 						</div>
@@ -388,16 +381,11 @@
 
     <script src="js/DeviceOrientationControls.js"></script>
     <script src="js/OrbitControlsHacked.js"></script>
-		<script>var bgm1Statues = 1;</script>
+		<script src="js/chrome.js"></script>
 
 		<script src="js/scene3/threejs_objs.js"></script>
 
 		<script src="js/scene3/modal_events.js"></script>
-		<script>
-		$("#menu-toggle").click(function(e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled");
-		});
-		</script>
+
 	</body>
 </html>

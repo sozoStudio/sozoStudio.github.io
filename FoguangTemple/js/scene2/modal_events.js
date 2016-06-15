@@ -18,15 +18,9 @@ function m4_update(direction){
   var isSupp1 = audio1.canPlayType("audio/wav");
   if ((m1_count == 0 && direction == 1) || (m1_count == 2 && direction == -1)) {
     //load second sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/3/2.ogg";
-      }else {
-        audio1.src="audio/3/2.wav";
-      }
-    }else {
-      audio1.src="audio/3/2.mp3";
-    }
+
+    audio1.src="audio/3/2.mp3";
+
     m1_count = m1_count + direction;
     audio1.load();
     audio1.play();
@@ -47,15 +41,9 @@ function m4_update(direction){
 
   }else if ((m1_count == 1 && direction == 1)) {
     //load third sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/3/3.ogg";
-      }else {
-        audio1.src="audio/3/3.wav";
-      }
-    }else {
-      audio1.src="audio/3/3.mp3";
-    }
+
+    audio1.src="audio/3/3.mp3";
+
     m1_count = m1_count + direction;
     audio1.load();
     audio1.play();
@@ -67,15 +55,9 @@ function m4_update(direction){
   else if((m1_count == 2 && direction == 1) || (m1_count == 1 && direction == -1)){
     //load the first sound track
     //reset status
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio1.src="audio/3/1.ogg";
-      }else {
-        audio1.src="audio/3/1.wav";
-      }
-    }else {
-      audio1.src="audio/3/1.mp3";
-    }
+
+    audio1.src="audio/3/1.mp3";
+    
     m1_count = 0;
     $('div#m4_text_holder').html("<p><strong>林徽因：</strong>佛殿梁下唐人题字，列举建殿时当地官长和施主的姓名，也是关于这座殿的重要史料。其中最令人注意的莫如“佛殿主上都送供女弟子宁公遇”，这应是出资建殿的施主了。佛坛南端天王的旁边有一座等身信女像，敦煌壁画或画卷里也常有供养者侍坐画隅的例子，因此我们推定这就是供养者“女弟子宁公遇”的塑像。</p>");
 
@@ -242,4 +224,18 @@ $('#modal7').on('hide.bs.modal', function(e){
     bgm.play();
   }
 
+});
+
+//----------------------------------------------------
+// button functions
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m4_buttons_pre').click(function(){
+  m4_pre();
+});
+
+$('button#m4_buttons_next').click(function(){
+  m4_next();
 });

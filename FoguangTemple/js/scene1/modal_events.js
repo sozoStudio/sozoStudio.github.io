@@ -13,15 +13,9 @@ function m4_update(direction){
   if ((m4_count == 0 && direction == 1)||(m4_count == 2 && direction == -1)) {
     //alert("m4_count is 0");
     //load second sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/4/m4_2.ogg";
-      }else {
-        audio.src="audio/4/m4_2.wav";
-      }
-    }else {
-      audio.src="audio/4/m4_2.mp3";
-    }
+
+        audio.src="audio/4/m4_2.mp3";
+
     m4_count = m4_count + direction;
     audio.load();
     audio.play();
@@ -62,15 +56,9 @@ function m4_update(direction){
 
   }else if ((m4_count == 2 && direction == 1) || (m4_count == 4 && direction == -1)) {
     //load third sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/4/m4_4.ogg";
-      }else {
-        audio.src="audio/4/m4_4.wav";
-      }
-    }else {
-      audio.src="audio/4/m4_4.mp3";
-    }
+
+    audio.src="audio/4/m4_4.mp3";
+
     m4_count = m4_count + direction;
     audio.load();
     audio.play();
@@ -79,15 +67,9 @@ function m4_update(direction){
 
   }else if ((m4_count == 3 && direction == 1)) {
     //load third sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/4/m4_5.ogg";
-      }else {
-        audio.src="audio/4/m4_5.wav";
-      }
-    }else {
-      audio.src="audio/4/m4_5.mp3";
-    }
+
+    audio.src="audio/4/m4_5.mp3";
+
     m4_count=m4_count + direction;
     audio.load();
     audio.play();
@@ -98,15 +80,9 @@ function m4_update(direction){
   else if((m4_count == 4 && direction == 1) || (m4_count == 1 && direction == -1)){
     //load the first sound track
     //reset status
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        audio.src="audio/4/m4_1.ogg";
-      }else {
-        audio.src="audio/4/m4_1.wav";
-      }
-    }else {
-      audio.src="audio/4/m4_1.mp3";
-    }
+
+    audio.src="audio/4/m4_1.mp3";
+
 
     m4_count = 0;
     if (direction == -1) {
@@ -165,29 +141,17 @@ n1.onended = function(){
   var isSupp1 = n1.canPlayType("audio/wav");
   if (n1_count == 0 ) {
     //load second sound tracking
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        n1.src="audio/4/n2.ogg";
-      }else {
-        n1.src="audio/4/n2.wav";
-      }
-    }else {
-      n1.src="audio/4/n2.mp3";
-    }
+
+    n1.src="audio/4/n2.mp3";
+
     n1_count++;
     n1.load();
     n1.play();
   }else {
     //load the first sound track
-    if (isSupp0 === "") {
-      if (isSupp1 === "") {
-        n1.src="audio/4/n1.ogg";
-      }else {
-        n1.src="audio/4/n1.wav";
-      }
-    }else {
-      n1.src="audio/4/n1.mp3";
-    }
+
+    n1.src="audio/4/n1.mp3";
+
     n1_count = 0;
     n1.pause();
     n1_ended = true;
@@ -262,3 +226,18 @@ $('#modal4').on('hide.bs.modal', function(e){
     n1.play();
   }
 });
+
+
+//------------------------------------------------------------
+//button fuctions
+$('button#setting-toggle').click(function(){
+  toggleSetting();
+});
+
+$('button#m4_pre').click(function(){
+  m4_buttons_pre();
+});
+
+$('button#m4_next').click(function(){
+  m4_buttons_next();
+})

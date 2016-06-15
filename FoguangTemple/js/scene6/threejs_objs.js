@@ -387,7 +387,8 @@
 			domEvents.addEventListener(tele_left, 'click', function(event){
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
-						window.open('pan_scene7.html','_self');
+						//window.open('pan_scene7.html','_self');
+                window.location="pan_scene7.html";
 				}
 			);
 
