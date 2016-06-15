@@ -31,11 +31,15 @@ $('.timeline-node').click(function(){
         part1 = $('.timeline-part1'),
         thiscontent = $('.timeline-each').index(this);
 
+// up and down animation for each nodes
     eachnode[thisnode] = $(this).toggleClass('activenode');
     $(eachnode ).not( thisnode ).removeClass('activenode');
+
+// up and down animation for each timeline contents
     tcontent[thisnode] =$(tcontent[thisnode]).toggleClass('timeline-each-up active-timeline animated Fadein');
     $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
 
+// up and down animation for each nodes connect via contents
     nodeline[thisnode]=$(nodeline[thisnode]).toggleClass('opacity1 animated FadeinUp');
     $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp')
 
@@ -62,7 +66,7 @@ $('.achor-link1').click(function(event) {
 
 
 $("#templeicon").click(function() {
-    $(this).fadeToggle("slow");
+    $(".icon-east").fadeToggle("slow");
     $('.second-img').fadeToggle("slow");
     $('.third-img').addClass("animated bounceInRight");
 });

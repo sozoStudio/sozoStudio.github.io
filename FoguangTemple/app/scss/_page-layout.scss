@@ -16,6 +16,10 @@ $color-white: #F3F8F1;
     top: 50%;
     transform: translateY(-50%);
 }
+.vertical-middle-noposition {
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
 
 html {
     background-color: $color-blue;
@@ -111,16 +115,6 @@ h3, h4, h5 {
     height:auto;
     min-height: 50%;
     display:block;
-    button {
-        height: 60px;
-        position: absolute;
-        margin: auto;
-        top: 40vh;
-        left: 45%;
-        right: 50%;
-        bottom: 0;
-        color:$color-paper;
-    }
 }
 .sunrise-intro {
   top: 50%;
@@ -140,29 +134,37 @@ h3, h4, h5 {
    transform: translateX(0%) translateY(-50%);
    background-color: rgba(0,0,0,0.7);
    z-index:90000;
-   button{
-       position:absolute;
-       bottom: 0;
-       margin-bottom:40px;
-       color:$color-paper;
-       margin-left: -75px;
-   }
 }
 
-button, btn {
-    background:url(../../img/UI/button_light.png) no-repeat;
-    background-position:-30px 5px;
-     width: 166px;
-     height: 60px;
+// all button defines here.
+button {
+     width: 176px;
+     height: 45px;
      border: none;
-     min-height:50px;
-     min-width:90px;
      font-size: 20px;
-     color:$color-paper;
      text-indent: 0.5rem;
      text-decoration: none;
 }
-
+ .button1 {
+     color:$color-paper;
+    background:url(../../img/UI/icons/button1.svg) no-repeat;
+}
+ .button2 {
+    color:$color-orange;
+    background:url(../../img/UI/icons/button2.svg) no-repeat;
+}
+ .button3 {
+     color:$color-paper;
+    width: 230px;
+    height: 65px;
+    background:url(../../img/UI/icons/button3.svg) no-repeat;
+}
+.button4 {
+    width: 230px;
+    height: 65px;
+    color:$color-orange;
+    background:url(../../img/UI/icons/button4.svg) no-repeat;
+}
 .intro-text {
     padding:20px 20px 0 30px;
     max-width: 600px;
@@ -213,7 +215,7 @@ button, btn {
 .scene-title-box {
   padding-top:5px;
   color:$color-paper;
-  background-image: url(../../img/layout/title-bg.png);
+  background-image: url(../../img/UI/icons/titlebox-layout.svg);
   left: 24%;
   width: 100px;
   height:auto;
@@ -222,22 +224,34 @@ button, btn {
   text-align:center;
 }
 
-#titlebox-top,#titlebox-bottom{
+#titlebox-top{
     width:100px;
-    height:80px;
+    height:87px;
+}
+#titlebox-bottom{
+    width:100px;
+    height:40px;
 }
 
 #titlebox-bottom{
     margin-top:-34px;
 }
-
+.scene-chap-lgword{
+    letter-spacing: 26px;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    top: 50%;
+    color:$color-orange;
+    text-align: center;
+    padding-left: 33px;
+}
 .scene-title-lgword{
     letter-spacing: 16px;
-    font-size: 2.5em;
+    font-size: 2.2em;
     top: 50%;
     text-align:center;
-    color:$color-white;
-    padding-left: 8px;
+    padding-left: 20px;
+    line-height: 1.3em;
 }
 .scene-sub-title{
     width: 60px;
