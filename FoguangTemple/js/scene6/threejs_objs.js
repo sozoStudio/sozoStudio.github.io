@@ -108,6 +108,7 @@
 				var material2= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
 				var material3= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
 				var material4= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material6= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
 
 				var loader_int = new THREE.TextureLoader();
 				loader_int.load(
@@ -117,6 +118,7 @@
 						material2.alphaMap = texture;
 						material3.alphaMap = texture;
 						material4.alphaMap = texture;
+						material6.alphaMap = texture;
 					}
 				);
 
@@ -173,6 +175,19 @@
 
 				hotspots.push(hotspot4);
 				scene.add(hotspot4);
+				//-------------------------
+
+				material6.opacity = 0.7;
+
+
+				var hotspot6 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material6);
+				hotspot6.position.set(-350, 190, -120);
+				hotspot6.rotation.y = 70 * Math.PI/180;
+
+				hotspot6.name = "hotspot6";
+
+				hotspots.push(hotspot6);
+				scene.add(hotspot6);
 				//-------------------------
 
 				var material5 = new THREE.MeshBasicMaterial( { color:0xffba00, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
@@ -254,6 +269,22 @@
 				//tele_left.position.set(70, -150, 400);
 				tele_left.position.set(-50, -130, -200);
 				scene.add(tele_left);
+
+				//-------------------------------------------------------
+				var material_t2 = new THREE.MeshBasicMaterial( { color: 0xB55C39, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
+				material_t2.opacity = 0.5;
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
+				var tele_nextChap = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t2);
+				tele_nextChap.rotation.x = -90 * Math.PI/180;
+				tele_nextChap.rotation.z = 90 * Math.PI/180;
+				tele_nextChap.rotation.y = 15 * Math.PI/180;
+				//tele_left.rotation.z = 80 * Math.PI/180;
+
+				//tele_left.position.set(50, -150, 350);
+				//tele_left.position.set(-380, -130, 80);
+				//tele_left.position.set(70, -150, 400);
+				tele_nextChap.position.set(-350, -35, 50);
+				scene.add(tele_nextChap);
 
 
 		//--------------- End of teleporting spots -----------------------------------------------
@@ -363,6 +394,18 @@
 						hotspot5.material.opacity = 0.7;
 			});
 
+			domEvents.addEventListener(hotspot6, 'click', function(event){
+						$('#modal5').modal('toggle');
+			}, false);
+
+			domEvents.addEventListener(hotspot6, 'mouseover', function(event){
+						hotspot6.material.opacity = 1;
+			});
+
+			domEvents.addEventListener(hotspot6, 'mouseout', function(event){
+						hotspot6.material.opacity = 0.7;
+			});
+
 			domEvents.addEventListener(figure_plane, 'click', function(event){
 				var bgm_lsc = document.getElementById("lsc_bgm");
 				var lsc_nar = document.getElementById("lsc_nar");
@@ -398,6 +441,22 @@
 
 			domEvents.addEventListener(tele_left, 'mouseout', function(event){
 				tele_left.material.opacity = 0.5;
+			});
+
+			domEvents.addEventListener(tele_nextChap, 'click', function(event){
+						//console.log('click on the door!!', object);
+						//tele_left.material.color = 0x4091FF;
+						//window.open('pan_scene7.html','_self');
+								window.location="pan_scene4.html";
+				}
+			);
+
+			domEvents.addEventListener(tele_nextChap, 'mouseover', function(event){
+				tele_nextChap.material.opacity = 0.8;
+			});
+
+			domEvents.addEventListener(tele_nextChap, 'mouseout', function(event){
+				tele_nextChap.material.opacity = 0.5;
 			});
 
 

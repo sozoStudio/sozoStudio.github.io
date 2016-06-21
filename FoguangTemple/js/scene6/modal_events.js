@@ -528,6 +528,28 @@ $('#modal2').on('hide.bs.modal', function(e){
   }
 });
 
+$('#modal5').on('shown.bs.modal', function(e){
+  var audio = document.getElementById('audio5');
+  var m5bgm = document.getElementById('m5bgm');
+  audio.load();
+  audio.play();
+  bgm.pause();
+  m5bgm.play();
+
+
+});
+
+$('#modal5').on('hide.bs.modal', function(e){
+  var audio = document.getElementById('audio5');
+  var m5bgm = document.getElementById('m5_bgm');
+  audio.pause();
+  m5bgm.pause();
+  if (bgm1Statues == 1) {
+    bgm.play();
+  }
+
+});
+
 //-----------------------------------------------------
 //----- buttons --------------------
 $('button#setting-toggle').click(function(){
