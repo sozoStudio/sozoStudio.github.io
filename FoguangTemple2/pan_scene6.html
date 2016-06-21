@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>第三章 佛光寺 - 东大殿</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/pan_css.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/gallery.prefixed.css">
+		<link rel="stylesheet" href="css/gallery.theme.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap-toggle.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+
+
+		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
+	</head>
+	<body>
+		<div id="wrapper" class="toggled">
+
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper" class="toggled">
+						<ul class="sidebar-nav">
+								<li class="sidebar-brand">
+
+								</li>
+								<li>
+										<a href="./index.html#/tab/timeline"><div class="chap-title">第一章</div></a>
+								</li>
+								<li>
+										<a href="./index.html#/tab/chap2"><div class="chap-title">第二章</div></a>
+								</li>
+								<li>
+										<a href="pan_scene6.html"><div class="chap-title">第三章</div></a>
+								</li>
+								<li>
+										<a href="pan_scene1.html"><div class="chap-title">第四章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">第五章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">地图</div></a>
+								</li>
+						</ul>
+				</div>
+				<!-- /#sidebar-wrapper -->
+
+				<!-- Page Content -->
+				<div id="page-content-wrapper">
+
+					<div id="container"></div>
+					<!-- <div id="info">
+			      <button type="button" class="btn btn-danger" id="changeControls" onclick="test()">Change Controls</button>
+						<button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">Show/Hide Hotspots</button>
+						<button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">Change Controls000</button>
+					</div> -->
+					<div id="menu">
+						<button href="#menu-toggle" type="button" class="btn btn-info" id="menu-toggle" aria-label="Left Align">
+							<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+						</button>
+					</div>
+					<!-- <div id="info2">
+						<button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">Play/Pause</button>
+					</div> -->
+					<div id="setting">
+						<button type="button" class="btn btn-info" id="menu-toggle" aria-label="Right Align" onclick="toggleSetting()">
+							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						</button>
+					</div>
+
+					<div id="bgm_section">
+						<audio id="bgm1" loop>
+							<source src="audio/4/bgm_001.mp3" type="audio/mp3">
+							<source src="audio/4/bgm_001.ogg" type="audio/ogg">
+							<source src="audio/4/bgm_001.wav" type="audio/wav">
+						</audio>
+					</div>
+
+					<div id="lsc-avatar" onclick="testAvatar()" hidden="hidden">
+						<img src="img/scene3_1/lsc2.png">
+					</div>
+
+					<div id="lsc-sp-bubble" hidden="hidden">
+						<audio id="lsc_bgm">
+							<source src="audio/scene3/s1/lsc_bgm.mp3" type="audio/mp3">
+							<source src="audio/scene3/s1/lsc_bgm.ogg" type="audio/ogg">
+							<source src="audio/scene3/s1/lsc_bgm.wav" type="audio/wav">
+						</audio>
+						<audio id="lsc_nar" onended="lsc_end()">
+							<source src="audio/scene3/s1/lsc.mp3" type="audio/mp3">
+							<source src="audio/scene3/s1/lsc.ogg" type="audio/ogg">
+							<source src="audio/scene3/s1/lsc.wav" type="audio/wav">
+						</audio>
+					</div>
+
+					<div id="speech" hidden="hidden">
+						<p>佛光寺一寺之中，寥寥几座殿塔，几乎全是国内建筑的孤例：
+							佛殿建筑物，本身已经是一座唐构，乃更在殿内蕴藏着唐代原有塑像、绘画和墨迹，
+							四种艺术萃聚在一处，在实物遗迹中诚然是件奇珍。</p>
+							<p>佛光寺东大殿不但是国内古建筑之第一瑰宝，也是我国封建文化遗产中最可珍贵的一件东西。</p>
+					</div>
+
+
+
+
+
+					<!--   Modals  -->
+
+					<!-- ================= Modal S for settings ==================================================== -->
+					<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">设置</h1>
+								</div>
+								<div class="modal-body" align="center">
+									<ul style="list-style-type:none" align-content="justify">
+										<li>
+											<!-- <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">切换模式</button> -->
+											<p>切换模式
+												<input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+										<li>
+											<!-- <button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">显示/隐藏热点</button> -->
+											<p>热点
+												<input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+										<li>
+											<!-- <button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">暂停/播放背景乐</button> -->
+											<p>背景音乐
+												<input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+
+									</ul>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal S ========================================================= -->
+
+
+
+					<!-- ================= Modal 1 for hotspot 1 ==================================================== -->
+					<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">东大殿形制概述</h1>
+								</div>
+								<div class="modal-body" align="center">
+
+									<div id="modal1_img" class="gallery autoplay items-4">
+										<div id="item-1" class="control-operator"></div>
+										<div id="item-2" class="control-operator"></div>
+										<div id="item-3" class="control-operator"></div>
+										<div id="item-4" class="control-operator"></div>
+
+										<figure class="item">
+											<img src="img/scene3_1/001nanchan.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/002tiantai.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/003renwang.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/004EH.jpg" height="400px">
+										</figure>
+
+										<div class="controls">
+											<a href="#item-1" class="control-button">•</a>
+											<a href="#item-2" class="control-button">•</a>
+											<a href="#item-3" class="control-button">•</a>
+											<a href="#item-4" class="control-button">•</a>
+										</div>
+
+									</div>
+
+									<div id="m1_bgm_section">
+										<audio id="m1_bgm">
+											<source src="audio/scene3/s1/tm1_bgm1.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/tm1_bgm1.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/tm1_bgm1.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<div id="audio1_placeholder">
+										<audio id="audio1" controls="controls">
+											<source src="audio/scene3/s1/tm1_1.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/tm1_1.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/tm1_1.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<br>
+
+
+
+									<div id="m1_text_holder" align="left">
+										<p>佛光寺东大殿的建筑的绝大多数构件为唐代遗构，构件表面仍保留有唐代的丹粉
+											刷饰彩画，东大殿内还保存有与建筑同时期的塑像、壁画、题记，以及从唐代至
+											今一千多年，历次维修改造碑刻题记、重装补塑的塑像壁画，真实完整的显现出东大殿
+											在历史长河中的变迁。因此，佛光寺东大殿是东亚文化体系中，最具代表性的
+											木结构古建筑，在全世界都具有极高的文化价值与代表意义。</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m1_pre" hidden="" onclick="m1_buttons_pre()">前一节</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-warning" id="m1_next" onclick="m1_button_next()">后一节</button>      		</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 1 ========================================================= -->
+
+
+					<!-- ================= Modal 3 for hotspot 3 ==================================================== -->
+					<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">东大殿概述</h1>
+								</div>
+								<div class="modal-body" align="center">
+									<div id="m3_bgm_sec">
+										<audio id="m3_bgm">
+											<source src="audio/scene3/s1/m1_bgm.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/m1_bgm.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/m1_bgm.wav" type="audio/wav">
+										</audio>
+									</div>
+									<!-- <img src="img/4/details/title3.jpg" height="400px"> -->
+									<div id="modal3_video_sec">
+										<video id="modal3_video" controls="" width="100%" loop="">
+											<source src="media/scene3_intro.webm" type="video/webm">
+										</video>
+									</div>
+
+									<div id="m3_audio_sec">
+										<audio id="m3_audio" controls="">
+											<source src="audio/scene3/s1/m1_1.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/m1_1.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/m1_1.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<div align="left">
+										<p> 佛光寺位于五台山台外南麓佛光山中。寺院坐东面西，建筑分布在由西向东逐层升高的三层台地上。</p>
+										<p>东大殿矗立于东端的寺院制高点，向西俯瞰一马平川，视野非常开阔。东大殿殿前有经幢一座，刻工精美，
+											与大殿同时建造，背后紧邻山崖，东南侧为北齐祖师塔。</p>
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 3 ========================================================= -->
+
+
+					<!-- ================= Modal 4 for hotspot 2  ==================================================== -->
+					<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">唐大中经幢</h1>
+								</div>
+								<div class="modal-body" align="center">
+
+
+									<div id="modal4_img">
+										<video id="m4_vid" autoplay="" loop="" width="100%" controls="">
+											<source src="media/2.webm">
+										</video>
+									</div>
+
+
+									<div id="m4_text_holder" align="left">
+										<p>
+											 唐大中经幢立于东大殿正前，青石质，高3.24米，权衡秀美。最下方为方形土衬石，
+											 其上为八角形幢座，座束腰镌刻壶门，内雕蹲狮，上承仰覆莲座，座上立八角形幢身，
+											 正面向西，刻题名：“奉为国及法界众生造佛顶陀罗尼幢”。内容刻《佛顶尊胜陀罗尼经》，
+											 以及立幢人和年代。
+										</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m4_pre" onclick="m4_buttons_pre()" hidden="">前一节</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        		<button type="button" class="btn btn-warning" id="m4_next" onclick="m4_buttons_next()">后一节</button>								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 4 ========================================================= -->
+
+					<!-- ================= Modal 2 for hotspot 4 ==================================================== -->
+					<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">前檐柱头铺作</h1>
+								</div>
+								<div class="modal-body" align="center">
+
+									<div id="modal2_img" class="gallery autoplay items-2">
+										<div id="item-1" class="control-operator"></div>
+										<div id="item-2" class="control-operator"></div>
+
+
+										<figure class="item">
+											<img src="img/scene3_1/013.jpg" height="400px">
+										</figure>
+
+										<figure class="item">
+											<img src="img/scene3_1/014.jpg" height="400px">
+										</figure>
+
+
+										<div class="controls">
+											<a href="#item-1" class="control-button">•</a>
+											<a href="#item-2" class="control-button">•</a>
+										</div>
+
+									</div>
+
+									<div id="m2_bgm_section">
+										<audio id="m2_bgm">
+											<source src="audio/scene3/s1/m2_bgm.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/m2_bgm.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/m2_bgm.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<div id="audio2_placeholder">
+										<audio id="audio2" controls="controls">
+											<source src="audio/scene3/s1/m2_1.mp3" type="audio/mp3">
+											<source src="audio/scene3/s1/m2_1.ogg" type="audio/ogg">
+											<source src="audio/scene3/s1/m2_1.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<br>
+
+
+
+									<div id="m2_text_holder" align="left">
+										<p>东大殿殿身所用斗栱壮大，屋顶曲线平缓，出檐深远，气势庞大豪迈。</p>
+										<p>斗栱是中国木结构古建筑最具代表性的构件，是柱梁与屋顶之间的承托构件。
+											科学的杠杆运用与精巧的榫卯设计结合，将木材的特性发挥到极致。
+											东大殿铺作设计简约、结构精巧、造型雄伟，是最具代表性的构件。</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m2_pre" hidden="" onclick="m2_buttons_pre()">前一节</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-warning" id="m2_next" onclick="m2_button_next()">后一节</button>      		</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 2 ========================================================= -->
+
+				</div>
+				<!-- /#page-content-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+		<script src="js/three.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/SSUhtml5Audio.js"></script>
+		<script src="js/threex.domevents_hacked.js"></script>
+		<script src="js/bootstrap-toggle.js"></script>
+
+		<script src="js/DeviceOrientationControls.js"></script>
+		<script src="js/OrbitControlsHacked.js"></script>
+		<script>
+		var bgm1Statues = 1;
+		$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+		});
+
+		function testAvatar(){
+		  //alert("avatar clicked!");
+			var bgm_lsc = document.getElementById("lsc_bgm");
+			var lsc_nar = document.getElementById("lsc_nar");
+			var speech = document.getElementById("speech");
+
+			//check status
+			if (speech.hidden == true) {
+				speech.hidden=false;
+
+				bgm_lsc.load();bgm_lsc.play();
+				lsc_nar.load(); lsc_nar.play();
+			}else {
+				lsc_end();
+				speech.hidden = true;
+			}
+
+
+		}
+
+		function lsc_end() {
+			var bgm_lsc = document.getElementById("lsc_bgm");
+			var lsc_nar = document.getElementById("lsc_nar");
+			bgm_lsc.pause();
+			lsc_nar.pause();
+		}
+
+		function test(){
+			console.log("test function called");
+		}
+
+
+
+
+		// $(".modal-transparent").on('show.bs.modal', function () {
+  	// 		setTimeout( function() {
+    // 		$(".modal-backdrop").addClass("modal-backdrop-transparent");
+		//   }, 0);
+		// });
+		//
+		// $(".modal-transparent").on('hidden.bs.modal', function () {
+		//   $(".modal-backdrop").addClass("modal-backdrop-transparent");
+		// });
+		//
+		// $(".modal-fullscreen").on('show.bs.modal', function () {
+		//   setTimeout( function() {
+		//     $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+		//   }, 0);
+		// });
+		//
+		// $(".modal-fullscreen").on('hidden.bs.modal', function () {
+		//   $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+		// });
+		</script>
+
+
+
+		<script src="js/scene6/threejs_objs.js"></script>
+		<script src="js/scene6/modal_events.js"></script>
+		<script src="js/Settings_Pan.js"></script>
+
+	</body>
+</html>

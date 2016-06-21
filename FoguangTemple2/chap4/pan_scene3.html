@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Foguang Temple Panorama Scene 4</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: #ffffff;
+				margin: 0px;
+				overflow: hidden;
+				color: black;
+
+			}
+
+			#info {
+				position: absolute;
+				top: 0px; width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-size:13px;
+				font-weight: bold;
+				text-align:center;
+			}
+
+			#info2 {
+				position: absolute;
+				top: 40px; width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-size:13px;
+				font-weight: bold;
+				text-align:center;
+			}
+
+			a {
+				color: #ffffff;
+			}
+
+			/*.popup{
+            max-width: 75%;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.49);
+            border-radius: 5px;
+            position: absolute;
+            bottom: -105%;
+
+            left: 37%;
+            padding: 5px 20px 5px 20px;
+            -moz-box-shadow: 3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            box-shadow: 1px 3px 1px 1px rgba(0, 0, 0, 0.17);
+            z-index:1109;
+        }*/
+		</style>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/gallery.prefixed.css">
+		<link rel="stylesheet" href="css/gallery.theme.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
+	</head>
+	<body>
+
+		<div id="container"></div>
+		<div id="info">
+      <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">Change Controls</button>
+			<button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">Show/Hide Hotspots</button>
+
+				<!-- <button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">Play/Pause</button>
+				<button type="button" class="btn btn-warning btn-xs" id="songPlayPause" onclick="playPause('n1')">Start/Pause intro</button> -->
+
+			<!-- <div id="songPlayPause" onclick="playPause('song')"></div> -->
+			<!-- <div class="popup"><div class="text"></div></div> -->
+		</div>
+		<div id="info2">
+			<button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">Play/Pause</button>
+		</div>
+
+		<div id="bgm_section">
+			<audio id="bgm1" loop>
+				<source src="audio/4/bgm_001.mp3" type="audio/mp3">
+				<source src="audio/4/bgm_001.ogg" type="audio/ogg">
+				<source src="audio/4/bgm_001.wav" type="audio/wav">
+			</audio>
+		</div>
+
+
+
+
+
+		<!--   Modals  -->
+
+		<!-- ================= Modal 1 for title 1 ==================================================== -->
+		<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h1 class="modal-title" id="myModalLabel">甯公遇題記的發現</h1>
+      		</div>
+      		<div class="modal-body" align="center">
+
+						<div id="modal1_img" class="gallery autoplay items-3">
+							<div id="item-1" class="control-operator"></div>
+							<div id="item-2" class="control-operator"></div>
+							<div id="item-3" class="control-operator"></div>
+
+							<figure class="item">
+								<img src="img/4/details/m1_1.jpg" height="400px">
+					    </figure>
+
+					    <figure class="item">
+								<img src="img/4/details/m1_2.jpg" height="400px">
+					    </figure>
+
+					    <figure class="item">
+								<img src="img/4/details/title1.jpg" height="400px">
+					    </figure>
+
+					    <div class="controls">
+					      <a href="#item-1" class="control-button">•</a>
+					      <a href="#item-2" class="control-button">•</a>
+					      <a href="#item-3" class="control-button">•</a>
+					    </div>
+
+						</div>
+
+						<div id="m1_bgm_section">
+							<audio id="m1_bgm">
+								<source src="audio/3/m3_bgm_0.mp3" type="audio/mp3">
+								<source src="audio/3/m3_bgm_0.ogg" type="audio/ogg">
+								<source src="audio/3/m3_bgm_0.wav" type="audio/wav">
+							</audio>
+						</div>
+
+						<div id="audio1_placeholder">
+							<audio id="audio1" controls="controls">
+								<source src="audio/4/1.mp3" type="audio/mp3">
+								<source src="audio/4/1.ogg" type="audio/ogg">
+								<source src="audio/4/1.wav" type="audio/wav">
+							</audio>
+						</div>
+
+						<p>（北次间北缝梁架明四椽栿）功德主故右軍中尉王 佛殿主上都送供女弟子甯公遇</p>
+
+	        	<div id="m1_text_holder" align="left">
+						</div>
+      		</div>
+      		<div class="modal-footer">
+						<button type="button" class="btn btn-warning" id="m1_pre" hidden="" onclick="m1_buttons_pre()">Previous</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-warning" id="m1_next" onclick="m1_button_next()">Next</button>      		</div>
+    		</div>
+  		</div>
+		</div>
+		<!-- ================= End of Modal 1 ========================================================= -->
+
+		<!-- ================= Modal 2 for title 2 ==================================================== -->
+		<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h1 class="modal-title" id="myModalLabel">明間南縫梁架明四椽栿</h1>
+      		</div>
+      		<div class="modal-body" align="center">
+						<img src="img/4/details/title3.jpg" height="400px">
+							<p>奉為國敬造佛殿柒間伏願龍天歡喜歲稔時康雨順風調干戈休息十方施主願轉法輪法界有情悉願成佛</p>
+
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      		</div>
+    		</div>
+  		</div>
+		</div>
+		<!-- ================= End of Modal 2 ========================================================= -->
+
+		<!-- ================= Modal 3 for hotspot 1 ==================================================== -->
+		<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h1 class="modal-title" id="myModalLabel">阿彌陀佛</h1>
+      		</div>
+      		<div class="modal-body" align="center">
+						<!-- <img src="img/4/details/title3.jpg" height="400px"> -->
+
+						<div id="audio1_placeholder">
+							<audio id="audio3" controls="controls">
+								<source src="audio/5/m3.mp3" type="audio/mp3">
+								<source src="audio/5/m3.ogg" type="audio/ogg">
+								<source src="audio/5/m3.wav" type="audio/wav">
+							</audio>
+						</div>
+
+
+						<div align="left">
+							<p> 阿弥陀佛，趺坐在六角须弥座上。
+								直髻，如犍陀罗式，面庞圆润，双眉弯曲。
+								身披通肩袈裟，上身端坐，双臂上垂下曲，左手在下，
+								手心向上，右手在上，手心向下，双手手指自然弯曲，
+								略如“安慰印”。</p>
+							</div>
+
+
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      		</div>
+    		</div>
+  		</div>
+		</div>
+		<!-- ================= End of Modal 3 ========================================================= -->
+
+		<!-- ================= Modal 4 for hotspot 2 ==================================================== -->
+		<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h1 class="modal-title" id="myModalLabel">阿彌陀佛北側脅侍菩薩</h1>
+					</div>
+					<div class="modal-body" align="center">
+						<!-- <img src="img/4/details/title3.jpg" height="400px"> -->
+						<div id="modal4_video_sec">
+							<video id="m4_video" controls="" width="500px" loop="">
+								<source src="media/2.mp4" type="video/mp4">
+							</video>
+						</div>
+
+						<div id="m4_audio_sec">
+							<audio id="m4_audio" controls="">
+								<source src="audio/5/m4.mp3" type="audio/mp3">
+								<source src="audio/5/m4.ogg" type="audio/ogg">
+								<source src="audio/5/m4.wav" type="audio/wav">
+							</audio>
+						</div>
+
+
+						<div align="left">
+							<p>胁侍菩萨立像微微前倾，腰部微弯曲，腹部微凸起，
+								是唐中叶以后菩萨的特征，与敦煌塑像同出一范。</p>
+							<p>该尊胁侍菩萨高约4米，身体微向前倾，束发竖髻，
+								头戴云头花冠，坦胸露背，项佩璎珞，飘带自两肩垂下，
+								胸前十字相结，并悬搭于两臂之上。面庞方圆细腻，面相端庄，
+								弯眉大眼，双目下视，鼻梁宽厚，嘴角显现，两耳垂吊玉环，
+								尽显宁静虔诚之神态；两臂弯曲，左手手心向上，右手手背朝上，
+								两手均作拈花状；半身裙裹下腹和双腿，绵软的罗纱微显“曹衣出水”之势。</p>
+	   					<p>塑像身体比例匀称，身段秀美，姿态柔和，气度娴雅，
+								显现了无限的明澈和智慧，以柔和秀美的女性形象，
+								融入佛教圣人超凡绝尘的智慧精神，唐代艺术的时代风格一览无余。</p>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ================= End of Modal 4 ========================================================= -->
+
+
+		<!-- ================= Modal 5 for hotspot 3 ==================================================== -->
+		<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h1 class="modal-title" id="myModalLabel">文殊菩薩-新樣文殊</h1>
+					</div>
+					<div class="modal-body" align="center">
+						<!-- <img src="img/4/details/title3.jpg" height="400px"> -->
+						<div id="modal5_img">
+						</div>
+
+
+						<div id="m5_audio_sec">
+							<audio id="m5_audio" controls="">
+								<source src="audio/5/m5.mp3" type="audio/mp3">
+								<source src="audio/5/m5.ogg" type="audio/ogg">
+								<source src="audio/5/m5.wav" type="audio/wav">
+							</audio>
+						</div>
+
+
+						<div id="m5_text" align="left">
+						<p>文殊菩萨头戴天冠，面向秀润，双目平视，专注凝思，身披璎珞衣着，
+							雍容华贵。手持如意，一派智慧深邃者的神态。坐骑高大威猛，作狂吼状，
+							四蹄爪地，各踏一莲。</p>
+						</div>
+
+
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-warning" id="m5_pre" hidden="" onclick="m5_buttons_pre()">Previous</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-warning" id="m5_next" onclick="m5_button_next()">Next</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ================= End of Modal 5 ========================================================= -->
+
+		<!-- ================= Modal 6 for hotspot 4 ==================================================== -->
+		<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h1 class="modal-title" id="myModalLabel">兩側天王</h1>
+					</div>
+					<div class="modal-body" align="center">
+						<!-- <img src="img/4/details/title3.jpg" height="400px"> -->
+
+						<div id="audio6_placeholder">
+							<audio id="audio6" controls="controls">
+								<source src="audio/3/m7.mp3" type="audio/mp3">
+								<source src="audio/3/m7.ogg" type="audio/ogg">
+								<source src="audio/3/m7.wav" type="audio/wav">
+							</audio>
+						</div>
+
+
+						<div align="left">
+							<p>两侧天王像森严雄劲，极为生动；他们的甲胄衣饰与唐墓出土的武俑多相似处，也是少见的实例。</p>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ================= End of Modal 6 ========================================================= -->
+
+		<script src="js/three.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/SSUhtml5Audio.js"></script>
+		<script src="js/threex.domevents_hacked.js"></script>
+		<script src="js/drawString.js"></script>
+
+    <script src="js/DeviceOrientationControls.js"></script>
+    <script src="js/OrbitControlsHacked.js"></script>
+
+		<script src="js/scene3/threejs_objs.js"></script>
+
+		<script src="js/scene3/modal_events.js"></script>
+	</body>
+</html>

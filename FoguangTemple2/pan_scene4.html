@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Foguang Temple Panorama Scene 4</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/pan_css.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/gallery.prefixed.css">
+		<link rel="stylesheet" href="css/gallery.theme.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap-toggle.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
+	</head>
+	<body>
+		<div id="wrapper" class="toggled">
+
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper">
+						<ul class="sidebar-nav">
+								<li class="sidebar-brand">
+
+								</li>
+								<li>
+										<a href="./index.html#/tab/timeline"><div class="chap-title">第一章</div></a>
+								</li>
+								<li>
+										<a href="./index.html#/tab/chap2"><div class="chap-title">第二章</div></a>
+								</li>
+								<li>
+										<a href="pan_scene6.html"><div class="chap-title">第三章</div></a>
+								</li>
+								<li>
+										<a href="pan_scene1.html"><div class="chap-title">第四章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">第五章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">地图</div></a>
+								</li>
+						</ul>
+				</div>
+				<!-- /#sidebar-wrapper -->
+
+				<!-- Page Content -->
+				<div id="page-content-wrapper">
+
+					<div id="container"></div>
+
+
+					<div id="menu">
+						<button href="#menu-toggle" type="button" class="btn btn-info" id="menu-toggle" aria-label="Left Align">
+							<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+						</button>
+					</div>
+
+					<div id="setting">
+						<button type="button" class="btn btn-info" id="menu-toggle" aria-label="Right Align" onclick="toggleSetting()">
+							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						</button>
+					</div>
+
+
+					<div id="bgm_section">
+						<audio id="bgm1" loop>
+							<source src="audio/4/bgm_001.mp3" type="audio/mp3">
+							<source src="audio/4/bgm_001.ogg" type="audio/ogg">
+							<source src="audio/4/bgm_001.wav" type="audio/wav">
+						</audio>
+					</div>
+
+
+
+
+
+					<!--   Modals  -->
+					<!-- ================= Modal S for settings ==================================================== -->
+					<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">设置</h1>
+								</div>
+								<div class="modal-body" align="center">
+									<ul style="list-style-type:none" align-content="justify">
+										<li>
+											<!-- <button type="button" class="btn btn-danger" id="changeControls" onclick="toggleControls()">切换模式</button> -->
+											<p>切换模式
+												<input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+										<li>
+											<!-- <button type="button" class="btn btn-danger" id="hotspotbutton" onclick="toggleHotspots()">显示/隐藏热点</button> -->
+											<p>热点
+												<input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+										<li>
+											<!-- <button type="button" class="btn btn-info btn-xs" id="songPlayPause" onclick="playPause('bgm1')">暂停/播放背景乐</button> -->
+											<p>背景音乐
+												<input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger">
+											</p>
+										</li>
+
+									</ul>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal S ========================================================= -->
+
+
+
+
+					<!-- ================= Modal 2 for title 2 ==================================================== -->
+					<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  		<div class="modal-dialog" role="document">
+			    		<div class="modal-content">
+			      		<div class="modal-header">
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        		<h1 class="modal-title" id="myModalLabel">唐代栱眼壁壁画</h1>
+			      		</div>
+			      		<div class="modal-body" align="center">
+									<div id="m2_bgm_sec">
+										<audio id="m2_bgm">
+											<source src="audio/6/m2_bgm.mp3" type="audio/mp3">
+											<source src="audio/6/m2_bgm.ogg" type="audio/ogg">
+											<source src="audio/6/m2_bgm.wav" type="audio/wav">
+										</audio>
+									</div>
+									<div id="modal2_img" class="gallery autoplay items-4">
+										<div id="item-1" class="control-operator"></div>
+										<div id="item-2" class="control-operator"></div>
+										<div id="item-3" class="control-operator"></div>
+										<div id="item-4" class="control-operator"></div>
+
+										<figure class="item">
+											<img src="img/6/details/m2_010.jpg" height="100px">
+								    </figure>
+
+								    <figure class="item">
+											<img src="img/6/details/m2_011.jpg" height="300px">
+								    </figure>
+
+								    <figure class="item">
+											<img src="img/6/details/m2_012.jpg" height="300px">
+								    </figure>
+
+										<figure class="item">
+											<img src="img/6/details/m2_013.jpg" height="300px">
+								    </figure>
+
+								    <div class="controls">
+								      <a href="#item-1" class="control-button">•</a>
+								      <a href="#item-2" class="control-button">•</a>
+								      <a href="#item-3" class="control-button">•</a>
+											<a href="#item-4" class="control-button">•</a>
+								    </div>
+
+									</div>
+									<div id="m2_audio_sec">
+										<audio id="m2_audio" controls="">
+											<source src="audio/6/m2.mp3" type="audio/mp3">
+											<source src="audio/6/m2.ogg" type="audio/ogg">
+											<source src="audio/6/m2.wav" type="audio/wav">
+										</audio>
+
+									</div>
+									<div id="m2_text" align="left">
+										<p>这幅唐代栱眼壁壁画位于东大殿内槽北次间栱眼壁外侧。柴泽俊先生将这幅图命名为弥陀说法图。整组造像布局严谨、主次分明，形象生动、风格雄健，实为我国现存唐代佛教壁画珍品。并且壁画造像布局与佛坛塑像布局严格对应，是壁画与塑像同为唐代建造的最好印证。</p>
+									</div>
+			      		</div>
+			      		<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m2_pre" onclick="m2_buttons_pre()" hidden="">前一节</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        		<button type="button" class="btn btn-warning" id="m2_next" onclick="m2_buttons_next()">后一节</button>
+			      		</div>
+			    		</div>
+			  		</div>
+					</div>
+					<!-- ================= End of Modal 2 ========================================================= -->
+
+
+
+					<!-- ================= Modal 4 for hotspot 2  ==================================================== -->
+					<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">板门的故事</h1>
+								</div>
+								<div class="modal-body" align="center">
+									<div id="m4_bgm_section">
+										<audio id="m4_bgm">
+											<source src="audio/6/m4_bgm.mp3" type="audio/mp3">
+											<source src="audio/6/m4_bgm.ogg" type="audio/ogg">
+											<source src="audio/6/m4_bgm.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<div id="modal4_img" class="gallery autoplay items-3">
+											<div id="item-1" class="control-operator"></div>
+											<div id="item-2" class="control-operator"></div>
+											<div id="item-3" class="control-operator"></div>
+
+
+											<figure class="item">
+												<img src="img/6/details/m4_001.jpg" height="250px">
+									    </figure>
+
+									    <figure class="item">
+												<img src="img/6/details/m4_002.jpg" height="400px">
+									    </figure>
+
+									    <figure class="item">
+												<img src="img/6/details/m4_003.jpg" height="400px">
+									    </figure>
+
+									    <div class="controls">
+									      <a href="#item-1" class="control-button">•</a>
+									      <a href="#item-2" class="control-button">•</a>
+									      <a href="#item-3" class="control-button">•</a>
+
+									    </div>
+
+
+									</div>
+
+									<div id="audio4_placeholder">
+										<audio id="audio4" controls="controls">
+											<source src="audio/6/m4_001.mp3" type="audio/mp3">
+											<source src="audio/6/m4_001.ogg" type="audio/ogg">
+											<source src="audio/6/m4_001.wav" type="audio/wav">
+										</audio>
+									</div>
+
+									<div id="m4_text_holder" align="left">
+										<p>
+											 东大殿发现之时，梁思成先生初步判断板门为明以后之物。</p>
+											 <p>1963年陈明达先生提出东大殿原设有前廊，板门是后来推出至檐柱间的观点。
+										</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-warning" id="m4_pre" hidden="" onclick="m4_buttons_pre()">前一节</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-warning" id="m4_next" onclick="m4_buttons_next()">后一节</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 4 ========================================================= -->
+				</div>
+				<!-- /#page-content-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+
+		<script src="js/three.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/SSUhtml5Audio.js"></script>
+		<script src="js/threex.domevents_hacked.js"></script>
+		<script src="js/bootstrap-toggle.js"></script>
+		<script src="js/Settings_Pan.js"></script>
+
+
+
+    <script src="js/DeviceOrientationControls.js"></script>
+    <script src="js/OrbitControlsHacked.js"></script>
+
+		<script>var bgm1Statues = 1; </script>
+		<script src="js/scene4/threejs_objs.js"></script>
+		<script src="js/scene4/modal_events.js"></script>
+		<script>
+		$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+		});
+		</script>
+	</body>
+</html>
