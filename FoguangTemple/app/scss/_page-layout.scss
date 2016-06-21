@@ -90,6 +90,10 @@ display: inline-block;
       font-family: 'chnFont1';
       src: local("FZQKBYSJW.TTF"), url("../../source/font/FZQKBYSJW.TTF");
     }
+    
+@font-face {
+      font-family: 'fontAwesome';
+      src: local("fontAwesome.otf"), url("../font/fontAwesome.otf"); }
 
 h1, h2 {
   font-family: 'chnFont1', Helvetica, Arial, sans-serif;

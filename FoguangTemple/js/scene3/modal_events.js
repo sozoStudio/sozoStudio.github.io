@@ -353,18 +353,18 @@ function m1_update(direction){
     //remove the canvas element
 
     $('#canvas').html('');
-    $('#canvas').html('<p class="intro-text" style="display:none">功\n'+
-    '德\n'+'主\n'+'故\n'+'右\n'+'軍\n'+'中\n'+'尉\n'+'王\n'+ ' \n' + '佛\n' +
+    $('#canvas').html('<p id="intro-text" style="display:none">功\n'+
+    '德\n'+'主\n'+'故\n'+'右\n'+'軍\n'+'中\n'+'尉\n'+'王\n'+ ' \n' + ' \n' + ' \n'+ '佛\n' +
     '殿\n'+'主\n'+'上\n'+'都\n'+'送\n'+'供\n'+'女\n'+'弟\n'+'子\n'+'甯\n'+'公\n'+'遇\n</p>'+
     '<ul id="result"></ul>');
     //intro text rolling.
-    var lines = $('.intro-text').text().split("\n");
+    var lines = $('#intro-text').text().split("\n");
 
     var timer,
         displayLine = function(){
             var nextLine = lines.shift();
             if(nextLine){
-                var newLine = $('<li class="line">' + nextLine + '</li>');
+                var newLine = $('<li id="line">' + nextLine + '</li>');
                 $('#result').append(newLine);
                 newLine.animate({ 'margin-left':0 }, 1100);
                 timer = setTimeout(displayLine,200);
@@ -449,7 +449,7 @@ $('#modal1').on('shown.bs.modal', function(e){
   if (m1_count==0) {
 
     audio1.src="audio/4/1.mp3";
-    
+
 
     if (isBgmSupp0 === "") {
       if (isBgmSupp1 === "") {
