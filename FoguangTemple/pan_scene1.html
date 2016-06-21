@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="css/gallery.theme.css">
 		<link rel="stylesheet" href="css/bootstrap-toggle.css">
 		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/map_modal.css">
 
 		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
 	</head>
@@ -41,7 +42,7 @@
                     <a href="#"><div class="chap-title">第五章</div></a>
                 </li>
                 <li>
-                    <a href="#"><div class="chap-title">地图</div></a>
+                    <a href="#"><div class="chap-title" id="map_trigger">地图</div></a>
                 </li>
             </ul>
         </div>
@@ -77,9 +78,18 @@
 							</audio>
 						</div>
 
+						<!-- map pop up section -->
+						<div id="map-popup" class="modal_map">
+							<div class="modal_map-content">
+								<span class="map_close">x</span>
+								<div id="map_container"></div>
+								<p> this is the section where shows the map</p>
+							</div>
+						</div>
 
 
-						<!--   Modals  -->
+
+						  <!-- Modals  -->
 						<!-- ================= Modal S for settings ==================================================== -->
 						<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							<div class="modal-dialog" role="document">
@@ -267,6 +277,7 @@
 		<script src="js/SSUhtml5Audio.js"></script>
 		<script src="js/threex.domevents_hacked.js"></script>
 		<script src="js/bootstrap-toggle.js"></script>
+		<script src="js/OBJLoader.js"></script>
 
 
 
@@ -276,6 +287,8 @@
 		<script src="js/scene1/threejs_objs.js"></script>
 		<script src="js/Settings_Pan.js"></script>
 		<script src="js/scene1/modal_events.js"></script>
+
+		<script src="js/map_modal.js"></script>
 
 
 

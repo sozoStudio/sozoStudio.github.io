@@ -156,7 +156,7 @@
 
 				//------------------------------------------------------
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
+				var material = new THREE.MeshBasicMaterial( { color: 0xB55C39, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
 				material.opacity = 0.5;
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
 				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
@@ -245,7 +245,7 @@
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
 						//window.open('pan_scene5.html','_self');
-                window.location="pan_scene5.html";
+                window.location="pan_scene6.html";
 				}
 			);
 
