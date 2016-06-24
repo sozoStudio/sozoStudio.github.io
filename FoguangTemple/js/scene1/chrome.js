@@ -3,7 +3,7 @@ var n1Statues = 1;
 // $('div#body-setting').html('<div class="main" ui-view></div>');
 $("#menu-toggle").click(function(e) {
     e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
+    $("#wrapper-p").toggleClass("toggled");
 });
 $('#narPlayPause').change(function() {
   console.log('Toggle: ' + $(this).prop('checked'));

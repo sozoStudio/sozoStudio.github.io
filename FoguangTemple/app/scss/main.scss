@@ -25,3 +25,15 @@
 @import '_responsive.scss';
 
 //bootstrap (external style)
+@import '_modal.scss';
+@import '_toggle.scss';
+@import '_btsLayout.scss';
+
+//panorama css
+@import '_pan_css.scss';
+@import '_pan_map_modal.scss';
+@import '_gallery.prefixed.scss';
+@import '_gallery.theme.scss';
+
+//normalize to use crossplatforms
+@import '_normalize.scss'
