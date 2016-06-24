@@ -1,0 +1,407 @@
+//variables
+$color-red: #7A1A11;
+$color-orange: #D69F50;
+$color-yellow: #d9b612;
+$color-brown: #B55C39;
+$color-blue: #424B50;
+$color-lightblue:#707D95;
+$color-green:#AEC3A4;
+$color-black: #050505;
+$color-paper: #EEE2CF;
+$color-grey:#606060;
+$color-white: #F3F8F1;
+
+.vertical-middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.vertical-middle-noposition {
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+html {
+    background-color: $color-blue;
+}
+
+body {
+  height:100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+  overflow-x:scroll;
+  @extend .fadein;
+}
+
+body::after {
+  content: "";
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hori-scroll {
+display: inline-block;
+}
+
+.black-bg{
+     background-color: rgba(0, 0, 0, .4);
+}
+#texture {
+    width:inherit;
+    background: url("../../img/layout/concrete-wall-2.png");
+    height:150vh;
+    z-index: 0;
+    position:absolute;
+    margin-top:-46vh;
+    opacity:0.6;
+    pointer-events: none;
+}
+
+// .active {
+//   background-color: $color-orange;
+// }
+
+/* FONT PATH
+ * -------------------------- */
+ // @font-face {
+ //     font-family: 'contentFont';
+ //     src: local('contentFont.otf'),
+ //           url('../../source/font/contentFont.otf');
+ //     src: local('contentFont.ttf'),
+ //     url('../../source/font/contentFont.ttf') format('truetype'); /* Safari, Android, iOS */
+    //  url('/css/fonts/IranSans.woff') format('woff'), /* Modern Browsers */
+    //  url('/css/fonts/IranSans.svg') format('svg'); /* Legacy iOS */
+ // }
+ @font-face {
+    font-family: 'titleFont';
+    src: local('yuweif.woff'),
+    url('../../source/font/yuweif.woff');
+}
+@font-face {
+      font-family: 'chnFont1';
+      src: local("FZQKBYSJW.TTF"), url("../../source/font/FZQKBYSJW.TTF");
+    }
+    
+@font-face {
+      font-family: 'fontAwesome';
+      src: local("fontAwesome.otf"), url("../font/fontAwesome.otf"); }
+
+h1, h2 {
+  font-family: 'chnFont1', Helvetica, Arial, sans-serif;
+}
+
+p,li, button {
+  font-family:'chnFont1',times;
+  font-weight:normal;
+  font-size: 12pt;
+}
+
+h3, h4, h5 {
+    font-family:'chnFont1',Helvetica;
+    font-weight:700;
+    font-size: 1.6em;
+}
+
+/* all chapters introduction page */
+.main-intro{
+    top:50%;
+    left:50%;
+    width:auto;
+    height:auto;
+    min-height: 50%;
+    display:block;
+}
+.sunrise-intro {
+  top: 50%;
+  left: 10%;
+  width: auto;
+  height: auto;
+  max-width: 25%;
+  min-width: 350px;
+  min-height: 330px;
+  text-align:center;
+   line-height: 2.0em;
+   position: fixed;
+   color:$color-paper;
+   padding:50px;
+  position: fixed;
+   -webkit-transform: translateX(0%) translateY(-50%);
+   transform: translateX(0%) translateY(-50%);
+   background-color: rgba(0,0,0,0.7);
+   z-index:90000;
+}
+
+// all button defines here.
+button {
+     width: 176px;
+     height: 45px;
+     border: none;
+     font-size: 20px;
+     text-indent: 0.5rem;
+     text-decoration: none;
+}
+ .button1 {
+     color:$color-paper;
+    background:url(../../img/UI/icons/button1.svg) no-repeat;
+}
+ .button2 {
+    color:$color-orange;
+    background:url(../../img/UI/icons/button2.svg) no-repeat;
+}
+ .button3 {
+     color:$color-paper;
+    width: 230px;
+    height: 65px;
+    background:url(../../img/UI/icons/button3.svg) no-repeat;
+}
+.button4 {
+    width: 230px;
+    height: 65px;
+    color:$color-orange;
+    background:url(../../img/UI/icons/button4.svg) no-repeat;
+}
+.intro-text {
+    padding:20px 20px 0 30px;
+    max-width: 600px;
+    color:white;
+  position: relative;
+  p{
+      min-width: 300px !important;
+  }
+}
+.line{ margin-left: 100%; overflow:hidden;height:30px;}
+
+.logo {
+  background: url(img/logo/logos-04.svg) no-repeat top left;
+  background-size: contain;
+  width:300px;
+  height:150px;
+}
+
+ .logo-property{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   width:550px;
+   height:230px;
+   max-width: 670px;
+   display: block;
+}
+
+
+.no-svg .main-header {
+  background-image: url(img/logo/logos-04.svg.png);
+}
+
+.scene-title {
+  width: 200px;
+  min-width: 100px;
+  height:77vh;
+  top: 50vh;
+  left: 100px;
+  display: inline-block;
+  position: absolute;
+  @extend .vertical-middle;
+}
+
+.scene-title-box {
+  padding-top:5px;
+  color:$color-paper;
+  background-image: url(../../img/UI/icons/titlebox-layout.svg);
+  left: 24%;
+  width: 100px;
+  height:auto;
+  max-width: 55%;
+  min-height: 80%;
+  text-align:center;
+}
+
+#titlebox-top{
+    width:100px;
+    height:87px;
+}
+#titlebox-bottom{
+    width:100px;
+    height:40px;
+}
+
+#titlebox-bottom{
+    margin-top:-34px;
+}
+.scene-chap-lgword{
+    letter-spacing: 26px;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    top: 50%;
+    color:$color-orange;
+    text-align: center;
+    padding-left: 33px;
+}
+.scene-title-lgword{
+    letter-spacing: 16px;
+    font-size: 2.2em;
+    top: 50%;
+    text-align:center;
+    padding-left: 20px;
+    line-height: 1.3em;
+}
+.scene-sub-title{
+    width: 60px;
+    height: 90vh;
+    bottom:10vh;
+    letter-spacing: 16px;
+    margin-left:50px;
+    text-align:center;
+    overflow: hidden;
+    .sub-title-line{
+        height:auto;
+        width:40%;
+        min-height: 90px;
+        border-right:2px solid $color-grey;
+    }
+    h1 {
+            font-size: 2.2em;
+    }
+}
+.background-mvc{
+  opacity: 0.3;
+  width: 45px;
+  padding-left:20px;
+  position:absolute;
+
+  left:100px;
+}
+.chap2-nextchap{
+    width: 250px;
+    height:100vh;
+    text-align: center;
+    h4{
+        margin-top:-15px;
+        line-height: 0px;
+    }
+        .arrow-right {
+            margin-left:40%;
+        	width: 20px;
+        	height: 1px;
+        	border-top: 30px solid transparent;
+        	border-bottom: 30px solid transparent;
+        	border-left: 30px solid $color-brown;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline;
+        }
+}
+.next-chap{
+    right: 0px;
+    position: absolute;
+    width: 350px;
+    height:100vh;
+    text-align: right;
+    color:$color-paper;
+
+    li {
+        width:45%;
+        display: inline;
+        float:left;
+    }
+    h4{
+        margin-top:-15px;
+    }
+    .arrow-right {
+    	width: 20px;
+    	height: 1px;
+    	border-top: 30px solid transparent;
+    	border-bottom: 30px solid transparent;
+    	border-left: 30px solid $color-brown;
+    }
+    ul{
+        list-style: none;
+    }
+
+}
+
+.bg-responsive {
+	/* Set rules to fill background */
+	min-height: 100%;
+	min-width: 1024px;
+
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+    z-index:999;
+}
+.red {
+    color:$color-red;
+    display: inline;
+    line-height: 34px;
+}
+
+audio {
+    z-index: 99999;
+}
+
+#arrows {
+    top:40px;
+    left:40px;
+		width:30px;
+		height:30px;
+		position:absolute;
+        z-index:99999;
+	}
+
+#arrows .arrowpointer{
+    background-color: $color-white;
+    -webkit-mask-image: url(../../img/UI/arrow-link.svg);
+    mask-image: url(../../img/UI/arrow-link.svg);
+	height:100%;
+	width:100%;
+}
+
+#templeicon{
+		width:4vw;
+		height:4vw;
+        min-width:30px;
+        min-width:30px;
+		position:absolute;
+        z-index:99999;
+	}
+#templeicon .templepointer{
+    background-color: $color-yellow;
+    -webkit-mask-image: url(../../img/UI/temple.svg);
+    mask-image: url(../../img/UI/temple.svg);
+	height:100%;
+	width:100%;
+}
+
+.opacity1 {
+    opacity:1 !important;
+}
+.opacity0 {
+    opacity:0;
+}
+@-webkit-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:15px; }
+  50%      { bottom:20px; }
+  100%     {bottom:0;}
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Foguang Temple Panorama Scene 4</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- <link rel="stylesheet" href="css/pan_css.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/gallery.prefixed.css">
+		<link rel="stylesheet" href="css/gallery.theme.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap-toggle.css"> -->
+		<link rel="stylesheet" type="text/css" href="app/css/main.css">
+
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
+	</head>
+	<body>
+		<div id="wrapper-p" class="toggled">
+
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper-p">
+						<ul class="sidebar-nav-p">
+								<li class="sidebar-brand-p">
+
+								</li>
+								<li>
+										<a href="chap1_timeline.html"><div class="chap-title">第一章</div></a>
+								</li>
+								<li>
+										<a href="chap2_second.html"><div class="chap-title">第二章</div></a>
+								</li>
+								<li>
+										<a href="pan_scene6.html"><div class="chap-title">第三章</div></a>
+								</li>
+								<li>
+										<a href="pan_scene1.html"><div class="chap-title">第四章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">第五章</div></a>
+								</li>
+								<li>
+										<a href="#"><div class="chap-title">地图</div></a>
+								</li>
+						</ul>
+				</div>
+				<!-- /#sidebar-wrapper -->
+
+				<!-- Page Content -->
+				<div id="page-content-wrapper-p">
+
+					<div id="container"></div>
+
+					<div id="menu">
+						<button href="#menu-toggle" type="button" class="btn btn-info" id="menu-toggle" aria-label="Left Align">
+							<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div id="setting">
+						<button type="button" class="btn btn-info" id="setting-toggle" aria-label="Right Align">
+							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						</button>
+					</div>
+
+
+					<div id="bgm_section">
+						<audio id="bgm1" loop>
+							<source src="audio/4/bgm_001.mp3" type="audio/mp3">
+						</audio>
+					</div>
+
+
+
+
+
+					<!--   Modals  -->
+					<!-- ================= Modal S for settings ==================================================== -->
+					<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel" align="center">设置</h1>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-sm-3 col-sm-offset-3">
+											<p>切换模式</p>
+										</div>
+										<div class="col-sm-3 col-sm-offset-1">
+											<p><input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3 col-sm-offset-3">
+											<p>热点</p>
+										</div>
+										<div class="col-sm-3 col-sm-offset-1">
+											<p><input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3 col-sm-offset-3">
+											<p>背景音乐</p>
+										</div>
+										<div class="col-sm-3 col-sm-offset-1">
+											<p><input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+										</div>
+									</div>
+
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal S ========================================================= -->
+
+
+
+					<!-- ================= Modal 4 for hotspot 2  ==================================================== -->
+					<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h1 class="modal-title" id="myModalLabel">七朱八白</h1>
+								</div>
+								<div class="modal-body" align="center">
+									<div id="m4_bgm_section">
+										<audio id="m4_bgm">
+											<source src="audio/6/m4_bgm.mp3" type="audio/mp3">
+										</audio>
+									</div>
+
+									<div id="modal4_img">
+										<img src="img/1/details/m4.gif" height="350px">
+									</div>
+
+									<div id="audio4_placeholder">
+										<audio id="audio4" controls="controls">
+											<source src="audio/1/m4_001.mp3" type="audio/mp3">
+										</audio>
+									</div>
+
+									<div id="m4_text_holder" align="left">
+										<p>
+											 七朱八白和燕尾彩画是《营造法式》彩画作制度中丹粉刷饰屋舍的一种方法。
+											 其中七朱八白就是把阑额的立面之广分为五份至七份，各取居中的一份刷白，
+											 然后沿柱间方向均匀地分成八等份。每份之间用朱阑断成七格，两头近柱处不用朱阑断，
+											 隔长随白之广。尽端的白色直接与柱相接是《营造法式》提到的“入柱白”，
+											 佛光寺保留了这种古老的彩画方式在唐代建筑上的实例。
+										</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Modal 4 ========================================================= -->
+				</div>
+				<!-- /#page-content-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+
+		<script src="js/three.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/SSUhtml5Audio.js"></script>
+		<script src="js/threex.domevents_hacked.js"></script>
+		<script src="js/bootstrap-toggle.js"></script>
+		<script src="js/Settings_Pan.js"></script>
+
+
+    <script src="js/DeviceOrientationControls.js"></script>
+    <script src="js/OrbitControlsHacked.js"></script>
+		<script src="js/chrome.js"></script>
+
+		<script src="js/scene5/threejs_objs.js"></script>
+		<script src="js/scene5/modal_events.js"></script>
+
+	</body>
+</html>
