@@ -400,12 +400,16 @@ button {
     display: inline; }
 
 .next-chap {
-  top: -30vh;
   right: 0px;
   position: absolute;
-  width: 160px;
+  width: 350px;
   height: 100vh;
-  padding: 40px; }
+  text-align: right;
+  color: #EEE2CF; }
+  .next-chap li {
+    width: 45%;
+    display: inline;
+    float: left; }
   .next-chap h4 {
     margin-top: -15px; }
   .next-chap .arrow-right {
@@ -416,8 +420,6 @@ button {
     border-left: 30px solid #B55C39; }
   .next-chap ul {
     list-style: none; }
-  .next-chap li {
-    display: inline; }
 
 .bg-responsive {
   /* Set rules to fill background */
@@ -936,7 +938,7 @@ video#bgvid {
   transition: all 3s ease-in-out; }
 
 .timeline-width {
-  width: 2700px;
+  width: 2800px;
   position: relative; }
 
 .timeline-part1 {
@@ -1126,24 +1128,36 @@ video#bgvid {
   color: #EEE2CF;
   position: fixed;
   z-index: 9999;
+  top: 13px;
   left: 80px; }
 
 .timelineborder {
-  border: 15px solid transparent;
-  -webkit-border-image: url(../../img/UI/border.png) 25 round;
+  border: 13px solid transparent;
+  padding: 35px;
+  -webkit-border-image: url(../../img/UI/border1.svg) 35 round;
   /* Safari 3.1-5 */
-  -o-border-image: url(../../img/UI/border.png) 25 round;
+  -o-border-image: url(../../img/UI/border1.svg) 35 round;
   /* Opera 11-12.1 */
-  border-image: url(../../img/UI/border.png) 25 round;
+  border-image: url(../../img/UI/border1.svg) 35 round;
   overflow: hidden; }
 
 .imageborder {
-  border: 10px solid transparent;
-  -webkit-border-image: url(../../img/UI/border.png) 25 round;
+  border: 13px solid transparent;
+  -webkit-border-image: url(../../img/UI/border1.svg) 35 round;
   /* Safari 3.1-5 */
-  -o-border-image: url(../../img/UI/border.png) 25 round;
+  -o-border-image: url(../../img/UI/border1.svg) 35 round;
   /* Opera 11-12.1 */
-  border-image: url(../../img/UI/border.png) 25 round;
+  border-image: url(../../img/UI/border1.svg) 35 round;
+  overflow: hidden; }
+
+.custumborder1 {
+  border: 13px solid transparent;
+  padding: 35px;
+  -webkit-border-image: url(../../img/UI/border1.svg) 35 round;
+  /* Safari 3.1-5 */
+  -o-border-image: url(../../img/UI/border1.svg) 35 round;
+  /* Opera 11-12.1 */
+  border-image: url(../../img/UI/border1.svg) 35 round;
   overflow: hidden; }
 
 .scroll-each, .wide-scroll {
@@ -1151,11 +1165,17 @@ video#bgvid {
   width: 340px;
   min-width: 270px;
   height: 70vh;
-  background-color: rgba(255, 255, 255, 0.2);
   margin: auto 40px auto 40px;
   padding: 40px;
   overflow: hidden;
   z-index: 999; }
+  .scroll-each h4, .wide-scroll h4, .scroll-each h5, .wide-scroll h5, .scroll-each h2, .wide-scroll h2 {
+    color: #D69F50;
+    margin: 0px; }
+  .scroll-each h3, .wide-scroll h3, .scroll-each p, .wide-scroll p {
+    color: #EEE2CF; }
+  .scroll-each h2, .wide-scroll h2 {
+    margin-top: 0px; }
 
 .wide-scroll {
   width: auto;
@@ -1481,6 +1501,44 @@ video#bgvid {
   -ms-animation: blink 5.0s linear infinite;
   -o-animation: blink 5.0s linear infinite;
   animation: blink 5.0s linear infinite; }
+
+.infinite-bounce {
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite; }
+
+@-webkit-keyframes infinite-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
+
+@-moz-keyframes infinite-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-30px); }
+  60% {
+    -moz-transform: translateY(-15px); } }
+
+@-o-keyframes infinite-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -o-transform: translateY(0); }
+  40% {
+    -o-transform: translateY(-30px); }
+  60% {
+    -o-transform: translateY(-15px); } }
+
+@keyframes infinite-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-30px); }
+  60% {
+    transform: translateY(-15px); } }
 
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 ::-moz-selection {

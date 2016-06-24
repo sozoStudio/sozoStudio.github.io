@@ -22,6 +22,7 @@
 </head>
 <body>
     <div class="main chap2-width">
+        <div id = "texture"></div>
         <!-- navigation bar -->
         <div id="wrapper">
         <div id="sidebar-wrapper">
@@ -52,15 +53,15 @@
         </div>
         <!-- navigation bar -->
 <section class="scroll-page">
-    <button id="chap2_start" type="button"></button>
-      <div class ="scene-title">
-            <div id="titlebox-top"><img src="img/UI/titlebox-top.png"></div>
-            <div class ="scene-title-box title">
-              <h4 style="margin-top:9px;">第二章</h4>
-              <h2 class="scene-title-lgword" style="font-size:1.9em;margin-top:-15px;">梁思成｜发现佛光寺</h2>
-          </div>
-          <div id="titlebox-bottom"><img src="img/UI/titlebox-bottom.png"></div>
+    <button id="chap2_start" type="button" class="button1"></button>
+    <div class ="scene-title">
+        <div id="titlebox-top"><img src="img/UI/icons/titlebox-top.svg"></div>
+        <div class ="scene-title-box title">
+          <p class="scene-chap-lgword">第二章</p>
+          <h2 class="scene-title-lgword">梁思成｜发现佛光寺</h2>
       </div>
+      <div id="titlebox-bottom"><img src="img/UI/icons/titlebox-buttom.svg"></div>
+    </div>
 
   <ul class="scroll-list fade-in" style="margin-left:180px;">
       <li class ="hori-scroll scene-sub-title">
@@ -237,7 +238,7 @@
             <audio controls class="narration" id="audio_1" onended="playAudio(1)">
                 <source src="media/scene2/audio/012.mp3"></source>
             </audio>
-                <p> 山西五台山是由五座山峰环抱起来的，当中是盆地，有一个镇叫台怀。五峰以内称为“台内”，以外称“台外”。台怀是五台山的中心，附近寺刹林立，香火极盛。殿塔佛像都勤经修建。其中许多金碧辉煌，用来炫耀香客的寺院，都是近代的贵官富贾所布施重修的。千余年来所谓：文殊菩萨道场的地方，竟然很少明清以前的殿宇存在。</p>
+                <p style="color:#050505;"> 山西五台山是由五座山峰环抱起来的，当中是盆地，有一个镇叫台怀。五峰以内称为“台内”，以外称“台外”。台怀是五台山的中心，附近寺刹林立，香火极盛。殿塔佛像都勤经修建。其中许多金碧辉煌，用来炫耀香客的寺院，都是近代的贵官富贾所布施重修的。千余年来所谓：文殊菩萨道场的地方，竟然很少明清以前的殿宇存在。</p>
             </div>
                        <img class="scene-img image-full" src ="dist/img/scene/scene2/img32.png"></img>
     </li>
@@ -314,17 +315,16 @@
 </li>
 
 <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0); width:200px; left:-100px;position:relative">
-    <div class="chap2-nextchap">
-         <a href ="pan_scene6.html">
-        <ul>
+    <a href ="chap2-nextchap" class="next-chap" style="top:-46vh;">
+        <ul class="vertical-middle ">
         <li><p>身临其境</p>
-        <h4>东大殿全景体验</h4></li>
-        <li><div class="arrow-right"></div></li>
+        <h4>东大殿全景</h4></li>
+        <li><i style="margin-left:30%;" class="icon-next icon-size-80"></i></li>
     </ul>
     </a>
-    </div>
 </li>
   </ul>
+
 </section>
 </div>
 <div id = "texture"></div>

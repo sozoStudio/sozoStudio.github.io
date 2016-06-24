@@ -16,34 +16,53 @@ margin-left:13px;
     color:$color-paper;
     position: fixed;
     z-index: 9999;
+    top:13px;
     left: 80px;
 }
 .timelineborder {
-    border: 15px solid transparent;
-      -webkit-border-image: url(../../img/UI/border.png) 25 round; /* Safari 3.1-5 */
-      -o-border-image: url(../../img/UI/border.png) 25 round; /* Opera 11-12.1 */
-      border-image: url(../../img/UI/border.png) 25 round;
+    border: 13px solid transparent;
+      padding: 35px;
+      -webkit-border-image: url(../../img/UI/border1.svg) 35 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border1.svg) 35 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border1.svg) 35 round;
     overflow: hidden;
 }
 
 .imageborder {
-    border: 10px solid transparent;
-      -webkit-border-image: url(../../img/UI/border.png) 25 round; /* Safari 3.1-5 */
-      -o-border-image: url(../../img/UI/border.png) 25 round; /* Opera 11-12.1 */
-      border-image: url(../../img/UI/border.png) 25 round;
+    border: 13px solid transparent;
+      -webkit-border-image: url(../../img/UI/border1.svg) 35 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border1.svg) 35 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border1.svg) 35 round;
     overflow: hidden;
 }
 
+.custumborder1 {
+    border: 13px solid transparent;
+      padding: 35px;
+      -webkit-border-image: url(../../img/UI/border1.svg) 35 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border1.svg) 35 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border1.svg) 35 round;
+    overflow: hidden;
+}
 .scroll-each {
   max-width:450px;
   width:340px;
   min-width: 270px;
   height:70vh;
-  background-color: rgba(255,255,255,0.2);
   margin:auto 40px auto 40px;
   padding:40px;
   overflow: hidden;
   z-index: 999;
+  h4, h5, h2{
+      color:$color-orange;
+      margin:0px;
+  }
+   h3, p{
+    color:$color-paper;
+  }
+  h2{
+      margin-top: 0px;
+  }
 }
 .wide-scroll {
     @extend .scroll-each;

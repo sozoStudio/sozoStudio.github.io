@@ -303,15 +303,21 @@ button {
         }
 }
 .next-chap{
-    top: -30vh;
     right: 0px;
     position: absolute;
-    width: 160px;
+    width: 350px;
     height:100vh;
-    padding: 40px;
-h4{
-    margin-top:-15px;
-}
+    text-align: right;
+    color:$color-paper;
+
+    li {
+        width:45%;
+        display: inline;
+        float:left;
+    }
+    h4{
+        margin-top:-15px;
+    }
     .arrow-right {
     	width: 20px;
     	height: 1px;
@@ -321,9 +327,6 @@ h4{
     }
     ul{
         list-style: none;
-    }
-    li{
-        display: inline;
     }
 
 }
