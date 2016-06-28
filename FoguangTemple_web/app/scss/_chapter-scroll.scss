@@ -1,0 +1,199 @@
+.chap2-width {
+    width:12000px;
+}
+.scroll-page{
+  overflow-x: visible;
+}
+
+.scroll-list{
+margin-left: 150px;
+height:100vh;
+margin-left:13px;
+}
+
+#chap2_start{
+    float:left;
+    color:$color-paper;
+    position: fixed;
+    z-index: 9999;
+    top:13px;
+    left: 80px;
+}
+.timelineborder {
+    border: 13px solid transparent;
+      padding: 35px;
+      -webkit-border-image: url(../../img/UI/border1.svg) 35 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border1.svg) 35 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border1.svg) 35 round;
+    overflow: hidden;
+}
+
+.imageborder {
+    border: 13px solid transparent;
+      -webkit-border-image: url(../../img/UI/border1.svg) 35 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border1.svg) 35 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border1.svg) 35 round;
+    overflow: hidden;
+}
+
+.custumborder1 {
+    border: 13px solid transparent;
+      padding: 35px;
+      -webkit-border-image: url(../../img/UI/border1.svg) 35 round; /* Safari 3.1-5 */
+      -o-border-image: url(../../img/UI/border1.svg) 35 round; /* Opera 11-12.1 */
+      border-image: url(../../img/UI/border1.svg) 35 round;
+    overflow: hidden;
+}
+.scroll-each {
+  max-width:450px;
+  width:340px;
+  min-width: 270px;
+  height:70vh;
+  margin:auto 40px auto 40px;
+  padding:40px;
+  overflow: hidden;
+  z-index: 999;
+  h4, h5, h2{
+      color:$color-orange;
+      margin:0px;
+  }
+   h3, p{
+    color:$color-paper;
+  }
+  h2{
+      margin-top: 0px;
+  }
+}
+.wide-scroll {
+    @extend .scroll-each;
+    width:auto;
+    max-width: 90vw;
+}
+.scroll-each::before{
+}
+.chap-cover {
+    width:100%;;
+    max-width: 100%;
+    float:left;
+    padding-left: 5%;
+    opacity:1;
+}
+.scroll-img {
+    float:right;
+}
+.scene-img{
+    width:100%;
+    height: auto;
+    -webkit-filter: grayscale(10%);
+    filter: grayscale(10%);
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+      -webkit-transition: 1s -webkit-filter linear;
+      -moz-transition: 1s -moz-filter linear;
+      -moz-transition: 1s filter linear;
+      -ms-transition: 1s -ms-filter linear;
+      -o-transition: 1s -o-filter linear;
+      transition: 1s filter linear;
+    }
+}
+
+.image-full {
+    width:125% !important;
+    height:auto;
+    margin-left:-40px;
+}
+.image-fit {
+    width:90%;
+    height:auto;
+}
+.image-overlay {
+    img:first-child {
+        position: absolute;
+        max-height:80vh;
+    }
+    img:nth-child(2) {
+        opacity: 1;
+        position: absolute;
+        max-height:80vh;
+    }
+    img:nth-child(3) {
+        position: absolute;
+        max-height:80vh;
+    }
+}
+
+.scene-anime {
+    height:40vh;
+    width: auto;
+    position:absolute;
+    z-index: 9999;
+    margin-left: -16%;
+    bottom:0px;
+}
+.scene-within {
+    width:100%;
+    height:auto;
+}
+
+.chap-first-content {
+    background-color:rgba(255,255,255,0);
+    width: 120%;
+
+    .paragraph{
+        width: 80%;
+        height: auto;
+        max-height: 60%;
+        padding: 10%;
+        background-color: rgba(255,255,255,0.2);
+        p{
+            line-height: 200%;
+        }
+    }
+}
+.activechap {
+  @extend .all-active;
+  min-width: 80vw;
+  .left-chapscroll{
+    max-width: 44%;
+    width:40%;
+    display: inline-block;
+    float:left;
+    padding-right:3%;
+  }
+  }
+  .left-chapscroll-two {
+      display:inline-block;
+      float:left;
+      max-width: 40%;
+      width:auto;
+      padding:0px 5% 0px 5%;
+  }
+  .left-chapscroll-three {
+      display:inline-block;
+      float:left;
+      max-width: 35%;
+      width:33%;
+      padding:0px 20px 0px 20px;
+  }
+  .mrLiang1 {
+      height:90vh;
+      width:auto;
+      bottom: 0;
+      margin-left: -130px;
+  }
+
+  .circle {
+      height:40vh;
+      width: auto;
+      position:absolute;
+      z-index: 9999;
+      margin-left: 15%;
+margin-top: -5%;
+  }
+
+  .scrollTexture{
+      color:$color-paper;
+      background-color: $color-black;
+
+  }
