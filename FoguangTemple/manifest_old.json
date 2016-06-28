@@ -1,0 +1,20 @@
+{
+  "lang":"chn",
+  "dir":"ltr",
+  "name":"Foguang_app_test",
+  "manifest_version":2,
+  "description":"None",
+  "version":"0.0.3",
+  "icons": [{
+    "src":"icons/icon.png",
+    "sizes": "128x128",
+    "type": "image/webp"
+    },{
+    "src":"icons/icon_site.png",
+    "sizes": "16x16"
+    }],
+    "start_url":"index.html",
+    "display":"fullscreen",
+    "orientation": "landscape"
+
+  }

@@ -8,8 +8,10 @@
     "16":"icons/icon_site.png"
   },
   "app": {
-    "background": { 
+    "background": {
     "scripts": ["background.js"]
     }
   }
+
+
 }
