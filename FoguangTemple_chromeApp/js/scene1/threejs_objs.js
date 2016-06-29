@@ -306,8 +306,16 @@
 			domEvents.addEventListener(tele_left, 'click', function(event){
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
-						window.open('pan_scene3.html','_self');
+						//window.open('pan_scene3.html','_self');
                 //window.location.href="./#/tab/timeline";
+								setTimeout(function(){chrome.app.window.current().close();}, 300);
+								chrome.app.window.create('pan_scene3.html',
+						        {
+						            type:       "panel",
+												bounds: { width: 1280, height: 720},
+										    minWidth:800, minHeight: 450,
+						            focused: true
+						        });
 
 				}
 			);
@@ -324,8 +332,17 @@
 			domEvents.addEventListener(tele_right, 'click', function(event){
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
-						window.open('pan_scene2.html','_self');
-                        //window.location="pan_scene2.html";
+						//window.open('pan_scene2.html','_self');
+            //window.location="pan_scene2.html";
+						setTimeout(function(){chrome.app.window.current().close();}, 300);
+						chrome.app.window.create('pan_scene2.html',
+				        {
+				            type:       "panel",
+										bounds: { width: 1280, height: 720},
+								    minWidth:800, minHeight: 450,
+				            focused: true
+				        });
+
 				}
 			);
 
@@ -340,7 +357,15 @@
 			domEvents.addEventListener(tele_out, 'click', function(event){
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
-						window.open('pan_scene4.html','_self');
+						//window.open('pan_scene4.html','_self');
+						setTimeout(function(){chrome.app.window.current().close();}, 300);
+						chrome.app.window.create('pan_scene4.html',
+				        {
+				            type:       "panel",
+										bounds: { width: 1280, height: 720},
+								    minWidth:800, minHeight: 450,
+				            focused: true
+				        });
                     //window.location="pan_scene4.html";
 
 				}

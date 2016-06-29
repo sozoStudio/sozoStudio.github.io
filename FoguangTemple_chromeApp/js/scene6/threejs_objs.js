@@ -431,7 +431,15 @@
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
 						//window.open('pan_scene7.html','_self');
-                window.location="pan_scene7.html";
+                //window.location="pan_scene7.html";
+								setTimeout(function(){chrome.app.window.current().close();}, 300);
+								chrome.app.window.create('pan_scene7.html',
+						        {
+						            type:       "panel",
+												bounds: { width: 1280, height: 720},
+										    minWidth:800, minHeight: 450,
+						            focused: true
+						        });
 				}
 			);
 
@@ -447,7 +455,15 @@
 						//console.log('click on the door!!', object);
 						//tele_left.material.color = 0x4091FF;
 						//window.open('pan_scene7.html','_self');
-								window.location="pan_scene4.html";
+								//window.location="pan_scene4.html";
+								setTimeout(function(){chrome.app.window.current().close();}, 300);
+								chrome.app.window.create('pan_scene4.html',
+						        {
+						            type:       "panel",
+												bounds: { width: 1280, height: 720},
+										    minWidth:800, minHeight: 450,
+						            focused: true
+						        });
 				}
 			);
 

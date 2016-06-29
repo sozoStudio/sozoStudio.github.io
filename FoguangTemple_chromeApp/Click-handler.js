@@ -7,7 +7,8 @@ indexbutton.click(function() {
     chrome.app.window.create('chap1_intro.html',
         {
             type:       "panel",
-            bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600,
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
             focused: true
         });
 });
@@ -21,7 +22,8 @@ sunrisebutton.click(function() {
     chrome.app.window.create('chap1_timeline.html',
         {
             type:       "panel",
-            bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600,
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
             focused: true
         });
 });
@@ -35,7 +37,8 @@ timelinebutton.click(function() {
     chrome.app.window.create('chap2_second.html',
         {
             type:       "panel",
-            bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600,
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
             focused: true
         });
 });
@@ -49,7 +52,8 @@ tabchap1.click(function() {
     chrome.app.window.create('chap1_timeline.html',
         {
             type:       "panel",
-            bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600,
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
             focused: true
         });
 });
@@ -60,7 +64,8 @@ tabchap2.click(function() {
     chrome.app.window.create('chap2_second.html',
         {
             type:       "panel",
-            bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600,
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
             focused: true
         });
 });
@@ -71,7 +76,8 @@ tabchap3.click(function() {
     chrome.app.window.create('pan_scene6.html',
         {
             type:       "panel",
-            bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600,
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
             focused: true
         });
 });
@@ -82,7 +88,8 @@ tabchap4.click(function() {
     chrome.app.window.create('pan_scene1.html',
         {
             type:       "panel",
-            bounds: { width: 800, height: 600}, minWidth:800, minHeight: 600,
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
             focused: true
         });
 });
