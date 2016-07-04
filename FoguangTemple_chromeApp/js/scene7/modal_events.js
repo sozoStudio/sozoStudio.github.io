@@ -67,7 +67,7 @@ $('#modal4').on('hide.bs.modal', function(e){
 
 //-------------------------------------------------------------
 //   buttons ----------------------
-$('button#setting-toggle').click(function(){
+$('#setting-toggle').click(function(){
   toggleSetting();
 });
 

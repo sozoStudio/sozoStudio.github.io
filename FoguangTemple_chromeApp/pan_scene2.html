@@ -4,17 +4,9 @@
 		<title>Foguang Temple Panorama Scene 4</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<!-- <link rel="stylesheet" href="css/pan_css.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/gallery.prefixed.css">
-		<link rel="stylesheet" href="css/gallery.theme.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/bootstrap-toggle.css"> -->
-		<link rel="stylesheet" type="text/css" href="app/css/main.css">
 
+		<link rel="stylesheet" type="text/css" href="app/css/main.css">
 		<link rel="stylesheet" href="css/font-awesome.css">
-		<!-- <link rel="stylesheet" href="css/SSUhtml5audio.css"> -->
 	</head>
 	<body>
 		<div id="wrapper-p" class="toggled">
@@ -53,16 +45,20 @@
 					<div id="container"></div>
 
 
-					<div id="menu">
-						<button href="#menu-toggle" type="button" class="btn btn-info" id="menu-toggle" aria-label="Left Align">
+					<div id="menu_i">
+						<!-- <button href="#menu-toggle" type="button" class="btn btn-info" id="menu-toggle" aria-label="Left Align">
 							<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-						</button>
+						</button> -->
+						<a href="#"><i class="icon-eye1 p" type="button" id="menu-toggle"></i></a>
+
 					</div>
 
-					<div id="setting">
-						<button type="button" class="btn btn-info" id="setting-toggle" aria-label="Right Align">
+					<div id="setting_i">
+						<!-- <button type="button" class="btn btn-info" id="setting-toggle" aria-label="Right Align">
 							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-						</button>
+						</button> -->
+						<a href="#"><i class="icon-leave p" type="button" id="setting-toggle"></i></a>
+
 					</div>
 
 
@@ -79,15 +75,15 @@
 					<!--   Modals  -->
 					<!-- ================= Modal S for settings ==================================================== -->
 					<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						<div class="modal-dialog" role="document">
+						<div class="modal-dialog m_border" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
 									<h1 class="modal-title" id="myModalLabel" align="center">设置</h1>
 								</div>
-								<div class="modal-body">
+								<div class="modal-body" align="center">
 									<div class="row">
-										<div class="col-sm-3 col-sm-offset-3">
+										<div class="col-sm-3 col-sm-offset-2">
 											<p>切换模式</p>
 										</div>
 										<div class="col-sm-3 col-sm-offset-1">
@@ -95,7 +91,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-sm-3 col-sm-offset-3">
+										<div class="col-sm-3 col-sm-offset-2">
 											<p>热点</p>
 										</div>
 										<div class="col-sm-3 col-sm-offset-1">
@@ -103,7 +99,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-sm-3 col-sm-offset-3">
+										<div class="col-sm-3 col-sm-offset-2">
 											<p>背景音乐</p>
 										</div>
 										<div class="col-sm-3 col-sm-offset-1">
@@ -114,7 +110,7 @@
 
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="button1" data-dismiss="modal">关闭</button>
 								</div>
 							</div>
 						</div>
@@ -124,7 +120,7 @@
 
 					<!-- ================= Modal 1 for title 1 ==================================================== -->
 					<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			  		<div class="modal-dialog" role="document">
+			  		<div class="modal-dialog m_border" role="document">
 			    		<div class="modal-content">
 			      		<div class="modal-header">
 			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -139,7 +135,7 @@
 
 			      		</div>
 			      		<div class="modal-footer">
-			        		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        		<button type="button" class="button1" data-dismiss="modal">关闭</button>
 			      		</div>
 			    		</div>
 			  		</div>
@@ -148,7 +144,7 @@
 
 					<!-- ================= Modal 2 for title 2 ==================================================== -->
 					<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			  		<div class="modal-dialog" role="document">
+			  		<div class="modal-dialog m_border" role="document">
 			    		<div class="modal-content">
 			      		<div class="modal-header">
 			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -192,7 +188,7 @@
 
 			      		</div>
 			      		<div class="modal-footer">
-			        		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        		<button type="button" class="button1" data-dismiss="modal">关闭</button>
 			      		</div>
 			    		</div>
 			  		</div>
@@ -201,7 +197,7 @@
 
 					<!-- ================= Modal 3 for hotspot 1 ==================================================== -->
 					<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			  		<div class="modal-dialog" role="document">
+			  		<div class="modal-dialog m_border" role="document">
 			    		<div class="modal-content">
 			      		<div class="modal-header">
 			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -234,7 +230,7 @@
 
 			      		</div>
 			      		<div class="modal-footer">
-			        		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        		<button type="button" class="button1" data-dismiss="modal">关闭</button>
 			      		</div>
 			    		</div>
 			  		</div>
@@ -244,7 +240,7 @@
 
 					<!-- ================= Modal 4 for hotspot 2 ==================================================== -->
 					<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						<div class="modal-dialog" role="document">
+						<div class="modal-dialog m_border" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -274,9 +270,9 @@
 
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-warning" id="m4_buttons_pre" hidden="">前一节</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-									<button type="button" class="btn btn-warning" id="m4_buttons_next">后一节</button>
+									<button type="button" class="button2" id="m4_buttons_pre" hidden="">前一节</button>
+									<button type="button" class="button1" data-dismiss="modal">关闭</button>
+									<button type="button" class="button2" id="m4_buttons_next">后一节</button>
 								</div>
 							</div>
 						</div>
@@ -286,7 +282,7 @@
 
 					<!-- ================= Modal 5 for hotspot 3 ==================================================== -->
 					<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						<div class="modal-dialog" role="document">
+						<div class="modal-dialog m_border" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -312,7 +308,7 @@
 
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="button1" data-dismiss="modal">关闭</button>
 								</div>
 							</div>
 						</div>
@@ -321,7 +317,7 @@
 
 					<!-- ================= Modal 6 for hotspot 4 ==================================================== -->
 					<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			  		<div class="modal-dialog" role="document">
+			  		<div class="modal-dialog m_border" role="document">
 			    		<div class="modal-content">
 			      		<div class="modal-header">
 			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -345,7 +341,7 @@
 
 			      		</div>
 			      		<div class="modal-footer">
-			        		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        		<button type="button" class="button1" data-dismiss="modal">关闭</button>
 			      		</div>
 			    		</div>
 			  		</div>
@@ -355,7 +351,7 @@
 
 					<!-- ================= Modal 7 for hotspot 5 ==================================================== -->
 					<div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			  		<div class="modal-dialog" role="document">
+			  		<div class="modal-dialog m_border" role="document">
 			    		<div class="modal-content">
 			      		<div class="modal-header">
 			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -377,7 +373,7 @@
 
 			      		</div>
 			      		<div class="modal-footer">
-			        		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        		<button type="button" class="button1" data-dismiss="modal">关闭</button>
 			      		</div>
 			    		</div>
 			  		</div>

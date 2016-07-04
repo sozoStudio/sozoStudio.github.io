@@ -64,12 +64,12 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: #fff;
+  background-color: #eee2cf;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid #999;
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 6px;
+  // border: 1px solid #999;
+  // border: 1px solid rgba(0, 0, 0, .2);
+  // border-radius: 6px;
   outline: 0;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
           box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
@@ -93,7 +93,7 @@ button.close {
 }
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #7A1A11;
 }
 .modal-header .close {
   margin-top: -2px;
@@ -109,7 +109,7 @@ button.close {
 .modal-footer {
   padding: 15px;
   text-align: right;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #7A1A11;
 }
 .modal-footer .btn + .btn {
   margin-bottom: 0;
@@ -128,6 +128,18 @@ button.close {
   height: 50px;
   overflow: scroll;
 }
+
+.m_border {
+  border: 10px solid transparent;
+  -webkit-border-image: url(../../img/UI/border1.svg) 35 round;
+  /* Safari 3.1-5 */
+  -o-border-image: url(../../img/UI/border1.svg) 35 round;
+  /* Opera 11-12.1 */
+  border-image: url(../../img/UI/border1.svg) 35 round;
+  overflow: hidden;
+}
+
+
 @media (min-width: 768px) {
   .modal-dialog {
     width: 600px;

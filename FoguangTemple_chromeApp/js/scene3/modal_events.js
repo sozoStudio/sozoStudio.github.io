@@ -583,7 +583,7 @@ $('#modal6').on('hide.bs.modal', function(e){
 });
 //------------------------------------------------------------
 //button fuctions
-$('button#setting-toggle').click(function(){
+$('#setting-toggle').click(function(){
   toggleSetting();
 });
 

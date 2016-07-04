@@ -48,6 +48,16 @@ div#lhy {
   text-align:center;
 }
 
+#menu_i {
+  position: absolute;
+  top: 0px; width: 100%; left: 5%;
+  color: #ffffff;
+  padding: 5px;
+  font-size:13px;
+  font-weight: bold;
+  text-align:center;
+}
+
 #setting {
   position:absolute;;
   top: 0px; width: 100%; left: 45%;
@@ -57,6 +67,17 @@ div#lhy {
   font-weight: bold;
   text-align:center;
 }
+
+#setting_i {
+  position:absolute;;
+  top: 0px; width: 100%; left: 90%;
+  color: #ffffff;
+  padding: 5px;
+  font-size:13px;
+  font-weight: bold;
+  text-align:center;
+}
+
 
 #single-img {
   text-align: center;
@@ -225,4 +246,11 @@ li#line {
 ul#result {
   list-style: none;
 
+}
+
+i.p {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: block;
 }

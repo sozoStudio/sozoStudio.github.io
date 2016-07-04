@@ -185,7 +185,7 @@ function m4_update(direction){
     //reset status
 
     audio.src="audio/6/m4_001.mp3";
-    
+
 
     m4_count = 0;
     if (direction == -1) {
@@ -319,7 +319,7 @@ $('#modal4').on('hide.bs.modal', function(e){
 //------------------------------
 // ------ buttons
 
-$('button#setting-toggle').click(function(){
+$('#setting-toggle').click(function(){
   toggleSetting();
 });
 
