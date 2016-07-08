@@ -106,12 +106,23 @@
 				hemi.position.set( 1, 1, 1 );
         scene.add(hemi);
 
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				var material01 = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, alphaMap: THREE.ImageUtils.loadTexture("img/maps/statue.jpg") } ) ;
+				var loaderM01 = new THREE.TextureLoader();
+				loaderM01.load(
+					'img/maps/statue.jpg',
+					function(texture){
+						material01.alphaMap=texture;
+					}
+				);
+
+				material01.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				object = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material01);
+				object = new THREE.Mesh( new THREE.PlaneGeometry( 28, 28, 32 ), material01);
 				object.position.set(400, 200, 0);
+
+				object.rotation.y = 95 * Math.PI/180;
 				object.name = "testOBJ001";
 
 				hotspots.push(object);
@@ -186,12 +197,38 @@
 
 				//------------------------------------------------------
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
-				material.opacity = 0.5;
+				var material_t1 = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending} ) ;
+				var material_t2 = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending} ) ;
+				var material_t3 = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending} ) ;
+
+				var loader = new THREE.TextureLoader();
+
+				loader.load(
+					'img/maps/icon_next.png',
+					function(texture){
+						material_t1.map = texture;
+						material_t2.map = texture;
+						material_t3.map = texture;
+					}
+
+				);
+
+				var loader_alpha = new THREE.TextureLoader();
+				loader_alpha.load(
+					'img/maps/icon_next_alpha.jpg',
+					function(texture){
+						material_t1.alphaMap = texture;
+						material_t2.alphaMap = texture;
+						material_t3.alphaMap = texture;
+					}
+				);
+
+				//var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
+				material_t1.opacity = 0.5;
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
+				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t1);
 				tele_left.rotation.x = -90 * Math.PI/180;
-				tele_left.rotation.z = 10 * Math.PI/180;
+				tele_left.rotation.z = 100 * Math.PI/180;
 
 				tele_left.position.set(0, -150, -320);
 				//tele_left.position.set(70, -150, 400);
@@ -200,22 +237,22 @@
 
 				scene.add(tele_left);
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png")} ) ;
-				material.opacity = 0.5;
-				var tele_right = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
+				//var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png")} ) ;
+				material_t2.opacity = 0.5;
+				var tele_right = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t2);
 				tele_right.rotation.x = 90 * Math.PI/180;
-				tele_right.rotation.z = -10 * Math.PI/180;
+				tele_right.rotation.z = 80 * Math.PI/180;
 				tele_right.position.set(80, -150, 300);
 
 
 
 				scene.add(tele_right);
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png")} ) ;
-				material.opacity = 0.5;
-				var tele_out = new THREE.Mesh( new  THREE.PlaneGeometry( 80, 80, 32 ), material);
+				//var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png")} ) ;
+				material_t3.opacity = 0.5;
+				var tele_out = new THREE.Mesh( new  THREE.PlaneGeometry( 80, 80, 32 ), material_t3);
 				tele_out.rotation.x = -90 * Math.PI/180;
-				tele_out.rotation.z = 100 * Math.PI/180;
+				tele_out.rotation.z = 190 * Math.PI/180;
 				tele_out.position.set(-80, -150, -150);
 
 

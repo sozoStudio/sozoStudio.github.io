@@ -132,36 +132,41 @@
 
 
 		//------------ To other panos ------------------------------------------------------------
-				// var door;
-				// var geometry = new THREE.PlaneGeometry( 60, 100, 32 );
-				// var material = new THREE.MeshBasicMaterial( {color: 0xffffff, side: THREE.DoubleSide} );
-				// material.transparent = true; material.opacity = 0.5;
-				// var door = new THREE.Mesh( geometry, material );
-				//
-				// door.position.set(90, 30, 400);
-				// door.rotation.y = 15*Math.PI/180;
-				// scene.add( door );
-				//
-				// //-----------------------------------------------------
-				//
-				// var door_right;
-				// var geometry = new THREE.PlaneGeometry( 60, 100, 32 );
-				// var material = new THREE.MeshBasicMaterial( {color: 0xffffff, side: THREE.DoubleSide} );
-				// material.transparent = true; material.opacity = 0.5;
-				// var door_right = new THREE.Mesh( geometry, material );
-				//
-				// door_right.position.set(-120, 30, -400);
-				// door_right.rotation.y = 15*Math.PI/180;
-				// scene.add( door_right );
+				//load textures!!!
+				var material_t1 = new THREE.MeshBasicMaterial( { color: 0xB55C39, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending} ) ;
+				var material_t2 = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending} ) ;
+
+				var loader_t = new THREE.TextureLoader();
+				loader_t.load(
+					'img/maps/icon_next.png',
+					function(texture){
+						material_t1.map = texture;
+						material_t2.map = texture;
+					}
+				);
+				var loader_alpha = new THREE.TextureLoader();
+				loader_alpha.load(
+					'img/maps/icon_next_alpha.jpg',
+					function(texture){
+						material_t1.alphaMap = texture;
+						material_t2.alphaMap = texture;
+					}
+				);
 
 				//------------------------------------------------------
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xB55C39, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
+				var material = new THREE.MeshBasicMaterial( {
+					color: 0xB55C39,
+					transparent: true,
+					side: THREE.DoubleSide,
+					blending: THREE.AdditiveBlending,
+					map: THREE.ImageUtils.loadTexture("img/maps/icon_next.png"),
+					alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_next_alpha.jpg") } ) ;
 				material.opacity = 0.5;
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
 				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
 				tele_left.rotation.x = 90 * Math.PI/180;
-				tele_left.rotation.z = -90 * Math.PI/180;
+				//tele_left.rotation.z = -90 * Math.PI/180;
 
 				tele_left.position.set(150, -150, 0);
 				//tele_left.position.set(70, -150, 400);
@@ -170,12 +175,12 @@
 
 				scene.add(tele_left);
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png")} ) ;
-				material.opacity = 0.5;
-				var tele_right = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
+				//var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png")} ) ;
+				material_t2.opacity = 0.5;
+				var tele_right = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t2);
 				tele_right.rotation.x = 90 * Math.PI/180;
 				//tele_right.rotation.y = 90 * Math.PI/180;
-				tele_right.rotation.z = 90 * Math.PI/180;
+				tele_right.rotation.z = 180 * Math.PI/180;
 				tele_right.position.set(-180, -150,200);
 
 

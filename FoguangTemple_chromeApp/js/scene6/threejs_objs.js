@@ -254,15 +254,32 @@
 
 		//------------ To other panos ------------------------------------------------------------
 
+		var material_t = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending} ) ;
+		var material_t2 = new THREE.MeshBasicMaterial( { color: 0xB55C39, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending} ) ;
 
+		var loader_t = new THREE.TextureLoader();
+		loader_t.load(
+			'img/maps/icon_next.png',
+			function(texture){
+				material_t.map = texture;
+				material_t2.map = texture;
+			}
+		);
+		var loader_alpha = new THREE.TextureLoader();
+		loader_alpha.load(
+			'img/maps/icon_next_alpha.jpg',
+			function(texture){
+				material_t.alphaMap = texture;
+				material_t2.alphaMap = texture;
+			}
+		);
 				//------------------------------------------------------
 
-				var material_t = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
 				material_t.opacity = 0.5;
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
 				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t);
 				tele_left.rotation.x = -90 * Math.PI/180;
-				//tele_left.rotation.z = 80 * Math.PI/180;
+				tele_left.rotation.z = 90 * Math.PI/180;
 
 				//tele_left.position.set(50, -150, 350);
 				//tele_left.position.set(-380, -130, 80);
@@ -271,14 +288,13 @@
 				scene.add(tele_left);
 
 				//-------------------------------------------------------
-				var material_t2 = new THREE.MeshBasicMaterial( { color: 0xB55C39, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
 				material_t2.opacity = 0.5;
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
 				var tele_nextChap = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t2);
 				tele_nextChap.rotation.x = -90 * Math.PI/180;
-				tele_nextChap.rotation.z = 90 * Math.PI/180;
+				tele_nextChap.rotation.z = 180 * Math.PI/180;
 				tele_nextChap.rotation.y = 15 * Math.PI/180;
-				//tele_left.rotation.z = 80 * Math.PI/180;
+				//tele_left.rotation.z = 90 * Math.PI/180;
 
 				//tele_left.position.set(50, -150, 350);
 				//tele_left.position.set(-380, -130, 80);
