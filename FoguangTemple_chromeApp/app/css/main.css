@@ -220,8 +220,7 @@ p, li, button {
 
 h3, h4, h5 {
   font-family: 'chnFont1',Helvetica;
-  font-weight: 700;
-  font-size: 1.6em; }
+  font-weight: 700; }
 
 /* all chapters introduction page */
 .main-intro {
@@ -363,7 +362,7 @@ button {
 
 .scene-sub-title {
   position: relative;
-  width: 100px;
+  width: 60px;
   height: 90vh;
   bottom: 10vh;
   letter-spacing: 16px;
@@ -372,15 +371,14 @@ button {
   overflow: hidden; }
   .scene-sub-title .title-content {
     position: absolute;
-    top: 20%; }
+    top: 40%; }
   .scene-sub-title .sub-title-line {
     height: auto;
     width: 40%;
     min-height: 90px;
     border-right: 2px solid #D69F50; }
-  .scene-sub-title h1 {
-    color: #D69F50;
-    font-size: 2.2em; }
+  .scene-sub-title h2 {
+    color: #D69F50; }
 
 .background-mvc {
   opacity: 0.3;
@@ -499,6 +497,7 @@ audio {
 
 .border2 {
   background-color: #EEE2CF;
+  background-image: url("../../img/layout/concrete-wall-2.png");
   border: 13px solid transparent;
   padding: 35px;
   -webkit-border-image: url(../../img/UI/border2.svg) 47 round;
@@ -607,17 +606,22 @@ audio {
 #wrapper.toggled {
   padding-left: 150px; }
 
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  z-index: 9999; }
+
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
   top: 0;
   left: 150px;
-  width: 40px;
+  width: 0px;
   height: 110vh;
   margin-left: -150px;
   /* position of the side bar */
   overflow-y: auto;
-  background: #424B50;
+  background: #050505;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -657,13 +661,12 @@ audio {
   color: #999999; }
 
 .sidebar-nav li a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: #050505; }
+  background: #424B50;
+  color: #EEE2CF; }
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
-  text-decoration: none; }
+  color: #EEE2CF; }
 
 .sidebar-nav > .sidebar-brand {
   height: 65px; }
@@ -677,6 +680,9 @@ audio {
 
 .sidebar-move {
   margin-left: -33px; }
+
+.chap-title {
+  color: #D69F50; }
 
 /*@media(min-width:768px) {
     #wrapper {
@@ -1031,7 +1037,8 @@ video#bgvid {
     width: 70px;
     text-align: left; }
   .timeline-node .node-title {
-    margin-top: 50px; }
+    margin-top: 50px;
+    text-align: center; }
   .timeline-node .node-line {
     opacity: 0;
     background: url("../../img/UI/icons/icon-branch.svg");
@@ -1041,7 +1048,7 @@ video#bgvid {
     margin-top: 53px; }
   .timeline-node p {
     color: #EEE2CF; }
-  .timeline-node h4 {
+  .timeline-node h2 {
     color: #D69F50; }
 
 #chap1_start {
@@ -1152,8 +1159,8 @@ video#bgvid {
   color: #EEE2CF;
   position: fixed;
   z-index: 9999;
-  top: 13px;
-  left: 80px; }
+  top: 20px;
+  left: 120px; }
 
 .timelineborder {
   border: 13px solid transparent;
@@ -1316,6 +1323,9 @@ video#bgvid {
 .scrollTexture {
   color: #EEE2CF;
   background-color: #050505; }
+
+.white-bg {
+  background-color: rgba(255, 255, 255, 0.1); }
 
 .hideme {
   opacity: 0; }
@@ -1707,20 +1717,18 @@ q {
 
 @media screen and (min-width: 1024px) {
   p {
-    font-size: 16px;
-    line-height: 34px; }
-  h2 {
-    font-size: 2em; } }
+    font-size: 14px;
+    line-height: 24px; } }
 
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 31px;
   font-weight: bold;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: .2; }
+  filter: alpha(opacity=60);
+  opacity: .6; }
 
 .close:hover,
 .close:focus {
@@ -1778,7 +1786,8 @@ button.close {
 
 .modal-content {
   position: relative;
-  background-color: #eee2cf;
+  background-color: #EEE2CF;
+  background-image: url("../../img/layout/concrete-wall-2.png");
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: 0;
@@ -1804,7 +1813,7 @@ button.close {
 
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #7A1A11; }
+  border-bottom: 1px solid #D69F50; }
 
 .modal-header .close {
   margin-top: -2px; }
@@ -1820,7 +1829,7 @@ button.close {
 .modal-footer {
   padding: 15px;
   text-align: right;
-  border-top: 1px solid #7A1A11; }
+  border-top: 1px solid #D69F50; }
 
 .modal-footer .btn + .btn {
   margin-bottom: 0;

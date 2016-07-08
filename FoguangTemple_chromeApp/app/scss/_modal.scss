@@ -1,12 +1,12 @@
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 31px;
   font-weight: bold;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: .2;
+  filter: alpha(opacity=60);
+  opacity: .6;
 }
 .close:hover,
 .close:focus {
@@ -64,7 +64,8 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: #eee2cf;
+  background-color: $color-paper;
+background-image: url("../../img/layout/concrete-wall-2.png");
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   // border: 1px solid #999;
@@ -93,7 +94,7 @@ button.close {
 }
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #7A1A11;
+  border-bottom: 1px solid $color-orange;
 }
 .modal-header .close {
   margin-top: -2px;
@@ -109,7 +110,7 @@ button.close {
 .modal-footer {
   padding: 15px;
   text-align: right;
-  border-top: 1px solid #7A1A11;
+  border-top: 1px solid $color-orange;
 }
 .modal-footer .btn + .btn {
   margin-bottom: 0;

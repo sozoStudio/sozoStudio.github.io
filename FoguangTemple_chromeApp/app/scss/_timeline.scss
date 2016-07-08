@@ -77,6 +77,7 @@
   }
   .node-title {
       margin-top: 50px;
+      text-align: center;
   }
   .node-line {
     opacity:0;
@@ -89,7 +90,7 @@
   p{
      color:$color-paper;
   }
-  h4{
+  h2{
     color:$color-orange;
   }
 }

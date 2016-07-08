@@ -19,15 +19,15 @@
   </style>
 
 </head>
-<body>
+<body style="width:12000px;">
     <div class="main chap2-width">
         <div id = "texture"></div>
         <!-- navigation bar -->
         <div id="wrapper">
+        <a href="#"><div id="menu-toggle"><i class="icon-flower icon-size-50" id="sidebar-toggle"></i></div></a>
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars sidebar-move" id="sidebar-toggle"></i></a>
                 </li>
                 <li>
                     <a href="#"><div id="tab-chap1" class="chap-title">第一章</div></a>
@@ -39,13 +39,13 @@
                     <a href="#"><div id="tab-chap3" class="chap-title">第三章</div></a>
                 </li>
                 <li>
-                		<a href="#"><div id="tab-chap4" class="chap-title">第四章</div></a>
+                	<a href="#"><div id="tab-chap4" class="chap-title">第四章</div></a>
                 </li>
                 <li>
-                    <a href="#"><div id="tab-chap5" lass="chap-title">第五章</div></a>
+                	<a href="#"><div id="tab-chap5" class="chap-title">第五章</div></a>
                 </li>
                 <li>
-                    <a href="#"><div id="tab-map" class="chap-title">地图</div></a>
+                  <a href="#"><div id="tab-map" class="chap-title">地图</div></a>
                 </li>
             </ul>
         </div>
@@ -65,7 +65,7 @@
   <ul class="scroll-list fade-in" style="margin-left:180px;">
       <li class ="hori-scroll scene-sub-title">
           <div class="title-content"> <div class="sub-title-line "></div>
-           <h1>营造学社成立背景</h1>
+           <h2>营造学社成立背景</h2>
        </div>
       </li>
       <!-- the first paragraph -->
@@ -77,9 +77,9 @@
             <p> 佛光寺东大殿是我国古建筑类文化遗产最珍贵的一处，
               其自身的文物价值与其传奇的发现过程，对推动中国建筑
               史学的发展具有重大意义。中国建筑史学开端，发轫于
-        <br></br><h5>一本书：《营造法式》，
+        <br></br><h1>一本书：《营造法式》，
             <br></br>一个机构：中国营造学社，
-            <br></br>一位学者：梁思成</h5>。</p></div>
+            <br></br>一位学者：梁思成</h1>。</p></div>
  </div>
  <!--- ++++++++++++++++++++++++++++++++++ number 1 ++++++++++++++++++++++++++++++++++++++++++++  -->
     <li class="wide-scroll hori-scroll hideme" style="width:800px;">
@@ -133,7 +133,7 @@
       </div>
   </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 4 ++++++++++++++++++++++++++++++++++++++++++++  -->
- <li class="scroll-each hori-scroll hideme">
+ <li class="scroll-each hori-scroll hideme white-bg">
      <div class="left-chapscroll">
          <h2>一位学者</h2>
          <audio controls class="narration" id="audio_1" onended="playAudio(1)">
@@ -188,7 +188,7 @@
 
 <li class ="hori-scroll scene-sub-title fade-in">
       <div class="title-content"> <div class="sub-title-line"></div>
-     <h1> 佛光寺考察历程 </h1>
+     <h2> 佛光寺考察历程 </h2>
     </div>
 </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 7 ++++++++++++++++++++++++++++++++++++++++++++  -->
@@ -290,7 +290,7 @@
     </div>
     </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 14 ++++++++++++++++++++++++++++++++++++++++++++  -->
-<li class="wide-scroll hori-scroll hideme" style="width:800px;">
+<li class="wide-scroll hori-scroll hideme white-bg" style="width:800px;">
     <h2>文殊殿简介</h2>
             <p>  文殊殿建于金天会十五年（公元1137年），元至正十一年（公元1351年）重修。1953年又进行了补修。</p>
             <div class="left-chapscroll-two">
@@ -307,7 +307,7 @@
 
      </div>
 </li>
-<li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0); width:auto; min-width:85vw; padding:0px; position:relative;">
+<li class="wide-scroll hori-scroll hideme " style=" width:800px; padding:0px; position:relative;">
      <div id="arrows"><div class="arrowpointer"></div></div>
     <div class="image-overlay">
     <img class="image-fit first-img imageborder" src ="dist/img/scene/scene2/img41.jpg"></img>
@@ -315,8 +315,8 @@
 </div>
 </li>
 
-<li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0); width:200px; left:-100px;position:relative">
-    <a href ="chap2-nextchap" class="next-chap" style="top:-46vh;">
+<li class="scroll-each wide-scroll hori-scroll hideme" style="position:relative; margin-left:-10px;position:absolute;">
+    <a href ="pan_scene6.html" class="next-chap">
         <ul class="vertical-middle ">
         <li><p>身临其境</p>
         <h4>东大殿全景</h4></li>
@@ -328,7 +328,6 @@
 
 </section>
 </div>
-<div id = "texture"></div>
 <script src="lib/wow2.js"></script>
 <script src="dist/js/custom-jquery.js"></script>
 <script src="Click-handler.js" type="text/javascript"></script>

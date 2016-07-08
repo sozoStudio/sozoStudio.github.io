@@ -55,25 +55,17 @@ $( document ).ready(function() {
     // // $("h1, h2, p").addClass("blue");
     //  $("div").css("border","3px solid red");
 
-//jquery mouse horizontal scroll
-  (function() {
-  function scrollHorizontally(e) {
-      e = window.event || e;
-      var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-      document.documentElement.scrollLeft -= (delta*20); // Multiplied by 40
-      document.body.scrollLeft -= (delta*20); // Multiplied by 40
-      e.preventDefault();
-  }
-  if (window.addEventListener) {
-      // IE9, Chrome, Safari, Opera
-      window.addEventListener("mousewheel", scrollHorizontally, false);
-      // Firefox
-      window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-  } else {
-      // IE 6/7/8
-      window.attachEvent("onmousewheel", scrollHorizontally);
-  }
-  })();
+
+  $('body').on('mousewheel DOMMouseScroll', function(event){
+
+          var delta = Math.max(-1, Math.min(1, (event.originalEvent.wheelDelta || -event.originalEvent.detail)));
+
+          $(this).scrollLeft( $(this).scrollLeft() - ( delta * 40 ) );
+          event.preventDefault();
+
+      });
+
+// });
 });
 
 /* ========================================================================
@@ -448,13 +440,23 @@ $(document).ready(function() {
           $("#wrapper").toggleClass("toggled");
           var sidebarLen = $('#sidebar-wrapper').width();
           var sidebar = $('#sidebar-wrapper');
-           console.log ($('#sidebar-wrapper').width());
+
           if(sidebarLen < 50){
             //  $(sidebar).css('border','3px solid red');
+            $("#menu-toggle, #chap2_start").animate({
+                left: "+=130"
+            }, 400, function() {
+                // Animation complete.
+              });
              $(".chap-title").show();
             $("#sidebar-toggle").removeClass('sidebar-move');
           }
           if(sidebarLen > 50){
+            $("#menu-toggle, #chap2_start").animate({
+                left: "-=130"
+            }, 400, function() {
+                // Animation complete.
+              });
             $(".chap-title").hide();
             $("#sidebar-toggle").addClass('sidebar-move');
           }

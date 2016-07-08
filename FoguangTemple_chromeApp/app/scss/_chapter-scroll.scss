@@ -16,8 +16,8 @@ margin-left:13px;
     color:$color-paper;
     position: fixed;
     z-index: 9999;
-    top:13px;
-    left: 80px;
+    top:20px;
+    left: 120px;
 }
 .timelineborder {
     border: 13px solid transparent;
@@ -196,4 +196,8 @@ margin-top: -5%;
       color:$color-paper;
       background-color: $color-black;
 
+  }
+
+  .white-bg {
+      background-color: rgba(255,255,255,0.1);
   }
