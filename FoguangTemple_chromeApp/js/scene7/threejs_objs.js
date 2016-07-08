@@ -117,12 +117,26 @@
 
 				//------------------------------------------------------
 
-				var material = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, alphaMap: THREE.ImageUtils.loadTexture("img/maps/right.png") } ) ;
-				material.opacity = 0.5;
+				var material_t = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending } ) ;
+				var loader_t = new THREE.TextureLoader();
+				loader_t.load(
+					'img/maps/icon_next.png',
+					function(texture){
+						material_t.map = texture;
+					}
+				);
+				var loader_alpha = new THREE.TextureLoader();
+				loader_alpha.load(
+					'img/maps/icon_next_alpha.jpg',
+					function(texture){
+						material_t.alphaMap = texture;
+					}
+				);
+				material_t.opacity = 0.5;
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material);
+				var tele_left = new THREE.Mesh( new  THREE.PlaneGeometry( 100, 100, 32 ), material_t);
 				tele_left.rotation.x = -90 * Math.PI/180;
-				tele_left.rotation.z = 70 * Math.PI/180;
+				tele_left.rotation.z = 170 * Math.PI/180;
 
 				//tele_left.position.set(50, -150, 350);
 				//tele_left.position.set(-380, -130, 80);
