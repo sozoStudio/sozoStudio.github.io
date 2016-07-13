@@ -3,7 +3,9 @@ var startbutton = $("#chap2_start, #chap1_start");
 var count = 0;
 var audios = document.getElementsByTagName('audio');
 var getnode = $('.timeline-node');
-var currentAudio = document.getElementById('audio_');
+var audios = [];
+var currentAudio = document.getElementById('audio_0');
+var preAudio;
 function playAudio(direction){
   // console.log("start playing audio");
   var nodeactive = $('.timeline-node').css('border-width'),
@@ -37,11 +39,19 @@ function playAudio(direction){
   //     }
   // });
   if (direction>0) {
+    console.log("direction > 0");
     if (count<audios.length) {
       count++;
       audios[count].load();audios[count].play();
+<<<<<<< HEAD
       console.log("the audio currently playing is" + count);
       currentAudio=audios[count];
+=======
+      preAudio = currentAudio;
+      currentAudio = audios[count];
+      console.log("current audio is " + currentAudio.id);
+
+>>>>>>> 56c0059d1921f88fbe36e9c2880ba61624bbb681
     //  scripts for the timeline contents
     // up and down animation for each nodes
         eachnode[count] = $(eachnode[count]).toggleClass('activenode');
@@ -99,6 +109,7 @@ startbutton.click(function(){
 
 });
 
+<<<<<<< HEAD
     currentAudio.onended = function(){
       console.log("audio " + count + " ended");
       var nextaudio = count + 1;
@@ -107,6 +118,17 @@ startbutton.click(function(){
     };
 
 
+=======
+
+
+
+var count_JQ = $("audio").size();
+$("audio").each(function(i){
+  if (i < count_JQ - 1) {
+    this.addEventListener("ended", function () { $("audio")[i+1].play();});
+  }
+});
+>>>>>>> 56c0059d1921f88fbe36e9c2880ba61624bbb681
 
 // $(startbutton).click(function(){
 //     // var $this = $(this);
