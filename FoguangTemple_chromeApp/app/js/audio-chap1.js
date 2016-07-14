@@ -1,19 +1,17 @@
 // auto play audios
-var startbutton = $("#chap2_start, #chap1_start");
+var startbutton = $("#chap1_start").text('开始介绍');
+var startbutton2 = $("#chap2_start");
 var count = 0;
-var audios = document.getElementsByTagName('audio');
+var audio = $("audio");
 var getnode = $('.timeline-node');
-var audios = [];
 var currentAudio = document.getElementById('audio_0');
 var preAudio;
 
-//button change text
-startbutton.text('开始介绍');
-
 startbutton.click(function(){
-    tline = $('.timeline-line'),
+    var tline = $('.timeline-line'),
     nodetext = $('.node-title'),
-    part1 = $('.timeline-part1'),
+    part1 = $('.timeline-part1');
+
   $("audio")[0].play();
   $(".timeline-node, .timeline-each, .node-line").first().addClass("animated Fadein");
   $(".timeline-node").first().addClass('activenode');
@@ -58,16 +56,32 @@ $("audio").each(function(i){
   }
 });
 
+// function for the chapter 2 play audio pause audio button
+startbutton2.text('开始介绍');
 
-// $(startbutton).click(function(){
-//     // var $this = $(this);
-//     // $this.toggleClass('SeeMore2');
-//     // if($this.hasClass('SeeMore2')){
-//     //     $this.text('停止介绍');
-//         audios[0].play();
-//         startbutton.fadeOut();
-//     // } else {
-//     //     $this.text('开始介绍');
-//     //     audios[count].pause();
-//     // }
-// });
+$(startbutton2).click(function(){
+    for (i =0; i <count_JQ; i ++){
+        if (!audio[i].paused && audio[i].currentTime) {
+            console.log(audio[i] + "is playing");
+            audio[i].pause();
+            startbutton2.text('开始介绍');
+        } else if (audio[i].paused && audio[i].currentTime && $(audio[i]).visible()) {
+            audio[i].play();
+            startbutton2.text('停止介绍');
+        }else if (!audio[i].paused && !audio[i].currentTime) {
+            audio[0].play();
+        }
+}
+});
+
+
+// auto position the audio to the center of window
+        var eachLI = $('.scroll-list > li');
+        for (var i = 0; i < eachLI.length; ++i){
+                     audio[i].onplay = function(e){
+                     setTimeout(function(){
+                        window.scrollTo(
+                            e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
+                        }, 400);
+                        console.log("center");
+                     }; }

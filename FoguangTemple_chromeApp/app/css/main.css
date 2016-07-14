@@ -366,7 +366,7 @@ button {
   height: 90vh;
   bottom: 10vh;
   letter-spacing: 16px;
-  margin-left: 50px;
+  margin-left: 150px;
   text-align: center;
   overflow: hidden; }
   .scene-sub-title .title-content {
@@ -1142,7 +1142,7 @@ video#bgvid {
   position: absolute; }
 
 .chap2-width {
-  width: 12000px; }
+  width: 12100px; }
 
 .scroll-page {
   overflow-x: visible; }
@@ -1295,7 +1295,8 @@ video#bgvid {
   float: left;
   max-width: 40%;
   width: auto;
-  padding: 0px 5% 0px 5%; }
+  padding: 0px 5% 0px 5%;
+  position: relative; }
 
 .left-chapscroll-three {
   display: inline-block;

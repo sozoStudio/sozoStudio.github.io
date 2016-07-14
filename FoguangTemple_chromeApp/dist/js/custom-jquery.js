@@ -343,22 +343,24 @@ function timelineActive(){
     audio[thisnode].play();
     // $("#chap1_start").addClass('SeeMore2').text('停止介绍');
 
-// timelinecontent toggle
-        var activeNum = $('.activenode').length;
-        if(activeNum >= 1) {
-            tline= $(tline).removeClass('top-45');
-            tline= $(tline).addClass('top-10');
-            nodetext = $(nodetext).fadeOut('slow');
-            part1 = $(part1).css('margin-top', '-11vh');
-        }
-        else if (activeNum < 1) {
-            tline= $(tline).removeClass('top-10').addClass('top-45');
-            nodetext = $(nodetext).show('slow');
-            part1 = $(part1).css('margin-top', '-46vh');
-            audio[thisnode].pause();
-            // $("#chap1_start").removeClass('SeeMore2').text('开始介绍');
-        }
+    // timelinecontent toggle
+    var activeNum = $('.activenode').length;
+    if(activeNum >= 1) {
+        tline= $(tline).removeClass('top-45');
+        tline= $(tline).addClass('top-10');
+        nodetext = $(nodetext).fadeOut('slow');
+        part1 = $(part1).css('margin-top', '-11vh');
+    }
+    else if (activeNum < 1) {
+        tline= $(tline).removeClass('top-10').addClass('top-45');
+        nodetext = $(nodetext).show('slow');
+        part1 = $(part1).css('margin-top', '-46vh');
+        audio[thisnode].pause();
+        // $("#chap1_start").removeClass('SeeMore2').text('开始介绍');
+    }
 };
+
+
 
 $('.achor-link1').click(function(event) {
     var pos = $(window).scrollLeft() + 550;

@@ -262,7 +262,7 @@ button {
     height: 90vh;
     bottom:10vh;
     letter-spacing: 16px;
-    margin-left:50px;
+    margin-left:150px;
     text-align:center;
     overflow: hidden;
     .title-content {
@@ -419,7 +419,7 @@ audio {
     }
     background-color: $color-paper;
     background-image: url("../../img/layout/concrete-wall-2.png");
-    
+
     border: 13px solid transparent;
       padding: 35px;
       -webkit-border-image: url(../../img/UI/border2.svg) 47 round; /* Safari 3.1-5 */
