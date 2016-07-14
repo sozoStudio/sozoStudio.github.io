@@ -97,7 +97,13 @@
 
 
 				//---------------------------------------------------------------------------
-				var material0= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_temple.jpg") } ) ;
+				var material0= new THREE.MeshBasicMaterial( {
+					transparent: true,
+					blending: THREE.AdditiveBlending,
+					side: THREE.DoubleSide,
+					map: THREE.ImageUtils.loadTexture("img/maps/icon_scroll_1.jpg"),
+					alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_scroll1_alpha.png")
+				} ) ;
 
 				material0.opacity = 0.7;
 

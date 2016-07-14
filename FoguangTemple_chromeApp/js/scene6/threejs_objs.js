@@ -104,20 +104,33 @@
 
 				//---------------------------------------------------------------------------
 				//declare all materials
-				var material1= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
-				var material2= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
-				var material3= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
-				var material4= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
-				var material6= new THREE.MeshBasicMaterial( { color:0xf0dfad, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material1= new THREE.MeshBasicMaterial( { transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material2= new THREE.MeshBasicMaterial( { transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material3= new THREE.MeshBasicMaterial( { transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material4= new THREE.MeshBasicMaterial( { transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material6= new THREE.MeshBasicMaterial( { transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
 
 				var loader_int = new THREE.TextureLoader();
 				loader_int.load(
-					'img/maps/icon_temple.jpg',
+					'img/maps/icon_statue_5.jpg',
+					function(texture){
+						material1.map = texture;
+						material2.map = texture;
+						material3.map = texture;
+						material4.map = texture;
+						material6.map = texture;
+					}
+				);
+
+				var loader_int_alpha = new THREE.TextureLoader();
+				loader_int_alpha.load(
+					'img/maps/icon_statue4_alpha2.png',
 					function(texture){
 						material1.alphaMap = texture;
 						material2.alphaMap = texture;
 						material3.alphaMap = texture;
 						material4.alphaMap = texture;
+						//material5.alphaMap = texture;
 						material6.alphaMap = texture;
 					}
 				);
@@ -190,14 +203,25 @@
 				scene.add(hotspot6);
 				//-------------------------
 
-				var material5 = new THREE.MeshBasicMaterial( { color:0xffba00, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide } ) ;
+				var material5 = new THREE.MeshBasicMaterial( {
+					transparent: true,
+					blending: THREE.AdditiveBlending,
+					side: THREE.DoubleSide } ) ;
 				material5.opacity = 0.7;
 
 				var loader = new THREE.TextureLoader();
 				loader.load(
-					'img/maps/icon_book.jpg',
+					'img/maps/icon_scroll1_alpha.png',
 					function(texture){
 						material5.alphaMap = texture;
+					}
+				);
+
+				var loader_m = new THREE.TextureLoader();
+				loader.load(
+					'img/maps/icon_scroll_1.jpg',
+					function(texture){
+						material5.map = texture;
 					}
 				);
 

@@ -89,16 +89,62 @@
 
 
 		//------------- titles / writings on the roof structure ---------------------------------------
+
 				//--------------------------------------------------------------------------
 				var hemi = new THREE.DirectionalLight( 0xffffff, 1.5 );
 				hemi.position.set( 1, 1, 1 );
         scene.add(hemi);
 
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				//-------------------- declare materials ------------------------------------
+				var material1 = new THREE.MeshBasicMaterial({transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide});
+				var material2 = new THREE.MeshBasicMaterial({transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide});
+				var material3 = new THREE.MeshBasicMaterial({transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide});
+				var material4 = new THREE.MeshBasicMaterial({transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide});
+				var material5 = new THREE.MeshBasicMaterial({transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide});
+
+				//--------------------- load materials -------------------------------------------------------------------------------------------
+				var loader_s = new THREE.TextureLoader();
+				var loader_s_alpha = new THREE.TextureLoader();
+				loader_s.load(
+					'img/maps/icon_statue_5.jpg',
+					function(texture){
+						material1.map = texture;
+						material2.map = texture;
+						material3.map = texture;
+						material4.map = texture;
+					}
+				);
+
+				loader_s_alpha.load(
+					'img/maps/icon_statue4_alpha2.png',
+					function(texture){
+						material1.alphaMap = texture;
+						material2.alphaMap = texture;
+						material3.alphaMap = texture;
+						material4.alphaMap = texture;
+					}
+				);
+
+				var loader_s2 = new THREE.TextureLoader();
+				var loader_s2_alpha = new THREE.TextureLoader();
+				loader_s2.load(
+					'img/maps/icon_scroll_1.jpg',
+					function(texture){
+						material5.map = texture;
+					}
+				);
+				loader_s2_alpha.load(
+					'img/maps/icon_scroll1_alpha.png',
+					function(texture){
+						material5.alphaMap = texture;
+					}
+				);
+				//var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
+				material1.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				object = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				//object = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				object = new THREE.Mesh( new THREE.PlaneGeometry( 30, 30, 32 ), material1);
 				object.position.set(-80, -40, -280);
 				object.name = "testOBJ001";
 
@@ -107,18 +153,18 @@
 				scene.add(object);
 
 				//---------------------------------------------------------------------------
-				var material1 = new THREE.MeshBasicMaterial( { color:0xffba00, transparent: true, blending: THREE.AdditiveBlending, side:THREE.DoubleSide } ) ;
-				material1.opacity = 0.7;
-				var loader = new THREE.TextureLoader();
-				loader.load(
-					'img/maps/icon_book.jpg',
-					function(texture){
-						material1.alphaMap = texture;
-					}
-				);
+				//var material1 = new THREE.MeshBasicMaterial( { color:0xffba00, transparent: true, blending: THREE.AdditiveBlending, side:THREE.DoubleSide } ) ;
+				material5.opacity = 0.7;
+				// var loader = new THREE.TextureLoader();
+				// loader.load(
+				// 	'img/maps/icon_book.jpg',
+				// 	function(texture){
+				// 		material1.alphaMap = texture;
+				// 	}
+				// );
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot2 = new THREE.Mesh( new THREE.PlaneGeometry( 27, 27, 32 ), material1);
+				var hotspot2 = new THREE.Mesh( new THREE.PlaneGeometry( 27, 27, 32 ), material5);
 				hotspot2.position.set(180, 40, -300);
 				hotspot2.rotation.y = -30 * Math.PI/180;
 
@@ -129,12 +175,15 @@
 				scene.add(hotspot2);
 
 				//----------------------------------------------------------------------------
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				//var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
+				material2.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot3 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
-				hotspot3.position.set(-300, 280, -280);
+				//var hotspot3 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				var hotspot3 = new THREE.Mesh( new THREE.PlaneGeometry( 30, 30, 32 ), material2);
+				hotspot3.rotation.y = 45 * Math.PI/180;
+
+				hotspot3.position.set(-300, 200, -280);
 				hotspot3.name = "hotspot3";
 
 				hotspots.push(hotspot3);
@@ -142,11 +191,12 @@
 
 				//----------------------------------------------------------------------------
 
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				//var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
+				material3.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot4 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				//var hotspot4 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				var hotspot4 = new THREE.Mesh( new THREE.PlaneGeometry( 30, 30, 32 ), material3);
 				hotspot4.position.set(100, 150, -380);
 				hotspot4.name = "hotspot4";
 
@@ -157,11 +207,19 @@
 
 				//--------------------------------------------------
 
-				var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				material.opacity = 0.7;
+				//var material = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending } ) ;
+				var material4 = new THREE.MeshBasicMaterial( { transparent: true,
+					side: THREE.DoubleSide,
+					map: THREE.ImageUtils.loadTexture("img/maps/icon_scroll_1.jpg"),
+					alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_scroll1_alpha.png"),
+					blending: THREE.AdditiveBlending
+				 } ) ;
+				material4.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
-				var hotspot5 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				//var hotspot5 = new THREE.Mesh( new  THREE.SphereGeometry(15, 20, 10), material);
+				var hotspot5 = new THREE.Mesh( new THREE.PlaneGeometry( 30, 30, 32 ), material4);
+				hotspot5.rotation.y = 115 * Math.PI/180;
 				hotspot5.position.set(230, 150, -250);
 				hotspot5.name = "hotspot5";
 
