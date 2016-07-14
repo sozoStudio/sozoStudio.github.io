@@ -106,14 +106,20 @@
 				hemi.position.set( 1, 1, 1 );
         scene.add(hemi);
 
-				var material01 = new THREE.MeshBasicMaterial( { color:0xFF3301, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, alphaMap: THREE.ImageUtils.loadTexture("img/maps/statue.jpg") } ) ;
-				var loaderM01 = new THREE.TextureLoader();
-				loaderM01.load(
-					'img/maps/statue.jpg',
-					function(texture){
-						material01.alphaMap=texture;
-					}
-				);
+				var material01 = new THREE.MeshBasicMaterial( {
+					transparent: true,
+					blending: THREE.AdditiveBlending,
+					side: THREE.DoubleSide,
+					alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_statue4_alpha2.png"),
+					map: THREE.ImageUtils.loadTexture("img/maps/icon_statue_5.jpg")
+				 } ) ;
+				// var loaderM01 = new THREE.TextureLoader();
+				// loaderM01.load(
+				// 	'img/maps/statue.jpg',
+				// 	function(texture){
+				// 		material01.alphaMap=texture;
+				// 	}
+				// );
 
 				material01.opacity = 0.7;
 
@@ -129,13 +135,19 @@
 				scene.add(object);
 
 				//---------------------------------------------------------------------------
-				var material1 = new THREE.MeshBasicMaterial( { color:0xffba00, transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_book.jpg") } ) ;
+				var material1 = new THREE.MeshBasicMaterial( {
+					transparent: true,
+					blending: THREE.AdditiveBlending,
+					side: THREE.DoubleSide,
+					alphaMap: THREE.ImageUtils.loadTexture("img/maps/icon_scroll1_alpha.png"),
+					map: THREE.ImageUtils.loadTexture("img/maps/icon_scroll_1.jpg")
+				 } ) ;
 				material1.opacity = 0.7;
 
 				//object = new THREE.Mesh( new  THREE.SphereGeometry(75, 20, 10), material); //change back to r=15
 				var hotspot2 = new THREE.Mesh( new  THREE.PlaneGeometry( 28, 28, 32 ), material1);
 				hotspot2.position.set(400, 120, -180);
-				hotspot2.rotation.y = 95 * Math.PI/180;
+				hotspot2.rotation.y = 275 * Math.PI/180;
 				hotspot2.name = "hotspot2";
 
 				hotspots.push(hotspot2);
