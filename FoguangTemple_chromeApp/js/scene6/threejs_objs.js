@@ -112,10 +112,10 @@
 
 				var loader_int = new THREE.TextureLoader();
 				loader_int.load(
-					'img/maps/icon_statue_5.jpg',
+					'img/maps/icon_outside-01.png',
 					function(texture){
 						material1.map = texture;
-						material2.map = texture;
+						//material2.map = texture;
 						material3.map = texture;
 						material4.map = texture;
 						material6.map = texture;
@@ -152,7 +152,7 @@
 				scene.add(hotspot1);
 
 				//-------------------------
-
+				material2.map = THREE.ImageUtils.loadTexture("img/maps/icon_pillar.jpg");
 				material2.opacity = 0.7;
 
 				var hotspot2 = new THREE.Mesh( new  THREE.PlaneGeometry( 30, 30, 32 ), material2);
