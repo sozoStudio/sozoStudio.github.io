@@ -1,7 +1,7 @@
 chrome.app.runtime.onLaunched.addListener(function() {
   chrome.app.window.create("index.html", {
     bounds: { width: 1280, height: 720},
-    minWidth:800, minHeight: 450,
+    minWidth:960, minHeight: 540,
     state: "fullscreen"
   });
 });
