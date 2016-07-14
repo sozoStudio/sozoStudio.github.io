@@ -6,129 +6,58 @@ var getnode = $('.timeline-node');
 var audios = [];
 var currentAudio = document.getElementById('audio_0');
 var preAudio;
-function playAudio(direction){
-  // console.log("start playing audio");
-  var nodeactive = $('.timeline-node').css('border-width'),
-      eachnode = $('.timeline-node'),
-      thisnode = $('.timeline-node').index(this),
-      nodetext = $('.node-title'),
-      tcontent = $('.timeline-each'),
-      tline = $('.timeline-line'),
-      nodeline = $('.node-line'),
-      part1 = $('.timeline-part1'),
-      thiscontent = $('.timeline-each').index(this);
-       //$(startbutton).fadeOut();
-  // $(startbutton).click(function(){
-  //     var $this = $(this);
-  //     audios[0].play();
-  //       $(startbutton).toggleClass('SeeMore2');
-  //     if($this.hasClass('SeeMore2')){
-  //         $this.text('停止介绍');
-  //         audios[count].play();
-  //         console.log('stop');
-  //         tline= $(tline).addClass('top-10').removeClass('top-45');
-  //         nodetext = $(nodetext).fadeOut('slow');
-  //         part1 = $(part1).css('margin-top', '-11vh');
-  //     } else {
-  //         $this.text('开始介绍');
-  //         audios[count].pause();
-  //         console.log('start');
-  //         tline= $(tline).removeClass('top-10').addClass('top-45');
-  //         nodetext = $(nodetext).show('slow');
-  //         part1 = $(part1).css('margin-top', '-46vh');
-  //     }
-  // });
-  if (direction>0) {
-    console.log("direction > 0");
-    if (count<audios.length) {
-      count++;
-      audios[count].load();audios[count].play();
-<<<<<<< HEAD
-      console.log("the audio currently playing is" + count);
-      currentAudio=audios[count];
-=======
-      preAudio = currentAudio;
-      currentAudio = audios[count];
-      console.log("current audio is " + currentAudio.id);
-
->>>>>>> 56c0059d1921f88fbe36e9c2880ba61624bbb681
-    //  scripts for the timeline contents
-    // up and down animation for each nodes
-        eachnode[count] = $(eachnode[count]).toggleClass('activenode');
-        $(eachnode ).not(thisnode).removeClass('activenode');
-
-    // up and down animation for each timeline contents
-      tcontent[count] =$(tcontent[count]).toggleClass('timeline-each-up active-timeline animated Fadein');
-      $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
-
-      // up and down animation for each nodes connect via contents
-      nodeline[count]=$(nodeline[count]).toggleClass('opacity1 animated FadeinUp');
-      $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp');
-
-    }else {
-      count=0;
-    }
-
-  }else if (direction==0) {
-    //init
-    audios[0].load();audios[0].play();
-    console.log("playing first audio");
-    currentAudio = audios[0];
-    //  scripts for the timeline contents
-    // up and down animation for each nodes
-        eachnode[count] = $(eachnode[count]).toggleClass('activenode');
-        $(eachnode ).not(count).removeClass('activenode');
-    // up and down animation for each timeline contents
-      tcontent[count] =$(tcontent[count]).toggleClass('timeline-each-up active-timeline animated Fadein');
-      $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
-
-      // up and down animation for each nodes connect via contents
-      nodeline[count]=$(nodeline[count]).toggleClass('opacity1 animated FadeinUp');
-      $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp');
-
-      tline= $(tline).addClass('top-10');
-      nodetext = $(nodetext).fadeOut('slow');
-      part1 = $(part1).css('margin-top', '-11vh');
-  }
-}
 
 //button change text
 startbutton.text('开始介绍');
 
 startbutton.click(function(){
-
-  // audios = document.getElementsByTagName("audio");
-  // for (var i = 0; i < audios.length; i++) {
-  //   // console.log("audio " + i + " id is " + audios[i].id);
-  //   //audios[i]
-  // };
-
-  playAudio(0);
-  count = 0;
-  console.log("start button clicked");
-
+    tline = $('.timeline-line'),
+    nodetext = $('.node-title'),
+    part1 = $('.timeline-part1'),
+  $("audio")[0].play();
+  $(".timeline-node, .timeline-each, .node-line").first().addClass("animated Fadein");
+  $(".timeline-node").first().addClass('activenode');
+  $(".timeline-each").first().addClass('timeline-each-up active-timeline');
+  $(".node-line").first().addClass('opacity1');
+  tline= $(tline).removeClass('top-45');
+  tline= $(tline).addClass('top-10');
+  nodetext = $(nodetext).fadeOut('slow');
+  part1 = $(part1).css('margin-top', '-11vh');
+  startbutton.fadeOut();
 });
-
-<<<<<<< HEAD
-    currentAudio.onended = function(){
-      console.log("audio " + count + " ended");
-      var nextaudio = count + 1;
-      // console.log("next audio " + nextaudio + " play");
-      playAudio(nextaudio);
-    };
-
-
-=======
-
-
 
 var count_JQ = $("audio").size();
 $("audio").each(function(i){
   if (i < count_JQ - 1) {
-    this.addEventListener("ended", function () { $("audio")[i+1].play();});
+    this.addEventListener("ended", function () {
+        var nodeactive = $('.timeline-node').css('border-width'),
+            eachnode = $('.timeline-node'),
+            thisnode = $('.timeline-node').index(this),
+            nodetext = $('.node-title'),
+            tcontent = $('.timeline-each'),
+            tline = $('.timeline-line'),
+            nodeline = $('.node-line'),
+            part1 = $('.timeline-part1'),
+            thiscontent = $('.timeline-each').index(this);
+     $("audio")[i+1].play();
+
+    //  scripts for the timeline contents
+
+    // up and down animation for each nodes
+        eachnode[i+1] = $(eachnode[i+1]).toggleClass('activenode');
+        $(eachnode).not(thisnode).removeClass('activenode');
+
+    // up and down animation for each timeline contents
+      tcontent[i+1] =$(tcontent[i+1]).toggleClass('timeline-each-up active-timeline animated Fadein');
+      $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
+
+      // up and down animation for each nodes connect via contents
+      nodeline[i+1]=$(nodeline[i+1]).toggleClass('opacity1 animated FadeinUp');
+      $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp');
+});
   }
 });
->>>>>>> 56c0059d1921f88fbe36e9c2880ba61624bbb681
+
 
 // $(startbutton).click(function(){
 //     // var $this = $(this);

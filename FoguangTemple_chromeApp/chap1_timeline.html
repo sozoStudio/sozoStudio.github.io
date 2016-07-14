@@ -19,9 +19,9 @@
   </style>
 
 </head>
-<body>
-    <div class="main timeline-width">
-        <div id = "texture"></div>
+<body style="width:2800px; position:relative;">
+    <div id = "texture"></div>
+    <div class="main">
         <!-- navigation bar -->
         <div id="wrapper">
         <a href="#"><div id="menu-toggle"><i class="icon-flower icon-size-50" id="sidebar-toggle"></i></div></a>
@@ -110,7 +110,7 @@
             <!-- the actual content -->
             <li class="timeline-each hori-scroll"  style="margin-left:200px;width:800px;" >
               <!--href="#/details/{{events.indexOf(item)}}" -->
-              <div class="left-timeline" style="width:300px;">
+              <div id="chap1-audio0" class="left-timeline" style="width:300px;">
                       <source src=""></source>
                   </audio>
                 <h2>初建</h2>
@@ -182,20 +182,18 @@
             </li>
 
             <!-- 5 -->
-            <li class="timeline-each hori-scroll" style="margin-left:900px;width:500px;">
+            <li class="timeline-each hori-scroll" style="margin-left:900px;width:350px;">
               <!--href="#/details/{{events.indexOf(item)}}" -->
-              <div class="left-timeline">
                 <h2>文物认可</h2>
                 <h4>公元1961年</h4>
                 <p class="timeline_descp">1961年，佛光寺被国务院公布为第一批全国重点文物保护单位。</p>
                 <audio id="audio-player5" controls="controls">
                     <source src="media/scene1/audio/5.mp3"></source>
                 </audio>
-              </div>
             </li>
 
             <!-- 6 -->
-            <li class="timeline-each hori-scroll" style="margin-left:1100px;width:400px;">
+            <li class="timeline-each hori-scroll" style="margin-left:1100px;width:400px; min-width:300px;">
               <!--href="#/details/{{events.indexOf(item)}}" -->
               <div class="left-timeline">
                 <h2>文化遗产</h2>
@@ -211,26 +209,21 @@
                 </div>
             </li>
           </ul>
-
-          <div id="timelinebutton" class="next-chap" style="top:-46vh;">
-              <ul class="vertical-middle ">
-              <li><p>下一章</p>
-              <h4>发现佛光寺</h4></li>
-              <li><i style="margin-left:30%;" class="icon-next icon-size-80"></i></li>
-          </ul>
+      </section>
       </div>
+      <div id="timelinebutton" class="next-chap" style="top:0px;">
+          <ul class="vertical-middle">
+          <li><p>下一章</p>
+          <h4>发现佛光寺</h4></li>
+          <li><i style="margin-left:30%;" class="icon-next icon-size-80"></i></li>
+      </ul>
       </div>
-
           <!-- <audio autoplay="" controls="" loop="" preload="" class="background-mvc">
             <source src="media/scene1/bgm/001.mp3" type="audio/mpeg">
             <source src="media/scene1/bgm/001.ogg" type="audio/ogg">
             <source src="media/scene1/bgm/001.wav" type="audio/wav">
            Your browser does not support the audio element.
           </audio> -->
-        </section>
-
-
-</div>
 <script src="lib/wow2.js"></script>
 <script src="dist/js/custom-jquery.js"></script>
 <script src="Click-handler.js" type="text/javascript"></script>

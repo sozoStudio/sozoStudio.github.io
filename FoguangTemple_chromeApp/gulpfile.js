@@ -30,7 +30,6 @@ var paths2 = {
         'app/js/chap2animation.js',
         'app/js/tab-navigation.js',
         'app/js/Click-handler.js',
-        'app/js/audio-chap1.js',
         // 'app/js/modal.js'
         //the animation for sunrise on intro 1 page is included in its page. not this one here
     ]

@@ -1086,8 +1086,6 @@ video#bgvid {
   max-height: 90vh;
   max-width: 70vw;
   width: 55vw;
-  min-width: 40vw;
-  width: auto;
   display: inherit; }
 
 .activecards {
