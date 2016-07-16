@@ -6,6 +6,7 @@ var audio = $("audio");
 var getnode = $('.timeline-node');
 var currentAudio = document.getElementById('audio_0');
 var preAudio;
+var initState = 0;
 
 startbutton.click(function(){
     var tline = $('.timeline-line'),
@@ -60,6 +61,11 @@ $("audio").each(function(i){
 startbutton2.text('开始介绍');
 
 $(startbutton2).click(function(){
+  if (initState == 0) {
+    audio[0].play();
+    startbutton2.text('停止介绍');
+    initState++;
+  }else {
     for (i =0; i <count_JQ; i ++){
         if (!audio[i].paused && audio[i].currentTime) {
             console.log(audio[i] + "is playing");
@@ -68,10 +74,9 @@ $(startbutton2).click(function(){
         } else if (audio[i].paused && audio[i].currentTime && $(audio[i]).visible()) {
             audio[i].play();
             startbutton2.text('停止介绍');
-        }else if (!audio[i].paused && !audio[i].currentTime) {
-            audio[0].play();
         }
-}
+      }
+  }
 });
 
 
