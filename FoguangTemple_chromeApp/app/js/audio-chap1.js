@@ -6,6 +6,7 @@ var audio = $("audio");
 var getnode = $('.timeline-node');
 var currentAudio = document.getElementById('audio_0');
 var preAudio;
+var eachLI = $('.scroll-list > li');
 
 startbutton.click(function(){
     var tline = $('.timeline-line'),
@@ -76,12 +77,85 @@ $(startbutton2).click(function(){
 
 
 // auto position the audio to the center of window
-        var eachLI = $('.scroll-list > li');
+$(document).ready(function(){
         for (var i = 0; i < eachLI.length; ++i){
-                     audio[i].onplay = function(e){
+                     audio[i].addEventListener("playing",function(e){
                      setTimeout(function(){
                         window.scrollTo(
                             e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
                         }, 400);
-                        console.log("center");
-                     }; }
+                    });
+
+                 }
+                 });
+
+
+//////////////////////// bgm!!!
+var myBgm = $(".bgm");
+var bgmNumber = 0;
+// set my bgm volume to be half of what's now
+for(i=0; i < myBgm.length; i ++){
+myBgm[i].volume = 0.1;
+}
+
+//switch bgm for chap2
+
+//second bgm
+audio[4].addEventListener("playing",function(){
+
+for(i=0; i < myBgm.length && i != 1; i ++){
+    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+    });
+    bgmNumber++;
+};
+myBgm[1].play();
+ $(myBgm[1]).animate({volume: 0.3}, 2000);
+});
+
+// third bgm
+audio[7].addEventListener("playing",function(){
+
+for(i=0; i < myBgm.length && i != 1; i ++){
+    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+    });
+    bgmNumber++;
+};
+myBgm[2].play();
+ $(myBgm[2]).animate({volume: 0.3}, 2000);
+});
+
+// 4th bgm
+audio[10].addEventListener("playing",function(){
+
+for(i=0; i < myBgm.length && i != 1; i ++){
+    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+    });
+    bgmNumber++;
+};
+myBgm[3].play();
+ $(myBgm[3]).animate({volume: 0.3}, 2000);
+});
+
+// 5th bgm
+audio[13].addEventListener("playing",function(){
+
+for(i=0; i < myBgm.length && i != 1; i ++){
+    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+    });
+    bgmNumber++;
+};
+myBgm[4].play();
+ $(myBgm[4]).animate({volume: 0.3}, 2000);
+});
+
+// 6th bgm
+audio[13].addEventListener("playing",function(){
+
+for(i=0; i < myBgm.length && i != 1; i ++){
+    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+    });
+    bgmNumber++;
+};
+myBgm[4].play();
+ $(myBgm[4]).animate({volume: 0.3}, 2000);
+});
