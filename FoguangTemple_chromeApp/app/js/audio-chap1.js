@@ -100,8 +100,10 @@ var myBgm = $(".bgm");
 var bgmNumber = 0;
 // set my bgm volume to be half of what's now
 for(i=0; i < myBgm.length; i ++){
-myBgm[i].volume = 0.1;
+myBgm[i].volume = 0.3;
 }
+// chap1
+$(".bgm_chap1").get(0).volume = 0.3;
 
 //switch bgm for chap2
 
