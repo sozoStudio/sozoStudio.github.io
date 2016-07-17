@@ -102,8 +102,6 @@ var bgmNumber = 0;
 for(i=0; i < myBgm.length; i ++){
 myBgm[i].volume = 0.3;
 }
-// chap1
-$(".bgm_chap1").get(0).volume = 0.3;
 
 //switch bgm for chap2
 
@@ -141,10 +139,16 @@ for(i=0; i < myBgm.length && i != 1; i ++){
 };
 myBgm[3].play();
  $(myBgm[3]).animate({volume: 0.3}, 2000);
+
+ // chapter 2 temple brush show up
+setTimeout(function () {
+ $("#temple-circle").fadeIn("slow");
+ $("html").css("background-color","#606060");
+ },1000);
 });
 
 // 5th bgm
-audio[13].addEventListener("playing",function(){
+audio[14].addEventListener("playing",function(){
 
 for(i=0; i < myBgm.length && i != 1; i ++){
     $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
@@ -153,16 +157,40 @@ for(i=0; i < myBgm.length && i != 1; i ++){
 };
 myBgm[4].play();
  $(myBgm[4]).animate({volume: 0.3}, 2000);
+ $("html").css("background-color","#424B50");
 });
 
-// 6th bgm
-audio[13].addEventListener("playing",function(){
 
-for(i=0; i < myBgm.length && i != 1; i ++){
-    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
-    });
-    bgmNumber++;
-};
-myBgm[4].play();
- $(myBgm[4]).animate({volume: 0.3}, 2000);
+// chap1 volume
+var vidChap1 = document.getElementById("bgm_chap1");
+console.log(vidChap1);
+// vidChap1.volume = 0.3;
+
+// background bgm on/off switch
+$(".bg-switch").click(function() {
+    if(myBgm[bgmNumber].paused == false){
+        setTimeout(function () {
+            myBgm[bgmNumber].pause();
+        },150);
+    }
+
+    else if (myBgm[bgmNumber].paused == true){
+        setTimeout(function () {
+        myBgm[bgmNumber].play();
+        },150);
+    }
+
+});
+
+// chapter 2 image animation accoridng to audio
+audio[13].addEventListener("playing",function(){
+    setTimeout(function(){
+    $("#chapw-journey1").fadeIn(2000);
+}, 1500);
+setTimeout(function(){
+$("#chapw-journey2").fadeIn(3000);
+}, 3000);
+setTimeout(function(){
+$("#chapw-journey3").fadeIn(4000);
+}, 4500);
 });

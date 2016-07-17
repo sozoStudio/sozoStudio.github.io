@@ -35,17 +35,3 @@ $(".second-img").click(function() {
 $(".first-img").click(function() {
     $(".second-img").fadeToggle("slow");
 });
-
-//button change text
-var startbutton = $("#chap2_start");
-startbutton.text('开始介绍');
-
-$(startbutton).click(function(){
-    var $this = $(this);
-    $this.toggleClass('SeeMore2');
-    if($this.hasClass('SeeMore2')){
-        $this.text('停止介绍');
-    } else {
-        $this.text('开始介绍');
-    }
-});

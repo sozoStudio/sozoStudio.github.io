@@ -48,7 +48,7 @@ margin-left:13px;
   max-width:450px;
   width:340px;
   min-width: 270px;
-  height:70vh;
+  height:65vh;
   margin:auto 40px auto 40px;
   padding:40px;
   overflow: hidden;
@@ -178,10 +178,10 @@ margin-left:13px;
       padding:0px 20px 0px 20px;
   }
   .mrLiang1 {
-      height:90vh;
+      height:85vh;
       width:auto;
       bottom: 0;
-      margin-left: -130px;
+      margin-left: -30px;
   }
 
   .circle {
@@ -201,4 +201,12 @@ margin-top: -5%;
 
   .white-bg {
       background-color: rgba(255,255,255,0.1);
+  }
+
+  #temple-circle{
+     display:none;
+  }
+
+  #chapw-journey1,   #chapw-journey2,   #chapw-journey3 {
+      display:none;
   }

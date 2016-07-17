@@ -53,6 +53,11 @@
         <!-- navigation bar -->
 <section class="scroll-page">
     <button id="chap2_start" type="button" class="button1"></button>
+    <div class="bg-switch"><p>背景音乐</p><div id="scroll-img-L" class="switch-scroll"></div><label class="switch">
+      <input type="checkbox">
+      <div class="slider"></div>
+  </label><div id="scroll-img-R" class="switch-scroll"></div>
+</div>
     <div class ="scene-title">
         <div id="titlebox-top"><img src="img/UI/icons/titlebox-top.svg"></div>
         <div class ="scene-title-box title">
@@ -223,15 +228,15 @@
 <!--- ++++++++++++++++++++++++++++++++++ number 8 ++++++++++++++++++++++++++++++++++++++++++++  -->
  <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0);color:white;text-shadow:0px 0px 5px rgba(0, 0, 0, 1); margin-left:500px;">
      <div class="left-chapscroll">
+         <audio style="margin-top:-30px;" controls class="narration" id="audio_10" >
+             <source src="media/scene2/audio/011.mp3"></source>
+         </audio>
              <p> 1926年，法国学者伯希和出版一书<div style="color:yellow;">《敦煌石窟》（Les GrottesDeTouen-houang），</div></p><p>其61窟有一幅五代时期绘制的五台山全景壁画，这是一幅绘有五台山自然地理和佛教寺院、瑞相灵迹的佛画，其中寺庙林立、宝塔穿云。</p>
 
          </div>
-           <object class="circle" type="image/svg+xml" data="img/UI/temple-brush.html"></object>
+           <img id="temple-circle" class="circle" src="img/UI/temple-brush.svg" />
 
             <img style="width:auto; height:100vh; position:absolute; opacity:0.8; top:0; margin-left:-135px; z-index:-1;" src ="dist/img/scene/scene2/img31.png"></img>
-            <audio style="margin-top:45vh;" controls class="narration" id="audio_10" >
-                <source src="media/scene2/audio/011.mp3"></source>
-            </audio>
  </li>
  <!--- ++++++++++++++++++++++++++++++++++ number 9 ++++++++++++++++++++++++++++++++++++++++++++  -->
     <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.4); margin-left:400px;">
@@ -265,11 +270,11 @@
   </li>
 <!--- ++++++++++++++++++++++++++++++++++ number 12 ++++++++++++++++++++++++++++++++++++++++++++  -->
  <li class="scroll-each hori-scroll" style="background-color: rgba(255,255,255,0.0); width:250px; margin-left: -60px;">
-     <img class="image-fit hideme delay-show" src ="dist/img/scene/scene2/img34.jpg"></img>
+     <img id="chapw-journey1" class="image-fit" src ="dist/img/scene/scene2/img34.jpg"></img>
      <p></p>
-     <img class="image-fit hideme delay-show" src ="dist/img/scene/scene2/img35.jpg"></img>
+     <img id="chapw-journey2" class="image-fit" src ="dist/img/scene/scene2/img35.jpg"></img>
      <p></p>
-     <img class="image-fit hideme delay-show" src ="dist/img/scene/scene2/img36.jpg"></img>
+     <img id="chapw-journey3" class="image-fit" src ="dist/img/scene/scene2/img36.jpg"></img>
  </li>
  <!--- ++++++++++++++++++++++++++++++++++ number 13 ++++++++++++++++++++++++++++++++++++++++++++  -->
     <li class="scroll-each hori-scroll hideme" style="background-color: rgba(255,255,255,0.0);">
