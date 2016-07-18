@@ -27,10 +27,10 @@ function m4_update(direction){
       '<div id="item-2" class="control-operator"></div>'+
       '<div id="item-3" class="control-operator"></div>'+
       '<div id="item-4" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/4/details/wp/001.jpg" height="150px"></figure>'+
-      '<figure class="item"><img src="img/4/details/wp/002.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/4/details/wp/003.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/4/details/wp/004.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>束腰壁画</p><img src="img/4/details/wp/001.jpg" height="150px"></figure>'+
+      '<figure class="item"><p>束腰壁画（左侧细节）</p><img src="img/4/details/wp/002.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>束腰壁画（中间细节）</p><img src="img/4/details/wp/003.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>束腰壁画（右侧细节）</p><img src="img/4/details/wp/004.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a><a href="#item-4" class="control-button">•</a></div>'
     );
@@ -199,8 +199,8 @@ $('#modal4').on('shown.bs.modal', function(e){
     $('div#modal4_img').html(
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/4/details/wp/000.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/4/details/wp/001.jpg" height="150px"></figure>'+
+      '<figure class="item"><p>罗哲文先生论文</p><img src="img/4/details/wp/000.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>束腰壁画</p><img src="img/4/details/wp/001.jpg" height="150px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a></div>'
     );

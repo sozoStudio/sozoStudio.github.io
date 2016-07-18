@@ -3114,6 +3114,9 @@ i.p {
     top: 0px;
     left: 20px;
     text-shadow: 0px 0px 5px #050505; }
+  .gallery .item .white {
+    color: #EEE2CF;
+    text-shadow: 0px 0px 5px #AEC3A4; }
 
 .gallery .control-operator {
   display: none; }

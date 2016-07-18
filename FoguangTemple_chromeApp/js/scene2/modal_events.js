@@ -31,9 +31,9 @@ function m4_update(direction){
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
       '<div id="item-3" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/3/details/n3.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/3/details/n4.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/3/details/n5.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>佛光寺东大殿梁下题记</p><img src="img/3/details/n3.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>功德主故右军中尉王</p><img src="img/3/details/n4.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>佛殿主上都送供女弟子宁公遇</p><img src="img/3/details/n5.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a></div>'
     );
@@ -68,8 +68,8 @@ function m4_update(direction){
     $('div#modal4_img').html(
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/3/details/n1.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/3/details/n2.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>林徽因与宁公遇像</p><img src="img/3/details/n1.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>宁公遇像</p><img src="img/3/details/n2.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a></div>'
     );
@@ -151,8 +151,8 @@ $('#modal4').on('shown.bs.modal', function(e){
     $('div#modal4_img').html(
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/3/details/n1.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/3/details/n2.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>林徽因与宁公遇像</p><img src="img/3/details/n1.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>宁公遇像</p><img src="img/3/details/n2.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a></div>'
     );
