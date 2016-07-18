@@ -14,7 +14,7 @@ indexbutton.click(function() {
 });
 // ------------------   index link to sunrise page end ------------------
 
-// ------------------   sunrise link to sunrise page  ------------------
+// ------------------   sunrise link to timeline page  ------------------
 
 var sunrisebutton = $('#sunrisebutton');
 sunrisebutton.click(function() {
@@ -29,11 +29,12 @@ sunrisebutton.click(function() {
 });
 // ------------------   sunrise link to sunrise page end ------------------
 
-// ------------------   timeline link to sunrise page  ------------------
+// ------------------   timeline link to chapter2 page  ------------------
 
 var timelinebutton = $('#timelinebutton');
 timelinebutton.click(function() {
     // After the tab has been created, open a window to inject the tab into it.
+    setTimeout(function(){chrome.app.window.current().close();}, 3000);
     chrome.app.window.create('chap2_second.html',
         {
             type:       "panel",

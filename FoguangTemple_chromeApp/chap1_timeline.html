@@ -53,6 +53,11 @@
         <!-- navigation bar -->
         <div class="timeline-part1">
         <button class="button2" id="chap1_start">开始介绍</button>
+        <div class="bg-switch"><p>背景音乐</p><div id="scroll-img-L" class="switch-scroll"></div><label class="switch">
+          <input type="checkbox">
+          <div class="slider"></div>
+      </label><div id="scroll-img-R" class="switch-scroll"></div>
+    </div>
         <div class ="scene-title">
             <div id="titlebox-top"><img src="img/UI/icons/titlebox-top.svg"></div>
             <div class ="scene-title-box title">
@@ -108,9 +113,9 @@
             </div>
 
             <!-- the actual content -->
-            <li class="timeline-each hori-scroll"  style="margin-left:200px;width:800px;" >
+            <li class="timeline-each hori-scroll"  style="margin-left:200px;width:1000px;" >
               <!--href="#/details/{{events.indexOf(item)}}" -->
-              <div id="chap1-audio0" class="left-timeline" style="width:300px;">
+              <div id="chap1-audio0" class="left-timeline">
                       <source src=""></source>
                   </audio>
                 <h2>初建</h2>
@@ -121,15 +126,15 @@
                 </audio>
               </div>
 
-                <div class="timeline-cover" style="width:420px;">
-                    <video controls autoplay style="width:100%;" class="vertical-middle-noposition">
+                <div class="timeline-cover" style="width:630px;">
+                    <video autoplay loop="true" style="height:100%; width:100%;">
                       <source src="media/scene1/video1.mp4" type="video/mp4">
                     </video>
                 </div>
             </li>
 
             <!-- 2 -->
-            <li class="timeline-each hori-scroll" style="margin-left:300px">
+            <li class="timeline-each hori-scroll" style="margin-left:300px;width:960px;">
               <!--href="#/details/{{events.indexOf(item)}}" -->
               <div class="left-timeline">
                 <h2>佛教兴盛</h2>
@@ -140,16 +145,34 @@
                 </audio>
               </div>
 
-                <div class="timeline-cover">
-                <img class="timeline-img" src="dist/img/scene/scene1/3_1.jpg">
-                <img class="timeline-img" src="dist/img/scene/scene1/3_2.jpg">
+                <div class="timeline-cover" style="width:590px;">
+                    <div id="#modal1_img" class="gallery autoplay items-2">
+                        <div id="item-1" class="control-operator"></div>
+                        <div id="item-2" class="control-operator"></div>
+                        <figure class="item">
+                            <p>五台山寺庙</p>
+                            <img class="timeline-img" src="dist/img/scene/scene1/3_1.jpg">
+                        </figure>
+
+                        <figure class="item">
+                            <p>五台山寺庙</p>
+                            <img class="timeline-img" src="dist/img/scene/scene1/3_2.jpg">
+                        </figure>
+
+                        <div class="controls">
+                            <a href="#item-1" class="control-button">•</a>
+                            <a href="#item-2" class="control-button">•</a>
+                        </div>
+                    </div>
+                <!-- <img class="timeline-img" src="dist/img/scene/scene1/3_1.jpg">
+                <img class="timeline-img" src="dist/img/scene/scene1/3_2.jpg"> -->
                 </div>
             </li>
 
             <!-- 3 -->
-            <li class="timeline-each hori-scroll" style="margin-left:300px">
+            <li class="timeline-each hori-scroll" style="margin-left:300px;width:950px;">
               <!--href="#/details/{{events.indexOf(item)}}" -->
-              <div class="left-timeline" style="width: 350px;">
+              <div class="left-timeline">
                 <h3 style="margin-top:0px;">毁灭与复兴</h3>
                 <h5>唐元和，长庆年间 (公元845年）</h5>
                 <p class="timeline_descp">后逢北周武帝宇文邕“灭法”，五台山大部分寺院被荒废。隋灭北周，五台山佛教寺院又逐渐复兴。唐元和、长庆年间在高僧法兴的主持下，兴建了著名的佛光寺弥勒大阁；唐会昌五年（公元845年），唐武宗下令灭法，佛光寺僧人被遣散，寺内建筑被毁，弥勒大阁也因此消失；唐大中年间，佛教重新复兴，高僧愿诚四处募化，终由长安贵妇宁公遇等捐资兴建了东大殿，佛光寺也因此得到了复兴。</p>
@@ -158,17 +181,38 @@
                 </audio>
               </div>
 
-                <div class="timeline-cover" style="width:40%">
-                <img class="timeline-img" src="dist/img/scene/scene1/4_1.png">
-                <img class="timeline-img" src="dist/img/scene/scene1/4_2.png">
-                <img class="timeline-img" src="dist/img/scene/scene1/4_3.jpg">
+                <div class="timeline-cover" style="width:580px;">
+                    <div id="#modal1_img" class="gallery autoplay items-3">
+                        <div id="item-1" class="control-operator"></div>
+                        <div id="item-2" class="control-operator"></div>
+                        <figure class="item">
+                            <p>东大殿正面全景</p>
+                            <img class="timeline-img" src="dist/img/scene/scene1/4_1.png">
+                        </figure>
+
+                        <figure class="item">
+                            <p>东大殿外景(拍摄 徐晓颖)</p>
+                            <img class="timeline-img" src="dist/img/scene/scene1/4_2.png">
+                        </figure>
+
+                        <figure class="item">
+                            <p>东大殿后山俯瞰</p>
+                            <img class="timeline-img" src="dist/img/scene/scene1/4_3.jpg">
+                        </figure>
+
+                        <div class="controls">
+                            <a href="#item-1" class="control-button">•</a>
+                            <a href="#item-2" class="control-button">•</a>
+                            <a href="#item-3" class="control-button">•</a>
+                        </div>
+                    </div>
                 </div>
             </li>
 
             <!-- 4 -->
-            <li class="timeline-each hori-scroll" style="margin-left:800px">
+            <li class="timeline-each hori-scroll" style="margin-left:800px;width:660px;">
               <!--href="#/details/{{events.indexOf(item)}}" -->
-              <div class="left-timeline" style="width: 300px;">
+              <div class="left-timeline">
                 <h2>发现佛光寺</h2>
                 <h4>公元1937年</h4>
                 <p class="timeline_descp">1937年，我国建筑史学泰斗梁思成夫妇带领营造学社成员发现佛光寺。</p>
@@ -176,13 +220,14 @@
                     <source src="media/scene1/audio/4.mp3"></source>
                 </audio>
               </div>
-              <div class="timeline-cover" style="width:40%">
-              <img class="timeline-img" src="dist/img/scene/scene1/5_1.jpg">
+              <div class="timeline-cover" style="max-width:320px;">
+                  <p>梁、林先生</p>
+              <img class="timeline-img-vertical" src="dist/img/scene/scene1/5_1.jpg">
               </div>
             </li>
 
             <!-- 5 -->
-            <li class="timeline-each hori-scroll" style="margin-left:900px;width:350px;">
+            <li class="timeline-each hori-scroll" style="margin-left:900px;width:280px;">
               <!--href="#/details/{{events.indexOf(item)}}" -->
                 <h2>文物认可</h2>
                 <h4>公元1961年</h4>
@@ -193,19 +238,19 @@
             </li>
 
             <!-- 6 -->
-            <li class="timeline-each hori-scroll" style="margin-left:1100px;width:400px; min-width:300px;">
+            <li class="timeline-each hori-scroll" style="margin-left:1100px;width:760px; min-width:320px;">
               <!--href="#/details/{{events.indexOf(item)}}" -->
-              <div class="left-timeline">
+              <div class="left-timeline" style="width:150px;">
                 <h2>文化遗产</h2>
                 <h4>公元2009年</h4>
                 <p class="timeline_descp">2009年，佛光寺作为五台山的一个重要组成部分，被联合国教科文组织列入世界文化遗产。</p>
-                <audio id="audio-player6" controls="controls">
-                    <source src="media/scene1/audio/6.mp3"></source>
-                </audio>
               </div>
 
-                <div class="timeline-cover" style="margin-left:1200px">
-                <img class="timeline-img" src="dist/img/scene/scene1/6_1.png">
+                <div class="timeline-cover" style="width:530px;">
+                    <audio id="audio-player6" controls="controls" style="margin-top:-20px;">
+                        <source src="media/scene1/audio/6.mp3"></source>
+                    </audio>
+                    <img class="timeline-img" src="dist/img/scene/scene1/6_1.png">
                 </div>
             </li>
           </ul>
@@ -220,7 +265,7 @@
       </div>
 
       <!-- bgm audio -->
-      <video id="bgm_chap1" loop="true" autoplay>
+      <video class="chap1Bgm" id="bgm_chap1" loop="true" autoplay>
           <source src="media/scene1/bgm/001.mp3"></source>
       </video>
 

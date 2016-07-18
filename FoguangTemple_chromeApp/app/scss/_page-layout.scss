@@ -177,7 +177,8 @@ button {
       min-width: 300px !important;
   }
 }
-.line{ margin-left: 100%; overflow:hidden;height:30px;}
+.line{
+    margin-left: 100%; overflow:hidden;height:22px;}
 
 .logo {
   background: url(img/logo/logos-04.svg) no-repeat top left;
@@ -362,6 +363,7 @@ button {
 
 audio {
     z-index: 99999;
+    padding:20px 0 20px 0;
 }
 
 #arrows {

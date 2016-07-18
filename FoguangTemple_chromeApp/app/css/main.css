@@ -154,7 +154,7 @@ i {
   top: 50%;
   transform: translateY(-50%); }
 
-.vertical-middle-noposition, .timeline-cover .timeline-img {
+.vertical-middle-noposition {
   margin-top: 50%;
   transform: translateY(-50%); }
 
@@ -289,7 +289,7 @@ button {
 .line {
   margin-left: 100%;
   overflow: hidden;
-  height: 30px; }
+  height: 22px; }
 
 .logo {
   background: url(img/logo/logos-04.svg) no-repeat top left;
@@ -447,7 +447,8 @@ button {
   line-height: 34px; }
 
 audio {
-  z-index: 99999; }
+  z-index: 99999;
+  padding: 20px 0 20px 0; }
 
 #arrows {
   top: 40px;
@@ -790,6 +791,11 @@ audio {
     -webkit-transition: 0.6s ease-in-out left;
     -o-transition: 0.6s ease-in-out left;
     transition: 0.6s ease-in-out left; }
+    .carousel-inner > .item p {
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      text-shadow: 2px 2px #050505; }
     .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
       display: block;
@@ -1051,10 +1057,9 @@ video#bgvid {
 .timeline-each {
   position: relative;
   display: none;
-  width: 300px;
   height: 50vh;
   margin: auto 50px 200px 50px;
-  padding: 70px;
+  padding: 60px;
   border: 13px solid transparent;
   padding: 35px;
   -webkit-border-image: url(../../img/UI/border1.svg) 35 round;
@@ -1073,7 +1078,13 @@ video#bgvid {
 
 .timeline-cover {
   height: auto;
+  position: relative;
   z-index: 1000; }
+  .timeline-cover p {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    text-shadow: 0px 0px 3px #050505; }
 
 .timeline_descp {
   max-height: 300px;
@@ -1088,7 +1099,8 @@ video#bgvid {
   height: 4px;
   border-bottom: 3px double #D69F50;
   margin-top: 45vh;
-  margin-bottom: 65px; }
+  margin-bottom: 65px;
+  margin-left: 10vh; }
 
 .timeline-node {
   width: 26px;
@@ -1150,8 +1162,6 @@ video#bgvid {
 .active-timeline {
   height: 55vh;
   max-height: 90vh;
-  max-width: 70vw;
-  width: 55vw;
   display: inherit; }
 
 .activecards {
@@ -1162,8 +1172,7 @@ video#bgvid {
   display: block !important; }
 
 .left-timeline {
-  width: 35%;
-  min-width: 300px;
+  width: 280px;
   max-width: 50%;
   display: inline-block;
   float: left;
@@ -1179,6 +1188,9 @@ video#bgvid {
   .timeline-cover .timeline-img {
     width: 100%;
     height: auto; }
+  .timeline-cover .timeline-img-vertical {
+    width: auto;
+    height: 100%; }
 
 .top-10 {
   margin-top: 10vh; }
@@ -2890,6 +2902,11 @@ i.p {
   -webkit-transition: opacity .5s;
   -o-transition: opacity .5s;
   transition: opacity .5s; }
+  .gallery .item p {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    text-shadow: 0px 0px 5px #050505; }
 
 .gallery .control-operator {
   display: none; }

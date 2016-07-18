@@ -1,153 +1,156 @@
 // auto play audios
-var startbutton = $("#chap2_start, #chap1_start");
+var startbutton = $("#chap1_start").text('开始介绍');
+var startbutton2 = $("#chap2_start");
 var count = 0;
-var audios = document.getElementsByTagName('audio');
+var audio = $("audio");
 var getnode = $('.timeline-node');
-var audios = [];
 var currentAudio = document.getElementById('audio_0');
 var preAudio;
-var nodeactive = $('.timeline-node').css('border-width'),
-    eachnode = $('.timeline-node'),
-    thisnode = $('.timeline-node').index(this),
-    nodetext = $('.node-title'),
-    tcontent = $('.timeline-each'),
-    tline = $('.timeline-line'),
-    nodeline = $('.node-line'),
-    part1 = $('.timeline-part1'),
-    thiscontent = $('.timeline-each').index(this);
-
-function playAudio(direction){
-  console.log("start playing audio");
-  var nodeactive = $('.timeline-node').css('border-width'),
-      eachnode = $('.timeline-node'),
-      thisnode = $('.timeline-node').index(this),
-      nodetext = $('.node-title'),
-      tcontent = $('.timeline-each'),
-      tline = $('.timeline-line'),
-      nodeline = $('.node-line'),
-      part1 = $('.timeline-part1'),
-      thiscontent = $('.timeline-each').index(this);
-       //$(startbutton).fadeOut();
-  // $(startbutton).click(function(){
-  //     var $this = $(this);
-  //     audios[0].play();
-  //       $(startbutton).toggleClass('SeeMore2');
-  //     if($this.hasClass('SeeMore2')){
-  //         $this.text('停止介绍');
-  //         audios[count].play();
-  //         console.log('stop');
-  //         tline= $(tline).addClass('top-10').removeClass('top-45');
-  //         nodetext = $(nodetext).fadeOut('slow');
-  //         part1 = $(part1).css('margin-top', '-11vh');
-  //     } else {
-  //         $this.text('开始介绍');
-  //         audios[count].pause();
-  //         console.log('start');
-  //         tline= $(tline).removeClass('top-10').addClass('top-45');
-  //         nodetext = $(nodetext).show('slow');
-  //         part1 = $(part1).css('margin-top', '-46vh');
-  //     }
-  // });
-  if (direction>0) {
-    console.log("direction > 0");
-    if (count<audios.length) {
-      count++;
-      audios[count].load();audios[count].play();
-      preAudio = currentAudio;
-      currentAudio = audios[count];
-      console.log("current audio is " + currentAudio.id);
-
-    //  scripts for the timeline contents
-    // up and down animation for each nodes
-        eachnode[count] = $(eachnode[count]).toggleClass('activenode');
-        $(eachnode ).not(thisnode).removeClass('activenode');
-
-    // up and down animation for each timeline contents
-      tcontent[count] =$(tcontent[count]).toggleClass('timeline-each-up active-timeline animated Fadein');
-      $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
-
-      // up and down animation for each nodes connect via contents
-      nodeline[count]=$(nodeline[count]).toggleClass('opacity1 animated FadeinUp');
-      $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp');
-
-    }else {
-      count=0;
-    }
-  }else if (direction==0) {
-    //init
-    audios[0].load();audios[0].play();
-    currentAudio = audios[0];
-    //  scripts for the timeline contents
-    // up and down animation for each nodes
-        eachnode[count] = $(eachnode[count]).toggleClass('activenode');
-        $(eachnode ).not(count).removeClass('activenode');
-    // up and down animation for each timeline contents
-      tcontent[count] =$(tcontent[count]).toggleClass('timeline-each-up active-timeline animated Fadein');
-      $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
-
-      // up and down animation for each nodes connect via contents
-      nodeline[count]=$(nodeline[count]).toggleClass('opacity1 animated FadeinUp');
-      $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp');
-
-      tline= $(tline).addClass('top-10');
-      nodetext = $(nodetext).fadeOut('slow');
-      part1 = $(part1).css('margin-top', '-11vh');
-  }
-}
-
-//button change text
-startbutton.text('开始介绍');
-
-startbutton.click(function(){
-
-  audios = document.getElementsByTagName("audio");
-  for (var i = 0; i < audios.length; i++) {
-    console.log("audio " + i + " id is " + audios[i].id);
-    //audios[i]
-  };
-
-  playAudio(0);
-  count = 0;
-  console.log("start button clicked");
-
-
-});
-
-
-//auto play section -----------------------------------------
+var eachLI = $('.scroll-list > li');
+var initState = 0;
+var chap1bg = $(".chap1Bgm");
 
 var count_JQ = $("audio").size();
 $("audio").each(function(i){
   if (i < count_JQ - 1) {
-    this.addEventListener("ended", function(){
-      $("audio")[i+1].play();
-      //  scripts for the timeline contents
-      // up and down animation for each nodes
-          eachnode[i+1] = $(eachnode[i+1]).toggleClass('activenode');
-          $(eachnode ).not(thisnode).removeClass('activenode');
+    this.addEventListener("ended", function () {
 
-      // up and down animation for each timeline contents
-        tcontent[i+1] =$(tcontent[i+1]).toggleClass('timeline-each-up active-timeline animated Fadein');
-        $(tcontent ).not( thisnode ).removeClass('timeline-each-up active-timeline');
+     $("audio")[i+1].play();
 
-        // up and down animation for each nodes connect via contents
-        nodeline[i+1]=$(nodeline[i+1]).toggleClass('opacity1 animated FadeinUp');
-        $(nodeline).not(thisnode).removeClass('opacity1 animated FadeinUp');
-
-
-    });
+});
   }
 });
 
-// $(startbutton).click(function(){
-//     // var $this = $(this);
-//     // $this.toggleClass('SeeMore2');
-//     // if($this.hasClass('SeeMore2')){
-//     //     $this.text('停止介绍');
-//         audios[0].play();
-//         startbutton.fadeOut();
-//     // } else {
-//     //     $this.text('开始介绍');
-//     //     audios[count].pause();
-//     // }
-// });
+// function for the chapter 2 play audio pause audio button
+startbutton2.text('开始介绍');
+
+$(startbutton2).click(function(){
+  if (initState == 0) {
+    audio[0].play();
+    startbutton2.text('停止介绍');
+    initState++;
+  }else {
+    for (i =0; i <count_JQ; i ++){
+        if (!audio[i].paused && audio[i].currentTime) {
+            console.log(audio[i] + "is playing");
+            audio[i].pause();
+            startbutton2.text('开始介绍');
+        } else if (audio[i].paused && audio[i].currentTime && $(audio[i]).visible()) {
+            audio[i].play();
+            startbutton2.text('停止介绍');
+        }
+      }
+  }
+});
+
+
+// // auto position the audio to the center of window
+$(document).ready(function(){
+        for (var i = 0; i < eachLI.length; ++i){
+                     audio[i].addEventListener("playing",function(e){
+                     setTimeout(function(){
+                        window.scrollTo(
+                            e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
+                        }, 400);
+                    });
+
+                 }
+         });
+
+
+ //////////////////////// bgm!!!
+ var myBgm = $(".bgm");
+ var bgmNumber = 0;
+ // set my bgm volume to be half of what's now
+ for(i=0; i < myBgm.length; i ++){
+ myBgm[i].volume = 0.3;
+ }
+
+ //switch bgm for chap2
+
+ //second bgm
+ audio[4].addEventListener("playing",function(){
+
+ for(i=0; i < myBgm.length && i != 1; i ++){
+     $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+     });
+     bgmNumber++;
+ };
+ myBgm[1].play();
+  $(myBgm[1]).animate({volume: 0.3}, 2000);
+ });
+
+ // third bgm
+ audio[7].addEventListener("playing",function(){
+
+ for(i=0; i < myBgm.length && i != 1; i ++){
+     $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+     });
+     bgmNumber++;
+ };
+ myBgm[2].play();
+  $(myBgm[2]).animate({volume: 0.3}, 2000);
+ });
+
+ // 4th bgm
+ audio[10].addEventListener("playing",function(){
+
+ for(i=0; i < myBgm.length && i != 1; i ++){
+     $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+     });
+     bgmNumber++;
+ };
+ myBgm[3].play();
+  $(myBgm[3]).animate({volume: 0.3}, 2000);
+
+  // chapter 2 temple brush show up
+ setTimeout(function () {
+  $("#temple-circle").fadeIn("slow");
+  $("html").css("background-color","#606060");
+  },1000);
+ });
+
+ // 5th bgm
+ audio[14].addEventListener("playing",function(){
+
+ for(i=0; i < myBgm.length && i != 1; i ++){
+     $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
+     });
+     bgmNumber++;
+ };
+ myBgm[4].play();
+  $(myBgm[4]).animate({volume: 0.3}, 2000);
+  $("html").css("background-color","#424B50");
+ });
+
+ // background bgm on/off switch
+ $(".bg-switch").click(function() {
+     if(myBgm[bgmNumber].paused == false){
+         setTimeout(function () {
+             myBgm[bgmNumber].pause();
+             chap1bg[0].pause();
+             console.log("bgswitch clicked");
+         },150);
+     }
+
+     else if (myBgm[bgmNumber].paused == true){
+         setTimeout(function () {
+         myBgm[bgmNumber].play();
+         chap1bg[0].play();
+         },150);
+     }
+
+ });
+
+ // chapter 2 image animation accoridng to audio
+ audio[13].addEventListener("playing",function(){
+     setTimeout(function(){
+     $("#chapw-journey1").fadeIn(2000);
+ }, 1500);
+ setTimeout(function(){
+ $("#chapw-journey2").fadeIn(3000);
+ }, 3000);
+ setTimeout(function(){
+ $("#chapw-journey3").fadeIn(4000);
+ }, 4500);
+ });

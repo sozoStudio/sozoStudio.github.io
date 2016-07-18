@@ -14,6 +14,12 @@
   width: 100%;
 
   > .item {
+      p {
+          position: absolute;
+          top:0px;
+          left:20px;
+          text-shadow: 2px 2px $color-black;
+      }
     display: none;
     position: relative;
     @include transition(.6s ease-in-out left);

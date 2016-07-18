@@ -312,8 +312,14 @@ $(document).ready(function() {
     $('.chap-title').hide();
 });
 
-// function click node to display content
+var lastAudio = $("audio")[5];
+console.log(lastAudio);
+// when last node is activated, extend the width of timeline so it doesnt overlap the triangle icon.
+lastAudio.addEventListener("playing",function(){
+    $("body").css("width","3300px");
+});
 
+// function click node to display content
 function timelineActive(){
     var nodeactive = $('.timeline-node').css('border-width'),
         eachnode = $('.timeline-node'),
@@ -361,7 +367,7 @@ function timelineActive(){
 };
 
 
-
+// when clicked on the first iamge. scroll window to 550px to the right.
 $('.achor-link1').click(function(event) {
     var pos = $(window).scrollLeft() + 550;
     $('html, body').animate({
@@ -369,7 +375,7 @@ $('.achor-link1').click(function(event) {
           }, 800);
 });
 
-
+// the temple icon animation at the begining image of the chapter
 $("#templeicon").click(function() {
     $(".icon-east").fadeToggle("slow");
     $('.second-img').fadeToggle("slow");
@@ -378,6 +384,7 @@ $("#templeicon").click(function() {
 
 $('.timeline-node').click(timelineActive);
 
+// play one audio at a time
 $(function(){
     $("audio").on("play", function() {
         $("audio").not(this).each(function(index, audio) {

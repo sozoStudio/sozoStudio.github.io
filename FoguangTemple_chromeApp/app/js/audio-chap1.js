@@ -8,6 +8,8 @@ var currentAudio = document.getElementById('audio_0');
 var preAudio;
 var eachLI = $('.scroll-list > li');
 var initState = 0;
+var chap1bg = $(".chap1Bgm");
+
 
 startbutton.click(function(){
     var tline = $('.timeline-line'),
@@ -58,139 +60,39 @@ $("audio").each(function(i){
   }
 });
 
-// function for the chapter 2 play audio pause audio button
-startbutton2.text('开始介绍');
 
-$(startbutton2).click(function(){
-  if (initState == 0) {
-    audio[0].play();
-    startbutton2.text('停止介绍');
-    initState++;
-  }else {
-    for (i =0; i <count_JQ; i ++){
-        if (!audio[i].paused && audio[i].currentTime) {
-            console.log(audio[i] + "is playing");
-            audio[i].pause();
-            startbutton2.text('开始介绍');
-        } else if (audio[i].paused && audio[i].currentTime && $(audio[i]).visible()) {
-            audio[i].play();
-            startbutton2.text('停止介绍');
-        }
-      }
-  }
-});
+// // auto position the audio to the center of window
+// $(document).ready(function(){
+//         for (var i = 0; i < eachLI.length; ++i){
+//                      audio[i].addEventListener("playing",function(e){
+//                      setTimeout(function(){
+//                         window.scrollTo(
+//                             e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
+//                         }, 400);
+//                     });
+//
+//                  }
+//                  });
 
 
-// auto position the audio to the center of window
-$(document).ready(function(){
-        for (var i = 0; i < eachLI.length; ++i){
-                     audio[i].addEventListener("playing",function(e){
-                     setTimeout(function(){
-                        window.scrollTo(
-                            e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
-                        }, 400);
-                    });
 
-                 }
-                 });
-
-
-//////////////////////// bgm!!!
-var myBgm = $(".bgm");
-var bgmNumber = 0;
 // set my bgm volume to be half of what's now
-for(i=0; i < myBgm.length; i ++){
-myBgm[i].volume = 0.3;
-}
+chap1bg[0].volume = 0.3;
 
-//switch bgm for chap2
-
-//second bgm
-audio[4].addEventListener("playing",function(){
-
-for(i=0; i < myBgm.length && i != 1; i ++){
-    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
-    });
-    bgmNumber++;
-};
-myBgm[1].play();
- $(myBgm[1]).animate({volume: 0.3}, 2000);
-});
-
-// third bgm
-audio[7].addEventListener("playing",function(){
-
-for(i=0; i < myBgm.length && i != 1; i ++){
-    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
-    });
-    bgmNumber++;
-};
-myBgm[2].play();
- $(myBgm[2]).animate({volume: 0.3}, 2000);
-});
-
-// 4th bgm
-audio[10].addEventListener("playing",function(){
-
-for(i=0; i < myBgm.length && i != 1; i ++){
-    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
-    });
-    bgmNumber++;
-};
-myBgm[3].play();
- $(myBgm[3]).animate({volume: 0.3}, 2000);
-
- // chapter 2 temple brush show up
-setTimeout(function () {
- $("#temple-circle").fadeIn("slow");
- $("html").css("background-color","#606060");
- },1000);
-});
-
-// 5th bgm
-audio[14].addEventListener("playing",function(){
-
-for(i=0; i < myBgm.length && i != 1; i ++){
-    $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
-    });
-    bgmNumber++;
-};
-myBgm[4].play();
- $(myBgm[4]).animate({volume: 0.3}, 2000);
- $("html").css("background-color","#424B50");
-});
-
-
-// chap1 volume
-var vidChap1 = document.getElementById("bgm_chap1");
-console.log(vidChap1);
-// vidChap1.volume = 0.3;
 
 // background bgm on/off switch
 $(".bg-switch").click(function() {
-    if(myBgm[bgmNumber].paused == false){
+    if(chap1bg[0].paused == false){
         setTimeout(function () {
-            myBgm[bgmNumber].pause();
+            chap1bg[0].pause();
+            console.log("bgswitch clicked");
         },150);
     }
 
-    else if (myBgm[bgmNumber].paused == true){
+    else {
         setTimeout(function () {
-        myBgm[bgmNumber].play();
+        chap1bg[0].play();
         },150);
     }
 
-});
-
-// chapter 2 image animation accoridng to audio
-audio[13].addEventListener("playing",function(){
-    setTimeout(function(){
-    $("#chapw-journey1").fadeIn(2000);
-}, 1500);
-setTimeout(function(){
-$("#chapw-journey2").fadeIn(3000);
-}, 3000);
-setTimeout(function(){
-$("#chapw-journey3").fadeIn(4000);
-}, 4500);
 });
