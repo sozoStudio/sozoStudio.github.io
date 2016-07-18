@@ -82,12 +82,22 @@
 									<h1 class="modal-title" id="myModalLabel" align="center">设置</h1>
 								</div>
 								<div class="modal-body" align="center">
+
 									<div class="row">
 										<div class="col-sm-3 col-sm-offset-2">
 											<p>切换模式</p>
 										</div>
 										<div class="col-sm-3 col-sm-offset-1">
-											<p><input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+											<!-- <p><input id="changeControls" type="checkbox" checked data-toggle="toggle" data-on="模式1" data-off="模式2" data-width="100" data-onstyle="success" data-offstyle="danger"></p> -->
+											<!-- </p> -->
+											<div id="changeControls" class="pan-switch">
+												<div id="scroll-img-L" class="switch-scroll"></div>
+												<label class="switch">
+													<input type="checkbox">
+													<div class="slider"></div>
+												</label>
+												<div id="scroll-img-R" class="switch-scroll"></div>
+											</div>
 										</div>
 									</div>
 									<div class="row">
@@ -95,7 +105,15 @@
 											<p>热点</p>
 										</div>
 										<div class="col-sm-3 col-sm-offset-1">
-											<p><input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+											<!-- <p><input id="hotspotButton" type="checkbox" checked data-toggle="toggle" data-on="显示" data-off="隐藏" data-width="100" data-onstyle="success" data-offstyle="danger"></p> -->
+											<div id="hotspotButton" class="pan-switch">
+												<div id="scroll-img-L" class="switch-scroll"></div>
+												<label class="switch">
+													<input type="checkbox">
+													<div class="slider"></div>
+												</label>
+												<div id="scroll-img-R" class="switch-scroll"></div>
+											</div>
 										</div>
 									</div>
 									<div class="row">
@@ -103,10 +121,17 @@
 											<p>背景音乐</p>
 										</div>
 										<div class="col-sm-3 col-sm-offset-1">
-											<p><input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger"></p>
+											<!-- <p><input id="songPlayPause" type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> 播放" data-off="<i class='fa fa-pause'></i> 暂停" data-width="100" data-onstyle="success" data-offstyle="danger"></p> -->
+											<div id="songPlayPause" class="pan-switch">
+												<div id="scroll-img-L" class="switch-scroll"></div>
+												<label class="switch">
+													<input type="checkbox">
+													<div class="slider"></div>
+												</label>
+												<div id="scroll-img-R" class="switch-scroll"></div>
+											</div>
 										</div>
 									</div>
-
 
 								</div>
 								<div class="modal-footer">

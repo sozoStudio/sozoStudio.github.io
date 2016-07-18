@@ -2,7 +2,7 @@ function toggleSetting(){
   $('#modal_S').modal('toggle');
 }
 
-$('#changeControls').change(function() {
+$('div#changeControls').change(function() {
   console.log('Toggle: ' + $(this).prop('checked'));
   toggleControls();
 });
