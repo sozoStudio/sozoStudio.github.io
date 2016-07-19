@@ -80,11 +80,11 @@ function m4_update(direction){
       '<div id="item-3" class="control-operator"></div>'+
       '<div id="item-4" class="control-operator"></div>'+
       '<div id="item-5" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/6/details/m4_004.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_005.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_006.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_007.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_008.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">板门题记</p><img src="img/6/details/m4_004.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">板门题记</p><img src="img/6/details/m4_005.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">板门题记</p><img src="img/6/details/m4_006.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">板门题记</p><img src="img/6/details/m4_007.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">咸通七年题记</p><img src="img/6/details/m4_008.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '<a href="#item-4" class="control-button">•</a><a href="#item-5" class="control-button">•</a></div>'
@@ -105,9 +105,9 @@ function m4_update(direction){
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
       '<div id="item-3" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/6/details/m4_009.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_010.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_011.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>内槽柱卯口痕迹</p><img src="img/6/details/m4_009.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>内槽柱顶卯口</p><img src="img/6/details/m4_010.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>莲瓣柱础</p><img src="img/6/details/m4_011.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '</div>'
@@ -131,9 +131,9 @@ function m4_update(direction){
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
       '<div id="item-3" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/6/details/m4_012.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_013.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_014.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">栌斗节枳造</p><img src="img/6/details/m4_012.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">前檐内槽</p><img src="img/6/details/m4_013.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">外檐白色燕尾</p><img src="img/6/details/m4_014.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '</div>'
@@ -161,9 +161,9 @@ function m4_update(direction){
       '<div id="item-3" class="control-operator"></div>'+
       '<div id="item-4" class="control-operator"></div>'+
       '<figure class="item"><img src="img/6/details/m4_015.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_016.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">红色燕尾</p><img src="img/6/details/m4_016.jpg" height="400px"></figure>'+
       '<figure class="item"><img src="img/6/details/m4_017.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/6/details/m4_018.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>外檐白色燕尾</p><img src="img/6/details/m4_018.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '<a href="#item-4" class="control-button">•</a></div>'

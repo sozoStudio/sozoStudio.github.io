@@ -32,8 +32,8 @@ function m5_update(direction){
       $('div#modal5_img').html(
         '<div id="item-1" class="control-operator"></div>'+
         '<div id="item-2" class="control-operator"></div>'+
-        '<figure class="item"><img src="img/5/details/m5_1.jpg" height="400px"></figure>'+
-        '<figure class="item"><img src="img/5/details/m5_2.jpg" height="400px"></figure>'+
+        '<figure class="item"><p class="white">榆林窟32窟新样文殊</p><img src="img/5/details/m5_1.jpg" height="400px"></figure>'+
+        '<figure class="item"><p>莫高窟220窟新样文殊</p><img src="img/5/details/m5_2.jpg" height="400px"></figure>'+
         '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
         '<a href="#item-2" class="control-button">•</a></div>'
       );
@@ -85,8 +85,8 @@ function m5_update(direction){
       $('div#modal5_img').html(
         '<div id="item-1" class="control-operator"></div>'+
         '<div id="item-2" class="control-operator"></div>'+
-        '<figure class="item"><img src="img/5/details/m5_1.jpg" height="400px"></figure>'+
-        '<figure class="item"><img src="img/5/details/m5_2.jpg" height="400px"></figure>'+
+        '<figure class="item"><p class="white">榆林窟32窟新样文殊</p><img src="img/5/details/m5_1.jpg" height="400px"></figure>'+
+        '<figure class="item"><p>莫高窟220窟新样文殊</p><img src="img/5/details/m5_2.jpg" height="400px"></figure>'+
         '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
         '<a href="#item-2" class="control-button">•</a></div>'
       );
@@ -189,8 +189,8 @@ function m1_update(direction){
     $('div#modal1_img').html(
       '<div id="item-1" class="control-operator"></div>'+
       '<div id="item-2" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/4/details/m1_4.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/4/details/m1_5.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>经幢-女弟子佛殿主宁公遇</p><img src="img/4/details/m1_4.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>经幢-大中十一年十月建</p><img src="img/4/details/m1_5.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a></div>'
     );
@@ -211,7 +211,7 @@ function m1_update(direction){
     m1_bgm.load();
     m1_bgm.play();
 
-    $('div#modal1_img').html('<div id="canvas"></div>');
+    $('div#modal1_img').html('<div id="canvas"></div><p>互动游戏-模拟泼水</p><p>请在题记上上来回擦拭以显现题记文字</p>');
     $('div#modal1_img').attr({"class":""});
     $('div#canvas').css("background", "url(img/4/details/bkgtitle1.jpg)");
     $('div#canvas').css("width","300px");$('div#canvas').css("height","400px");

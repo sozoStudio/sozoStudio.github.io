@@ -143,10 +143,10 @@ function m1_update(direction){
       '<div id="item-2" class="control-operator"></div>'+
       '<div id="item-3" class="control-operator"></div>'+
       '<div id="item-4" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/scene3_1/001nanchan.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/002tiantai.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/003renwang.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/004EH.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>南禅寺</p><img src="img/scene3_1/001nanchan.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">天台庵</p><img src="img/scene3_1/002tiantai.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>芮城广仁王庙</p><img src="img/scene3_1/003renwang.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">东大殿外景</p><img src="img/scene3_1/004EH.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '<a href="#item-4" class="control-button">•</a></div>'
@@ -181,11 +181,11 @@ function m1_update(direction){
       '<div id="item-3" class="control-operator"></div>'+
       '<div id="item-4" class="control-operator"></div>'+
       '<div id="item-5" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/scene3_1/005yaoshi.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/006dongdasi.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/007falong.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/008dongdasi.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/009zhaodi.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>药师寺东塔</p><img src="img/scene3_1/005yaoshi.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>东大寺转害门</p><img src="img/scene3_1/006dongdasi.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>法隆寺梦殿</p><img src="img/scene3_1/007falong.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>东大寺法华堂</p><img src="img/scene3_1/008dongdasi.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">唐招提寺</p><img src="img/scene3_1/009zhaodi.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '<a href="#item-4" class="control-button">•</a><a href="#item-5" class="control-button">•</a></div>'
@@ -256,10 +256,10 @@ function m1_update(direction){
       '<div id="item-2" class="control-operator"></div>'+
       '<div id="item-3" class="control-operator"></div>'+
       '<div id="item-4" class="control-operator"></div>'+
-      '<figure class="item"><img src="img/scene3_1/001nanchan.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/002tiantai.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/003renwang.jpg" height="400px"></figure>'+
-      '<figure class="item"><img src="img/scene3_1/004EH.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>南禅寺</p><img src="img/scene3_1/001nanchan.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">天台庵</p><img src="img/scene3_1/002tiantai.jpg" height="400px"></figure>'+
+      '<figure class="item"><p>芮城广仁王庙</p><img src="img/scene3_1/003renwang.jpg" height="400px"></figure>'+
+      '<figure class="item"><p class="white">东大殿外景</p><img src="img/scene3_1/004EH.jpg" height="400px"></figure>'+
       '<div class="controls"><a href="#item-1" class="control-button">•</a>'+
       '<a href="#item-2" class="control-button">•</a><a href="#item-3" class="control-button">•</a>'+
       '<a href="#item-4" class="control-button">•</a></div>'
