@@ -43,21 +43,6 @@ $(startbutton2).click(function(){
   }
 });
 
-
-// // auto position the audio to the center of window
-$(document).ready(function(){
-        for (var i = 0; i < eachLI.length; ++i){
-                     audio[i].addEventListener("playing",function(e){
-                     setTimeout(function(){
-                        window.scrollTo(
-                            e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
-                        }, 400);
-                    });
-
-                 }
-         });
-
-
  //////////////////////// bgm!!!
  var myBgm = $(".bgm");
  var bgmNumber = 0;
@@ -111,7 +96,7 @@ $(document).ready(function(){
  });
 
  // 5th bgm
- audio[14].addEventListener("playing",function(){
+ audio[13].addEventListener("playing",function(){
 
  for(i=0; i < myBgm.length && i != 1; i ++){
      $(myBgm[bgmNumber]).animate({volume: 0}, 2000, 'swing', function() {
@@ -127,16 +112,16 @@ $(document).ready(function(){
  $(".bg-switch").click(function() {
      if(myBgm[bgmNumber].paused == false){
          setTimeout(function () {
-             myBgm[bgmNumber].pause();
-             chap1bg[0].pause();
-             console.log("bgswitch clicked");
+             for(i=0; i < myBgm.length; i ++){
+                 myBgm[i].pause();
+             }
+
          },150);
      }
 
      else if (myBgm[bgmNumber].paused == true){
          setTimeout(function () {
          myBgm[bgmNumber].play();
-         chap1bg[0].play();
          },150);
      }
 
@@ -154,3 +139,17 @@ $(document).ready(function(){
  $("#chapw-journey3").fadeIn(4000);
  }, 4500);
  });
+
+
+ // // auto position the audio to the center of window
+ $(document).ready(function(){
+         for (var i = 0; i < eachLI.length; ++i){
+                      audio[i].addEventListener("playing",function(e){
+                      setTimeout(function(){
+                         window.scrollTo(
+                             e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
+                         }, 400);
+                     });
+
+                  }
+          });

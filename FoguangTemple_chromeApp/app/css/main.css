@@ -578,6 +578,21 @@ audio {
     -ms-transform: translateX(18px);
     transform: translateX(18px); }
 
+.brown-text {
+  color: #B55C39; }
+
+.orange-text {
+  color: #D69F50; }
+
+.red-text {
+  color: #7A1A11; }
+
+.yellow-text {
+  color: #d9b612; }
+
+.lightblue-text {
+  color: #707D95; }
+
 .scrollable {
   overflow: hidden;
   position: relative;
@@ -1229,6 +1244,8 @@ video#bgvid {
   margin-left: 150px;
   height: 100vh;
   margin-left: 13px; }
+  .scroll-list li {
+    position: relative; }
 
 #chap2_start {
   float: left;
@@ -1298,25 +1315,20 @@ video#bgvid {
 .scroll-img {
   float: right; }
 
+.scene-img-vertical {
+  height: 40vh;
+  width: auto; }
+
 .scene-img {
   width: 100%;
-  height: auto;
-  -webkit-filter: grayscale(10%);
-  filter: grayscale(10%); }
-  .scene-img:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-    -webkit-transition: 1s -webkit-filter linear;
-    -moz-transition: 1s -moz-filter linear;
-    -moz-transition: 1s filter linear;
-    -ms-transition: 1s -ms-filter linear;
-    -o-transition: 1s -o-filter linear;
-    transition: 1s filter linear; }
+  height: auto; }
 
 .image-full {
-  width: 125% !important;
+  width: 100% !important;
   height: auto;
-  margin-left: -40px; }
+  position: absolute;
+  bottom: 0px;
+  left: 0px; }
 
 .image-fit {
   width: 90%;
@@ -1339,9 +1351,7 @@ video#bgvid {
   height: 40vh;
   width: auto;
   position: absolute;
-  z-index: 9999;
-  margin-left: -16%;
-  bottom: 0px; }
+  z-index: 9999; }
 
 .scene-within {
   width: 100%;
@@ -1393,9 +1403,7 @@ video#bgvid {
   height: 40vh;
   width: auto;
   position: absolute;
-  z-index: 9999;
-  margin-left: 15%;
-  margin-top: -5%; }
+  z-index: 9999; }
 
 .scrollTexture {
   color: #EEE2CF;
@@ -1404,11 +1412,32 @@ video#bgvid {
 .white-bg {
   background-color: rgba(255, 255, 255, 0.1); }
 
-#temple-circle {
+.chap-img-container {
+  width: 100%;
+  position: relative; }
+
+.behind-text {
+  z-index: -1;
   display: none; }
+
+#temple-circle {
+  display: none;
+  top: 30vh;
+  margin-left: -230px; }
 
 #chapw-journey1, #chapw-journey2, #chapw-journey3 {
   display: none; }
+
+#img37 {
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+  height: 170px;
+  opacity: 0; }
+
+#shanxi-img {
+  right: -40px;
+  left: auto; }
 
 .hideme {
   opacity: 0; }
@@ -3110,6 +3139,7 @@ i.p {
   -o-transition: opacity .5s;
   transition: opacity .5s; }
   .gallery .item p {
+    z-index: 9999;
     position: absolute;
     top: 0px;
     left: 20px;
