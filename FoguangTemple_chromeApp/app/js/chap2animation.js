@@ -11,7 +11,8 @@ $(yellowtext[1]).click(function() {
 });
 
 $(redtext[0]).click(function() {
-    $("#msling").fadeOut();
+        $("#msling").fadeOut();
+        $(".class").css("display", "block");
 });
 
 $(redtext[1]).click(function() {

@@ -312,13 +312,6 @@ $(document).ready(function() {
     $('.chap-title').hide();
 });
 
-var lastAudio = $("audio")[5];
-console.log(lastAudio);
-// when last node is activated, extend the width of timeline so it doesnt overlap the triangle icon.
-lastAudio.addEventListener("playing",function(){
-    $("body").css("width","3300px");
-});
-
 // function click node to display content
 function timelineActive(){
     var nodeactive = $('.timeline-node').css('border-width'),
@@ -406,7 +399,8 @@ $(yellowtext[1]).click(function() {
 });
 
 $(redtext[0]).click(function() {
-    $("#msling").fadeOut();
+        $("#msling").fadeOut();
+        $(".class").css("display", "block");
 });
 
 $(redtext[1]).click(function() {

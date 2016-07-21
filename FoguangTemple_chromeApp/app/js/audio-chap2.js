@@ -32,7 +32,7 @@ $(startbutton2).click(function(){
   }else {
     for (i =0; i <count_JQ; i ++){
         if (!audio[i].paused && audio[i].currentTime) {
-            console.log(audio[i] + "is playing");
+            // console.log(audio[i] + "is playing");
             audio[i].pause();
             startbutton2.text('开始介绍');
         } else if (audio[i].paused && audio[i].currentTime && $(audio[i]).visible()) {
@@ -140,16 +140,31 @@ $(startbutton2).click(function(){
  }, 4500);
  });
 
+ // // auto position the audio to the center of window
+$(document).ready(function(){
+    for (var i = 0; i < eachLI.length; ++i){
+        audio[i].addEventListener("playing",function(e){
+            var windowSize = $(window).width();
+            var windowLeft = windowSize /2;
+            var objLeft = $(e.target).offset().left;
+            var halfObj = $(e.target).width() / 2 ;
+            var scrollLeft = objLeft - windowLeft + halfObj;
+            console.log(halfObj);
+            // window.scrollTo(scrollLeft, 0, 1000);
+            $('body, html').animate( { scrollLeft: scrollLeft }, 600);
+        });
+    }
+});
 
  // // auto position the audio to the center of window
- $(document).ready(function(){
-         for (var i = 0; i < eachLI.length; ++i){
-                      audio[i].addEventListener("playing",function(e){
-                      setTimeout(function(){
-                         window.scrollTo(
-                             e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
-                         }, 400);
-                     });
-
-                  }
-          });
+ // $(document).ready(function(){
+ //         for (var i = 0; i < eachLI.length; ++i){
+ //                      audio[i].addEventListener("playing",function(e){
+ //                      setTimeout(function(){
+ //                         window.scrollTo(
+ //                             e.target.parentNode.offsetLeft - (window.innerWidth - e.target.offsetWidth) / 2, 0);
+ //                         }, 400);
+ //                     });
+ //
+ //                  }
+ //          });

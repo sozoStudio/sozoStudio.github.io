@@ -10,12 +10,13 @@ var eachLI = $('.scroll-list > li');
 var initState = 0;
 var chap1bg = $(".chap1Bgm");
 
-
+// start button to trigger the first audio
 startbutton.click(function(){
     var tline = $('.timeline-line'),
     nodetext = $('.node-title'),
     part1 = $('.timeline-part1');
 
+// timeline animation for the audio
   $("audio")[0].play();
   $(".timeline-node, .timeline-each, .node-line").first().addClass("animated Fadein");
   $(".timeline-node").first().addClass('activenode');
@@ -95,4 +96,11 @@ $(".bg-switch").click(function() {
         },150);
     }
 
+});
+
+// change window width when last audio is played so it does not overlap next chap button.
+var lastAudio = $("audio")[5];
+// when last node is activated, extend the width of timeline so it doesnt overlap the triangle icon.
+lastAudio.addEventListener("playing",function(){
+    $("body").css("width","3300px");
 });
