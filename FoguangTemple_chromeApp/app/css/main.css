@@ -3970,12 +3970,16 @@ table {
   height: 40px;
   width: 40px;
   position: absolute;
-  opacity: 0.8; }
+  opacity: 0.8;
+  cursor: pointer; }
+
+.onMapIcon:active, .onMapIcon:hover {
+  opacity: 1; }
 
 .inside {
-  top: 9vh;
-  left: 110vh; }
+  top: 9%;
+  left: 80%; }
 
 .outside {
-  top: 10vh;
-  left: 75vh; }
+  top: 10%;
+  left: 60%; }

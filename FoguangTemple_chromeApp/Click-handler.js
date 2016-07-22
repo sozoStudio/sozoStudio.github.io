@@ -108,3 +108,31 @@ buttonToChap3.click(function(){
           focused: true
       });
 });
+
+//-------------------- Map Icons --------------------------
+
+var mapInside = $('#on_map_icon_inside');
+mapInside.click(function(){
+  setTimeout(function(){chrome.app.window.current().close();}, 300);
+  console.log("function called");
+  chrome.app.window.create('pan_scene1.html',
+      {
+          type:       "panel",
+          bounds: { width: 1280, height: 720},
+          minWidth:800, minHeight: 450,
+          focused: true
+      });
+});
+
+var mapOutside = $('#on_map_icon_outside');
+mapOutside.click(function(){
+  setTimeout(function(){chrome.app.window.current().close();}, 300);
+  console.log("function called");
+  chrome.app.window.create('pan_scene6.html',
+      {
+          type:       "panel",
+          bounds: { width: 1280, height: 720},
+          minWidth:800, minHeight: 450,
+          focused: true
+      });
+});
