@@ -10,3 +10,6 @@ $('#narPlayPause').change(function() {
   playPause('n1');
   n1Statues = -n1Statues;
 });
+$('#map_trigger').click(function(){
+  $('#map-popup').modal('toggle');
+});
