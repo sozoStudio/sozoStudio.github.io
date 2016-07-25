@@ -35,7 +35,7 @@
                     <a href="#"><div id="tab-chap5" lass="chap-title">第五章</div></a>
                 </li>
 								<li>
-										<a href="#"><div class="chap-title">地图</div></a>
+										<a href="#"><div class="chap-title" id="map_trigger">地图</div></a>
 								</li>
 						</ul>
 				</div>
@@ -76,6 +76,31 @@
 
 
 					<!--   Modals  -->
+
+					<!-- ============================= Map modal =========================================================== -->
+					<div class="modal fade" id="map-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog m_border" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+									<h1 class="modal-title" id="myModalLabel" align="center">地图</h1>
+								</div>
+								<div class="modal-body" align="center">
+									<div id="map_container">
+									</div>
+								</div>
+
+
+
+								<div class="modal-footer">
+									<button type="button" class="button1" data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================= End of Map Modal ==================================================== -->
+
+					
 					<!-- ================= Modal S for settings ==================================================== -->
 					<div class="modal fade" id="modal_S" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						<div class="modal-dialog m_border" role="document">
