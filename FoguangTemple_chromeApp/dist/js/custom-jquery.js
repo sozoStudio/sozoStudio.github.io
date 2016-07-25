@@ -466,11 +466,15 @@ $(redtext[6]).click(function() {
 //         }
 //     });
 
-$(".second-img").click(function() {
-    $(this).fadeToggle("slow");
-});
-$(".first-img").click(function() {
-    $(".second-img").fadeToggle("slow");
+$(".second-img").on('mousedown',function(){
+      $(this).show();
+      })
+     .on('mouseup',function() {
+        $(this).hide("slow");
+      });
+
+$(".first-img").on('mousedown',function(){
+$(".second-img").show();
 });
 
 $(document).ready(function() {

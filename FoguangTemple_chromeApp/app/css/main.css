@@ -597,7 +597,7 @@ audio {
   color: #D69F50; }
 
 .red-text {
-  color: #7A1A11; }
+  color: #7A1A11 !important; }
 
 .yellow-text {
   color: #d9b612; }

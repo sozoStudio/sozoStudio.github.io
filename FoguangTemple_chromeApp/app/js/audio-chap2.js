@@ -110,10 +110,13 @@ $(startbutton2).click(function(){
 
  // background bgm on/off switch
  $(".bg-switch").click(function() {
-     if(myBgm[bgmNumber].paused == false){
+
+             if(myBgm[bgmNumber].paused == false){
          setTimeout(function () {
-             for(i=0; i < myBgm.length; i ++){
+             for(i=0; i < myBgm.length && i!= myBgm[bgmNumber]; i ++){
                  myBgm[i].pause();
+                 myBgm[i].currentTime = 0;
+                 myBgm[bgmNumber].pause();
              }
 
          },150);
