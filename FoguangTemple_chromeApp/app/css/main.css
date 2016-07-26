@@ -3983,3 +3983,9 @@ table {
 .outside {
   top: 10%;
   left: 60%; }
+
+.mapElement {
+  border-width: 0px;
+  height: 300px;
+  width: 100%;
+  position: relative; }

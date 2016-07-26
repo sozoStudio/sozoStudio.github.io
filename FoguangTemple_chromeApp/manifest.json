@@ -23,6 +23,9 @@
           ]
       }
   },
+  "sandbox": {
+  "pages": ["partials/map.html"]
+  },
   "permissions": [
       "<all_urls>",
       "fullscreen",
