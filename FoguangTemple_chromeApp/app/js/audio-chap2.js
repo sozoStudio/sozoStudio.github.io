@@ -152,7 +152,6 @@ $(document).ready(function(){
             var objLeft = $(e.target).offset().left;
             var halfObj = $(e.target).width() / 2 ;
             var scrollLeft = objLeft - windowLeft + halfObj;
-            console.log(halfObj);
             // window.scrollTo(scrollLeft, 0, 1000);
             $('body, html').animate( { scrollLeft: scrollLeft }, 600);
         });
