@@ -29,6 +29,7 @@
   "permissions": [
       "<all_urls>",
       "fullscreen",
+      "coockies",
       "storage"
   ]
 }
