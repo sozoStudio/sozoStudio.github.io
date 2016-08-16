@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="app/css/main.css">
+   <link rel="stylesheet" type="text/css" href="lib/css/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+<!---jquery link ---->
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/velocity.min.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Foguang Temple</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+  <style>
+      /* following three (cascaded) are equivalent to above three meta viewport statements */
+          @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+          @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }*/
+          @-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }
+  </style>
+
+</head>
+<body>
+    <div class="main">
+<div class="landscape" style="background-color:#05154d;">
+  <!-- <div class="observe-pos">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           viewBox="0 0 330 300" xml:space="preserve" width="200" height="200">
+      <linearGradient id="XMLID_2_" gradientUnits="userSpaceOnUse" x1="67.5" y1="112.8333" x2="294.1667" y2="339.5">
+        <stop  offset="0" style="stop-color:#3C2415"/>
+        <stop  offset="1" style="stop-color:#2B2016"/>
+      </linearGradient>
+      <path id="XMLID_30_" class="st2" d="M288,159.7l-1.6-22.3l6.9-1.6l0.5-7.6l20.7-4.6l2.1-2.7c0,0-42.9-23.1-72.6-59.3l5.4-5.6H245
+        c3-3,2-13.1,2-13.1s0,0-3,6.5c-2.6,5.7-11.2,9.5-13.3,10.3c-21.1,8.3-76.2,27.5-129.7,25h-5l-2.3,1.9l6.8,3.4l-4.3,46.8l8.5-2.1
+        l3.7,5.8h4.3l-2.1,30.8H96.2l5.8,6.4H91.4l-36.7,19.4c0,0,6.1,4.8,16.5,9.7v21.4l-59,16.5L5.3,300l324.7,3.7v-55.5v-10.5v-87
+        L288,159.7z"/>
+  </svg>
+</div> -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 996 599" xml:space="preserve">
+<g id="Sky">
+<defs>
+<filter id="f1" x="0" y="0">
+<feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+</filter>
+</defs>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="600" y1="595.9" x2="600" y2="-0">
+<stop offset="0" style="stop-color:#262222"/>
+<stop offset="0.3633" style="stop-color:#262222"/>
+<stop offset="0.5503" style="stop-color:#262222"/>
+<stop offset="0.747" style="stop-color:#262222"/>
+<stop offset="0.8862" style="stop-color:#262222"/>
+</linearGradient>
+<rect fill="url(#SVGID_1_)" width="1200" height="515.9"/>
+</g>
+<g id="Sun">
+<radialGradient id="SVGID_2_" cx="516.1" cy="477.6" r="110.3" gradientUnits="userSpaceOnUse">
+<stop offset="0.0521" style="stop-color:#000"/>
+<stop offset="0.2627" style="stop-color:#000;stop-opacity:0.8"/>
+<stop offset="0.513" style="stop-color:#000;stop-opacity:0.4"/>
+<stop offset="1.2" style="stop-color:#000;stop-opacity:0"/>
+</radialGradient>
+<circle fill="url(#SVGID_2_)" cx="516.1" cy="577.6" r="210.3"/>
+</g>
+
+</svg>
+
+<div class="stars"></div>
+<div class="front-img-night"></div>
+<div class="front-img"></div>
+<div id = "texture" style="width:100vw;height:120vh;position:absolute;bottom:0px;"></div>
+
+<div class="sunrise-intro fade-in title">
+    <audio controls autoplay id="intro_narr">
+      <source src="media/scene1/0.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+    </audio>
+
+    <p class="intro-text" style="display:none">五台山位于山西省中部，雁门关东南。
+   由五座状如平台的山峰环抱而成。
+   因气候凉、多清泉，又称清凉山。
+   五台山区域寺院林立，传说为文殊菩萨道场，
+   与峨眉山、普陀山、九华山并称为中国佛教
+   四大名山。隋唐时代吸引了许多信徒，香火
+   极盛，名播长安、敦煌等地，远及日本。</p>
+<ul id="result"></ul>
+
+ </div>
+</div>
+
+<!-- all the js files for the animations are included in the file below - not in gulp -->
+<script src="app/js/animation_sunset.js"></script>
+<script src="app/js/animation.js"></script>
+<script src="lib/wow2.js"></script>
+<script src="dist/js/custom-jquery.js"></script>
+<script src="Click-handler.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,56 +1,5 @@
 $(document).ready(function() {
 
-	function getRandomInt(min, max) {
-  		return Math.floor(Math.random() * (max - min)) + min;
-	}
-
-	function starGenerate(){
-
-		for (var i = 0;i<100;i++) {
-			var $star;
-			$star = $('<div class="star"></div>');
-			$('.stars').append($star);
-		}
-
-		starAnimate($('.star'));
-	}
-
-	var svgWidth = $('div.landscape').width();
-
-	var svgHeight = $('div.landscape').height();
-
-	function starAnimate(star){
-		star.velocity({
-			scale: function() {
-				return getRandomInt(50,120) + '%';
-			},
-			translateY:
-				function() {
-					return getRandomInt(0,svgHeight/2.5) + 'px';
-				},
-			translateX:
-				function() {
-					return getRandomInt(0,svgWidth) + 'px';
-				},
-			backgroundColorRed: function() {
-				return getRandomInt(70,100) + '%';
-			},
-			backgroundColorGreen: function() {
-				return getRandomInt(70,100) + '%';
-			},
-			backgroundColorBlue: function() {
-				return getRandomInt(70,100) + '%';
-			}
-			},{
-				duration:0,
-			}
-		).velocity({
-			opacity:1
-		},{
-			duration:3000
-		});
-	}
-
 	function observeStars() {
 		$('.tube').velocity({
 			rotateZ: '30deg',
@@ -78,13 +27,16 @@ $(document).ready(function() {
 		starGenerate();
 	},6000);
 
+    $(".night-day").delay(1500).fadeOut(5500);
+    $(".intro-cloud").delay(6000).fadeIn(5500);
+
 	// var skyGradientTwilight = ['#ffeecc','#e29ae5','#869cee','#509aee','#4988e5'];
 	//
 	// var skyGradientEvening = ['#05257d','#03287d','#02389d','#0247c6','#015cc9'];
 	//
 	// var skyGradientNight = ['#05154d','#030005','#020005','#010005','#010005'];
 
-	var skyGradientNight = ['#fff','#F7DFA4','#aae8f7','#509aee','#4988e5'];
+	var skyGradientNight = ['#fff','#f8eec6','#aae8f7','#509aee','#4988e5'];
 
 	var skyGradientEvening = ['#05257d','#03287d','#02389d','#0247c6','#015cc9'];
 
@@ -102,7 +54,7 @@ $(document).ready(function() {
 			stopColor: skyGradientEvening[index]
 		},{
 			easing:'linear',
-			duration:1500
+			duration:3500
 		});
 	}).each(function(index){
 		$(this).velocity({
@@ -239,12 +191,12 @@ $(document).ready(function() {
 		stopColor: sunGradient[3]
 	},{
 		easing:'linear',
-		duration:1000
+		duration:4000
 	}).velocity({
-		stopColor: sunGradient[4]
+		stopColor: sunGradient[3]
 	},{
 		easing:'linear',
-		duration:2250
+		duration:3250
 	}).velocity({
 		stopColor: sunGradient[0]
 	},{

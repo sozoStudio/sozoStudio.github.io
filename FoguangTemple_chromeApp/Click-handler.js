@@ -94,6 +94,19 @@ tabchap4.click(function() {
             focused: true
         });
 });
+
+var tabchap4 = $('#tab-chap5');
+tabchap4.click(function() {
+    setTimeout(function(){chrome.app.window.current().close();}, 3000);
+    chrome.app.window.create('chap5_sunset.html',
+        {
+            type:       "panel",
+            bounds: { width: 1280, height: 720},
+            minWidth:800, minHeight: 450,
+            focused: true
+        });
+});
+
 // ------------------   ALL Tab links ------------------
 
 var buttonToChap3 = $('#to-chap3');
